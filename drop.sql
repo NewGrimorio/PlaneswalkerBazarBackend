@@ -1,0 +1,2 @@
+
+    set client_min_messages = WARNING;

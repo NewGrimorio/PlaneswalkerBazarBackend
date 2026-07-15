@@ -1,0 +1,51 @@
+package com.betacom.mtgbazar.be.repositories.products;
+
+import java.util.Collection;
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Lock;
+import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
+
+import com.betacom.mtgbazar.be.model.products.MagazzinoSKU;
+import com.betacom.mtgbazar.be.model.products.enums.Condizione;
+import com.betacom.mtgbazar.be.model.products.enums.Finitura;
+
+import jakarta.persistence.LockModeType;
+
+@Repository
+public interface IMagazzinoSKURepository extends JpaRepository<MagazzinoSKU, Long> {
+
+    /** Letture di catalogo, senza lock (derived query, niente properties). */
+    List<MagazzinoSKU> findByProdottoIdAndAttivoTrue(Long prodottoId);
+
+    /** Batch anti-N+1: tutti gli SKU di piu' prodotti in una query sola. */
+    List<MagazzinoSKU> findByProdottoIdInAndAttivoTrue(Collection<Long> prodottoIds);
+
+    /**
+     * Dettaglio con il grafo prodotto/stampa/espansione (JOIN FETCH).
+     * Query in META-INF: MagazzinoSKU.findByIdWithProdotto
+     */
+    Optional<MagazzinoSKU> findByIdWithProdotto(@Param("id") Long id);
+
+    /**
+     * Caricamento CON lock esclusivo per il checkout (SELECT ... FOR UPDATE).
+     * Query in META-INF: MagazzinoSKU.findByIdInForUpdate
+     *
+     * L'ORDER BY s.id nella query e' la parte critica: blocca le righe in
+     * ordine di id, cosi' due checkout con carrelli sovrapposti chiedono i
+     * lock nella stessa sequenza e il secondo si accoda invece di andare
+     * in deadlock. REGOLE D'USO:
+     *  - chiamare SOLO dentro @Transactional
+     *  - verificare la disponibilita' DOPO il lock, decrementare in memoria
+     *  - ordine tra tabelle: SEMPRE prima magazzino_sku, poi portafoglio
+     */
+    @Lock(LockModeType.PESSIMISTIC_WRITE)
+    List<MagazzinoSKU> findByIdInForUpdate(@Param("ids") Collection<Long> ids);
+    
+    List<MagazzinoSKU> findByProdottoId(Long prodottoId);
+    boolean existsByProdottoIdAndCondizioneAndLinguaAndFinitura(
+            Long prodottoId, Condizione condizione, String lingua, Finitura finitura);
+}
