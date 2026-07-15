@@ -1665,3 +1665,947 @@
 2026-07-15T11:51:28.704+02:00  INFO 31048 --- [PlaneswalkerBazarBackend] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2026-07-15T11:51:28.707+02:00  INFO 31048 --- [PlaneswalkerBazarBackend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2026-07-15T11:51:28.710+02:00  INFO 31048 --- [PlaneswalkerBazarBackend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-07-15T13:06:25.935+02:00  INFO 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.p.PortafoglioServiceTest         : Starting PortafoglioServiceTest using Java 25.0.2 with PID 15688 (started by Betacom in C:\Users\Betacom\eclipse-workspace\PlaneswalkerBazarBackend)
+2026-07-15T13:06:25.937+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.p.PortafoglioServiceTest         : Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-07-15T13:06:25.938+02:00  INFO 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.p.PortafoglioServiceTest         : No active profile set, falling back to 1 default profile: "default"
+2026-07-15T13:06:27.207+02:00  INFO 15688 --- [PlaneswalkerBazarBackend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-15T13:06:27.394+02:00  INFO 15688 --- [PlaneswalkerBazarBackend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 178 ms. Found 18 JPA repository interfaces.
+2026-07-15T13:06:27.947+02:00  INFO 15688 --- [PlaneswalkerBazarBackend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-15T13:06:28.148+02:00  INFO 15688 --- [PlaneswalkerBazarBackend] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:dbJpaBazar user=SA
+2026-07-15T13:06:28.149+02:00  INFO 15688 --- [PlaneswalkerBazarBackend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-15T13:06:28.161+02:00  INFO 15688 --- [PlaneswalkerBazarBackend] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:h2:mem:dbJpaBazar (H2 2.4)
+2026-07-15T13:06:28.203+02:00  WARN 15688 --- [PlaneswalkerBazarBackend] [main] o.f.c.internal.database.base.Database    : Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026-07-15T13:06:28.251+02:00  INFO 15688 --- [PlaneswalkerBazarBackend] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "public"."flyway_schema_history" does not exist yet
+2026-07-15T13:06:28.256+02:00  INFO 15688 --- [PlaneswalkerBazarBackend] [main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.037s)
+2026-07-15T13:06:28.263+02:00  INFO 15688 --- [PlaneswalkerBazarBackend] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "public"."flyway_schema_history" ...
+2026-07-15T13:06:28.287+02:00  INFO 15688 --- [PlaneswalkerBazarBackend] [main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": << Empty Schema >>
+2026-07-15T13:06:28.304+02:00  INFO 15688 --- [PlaneswalkerBazarBackend] [main] o.f.core.internal.command.DbMigrate      : Migrating schema "public" to version "1 - schema iniziale"
+2026-07-15T13:06:28.377+02:00  INFO 15688 --- [PlaneswalkerBazarBackend] [main] o.f.core.internal.command.DbMigrate      : Migrating schema "public" to version "2 - messaggi sistema"
+2026-07-15T13:06:28.393+02:00  INFO 15688 --- [PlaneswalkerBazarBackend] [main] o.f.core.internal.command.DbMigrate      : Migrating schema "public" to version "3 - messaggi catalogo"
+2026-07-15T13:06:28.404+02:00  INFO 15688 --- [PlaneswalkerBazarBackend] [main] o.f.core.internal.command.DbMigrate      : Successfully applied 3 migrations to schema "public", now at version v3 (execution time 00:00.073s)
+2026-07-15T13:06:28.513+02:00  INFO 15688 --- [PlaneswalkerBazarBackend] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-07-15T13:06:28.583+02:00  INFO 15688 --- [PlaneswalkerBazarBackend] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-07-15T13:06:29.001+02:00  INFO 15688 --- [PlaneswalkerBazarBackend] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-15T13:06:29.081+02:00  INFO 15688 --- [PlaneswalkerBazarBackend] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:dbJpaBazar]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: dbjpabazar/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-15T13:06:29.544+02:00  WARN 15688 --- [PlaneswalkerBazarBackend] [main] org.hibernate.orm.core                   : HHH000038: Composite id class does not override equals(): com.betacom.mtgbazar.be.model.MessageID
+2026-07-15T13:06:30.235+02:00  INFO 15688 --- [PlaneswalkerBazarBackend] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-15T13:06:30.270+02:00  INFO 15688 --- [PlaneswalkerBazarBackend] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-15T13:06:30.344+02:00  INFO 15688 --- [PlaneswalkerBazarBackend] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-07-15T13:06:31.810+02:00  WARN 15688 --- [PlaneswalkerBazarBackend] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-15T13:06:32.466+02:00  INFO 15688 --- [PlaneswalkerBazarBackend] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-07-15T13:06:32.467+02:00  INFO 15688 --- [PlaneswalkerBazarBackend] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-07-15T13:06:32.471+02:00  INFO 15688 --- [PlaneswalkerBazarBackend] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-07-15T13:06:32.478+02:00  INFO 15688 --- [PlaneswalkerBazarBackend] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 11 ms
+2026-07-15T13:06:32.547+02:00  INFO 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.p.PortafoglioServiceTest         : Started PortafoglioServiceTest in 6.87 seconds (process running for 8.383)
+2026-07-15T13:06:32.639+02:00  WARN 15688 --- [PlaneswalkerBazarBackend] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-07-15T13:06:32.640+02:00  WARN 15688 --- [PlaneswalkerBazarBackend] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-07-15T13:06:33.220+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.p.PortafoglioServiceTest         : setUp: creato utente 1 (pwt1@test.it)
+2026-07-15T13:06:33.229+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.p.PortafoglioServiceTest         : TEST 1: ricarica PayPal 10.00, attesi commissione 0.85 e saldo 9.15
+2026-07-15T13:06:33.230+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.PortafoglioImpl        : ricarica: utente=1 importo=10.00 metodo=PAYPAL
+2026-07-15T13:06:33.332+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.p.PortafoglioServiceTest         : movimento: id=1 stato=COMPLETATO commissione=0.85
+2026-07-15T13:06:33.405+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.p.PortafoglioServiceTest         : setUp: creato utente 2 (pwt2@test.it)
+2026-07-15T13:06:33.411+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.p.PortafoglioServiceTest         : TEST 2: ricarica bonifico 50.00, saldo fermo fino alla conferma admin
+2026-07-15T13:06:33.411+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.PortafoglioImpl        : ricarica: utente=2 importo=50.00 metodo=BONIFICO
+2026-07-15T13:06:33.415+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.p.PortafoglioServiceTest         : movimento in attesa: id=2 stato=IN_ATTESA
+2026-07-15T13:06:33.417+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.PortafoglioImpl        : confermaMovimento: id=2 approvato=true
+2026-07-15T13:06:33.432+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.p.PortafoglioServiceTest         : dopo conferma: stato=COMPLETATO saldo=50.00
+2026-07-15T13:06:33.442+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.p.PortafoglioServiceTest         : setUp: creato utente 3 (pwt3@test.it)
+2026-07-15T13:06:33.446+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.p.PortafoglioServiceTest         : TEST 3: ricarica con metodo INTERNO deve essere respinta
+2026-07-15T13:06:33.447+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.PortafoglioImpl        : ricarica: utente=3 importo=10.00 metodo=INTERNO
+2026-07-15T13:06:33.447+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.implementations.MessaggioImpl  : get portafoglio.metodo.non.valido
+2026-07-15T13:06:33.451+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.p.PortafoglioServiceTest         : eccezione attesa: Metodo di ricarica non consentito
+2026-07-15T13:06:33.461+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.p.PortafoglioServiceTest         : setUp: creato utente 4 (pwt4@test.it)
+2026-07-15T13:06:33.464+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.p.PortafoglioServiceTest         : TEST 4: prelievo 10.00 con saldo zero deve fallire
+2026-07-15T13:06:33.465+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.PortafoglioImpl        : preleva: utente=4 importo=10.00 conto=4
+2026-07-15T13:06:33.474+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.implementations.MessaggioImpl  : get saldo.insufficiente
+2026-07-15T13:06:33.477+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.p.PortafoglioServiceTest         : eccezione attesa: Saldo del portafoglio insufficiente
+2026-07-15T13:06:33.482+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.p.PortafoglioServiceTest         : setUp: creato utente 5 (pwt5@test.it)
+2026-07-15T13:06:33.485+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.p.PortafoglioServiceTest         : TEST 5: prelievo 40 su 100 decurta subito; il rifiuto ri-accredita
+2026-07-15T13:06:33.487+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.PortafoglioImpl        : ricarica: utente=5 importo=100.00 metodo=BONIFICO
+2026-07-15T13:06:33.491+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.PortafoglioImpl        : confermaMovimento: id=3 approvato=true
+2026-07-15T13:06:33.496+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.p.PortafoglioServiceTest         : accredita: saldo portato a 100.00
+2026-07-15T13:06:33.498+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.PortafoglioImpl        : preleva: utente=5 importo=40.00 conto=5
+2026-07-15T13:06:33.505+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.p.PortafoglioServiceTest         : dopo prelievo: stato=IN_ATTESA saldo=60.00
+2026-07-15T13:06:33.508+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.PortafoglioImpl        : confermaMovimento: id=4 approvato=false
+2026-07-15T13:06:33.515+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.p.PortafoglioServiceTest         : dopo rifiuto: stato=RIFIUTATO saldo=100.00
+2026-07-15T13:06:33.523+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.p.PortafoglioServiceTest         : setUp: creato utente 6 (pwt6@test.it)
+2026-07-15T13:06:33.528+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.p.PortafoglioServiceTest         : TEST 6: doppia conferma dello stesso movimento (ledger append-only)
+2026-07-15T13:06:33.529+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.PortafoglioImpl        : ricarica: utente=6 importo=10.00 metodo=BONIFICO
+2026-07-15T13:06:33.532+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.PortafoglioImpl        : confermaMovimento: id=5 approvato=true
+2026-07-15T13:06:33.538+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.p.PortafoglioServiceTest         : accredita: saldo portato a 10.00
+2026-07-15T13:06:33.539+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.PortafoglioImpl        : preleva: utente=6 importo=10.00 conto=6
+2026-07-15T13:06:33.547+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.PortafoglioImpl        : confermaMovimento: id=6 approvato=true
+2026-07-15T13:06:33.549+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.p.PortafoglioServiceTest         : prima conferma ok, tento la seconda...
+2026-07-15T13:06:33.550+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.PortafoglioImpl        : confermaMovimento: id=6 approvato=true
+2026-07-15T13:06:33.551+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.implementations.MessaggioImpl  : get movimento.non.lavorabile
+2026-07-15T13:06:33.554+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.p.PortafoglioServiceTest         : eccezione attesa: Il movimento non e' piu' modificabile
+2026-07-15T13:06:33.562+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.p.PortafoglioServiceTest         : setUp: creato utente 7 (pwt7@test.it)
+2026-07-15T13:06:33.567+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.p.PortafoglioServiceTest         : TEST 7: due prelievi da 60 su saldo 100, ne deve passare UNO solo
+2026-07-15T13:06:33.567+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.PortafoglioImpl        : ricarica: utente=7 importo=100.00 metodo=BONIFICO
+2026-07-15T13:06:33.572+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.PortafoglioImpl        : confermaMovimento: id=7 approvato=true
+2026-07-15T13:06:33.580+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.p.PortafoglioServiceTest         : accredita: saldo portato a 100.00
+2026-07-15T13:06:33.582+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [pool-2-thread-1] c.b.m.b.s.i.users.PortafoglioImpl        : preleva: utente=7 importo=60.00 conto=7
+2026-07-15T13:06:33.582+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [pool-2-thread-2] c.b.m.b.s.i.users.PortafoglioImpl        : preleva: utente=7 importo=60.00 conto=7
+2026-07-15T13:06:33.589+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [pool-2-thread-1] c.b.m.b.p.PortafoglioServiceTest         : thread pool-2-thread-1: prelievo RIUSCITO
+2026-07-15T13:06:33.590+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [pool-2-thread-2] c.b.m.b.s.implementations.MessaggioImpl  : get saldo.insufficiente
+2026-07-15T13:06:33.592+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [pool-2-thread-2] c.b.m.b.p.PortafoglioServiceTest         : thread pool-2-thread-2: prelievo RIFIUTATO (Saldo del portafoglio insufficiente)
+2026-07-15T13:06:33.594+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.p.PortafoglioServiceTest         : esito: successi=1 rifiutati=1 saldo=40.00
+2026-07-15T13:06:33.603+02:00  INFO 15688 --- [PlaneswalkerBazarBackend] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.betacom.mtgbazar.be.utente.UtenteServiceTest]: UtenteServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-07-15T13:06:33.627+02:00  INFO 15688 --- [PlaneswalkerBazarBackend] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.betacom.mtgbazar.be.PlaneswalkerBazarBackendApplication for test class com.betacom.mtgbazar.be.utente.UtenteServiceTest
+2026-07-15T13:06:33.628+02:00  INFO 15688 --- [PlaneswalkerBazarBackend] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.betacom.mtgbazar.be.utente.UtenteServiceTest]: UtenteServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-07-15T13:06:33.631+02:00  INFO 15688 --- [PlaneswalkerBazarBackend] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.betacom.mtgbazar.be.PlaneswalkerBazarBackendApplication for test class com.betacom.mtgbazar.be.utente.UtenteServiceTest
+2026-07-15T13:06:33.638+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.utente.UtenteServiceTest        : TEST 1: registrazione con email 'sporca', attesi utente+portafoglio
+2026-07-15T13:06:33.640+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registraUtente:   UST1@TEST.IT  
+2026-07-15T13:06:33.776+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registrato utente id=8 con portafoglio id=8
+2026-07-15T13:06:33.783+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.utente.UtenteServiceTest        : registrato: id=8 email=ust1@test.it
+2026-07-15T13:06:33.801+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.utente.UtenteServiceTest        : TEST 2: doppia registrazione con la stessa email
+2026-07-15T13:06:33.803+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registraUtente: ust2@test.it
+2026-07-15T13:06:33.907+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registrato utente id=9 con portafoglio id=9
+2026-07-15T13:06:33.909+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registraUtente:   UST2@TEST.IT 
+2026-07-15T13:06:33.910+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.implementations.MessaggioImpl  : get utente.email.duplicata
+2026-07-15T13:06:33.912+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.utente.UtenteServiceTest        : eccezione attesa: Email gia' registrata
+2026-07-15T13:06:33.917+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.utente.UtenteServiceTest        : TEST 3: doppia registrazione con lo stesso CF
+2026-07-15T13:06:33.918+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registraUtente: ust4@test.it
+2026-07-15T13:06:34.008+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registrato utente id=10 con portafoglio id=10
+2026-07-15T13:06:34.010+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registraUtente: ust5@test.it
+2026-07-15T13:06:34.012+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.implementations.MessaggioImpl  : get utente.cf.duplicato
+2026-07-15T13:06:34.014+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.utente.UtenteServiceTest        : eccezione attesa: Codice fiscale gia' registrato
+2026-07-15T13:06:34.018+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.utente.UtenteServiceTest        : TEST 4: registrazione di un minorenne
+2026-07-15T13:06:34.019+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registraUtente: ust6@test.it
+2026-07-15T13:06:34.023+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.implementations.MessaggioImpl  : get utente.nascita.invalid
+2026-07-15T13:06:34.025+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.utente.UtenteServiceTest        : eccezione attesa: Data di nascita non valida
+2026-07-15T13:06:34.030+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.utente.UtenteServiceTest        : TEST 5: login con email non normalizzata
+2026-07-15T13:06:34.030+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registraUtente: ust7@test.it
+2026-07-15T13:06:34.110+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registrato utente id=11 con portafoglio id=11
+2026-07-15T13:06:34.112+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : loginUtente:  UST7@TEST.IT
+2026-07-15T13:06:34.189+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.utente.UtenteServiceTest        : login ok: id=11
+2026-07-15T13:06:34.194+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.utente.UtenteServiceTest        : TEST 6: password errata ed email inesistente devono dare LO STESSO errore
+2026-07-15T13:06:34.194+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registraUtente: ust8@test.it
+2026-07-15T13:06:34.266+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registrato utente id=12 con portafoglio id=12
+2026-07-15T13:06:34.267+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : loginUtente: ust8@test.it
+2026-07-15T13:06:34.338+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.implementations.MessaggioImpl  : get utente.credenziali.errate
+2026-07-15T13:06:34.342+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : loginUtente: nessuno8@test.it
+2026-07-15T13:06:34.345+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.implementations.MessaggioImpl  : get utente.credenziali.errate
+2026-07-15T13:06:34.350+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.utente.UtenteServiceTest        : messaggi: 'Email o password errati' / 'Email o password errati'
+2026-07-15T13:06:34.364+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.utente.UtenteServiceTest        : TEST 7: cambio password completo
+2026-07-15T13:06:34.366+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registraUtente: ust9@test.it
+2026-07-15T13:06:34.447+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registrato utente id=13 con portafoglio id=13
+2026-07-15T13:06:34.448+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : changePassword: id=13
+2026-07-15T13:06:34.519+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.implementations.MessaggioImpl  : get utente.credenziali.errate
+2026-07-15T13:06:34.521+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : changePassword: id=13
+2026-07-15T13:06:34.663+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.utente.UtenteServiceTest        : password cambiata, verifico i login
+2026-07-15T13:06:34.664+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : loginUtente: ust9@test.it
+2026-07-15T13:06:34.736+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : loginUtente: ust9@test.it
+2026-07-15T13:06:34.801+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.implementations.MessaggioImpl  : get utente.credenziali.errate
+2026-07-15T13:06:34.808+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.utente.UtenteServiceTest        : TEST 8: cambio email completo
+2026-07-15T13:06:34.809+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registraUtente: ust10@test.it
+2026-07-15T13:06:34.877+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registrato utente id=14 con portafoglio id=14
+2026-07-15T13:06:34.878+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registraUtente: ust11@test.it
+2026-07-15T13:06:34.945+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registrato utente id=15 con portafoglio id=15
+2026-07-15T13:06:34.946+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : changeEmail: id=14
+2026-07-15T13:06:35.015+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.implementations.MessaggioImpl  : get utente.email.duplicata
+2026-07-15T13:06:35.017+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : changeEmail: id=14
+2026-07-15T13:06:35.088+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.utente.UtenteServiceTest        : email cambiata in nuova12@test.it
+2026-07-15T13:06:35.088+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : loginUtente: nuova12@test.it
+2026-07-15T13:06:35.154+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.utente.UtenteServiceTest        : TEST 9: update profilo, l'email NON deve cambiare da qui
+2026-07-15T13:06:35.154+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registraUtente: ust13@test.it
+2026-07-15T13:06:35.221+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registrato utente id=16 con portafoglio id=16
+2026-07-15T13:06:35.224+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : updateProfilo: id=16
+2026-07-15T13:06:35.226+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.utente.UtenteServiceTest        : dopo update: nome=Marco telefono=+39 3459876543 email=ust13@test.it
+2026-07-15T13:06:35.230+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.utente.UtenteServiceTest        : TEST 10: getById su id inesistente
+2026-07-15T13:06:35.232+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.implementations.MessaggioImpl  : get utente.non.trovato
+2026-07-15T13:06:35.233+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.utente.UtenteServiceTest        : eccezione attesa: Utente non trovato
+2026-07-15T13:06:35.236+02:00  INFO 15688 --- [PlaneswalkerBazarBackend] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.betacom.mtgbazar.be.indirizzo.IndirizzoServiceTest]: IndirizzoServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-07-15T13:06:35.252+02:00  INFO 15688 --- [PlaneswalkerBazarBackend] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.betacom.mtgbazar.be.PlaneswalkerBazarBackendApplication for test class com.betacom.mtgbazar.be.indirizzo.IndirizzoServiceTest
+2026-07-15T13:06:35.252+02:00  INFO 15688 --- [PlaneswalkerBazarBackend] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.betacom.mtgbazar.be.indirizzo.IndirizzoServiceTest]: IndirizzoServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-07-15T13:06:35.255+02:00  INFO 15688 --- [PlaneswalkerBazarBackend] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.betacom.mtgbazar.be.PlaneswalkerBazarBackendApplication for test class com.betacom.mtgbazar.be.indirizzo.IndirizzoServiceTest
+2026-07-15T13:06:35.262+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registraUtente: ind1@test.it
+2026-07-15T13:06:35.337+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registrato utente id=17 con portafoglio id=17
+2026-07-15T13:06:35.338+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.indirizzo.IndirizzoServiceTest  : setUp: creato utente 17 (ind1@test.it)
+2026-07-15T13:06:35.339+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.indirizzo.IndirizzoServiceTest  : TEST 1: il primo indirizzo diventa predefinito da solo
+2026-07-15T13:06:35.341+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : createIndirizzo: utente=17
+2026-07-15T13:06:35.344+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : creato indirizzo id=1 predefinito=true
+2026-07-15T13:06:35.349+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.indirizzo.IndirizzoServiceTest  : creato: id=1 predefinito=true nazione=IT
+2026-07-15T13:06:35.355+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registraUtente: ind2@test.it
+2026-07-15T13:06:35.427+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registrato utente id=18 con portafoglio id=18
+2026-07-15T13:06:35.427+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.indirizzo.IndirizzoServiceTest  : setUp: creato utente 18 (ind2@test.it)
+2026-07-15T13:06:35.427+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.indirizzo.IndirizzoServiceTest  : TEST 2: il secondo indirizzo NON diventa predefinito, il terzo (esplicito) si'
+2026-07-15T13:06:35.428+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : createIndirizzo: utente=18
+2026-07-15T13:06:35.430+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : creato indirizzo id=2 predefinito=true
+2026-07-15T13:06:35.431+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : createIndirizzo: utente=18
+2026-07-15T13:06:35.432+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : creato indirizzo id=3 predefinito=false
+2026-07-15T13:06:35.435+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.indirizzo.IndirizzoServiceTest  : dopo il secondo: predefinito su DB = 2
+2026-07-15T13:06:35.437+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : createIndirizzo: utente=18
+2026-07-15T13:06:35.438+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : creato indirizzo id=4 predefinito=true
+2026-07-15T13:06:35.443+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.indirizzo.IndirizzoServiceTest  : dopo il terzo (predefinito=true): predefinito su DB = 4
+2026-07-15T13:06:35.448+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registraUtente: ind3@test.it
+2026-07-15T13:06:35.519+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registrato utente id=19 con portafoglio id=19
+2026-07-15T13:06:35.520+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.indirizzo.IndirizzoServiceTest  : setUp: creato utente 19 (ind3@test.it)
+2026-07-15T13:06:35.520+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.indirizzo.IndirizzoServiceTest  : TEST 3: promozione esplicita e flag calcolato nella lista
+2026-07-15T13:06:35.520+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : createIndirizzo: utente=19
+2026-07-15T13:06:35.524+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : creato indirizzo id=5 predefinito=true
+2026-07-15T13:06:35.526+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : createIndirizzo: utente=19
+2026-07-15T13:06:35.528+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : creato indirizzo id=6 predefinito=false
+2026-07-15T13:06:35.529+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : setPredefinito: id=6 utente=19
+2026-07-15T13:06:35.536+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : listIndirizzi: utente=19
+2026-07-15T13:06:35.545+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.indirizzo.IndirizzoServiceTest  : lista: [Casa=false, Ufficio=true]
+2026-07-15T13:06:35.549+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registraUtente: ind4@test.it
+2026-07-15T13:06:35.618+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registrato utente id=20 con portafoglio id=20
+2026-07-15T13:06:35.619+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.indirizzo.IndirizzoServiceTest  : setUp: creato utente 20 (ind4@test.it)
+2026-07-15T13:06:35.620+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.indirizzo.IndirizzoServiceTest  : TEST 4: update null-safe
+2026-07-15T13:06:35.620+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : createIndirizzo: utente=20
+2026-07-15T13:06:35.624+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : creato indirizzo id=7 predefinito=true
+2026-07-15T13:06:35.627+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : updateIndirizzo: id=7 utente=20
+2026-07-15T13:06:35.630+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.indirizzo.IndirizzoServiceTest  : dopo update: via=Via Umberto civico=7 citta=Catania
+2026-07-15T13:06:35.633+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registraUtente: ind5@test.it
+2026-07-15T13:06:35.701+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registrato utente id=21 con portafoglio id=21
+2026-07-15T13:06:35.702+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.indirizzo.IndirizzoServiceTest  : setUp: creato utente 21 (ind5@test.it)
+2026-07-15T13:06:35.702+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.indirizzo.IndirizzoServiceTest  : TEST 5: rimozione del predefinito -> FK azzerata, soft delete
+2026-07-15T13:06:35.702+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : createIndirizzo: utente=21
+2026-07-15T13:06:35.705+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : creato indirizzo id=8 predefinito=true
+2026-07-15T13:06:35.707+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : createIndirizzo: utente=21
+2026-07-15T13:06:35.710+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : creato indirizzo id=9 predefinito=false
+2026-07-15T13:06:35.711+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : removeIndirizzo: id=8 utente=21
+2026-07-15T13:06:35.716+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.indirizzo.IndirizzoServiceTest  : dopo remove: predefinito su DB = null
+2026-07-15T13:06:35.717+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : listIndirizzi: utente=21
+2026-07-15T13:06:35.720+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : updateIndirizzo: id=8 utente=21
+2026-07-15T13:06:35.721+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.implementations.MessaggioImpl  : get indirizzo.non.trovato
+2026-07-15T13:06:35.728+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registraUtente: ind6@test.it
+2026-07-15T13:06:35.794+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registrato utente id=22 con portafoglio id=22
+2026-07-15T13:06:35.795+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.indirizzo.IndirizzoServiceTest  : setUp: creato utente 22 (ind6@test.it)
+2026-07-15T13:06:35.796+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.indirizzo.IndirizzoServiceTest  : TEST 6: l'utente B non vede e non tocca gli indirizzi di A
+2026-07-15T13:06:35.796+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : createIndirizzo: utente=22
+2026-07-15T13:06:35.797+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : creato indirizzo id=10 predefinito=true
+2026-07-15T13:06:35.799+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registraUtente: ind7b@test.it
+2026-07-15T13:06:35.865+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registrato utente id=23 con portafoglio id=23
+2026-07-15T13:06:35.866+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : updateIndirizzo: id=10 utente=23
+2026-07-15T13:06:35.868+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.implementations.MessaggioImpl  : get indirizzo.non.trovato
+2026-07-15T13:06:35.870+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : removeIndirizzo: id=10 utente=23
+2026-07-15T13:06:35.873+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.implementations.MessaggioImpl  : get indirizzo.non.trovato
+2026-07-15T13:06:35.875+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : setPredefinito: id=10 utente=23
+2026-07-15T13:06:35.877+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.implementations.MessaggioImpl  : get indirizzo.non.trovato
+2026-07-15T13:06:35.879+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.indirizzo.IndirizzoServiceTest  : i tre tentativi di B: 'Indirizzo non trovato' / 'Indirizzo non trovato' / 'Indirizzo non trovato'
+2026-07-15T13:06:35.879+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : listIndirizzi: utente=22
+2026-07-15T13:06:35.885+02:00  INFO 15688 --- [PlaneswalkerBazarBackend] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.betacom.mtgbazar.be.contobancario.ContoBancarioServiceTest]: ContoBancarioServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-07-15T13:06:35.901+02:00  INFO 15688 --- [PlaneswalkerBazarBackend] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.betacom.mtgbazar.be.PlaneswalkerBazarBackendApplication for test class com.betacom.mtgbazar.be.contobancario.ContoBancarioServiceTest
+2026-07-15T13:06:35.902+02:00  INFO 15688 --- [PlaneswalkerBazarBackend] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.betacom.mtgbazar.be.contobancario.ContoBancarioServiceTest]: ContoBancarioServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-07-15T13:06:35.905+02:00  INFO 15688 --- [PlaneswalkerBazarBackend] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.betacom.mtgbazar.be.PlaneswalkerBazarBackendApplication for test class com.betacom.mtgbazar.be.contobancario.ContoBancarioServiceTest
+2026-07-15T13:06:35.909+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registraUtente: cbt1@test.it
+2026-07-15T13:06:35.979+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registrato utente id=24 con portafoglio id=24
+2026-07-15T13:06:35.979+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.c.ContoBancarioServiceTest       : setUp: creato utente 24 (cbt1@test.it)
+2026-07-15T13:06:35.980+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.c.ContoBancarioServiceTest       : TEST 1: IBAN incollato con spazi e minuscole dall'home banking
+2026-07-15T13:06:35.980+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.ContoBancarioImpl      : createConto: utente=24
+2026-07-15T13:06:35.982+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.ContoBancarioImpl      : creato conto id=8
+2026-07-15T13:06:35.987+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.c.ContoBancarioServiceTest       : creato: id=8 ibanMascherato=IT60 **** 3456 bic=BPMOIT22
+2026-07-15T13:06:35.994+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registraUtente: cbt2@test.it
+2026-07-15T13:06:36.062+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registrato utente id=25 con portafoglio id=25
+2026-07-15T13:06:36.062+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.c.ContoBancarioServiceTest       : setUp: creato utente 25 (cbt2@test.it)
+2026-07-15T13:06:36.062+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.c.ContoBancarioServiceTest       : TEST 2: lista con due conti, poi rimozione di uno
+2026-07-15T13:06:36.064+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.ContoBancarioImpl      : createConto: utente=25
+2026-07-15T13:06:36.066+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.ContoBancarioImpl      : creato conto id=9
+2026-07-15T13:06:36.067+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.ContoBancarioImpl      : createConto: utente=25
+2026-07-15T13:06:36.068+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.ContoBancarioImpl      : creato conto id=10
+2026-07-15T13:06:36.069+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.ContoBancarioImpl      : listConti: utente=25
+2026-07-15T13:06:36.077+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.c.ContoBancarioServiceTest       : lista: [IT60 **** 3456, IT28 **** 1288]
+2026-07-15T13:06:36.077+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.ContoBancarioImpl      : removeConto: id=9 utente=25
+2026-07-15T13:06:36.080+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.ContoBancarioImpl      : listConti: utente=25
+2026-07-15T13:06:36.086+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registraUtente: cbt3@test.it
+2026-07-15T13:06:36.153+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registrato utente id=26 con portafoglio id=26
+2026-07-15T13:06:36.153+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.c.ContoBancarioServiceTest       : setUp: creato utente 26 (cbt3@test.it)
+2026-07-15T13:06:36.154+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.c.ContoBancarioServiceTest       : TEST 3: il conto gia' rimosso non e' piu' raggiungibile
+2026-07-15T13:06:36.154+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.ContoBancarioImpl      : createConto: utente=26
+2026-07-15T13:06:36.157+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.ContoBancarioImpl      : creato conto id=11
+2026-07-15T13:06:36.158+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.ContoBancarioImpl      : removeConto: id=11 utente=26
+2026-07-15T13:06:36.161+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.ContoBancarioImpl      : removeConto: id=11 utente=26
+2026-07-15T13:06:36.163+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.implementations.MessaggioImpl  : get conto.non.trovato
+2026-07-15T13:06:36.165+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.c.ContoBancarioServiceTest       : eccezione attesa: Conto bancario non trovato
+2026-07-15T13:06:36.169+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registraUtente: cbt4@test.it
+2026-07-15T13:06:36.237+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registrato utente id=27 con portafoglio id=27
+2026-07-15T13:06:36.238+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.c.ContoBancarioServiceTest       : setUp: creato utente 27 (cbt4@test.it)
+2026-07-15T13:06:36.238+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.c.ContoBancarioServiceTest       : TEST 4: l'utente B non vede e non rimuove i conti di A
+2026-07-15T13:06:36.239+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.ContoBancarioImpl      : createConto: utente=27
+2026-07-15T13:06:36.243+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.ContoBancarioImpl      : creato conto id=12
+2026-07-15T13:06:36.243+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registraUtente: cbt5b@test.it
+2026-07-15T13:06:36.324+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registrato utente id=28 con portafoglio id=28
+2026-07-15T13:06:36.325+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.ContoBancarioImpl      : removeConto: id=12 utente=28
+2026-07-15T13:06:36.327+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.implementations.MessaggioImpl  : get conto.non.trovato
+2026-07-15T13:06:36.328+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.ContoBancarioImpl      : listConti: utente=28
+2026-07-15T13:06:36.330+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.ContoBancarioImpl      : listConti: utente=27
+2026-07-15T13:06:36.333+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.c.ContoBancarioServiceTest       : lista di A dopo il tentativo di B: 1
+2026-07-15T13:06:36.337+02:00  INFO 15688 --- [PlaneswalkerBazarBackend] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.betacom.mtgbazar.be.carrello.CarrelloServiceTest]: CarrelloServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-07-15T13:06:36.354+02:00  INFO 15688 --- [PlaneswalkerBazarBackend] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.betacom.mtgbazar.be.PlaneswalkerBazarBackendApplication for test class com.betacom.mtgbazar.be.carrello.CarrelloServiceTest
+2026-07-15T13:06:36.355+02:00  INFO 15688 --- [PlaneswalkerBazarBackend] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.betacom.mtgbazar.be.carrello.CarrelloServiceTest]: CarrelloServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-07-15T13:06:36.358+02:00  INFO 15688 --- [PlaneswalkerBazarBackend] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.betacom.mtgbazar.be.PlaneswalkerBazarBackendApplication for test class com.betacom.mtgbazar.be.carrello.CarrelloServiceTest
+2026-07-15T13:06:36.362+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registraUtente: crt1@test.it
+2026-07-15T13:06:36.432+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registrato utente id=29 con portafoglio id=29
+2026-07-15T13:06:36.436+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.carrello.CarrelloServiceTest    : setUp: utente=29 prodotto=1 sku=1 (giacenza 5, prezzo 10.00)
+2026-07-15T13:06:36.438+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.carrello.CarrelloServiceTest    : TEST 1: primo accesso, carrello creato al volo e vuoto
+2026-07-15T13:06:36.438+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : getCarrello: utente=29
+2026-07-15T13:06:36.444+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : creato carrello per utente 29
+2026-07-15T13:06:36.466+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.carrello.CarrelloServiceTest    : carrello: id=1 voci=0 totale=0
+2026-07-15T13:06:36.470+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registraUtente: crt2@test.it
+2026-07-15T13:06:36.541+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registrato utente id=30 con portafoglio id=30
+2026-07-15T13:06:36.544+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.carrello.CarrelloServiceTest    : setUp: utente=30 prodotto=2 sku=2 (giacenza 5, prezzo 10.00)
+2026-07-15T13:06:36.544+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.carrello.CarrelloServiceTest    : TEST 2: add 2 pezzi (tot 20.00), poi add 1 -> quantita 3 (tot 30.00)
+2026-07-15T13:06:36.545+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : addVoce: utente=30 sku=2 quantita=2
+2026-07-15T13:06:36.546+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : creato carrello per utente 30
+2026-07-15T13:06:36.554+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : voce 1: quantita ora 2
+2026-07-15T13:06:36.558+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.carrello.CarrelloServiceTest    : dopo primo add: voci=1 totale=20.00
+2026-07-15T13:06:36.559+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : addVoce: utente=30 sku=2 quantita=1
+2026-07-15T13:06:36.562+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : voce 1: quantita ora 3
+2026-07-15T13:06:36.564+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.carrello.CarrelloServiceTest    : dopo secondo add: quantita=3 totale=30.00
+2026-07-15T13:06:36.567+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registraUtente: crt3@test.it
+2026-07-15T13:06:36.636+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registrato utente id=31 con portafoglio id=31
+2026-07-15T13:06:36.642+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.carrello.CarrelloServiceTest    : setUp: utente=31 prodotto=3 sku=3 (giacenza 5, prezzo 10.00)
+2026-07-15T13:06:36.642+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.carrello.CarrelloServiceTest    : TEST 3: 3 in carrello + add 3 su giacenza 5 -> rifiuto
+2026-07-15T13:06:36.643+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : addVoce: utente=31 sku=3 quantita=3
+2026-07-15T13:06:36.645+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : creato carrello per utente 31
+2026-07-15T13:06:36.648+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : voce 2: quantita ora 3
+2026-07-15T13:06:36.651+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : addVoce: utente=31 sku=3 quantita=3
+2026-07-15T13:06:36.653+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.implementations.MessaggioImpl  : get sku.non.disponibile
+2026-07-15T13:06:36.654+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.carrello.CarrelloServiceTest    : eccezione attesa: Quantita' richiesta non disponibile
+2026-07-15T13:06:36.655+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : getCarrello: utente=31
+2026-07-15T13:06:36.664+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registraUtente: crt4@test.it
+2026-07-15T13:06:36.732+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registrato utente id=32 con portafoglio id=32
+2026-07-15T13:06:36.734+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.carrello.CarrelloServiceTest    : setUp: utente=32 prodotto=4 sku=4 (giacenza 5, prezzo 10.00)
+2026-07-15T13:06:36.735+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.carrello.CarrelloServiceTest    : TEST 4: update a quantita esatta, poi oltre giacenza, poi voce inesistente
+2026-07-15T13:06:36.735+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : addVoce: utente=32 sku=4 quantita=3
+2026-07-15T13:06:36.738+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : creato carrello per utente 32
+2026-07-15T13:06:36.741+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : voce 3: quantita ora 3
+2026-07-15T13:06:36.744+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : updateVoce: utente=32 sku=4 quantita=1
+2026-07-15T13:06:36.749+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.carrello.CarrelloServiceTest    : dopo update: quantita=1
+2026-07-15T13:06:36.750+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : updateVoce: utente=32 sku=4 quantita=6
+2026-07-15T13:06:36.752+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.implementations.MessaggioImpl  : get sku.non.disponibile
+2026-07-15T13:06:36.754+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : updateVoce: utente=32 sku=999999 quantita=1
+2026-07-15T13:06:36.758+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.implementations.MessaggioImpl  : get carrello.voce.non.trovata
+2026-07-15T13:06:36.762+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registraUtente: crt5@test.it
+2026-07-15T13:06:36.830+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registrato utente id=33 con portafoglio id=33
+2026-07-15T13:06:36.834+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.carrello.CarrelloServiceTest    : setUp: utente=33 prodotto=5 sku=5 (giacenza 5, prezzo 10.00)
+2026-07-15T13:06:36.834+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.carrello.CarrelloServiceTest    : TEST 5: rimozione propria ok; la voce di A per B 'non esiste'
+2026-07-15T13:06:36.834+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : addVoce: utente=33 sku=5 quantita=2
+2026-07-15T13:06:36.836+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : creato carrello per utente 33
+2026-07-15T13:06:36.841+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : voce 4: quantita ora 2
+2026-07-15T13:06:36.845+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registraUtente: crt6b@test.it
+2026-07-15T13:06:36.913+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registrato utente id=34 con portafoglio id=34
+2026-07-15T13:06:36.915+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : removeVoce: utente=34 voce=4
+2026-07-15T13:06:36.917+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : creato carrello per utente 34
+2026-07-15T13:06:36.919+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.implementations.MessaggioImpl  : get carrello.voce.non.trovata
+2026-07-15T13:06:36.920+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.carrello.CarrelloServiceTest    : tentativo di B: Articolo non presente nel carrello
+2026-07-15T13:06:36.921+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : removeVoce: utente=33 voce=4
+2026-07-15T13:06:36.936+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registraUtente: crt7@test.it
+2026-07-15T13:06:37.005+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registrato utente id=35 con portafoglio id=35
+2026-07-15T13:06:37.009+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.carrello.CarrelloServiceTest    : setUp: utente=35 prodotto=6 sku=6 (giacenza 5, prezzo 10.00)
+2026-07-15T13:06:37.009+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.carrello.CarrelloServiceTest    : TEST 6: clear con due voci dentro
+2026-07-15T13:06:37.010+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : addVoce: utente=35 sku=6 quantita=2
+2026-07-15T13:06:37.012+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : creato carrello per utente 35
+2026-07-15T13:06:37.015+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : voce 5: quantita ora 2
+2026-07-15T13:06:37.017+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : addVoce: utente=35 sku=7 quantita=1
+2026-07-15T13:06:37.020+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : voce 6: quantita ora 1
+2026-07-15T13:06:37.022+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : getCarrello: utente=35
+2026-07-15T13:06:37.026+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : clearCarrello: utente=35
+2026-07-15T13:06:37.031+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : getCarrello: utente=35
+2026-07-15T13:06:37.035+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.carrello.CarrelloServiceTest    : dopo clear: voci=0 totale=0
+2026-07-15T13:06:37.038+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registraUtente: crt8@test.it
+2026-07-15T13:06:37.108+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registrato utente id=36 con portafoglio id=36
+2026-07-15T13:06:37.111+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.carrello.CarrelloServiceTest    : setUp: utente=36 prodotto=7 sku=8 (giacenza 5, prezzo 10.00)
+2026-07-15T13:06:37.112+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.carrello.CarrelloServiceTest    : TEST 7: 4 in carrello, la giacenza scende a 2 (acquisto altrui) -> disponibile=false
+2026-07-15T13:06:37.112+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : addVoce: utente=36 sku=8 quantita=4
+2026-07-15T13:06:37.113+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : creato carrello per utente 36
+2026-07-15T13:06:37.117+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : voce 7: quantita ora 4
+2026-07-15T13:06:37.124+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : getCarrello: utente=36
+2026-07-15T13:06:37.128+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.carrello.CarrelloServiceTest    : voce: quantita=4 disponibile=false
+2026-07-15T13:06:37.131+02:00  INFO 15688 --- [PlaneswalkerBazarBackend] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.betacom.mtgbazar.be.ordine.OrdineServiceTest]: OrdineServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-07-15T13:06:37.149+02:00  INFO 15688 --- [PlaneswalkerBazarBackend] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.betacom.mtgbazar.be.PlaneswalkerBazarBackendApplication for test class com.betacom.mtgbazar.be.ordine.OrdineServiceTest
+2026-07-15T13:06:37.150+02:00  INFO 15688 --- [PlaneswalkerBazarBackend] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.betacom.mtgbazar.be.ordine.OrdineServiceTest]: OrdineServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-07-15T13:06:37.151+02:00  INFO 15688 --- [PlaneswalkerBazarBackend] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.betacom.mtgbazar.be.PlaneswalkerBazarBackendApplication for test class com.betacom.mtgbazar.be.ordine.OrdineServiceTest
+2026-07-15T13:06:37.155+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registraUtente: ord1@test.it
+2026-07-15T13:06:37.230+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registrato utente id=37 con portafoglio id=37
+2026-07-15T13:06:37.231+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : createIndirizzo: utente=37
+2026-07-15T13:06:37.232+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : creato indirizzo id=11 predefinito=true
+2026-07-15T13:06:37.237+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.ordine.OrdineServiceTest        : setUp: utente=37 indirizzo=11 sku=9 (giacenza 5, prezzo 10.00)
+2026-07-15T13:06:37.237+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.ordine.OrdineServiceTest        : TEST 1: checkout 3x10.00 con saldo 50 — verifica di TUTTI gli effetti
+2026-07-15T13:06:37.237+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.PortafoglioImpl        : ricarica: utente=37 importo=50.00 metodo=BONIFICO
+2026-07-15T13:06:37.241+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.PortafoglioImpl        : confermaMovimento: id=9 approvato=true
+2026-07-15T13:06:37.245+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : addVoce: utente=37 sku=9 quantita=3
+2026-07-15T13:06:37.248+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : creato carrello per utente 37
+2026-07-15T13:06:37.251+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : voce 8: quantita ora 3
+2026-07-15T13:06:37.253+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : checkout: utente=37 indirizzo=11
+2026-07-15T13:06:37.264+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : checkout: totale calcolato 30.00
+2026-07-15T13:06:37.273+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : checkout completato: ordine=1 totale=30.00
+2026-07-15T13:06:37.287+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.ordine.OrdineServiceTest        : ordine creato: id=1 stato=CREATO totale=30.00
+2026-07-15T13:06:37.295+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : getCarrello: utente=37
+2026-07-15T13:06:37.303+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.ordine.OrdineServiceTest        : ledger: [PAGAMENTO_ORDINE, RICARICA]
+2026-07-15T13:06:37.320+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registraUtente: ord2@test.it
+2026-07-15T13:06:37.390+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registrato utente id=38 con portafoglio id=38
+2026-07-15T13:06:37.391+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : createIndirizzo: utente=38
+2026-07-15T13:06:37.393+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : creato indirizzo id=12 predefinito=true
+2026-07-15T13:06:37.397+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.ordine.OrdineServiceTest        : setUp: utente=38 indirizzo=12 sku=10 (giacenza 5, prezzo 10.00)
+2026-07-15T13:06:37.397+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.ordine.OrdineServiceTest        : TEST 2: saldo 10, carrello da 30 -> rifiuto e NULLA e' cambiato
+2026-07-15T13:06:37.397+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.PortafoglioImpl        : ricarica: utente=38 importo=10.00 metodo=BONIFICO
+2026-07-15T13:06:37.400+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.PortafoglioImpl        : confermaMovimento: id=11 approvato=true
+2026-07-15T13:06:37.404+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : addVoce: utente=38 sku=10 quantita=3
+2026-07-15T13:06:37.408+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : creato carrello per utente 38
+2026-07-15T13:06:37.411+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : voce 9: quantita ora 3
+2026-07-15T13:06:37.413+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : checkout: utente=38 indirizzo=12
+2026-07-15T13:06:37.419+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : checkout: totale calcolato 30.00
+2026-07-15T13:06:37.420+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.implementations.MessaggioImpl  : get saldo.insufficiente
+2026-07-15T13:06:37.422+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.ordine.OrdineServiceTest        : eccezione attesa: Saldo del portafoglio insufficiente
+2026-07-15T13:06:37.427+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : getCarrello: utente=38
+2026-07-15T13:06:37.437+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registraUtente: ord3@test.it
+2026-07-15T13:06:37.510+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registrato utente id=39 con portafoglio id=39
+2026-07-15T13:06:37.511+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : createIndirizzo: utente=39
+2026-07-15T13:06:37.514+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : creato indirizzo id=13 predefinito=true
+2026-07-15T13:06:37.520+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.ordine.OrdineServiceTest        : setUp: utente=39 indirizzo=13 sku=11 (giacenza 5, prezzo 10.00)
+2026-07-15T13:06:37.521+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.ordine.OrdineServiceTest        : TEST 3: 4 in carrello, la giacenza scende a 2 -> il checkout DEVE fermarsi
+2026-07-15T13:06:37.521+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.PortafoglioImpl        : ricarica: utente=39 importo=100.00 metodo=BONIFICO
+2026-07-15T13:06:37.525+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.PortafoglioImpl        : confermaMovimento: id=12 approvato=true
+2026-07-15T13:06:37.530+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : addVoce: utente=39 sku=11 quantita=4
+2026-07-15T13:06:37.532+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : creato carrello per utente 39
+2026-07-15T13:06:37.535+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : voce 10: quantita ora 4
+2026-07-15T13:06:37.542+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : checkout: utente=39 indirizzo=13
+2026-07-15T13:06:37.547+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.implementations.MessaggioImpl  : get sku.non.disponibile
+2026-07-15T13:06:37.549+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.ordine.OrdineServiceTest        : eccezione attesa: Quantita' richiesta non disponibile
+2026-07-15T13:06:37.555+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registraUtente: ord4@test.it
+2026-07-15T13:06:37.625+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registrato utente id=40 con portafoglio id=40
+2026-07-15T13:06:37.625+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : createIndirizzo: utente=40
+2026-07-15T13:06:37.628+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : creato indirizzo id=14 predefinito=true
+2026-07-15T13:06:37.631+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.ordine.OrdineServiceTest        : setUp: utente=40 indirizzo=14 sku=12 (giacenza 5, prezzo 10.00)
+2026-07-15T13:06:37.632+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.ordine.OrdineServiceTest        : TEST 4: checkout senza nulla nel carrello
+2026-07-15T13:06:37.632+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.PortafoglioImpl        : ricarica: utente=40 importo=50.00 metodo=BONIFICO
+2026-07-15T13:06:37.634+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.PortafoglioImpl        : confermaMovimento: id=13 approvato=true
+2026-07-15T13:06:37.638+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : checkout: utente=40 indirizzo=14
+2026-07-15T13:06:37.641+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.implementations.MessaggioImpl  : get carrello.vuoto
+2026-07-15T13:06:37.645+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registraUtente: ord5@test.it
+2026-07-15T13:06:37.716+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registrato utente id=41 con portafoglio id=41
+2026-07-15T13:06:37.717+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : createIndirizzo: utente=41
+2026-07-15T13:06:37.718+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : creato indirizzo id=15 predefinito=true
+2026-07-15T13:06:37.721+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.ordine.OrdineServiceTest        : setUp: utente=41 indirizzo=15 sku=13 (giacenza 5, prezzo 10.00)
+2026-07-15T13:06:37.721+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.ordine.OrdineServiceTest        : TEST 5: annullo di un ordine CREATO -> scorte e denaro tornano
+2026-07-15T13:06:37.722+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.PortafoglioImpl        : ricarica: utente=41 importo=50.00 metodo=BONIFICO
+2026-07-15T13:06:37.725+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.PortafoglioImpl        : confermaMovimento: id=14 approvato=true
+2026-07-15T13:06:37.729+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : addVoce: utente=41 sku=13 quantita=3
+2026-07-15T13:06:37.730+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : creato carrello per utente 41
+2026-07-15T13:06:37.734+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : voce 11: quantita ora 3
+2026-07-15T13:06:37.736+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : checkout: utente=41 indirizzo=15
+2026-07-15T13:06:37.742+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : checkout: totale calcolato 30.00
+2026-07-15T13:06:37.746+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : checkout completato: ordine=2 totale=30.00
+2026-07-15T13:06:37.748+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : annulla: ordine=2 utente=41
+2026-07-15T13:06:37.759+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : ordine 2: CREATO -> ANNULLATO
+2026-07-15T13:06:37.763+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.ordine.OrdineServiceTest        : dopo annullo: stato=ANNULLATO giacenza=5 saldo=50.00
+2026-07-15T13:06:37.771+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registraUtente: ord6@test.it
+2026-07-15T13:06:37.843+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registrato utente id=42 con portafoglio id=42
+2026-07-15T13:06:37.844+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : createIndirizzo: utente=42
+2026-07-15T13:06:37.845+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : creato indirizzo id=16 predefinito=true
+2026-07-15T13:06:37.848+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.ordine.OrdineServiceTest        : setUp: utente=42 indirizzo=16 sku=14 (giacenza 5, prezzo 10.00)
+2026-07-15T13:06:37.849+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.ordine.OrdineServiceTest        : TEST 6: transizioni illegali rifiutate; flusso completo fino al rimborso
+2026-07-15T13:06:37.849+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.PortafoglioImpl        : ricarica: utente=42 importo=50.00 metodo=BONIFICO
+2026-07-15T13:06:37.851+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.PortafoglioImpl        : confermaMovimento: id=17 approvato=true
+2026-07-15T13:06:37.857+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : addVoce: utente=42 sku=14 quantita=2
+2026-07-15T13:06:37.858+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : creato carrello per utente 42
+2026-07-15T13:06:37.861+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : voce 12: quantita ora 2
+2026-07-15T13:06:37.863+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : checkout: utente=42 indirizzo=16
+2026-07-15T13:06:37.868+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : checkout: totale calcolato 20.00
+2026-07-15T13:06:37.874+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : checkout completato: ordine=3 totale=20.00
+2026-07-15T13:06:37.878+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : confermaConsegna: ordine=3 utente=42
+2026-07-15T13:06:37.881+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.implementations.MessaggioImpl  : get ordine.transizione.non.valida
+2026-07-15T13:06:37.882+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : spedisci: ordine=3 admin=43
+2026-07-15T13:06:37.884+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : ordine 3: CREATO -> SPEDITO
+2026-07-15T13:06:37.885+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : annulla: ordine=3 utente=42
+2026-07-15T13:06:37.888+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.implementations.MessaggioImpl  : get ordine.transizione.non.valida
+2026-07-15T13:06:37.891+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : confermaConsegna: ordine=3 utente=42
+2026-07-15T13:06:37.894+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : ordine 3: SPEDITO -> CONSEGNATO
+2026-07-15T13:06:37.895+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : richiediReso: ordine=3 utente=42
+2026-07-15T13:06:37.898+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : ordine 3: CONSEGNATO -> RESO_RICHIESTO
+2026-07-15T13:06:37.901+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : rimborsa: ordine=3 admin=43
+2026-07-15T13:06:37.904+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : ordine 3: RESO_RICHIESTO -> RIMBORSATO
+2026-07-15T13:06:37.910+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.ordine.OrdineServiceTest        : dopo rimborso: stato=RIMBORSATO saldo=50.00 giacenza=3
+2026-07-15T13:06:37.915+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.ordine.OrdineServiceTest        : timeline: [null->CREATO (Anna V.), CREATO->SPEDITO (Alice A.), SPEDITO->CONSEGNATO (Anna V.), CONSEGNATO->RESO_RICHIESTO (Anna V.), RESO_RICHIESTO->RIMBORSATO (Alice A.)]
+2026-07-15T13:06:37.919+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registraUtente: ord8@test.it
+2026-07-15T13:06:37.995+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registrato utente id=44 con portafoglio id=43
+2026-07-15T13:06:37.997+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : createIndirizzo: utente=44
+2026-07-15T13:06:38.000+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : creato indirizzo id=17 predefinito=true
+2026-07-15T13:06:38.005+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.ordine.OrdineServiceTest        : setUp: utente=44 indirizzo=17 sku=15 (giacenza 5, prezzo 10.00)
+2026-07-15T13:06:38.007+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.ordine.OrdineServiceTest        : TEST 7: l'ordine di A per B 'non esiste'
+2026-07-15T13:06:38.007+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.PortafoglioImpl        : ricarica: utente=44 importo=50.00 metodo=BONIFICO
+2026-07-15T13:06:38.011+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.PortafoglioImpl        : confermaMovimento: id=20 approvato=true
+2026-07-15T13:06:38.014+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : addVoce: utente=44 sku=15 quantita=1
+2026-07-15T13:06:38.015+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : creato carrello per utente 44
+2026-07-15T13:06:38.019+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : voce 13: quantita ora 1
+2026-07-15T13:06:38.021+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : checkout: utente=44 indirizzo=17
+2026-07-15T13:06:38.028+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : checkout: totale calcolato 10.00
+2026-07-15T13:06:38.032+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : checkout completato: ordine=4 totale=10.00
+2026-07-15T13:06:38.034+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registraUtente: ord9b@test.it
+2026-07-15T13:06:38.112+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registrato utente id=45 con portafoglio id=44
+2026-07-15T13:06:38.114+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.implementations.MessaggioImpl  : get ordine.non.trovato
+2026-07-15T13:06:38.116+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : annulla: ordine=4 utente=45
+2026-07-15T13:06:38.118+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.implementations.MessaggioImpl  : get ordine.non.trovato
+2026-07-15T13:06:38.125+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registraUtente: ord10@test.it
+2026-07-15T13:06:38.202+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registrato utente id=46 con portafoglio id=45
+2026-07-15T13:06:38.202+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : createIndirizzo: utente=46
+2026-07-15T13:06:38.205+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : creato indirizzo id=18 predefinito=true
+2026-07-15T13:06:38.208+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.ordine.OrdineServiceTest        : setUp: utente=46 indirizzo=18 sku=16 (giacenza 5, prezzo 10.00)
+2026-07-15T13:06:38.209+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.ordine.OrdineServiceTest        : TEST 8: giacenza 3, due checkout da 2 pezzi -> ne passa UNO solo
+2026-07-15T13:06:38.212+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registraUtente: ord11c@test.it
+2026-07-15T13:06:38.287+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registrato utente id=47 con portafoglio id=46
+2026-07-15T13:06:38.287+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : createIndirizzo: utente=47
+2026-07-15T13:06:38.289+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : creato indirizzo id=19 predefinito=true
+2026-07-15T13:06:38.291+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.PortafoglioImpl        : ricarica: utente=46 importo=50.00 metodo=BONIFICO
+2026-07-15T13:06:38.293+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.PortafoglioImpl        : confermaMovimento: id=22 approvato=true
+2026-07-15T13:06:38.298+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.PortafoglioImpl        : ricarica: utente=47 importo=50.00 metodo=BONIFICO
+2026-07-15T13:06:38.300+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.PortafoglioImpl        : confermaMovimento: id=23 approvato=true
+2026-07-15T13:06:38.306+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : addVoce: utente=46 sku=16 quantita=2
+2026-07-15T13:06:38.310+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : creato carrello per utente 46
+2026-07-15T13:06:38.313+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : voce 14: quantita ora 2
+2026-07-15T13:06:38.316+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : addVoce: utente=47 sku=16 quantita=2
+2026-07-15T13:06:38.319+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : creato carrello per utente 47
+2026-07-15T13:06:38.322+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : voce 15: quantita ora 2
+2026-07-15T13:06:38.331+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [pool-3-thread-1] c.b.m.b.s.i.users.OrdineImpl             : checkout: utente=46 indirizzo=18
+2026-07-15T13:06:38.334+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [pool-3-thread-2] c.b.m.b.s.i.users.OrdineImpl             : checkout: utente=47 indirizzo=19
+2026-07-15T13:06:38.340+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [pool-3-thread-1] c.b.m.b.s.i.users.OrdineImpl             : checkout: totale calcolato 20.00
+2026-07-15T13:06:38.346+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [pool-3-thread-1] c.b.m.b.s.i.users.OrdineImpl             : checkout completato: ordine=5 totale=20.00
+2026-07-15T13:06:38.348+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [pool-3-thread-1] c.b.m.be.ordine.OrdineServiceTest        : thread pool-3-thread-1: checkout RIUSCITO
+2026-07-15T13:06:38.349+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [pool-3-thread-2] c.b.m.b.s.implementations.MessaggioImpl  : get sku.non.disponibile
+2026-07-15T13:06:38.350+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [pool-3-thread-2] c.b.m.be.ordine.OrdineServiceTest        : thread pool-3-thread-2: checkout RIFIUTATO (Quantita' richiesta non disponibile)
+2026-07-15T13:06:38.352+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.ordine.OrdineServiceTest        : esito: successi=1 rifiutati=1 giacenza=1
+2026-07-15T13:06:38.357+02:00  INFO 15688 --- [PlaneswalkerBazarBackend] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.betacom.mtgbazar.be.recensione.RecensioneServiceTest]: RecensioneServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-07-15T13:06:38.375+02:00  INFO 15688 --- [PlaneswalkerBazarBackend] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.betacom.mtgbazar.be.PlaneswalkerBazarBackendApplication for test class com.betacom.mtgbazar.be.recensione.RecensioneServiceTest
+2026-07-15T13:06:38.376+02:00  INFO 15688 --- [PlaneswalkerBazarBackend] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.betacom.mtgbazar.be.recensione.RecensioneServiceTest]: RecensioneServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-07-15T13:06:38.377+02:00  INFO 15688 --- [PlaneswalkerBazarBackend] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.betacom.mtgbazar.be.PlaneswalkerBazarBackendApplication for test class com.betacom.mtgbazar.be.recensione.RecensioneServiceTest
+2026-07-15T13:06:38.381+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registraUtente: rec1@test.it
+2026-07-15T13:06:38.455+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registrato utente id=48 con portafoglio id=47
+2026-07-15T13:06:38.457+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : createIndirizzo: utente=48
+2026-07-15T13:06:38.459+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : creato indirizzo id=20 predefinito=true
+2026-07-15T13:06:38.463+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.r.RecensioneServiceTest          : setUp: utente=48 prodotto=16 sku=17
+2026-07-15T13:06:38.464+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.r.RecensioneServiceTest          : TEST 1: ciclo completo -> recensione a 5 stelle pubblicata
+2026-07-15T13:06:38.464+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.PortafoglioImpl        : ricarica: utente=48 importo=50.00 metodo=BONIFICO
+2026-07-15T13:06:38.468+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.PortafoglioImpl        : confermaMovimento: id=25 approvato=true
+2026-07-15T13:06:38.471+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : addVoce: utente=48 sku=17 quantita=1
+2026-07-15T13:06:38.474+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : creato carrello per utente 48
+2026-07-15T13:06:38.478+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : voce 16: quantita ora 1
+2026-07-15T13:06:38.479+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : checkout: utente=48 indirizzo=20
+2026-07-15T13:06:38.485+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : checkout: totale calcolato 15.00
+2026-07-15T13:06:38.491+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : checkout completato: ordine=6 totale=15.00
+2026-07-15T13:06:38.493+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : spedisci: ordine=6 admin=49
+2026-07-15T13:06:38.495+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : ordine 6: CREATO -> SPEDITO
+2026-07-15T13:06:38.498+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : confermaConsegna: ordine=6 utente=48
+2026-07-15T13:06:38.501+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : ordine 6: SPEDITO -> CONSEGNATO
+2026-07-15T13:06:38.503+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.RecensioneImpl         : saveRecensione: utente=48 prodotto=16 ordine=6 voto=5
+2026-07-15T13:06:38.514+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.RecensioneImpl         : recensione 1 salvata (voto 5)
+2026-07-15T13:06:38.520+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.r.RecensioneServiceTest          : recensione: id=1 voto=5 autore=Rita C. stato=APPROVATA
+2026-07-15T13:06:38.520+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.RecensioneImpl         : listByProdotto: prodotto=16
+2026-07-15T13:06:38.526+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.RecensioneImpl         : getStatistiche: prodotto=16
+2026-07-15T13:06:38.541+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.r.RecensioneServiceTest          : statistiche: media=5.0 conteggio=1
+2026-07-15T13:06:38.545+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registraUtente: rec3@test.it
+2026-07-15T13:06:38.621+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registrato utente id=50 con portafoglio id=48
+2026-07-15T13:06:38.624+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : createIndirizzo: utente=50
+2026-07-15T13:06:38.627+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : creato indirizzo id=21 predefinito=true
+2026-07-15T13:06:38.630+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.r.RecensioneServiceTest          : setUp: utente=50 prodotto=17 sku=18
+2026-07-15T13:06:38.630+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.r.RecensioneServiceTest          : TEST 2: ordine solo CREATO -> recensione rifiutata
+2026-07-15T13:06:38.631+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.PortafoglioImpl        : ricarica: utente=50 importo=50.00 metodo=BONIFICO
+2026-07-15T13:06:38.634+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.PortafoglioImpl        : confermaMovimento: id=27 approvato=true
+2026-07-15T13:06:38.637+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : addVoce: utente=50 sku=18 quantita=1
+2026-07-15T13:06:38.638+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : creato carrello per utente 50
+2026-07-15T13:06:38.642+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : voce 17: quantita ora 1
+2026-07-15T13:06:38.644+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : checkout: utente=50 indirizzo=21
+2026-07-15T13:06:38.648+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : checkout: totale calcolato 15.00
+2026-07-15T13:06:38.653+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : checkout completato: ordine=7 totale=15.00
+2026-07-15T13:06:38.655+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.RecensioneImpl         : saveRecensione: utente=50 prodotto=17 ordine=7 voto=5
+2026-07-15T13:06:38.659+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.implementations.MessaggioImpl  : get recensione.non.consentita
+2026-07-15T13:06:38.661+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.r.RecensioneServiceTest          : eccezione attesa: Puoi recensire solo prodotti di ordini consegnati
+2026-07-15T13:06:38.665+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registraUtente: rec5@test.it
+2026-07-15T13:06:38.742+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registrato utente id=52 con portafoglio id=49
+2026-07-15T13:06:38.742+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : createIndirizzo: utente=52
+2026-07-15T13:06:38.744+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : creato indirizzo id=22 predefinito=true
+2026-07-15T13:06:38.748+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.r.RecensioneServiceTest          : setUp: utente=52 prodotto=18 sku=19
+2026-07-15T13:06:38.748+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.r.RecensioneServiceTest          : TEST 3: l'ordine consegnato contiene un ALTRO prodotto
+2026-07-15T13:06:38.748+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.PortafoglioImpl        : ricarica: utente=52 importo=50.00 metodo=BONIFICO
+2026-07-15T13:06:38.750+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.PortafoglioImpl        : confermaMovimento: id=29 approvato=true
+2026-07-15T13:06:38.753+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : addVoce: utente=52 sku=19 quantita=1
+2026-07-15T13:06:38.754+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : creato carrello per utente 52
+2026-07-15T13:06:38.760+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : voce 18: quantita ora 1
+2026-07-15T13:06:38.762+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : checkout: utente=52 indirizzo=22
+2026-07-15T13:06:38.767+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : checkout: totale calcolato 15.00
+2026-07-15T13:06:38.771+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : checkout completato: ordine=8 totale=15.00
+2026-07-15T13:06:38.773+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : spedisci: ordine=8 admin=53
+2026-07-15T13:06:38.778+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : ordine 8: CREATO -> SPEDITO
+2026-07-15T13:06:38.779+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : confermaConsegna: ordine=8 utente=52
+2026-07-15T13:06:38.781+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : ordine 8: SPEDITO -> CONSEGNATO
+2026-07-15T13:06:38.783+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.RecensioneImpl         : saveRecensione: utente=52 prodotto=19 ordine=8 voto=5
+2026-07-15T13:06:38.785+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.implementations.MessaggioImpl  : get recensione.non.consentita
+2026-07-15T13:06:38.791+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registraUtente: rec8@test.it
+2026-07-15T13:06:38.861+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registrato utente id=54 con portafoglio id=50
+2026-07-15T13:06:38.862+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : createIndirizzo: utente=54
+2026-07-15T13:06:38.864+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : creato indirizzo id=23 predefinito=true
+2026-07-15T13:06:38.869+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.r.RecensioneServiceTest          : setUp: utente=54 prodotto=20 sku=20
+2026-07-15T13:06:38.869+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.r.RecensioneServiceTest          : TEST 4: B prova a recensire citando l'ordine consegnato di A
+2026-07-15T13:06:38.870+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.PortafoglioImpl        : ricarica: utente=54 importo=50.00 metodo=BONIFICO
+2026-07-15T13:06:38.874+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.PortafoglioImpl        : confermaMovimento: id=31 approvato=true
+2026-07-15T13:06:38.878+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : addVoce: utente=54 sku=20 quantita=1
+2026-07-15T13:06:38.879+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : creato carrello per utente 54
+2026-07-15T13:06:38.882+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : voce 19: quantita ora 1
+2026-07-15T13:06:38.883+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : checkout: utente=54 indirizzo=23
+2026-07-15T13:06:38.887+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : checkout: totale calcolato 15.00
+2026-07-15T13:06:38.891+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : checkout completato: ordine=9 totale=15.00
+2026-07-15T13:06:38.893+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : spedisci: ordine=9 admin=55
+2026-07-15T13:06:38.895+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : ordine 9: CREATO -> SPEDITO
+2026-07-15T13:06:38.895+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : confermaConsegna: ordine=9 utente=54
+2026-07-15T13:06:38.899+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : ordine 9: SPEDITO -> CONSEGNATO
+2026-07-15T13:06:38.900+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registraUtente: rec10b@test.it
+2026-07-15T13:06:38.968+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registrato utente id=56 con portafoglio id=51
+2026-07-15T13:06:38.969+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.RecensioneImpl         : saveRecensione: utente=56 prodotto=20 ordine=9 voto=1
+2026-07-15T13:06:38.972+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.implementations.MessaggioImpl  : get ordine.non.trovato
+2026-07-15T13:06:38.975+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.r.RecensioneServiceTest          : eccezione attesa: Ordine non trovato
+2026-07-15T13:06:38.978+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registraUtente: rec11@test.it
+2026-07-15T13:06:39.047+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registrato utente id=57 con portafoglio id=52
+2026-07-15T13:06:39.048+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : createIndirizzo: utente=57
+2026-07-15T13:06:39.049+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : creato indirizzo id=24 predefinito=true
+2026-07-15T13:06:39.052+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.r.RecensioneServiceTest          : setUp: utente=57 prodotto=21 sku=21
+2026-07-15T13:06:39.053+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.r.RecensioneServiceTest          : TEST 5: risalvataggio -> stessa recensione, voto aggiornato
+2026-07-15T13:06:39.053+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.PortafoglioImpl        : ricarica: utente=57 importo=50.00 metodo=BONIFICO
+2026-07-15T13:06:39.055+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.PortafoglioImpl        : confermaMovimento: id=33 approvato=true
+2026-07-15T13:06:39.060+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : addVoce: utente=57 sku=21 quantita=1
+2026-07-15T13:06:39.062+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : creato carrello per utente 57
+2026-07-15T13:06:39.063+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : voce 20: quantita ora 1
+2026-07-15T13:06:39.065+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : checkout: utente=57 indirizzo=24
+2026-07-15T13:06:39.069+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : checkout: totale calcolato 15.00
+2026-07-15T13:06:39.074+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : checkout completato: ordine=10 totale=15.00
+2026-07-15T13:06:39.077+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : spedisci: ordine=10 admin=58
+2026-07-15T13:06:39.078+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : ordine 10: CREATO -> SPEDITO
+2026-07-15T13:06:39.079+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : confermaConsegna: ordine=10 utente=57
+2026-07-15T13:06:39.081+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : ordine 10: SPEDITO -> CONSEGNATO
+2026-07-15T13:06:39.082+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.RecensioneImpl         : saveRecensione: utente=57 prodotto=21 ordine=10 voto=5
+2026-07-15T13:06:39.085+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.RecensioneImpl         : recensione 2 salvata (voto 5)
+2026-07-15T13:06:39.087+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.RecensioneImpl         : saveRecensione: utente=57 prodotto=21 ordine=10 voto=2
+2026-07-15T13:06:39.090+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.RecensioneImpl         : recensione 2 salvata (voto 2)
+2026-07-15T13:06:39.091+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.r.RecensioneServiceTest          : prima: id=2 voto=5 — dopo: id=2 voto=2
+2026-07-15T13:06:39.092+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.RecensioneImpl         : listByProdotto: prodotto=21
+2026-07-15T13:06:39.094+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.RecensioneImpl         : getStatistiche: prodotto=21
+2026-07-15T13:06:39.099+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registraUtente: rec13@test.it
+2026-07-15T13:06:39.167+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registrato utente id=59 con portafoglio id=53
+2026-07-15T13:06:39.168+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : createIndirizzo: utente=59
+2026-07-15T13:06:39.170+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : creato indirizzo id=25 predefinito=true
+2026-07-15T13:06:39.174+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.r.RecensioneServiceTest          : setUp: utente=59 prodotto=22 sku=22
+2026-07-15T13:06:39.175+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.r.RecensioneServiceTest          : TEST 6: rifiuto admin -> sparisce da lista e statistiche; poi ripristino
+2026-07-15T13:06:39.175+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.PortafoglioImpl        : ricarica: utente=59 importo=50.00 metodo=BONIFICO
+2026-07-15T13:06:39.177+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.PortafoglioImpl        : confermaMovimento: id=35 approvato=true
+2026-07-15T13:06:39.180+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : addVoce: utente=59 sku=22 quantita=1
+2026-07-15T13:06:39.182+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : creato carrello per utente 59
+2026-07-15T13:06:39.183+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : voce 21: quantita ora 1
+2026-07-15T13:06:39.185+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : checkout: utente=59 indirizzo=25
+2026-07-15T13:06:39.191+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : checkout: totale calcolato 15.00
+2026-07-15T13:06:39.195+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : checkout completato: ordine=11 totale=15.00
+2026-07-15T13:06:39.197+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : spedisci: ordine=11 admin=60
+2026-07-15T13:06:39.199+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : ordine 11: CREATO -> SPEDITO
+2026-07-15T13:06:39.201+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : confermaConsegna: ordine=11 utente=59
+2026-07-15T13:06:39.204+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : ordine 11: SPEDITO -> CONSEGNATO
+2026-07-15T13:06:39.206+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.RecensioneImpl         : saveRecensione: utente=59 prodotto=22 ordine=11 voto=4
+2026-07-15T13:06:39.210+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.RecensioneImpl         : recensione 3 salvata (voto 4)
+2026-07-15T13:06:39.211+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.RecensioneImpl         : modera: recensione=3 approvata=false
+2026-07-15T13:06:39.214+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.RecensioneImpl         : listByProdotto: prodotto=22
+2026-07-15T13:06:39.215+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.RecensioneImpl         : getStatistiche: prodotto=22
+2026-07-15T13:06:39.217+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.r.RecensioneServiceTest          : dopo il rifiuto: media=0.0 conteggio=0
+2026-07-15T13:06:39.217+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.RecensioneImpl         : modera: recensione=3 approvata=true
+2026-07-15T13:06:39.219+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.RecensioneImpl         : listByProdotto: prodotto=22
+2026-07-15T13:06:39.226+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registraUtente: rec15@test.it
+2026-07-15T13:06:39.299+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registrato utente id=61 con portafoglio id=54
+2026-07-15T13:06:39.300+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : createIndirizzo: utente=61
+2026-07-15T13:06:39.301+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : creato indirizzo id=26 predefinito=true
+2026-07-15T13:06:39.304+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.r.RecensioneServiceTest          : setUp: utente=61 prodotto=23 sku=23
+2026-07-15T13:06:39.305+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.r.RecensioneServiceTest          : TEST 7: voti 5 e 4 da due clienti -> media 4.5, conteggio 2
+2026-07-15T13:06:39.306+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.PortafoglioImpl        : ricarica: utente=61 importo=50.00 metodo=BONIFICO
+2026-07-15T13:06:39.309+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.PortafoglioImpl        : confermaMovimento: id=37 approvato=true
+2026-07-15T13:06:39.312+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : addVoce: utente=61 sku=23 quantita=1
+2026-07-15T13:06:39.316+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : creato carrello per utente 61
+2026-07-15T13:06:39.318+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : voce 22: quantita ora 1
+2026-07-15T13:06:39.320+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : checkout: utente=61 indirizzo=26
+2026-07-15T13:06:39.327+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : checkout: totale calcolato 15.00
+2026-07-15T13:06:39.330+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : checkout completato: ordine=12 totale=15.00
+2026-07-15T13:06:39.332+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : spedisci: ordine=12 admin=62
+2026-07-15T13:06:39.334+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : ordine 12: CREATO -> SPEDITO
+2026-07-15T13:06:39.335+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : confermaConsegna: ordine=12 utente=61
+2026-07-15T13:06:39.337+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : ordine 12: SPEDITO -> CONSEGNATO
+2026-07-15T13:06:39.338+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.RecensioneImpl         : saveRecensione: utente=61 prodotto=23 ordine=12 voto=5
+2026-07-15T13:06:39.345+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.RecensioneImpl         : recensione 4 salvata (voto 5)
+2026-07-15T13:06:39.345+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registraUtente: rec17c@test.it
+2026-07-15T13:06:39.421+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registrato utente id=63 con portafoglio id=55
+2026-07-15T13:06:39.423+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : createIndirizzo: utente=63
+2026-07-15T13:06:39.425+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : creato indirizzo id=27 predefinito=true
+2026-07-15T13:06:39.426+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.PortafoglioImpl        : ricarica: utente=63 importo=50.00 metodo=BONIFICO
+2026-07-15T13:06:39.428+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.PortafoglioImpl        : confermaMovimento: id=39 approvato=true
+2026-07-15T13:06:39.431+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : addVoce: utente=63 sku=23 quantita=1
+2026-07-15T13:06:39.432+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : creato carrello per utente 63
+2026-07-15T13:06:39.433+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : voce 23: quantita ora 1
+2026-07-15T13:06:39.435+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : checkout: utente=63 indirizzo=27
+2026-07-15T13:06:39.440+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : checkout: totale calcolato 15.00
+2026-07-15T13:06:39.447+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : checkout completato: ordine=13 totale=15.00
+2026-07-15T13:06:39.449+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : spedisci: ordine=13 admin=62
+2026-07-15T13:06:39.451+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : ordine 13: CREATO -> SPEDITO
+2026-07-15T13:06:39.452+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : confermaConsegna: ordine=13 utente=63
+2026-07-15T13:06:39.454+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : ordine 13: SPEDITO -> CONSEGNATO
+2026-07-15T13:06:39.457+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.RecensioneImpl         : saveRecensione: utente=63 prodotto=23 ordine=13 voto=4
+2026-07-15T13:06:39.460+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.RecensioneImpl         : recensione 5 salvata (voto 4)
+2026-07-15T13:06:39.461+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.RecensioneImpl         : getStatistiche: prodotto=23
+2026-07-15T13:06:39.462+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.r.RecensioneServiceTest          : statistiche finali: media=4.5 conteggio=2
+2026-07-15T13:06:39.462+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.RecensioneImpl         : listByProdotto: prodotto=23
+2026-07-15T13:06:39.467+02:00  INFO 15688 --- [PlaneswalkerBazarBackend] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.betacom.mtgbazar.be.catalogo.CatalogoServiceTest]: CatalogoServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-07-15T13:06:39.486+02:00  INFO 15688 --- [PlaneswalkerBazarBackend] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.betacom.mtgbazar.be.PlaneswalkerBazarBackendApplication for test class com.betacom.mtgbazar.be.catalogo.CatalogoServiceTest
+2026-07-15T13:06:39.487+02:00  INFO 15688 --- [PlaneswalkerBazarBackend] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.betacom.mtgbazar.be.catalogo.CatalogoServiceTest]: CatalogoServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-07-15T13:06:39.490+02:00  INFO 15688 --- [PlaneswalkerBazarBackend] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.betacom.mtgbazar.be.PlaneswalkerBazarBackendApplication for test class com.betacom.mtgbazar.be.catalogo.CatalogoServiceTest
+2026-07-15T13:06:39.495+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.catalogo.CatalogoServiceTest    : TEST 1: codice 'TS1' maiuscolo -> salvato minuscolo; doppione rifiutato
+2026-07-15T13:06:39.495+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.products.EspansioneImpl      : createEspansione: TS1
+2026-07-15T13:06:39.500+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.products.EspansioneImpl      : creata espansione id=1
+2026-07-15T13:06:39.505+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.catalogo.CatalogoServiceTest    : creata: id=1 codice=ts1
+2026-07-15T13:06:39.507+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.products.EspansioneImpl      : createEspansione: Ts1
+2026-07-15T13:06:39.514+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.implementations.MessaggioImpl  : get espansione.codice.duplicato
+2026-07-15T13:06:39.515+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.catalogo.CatalogoServiceTest    : eccezione attesa: Codice set gia' esistente
+2026-07-15T13:06:39.515+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.products.EspansioneImpl      : getByCodice:   TS1 
+2026-07-15T13:06:39.520+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.catalogo.CatalogoServiceTest    : TEST 2: update del nome; il codice non si tocca
+2026-07-15T13:06:39.520+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.products.EspansioneImpl      : createEspansione: ts2
+2026-07-15T13:06:39.522+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.products.EspansioneImpl      : creata espansione id=2
+2026-07-15T13:06:39.523+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.products.EspansioneImpl      : updateEspansione: id=2
+2026-07-15T13:06:39.525+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.catalogo.CatalogoServiceTest    : dopo update: nome=Nome corretto codice=ts2
+2026-07-15T13:06:39.529+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.catalogo.CatalogoServiceTest    : TEST 3: slug generato dal nome; collisione -> suffisso -2
+2026-07-15T13:06:39.530+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.products.ProdottoImpl        : createProdotto: Bundle Gift Edition! N.3 [BOOSTER_BOX]
+2026-07-15T13:06:39.533+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.products.ProdottoImpl        : creato prodotto id=24 slug=bundle-gift-edition-n-3
+2026-07-15T13:06:39.537+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.catalogo.CatalogoServiceTest    : primo: slug=bundle-gift-edition-n-3
+2026-07-15T13:06:39.538+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.products.ProdottoImpl        : createProdotto: Bundle Gift Edition! N.3 [BOOSTER_BOX]
+2026-07-15T13:06:39.541+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.products.ProdottoImpl        : creato prodotto id=25 slug=bundle-gift-edition-n-3-2
+2026-07-15T13:06:39.542+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.catalogo.CatalogoServiceTest    : secondo: slug=bundle-gift-edition-n-3-2
+2026-07-15T13:06:39.546+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.catalogo.CatalogoServiceTest    : TEST 4: SINGLE dal form rifiutato; cambio tipo in update rifiutato
+2026-07-15T13:06:39.547+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.products.ProdottoImpl        : createProdotto: Carta furbetta 4 [SINGLE]
+2026-07-15T13:06:39.547+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.implementations.MessaggioImpl  : get prodotto.tipo.non.modificabile
+2026-07-15T13:06:39.548+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.products.ProdottoImpl        : createProdotto: Box regolare 4 [BOOSTER_BOX]
+2026-07-15T13:06:39.550+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.products.ProdottoImpl        : creato prodotto id=26 slug=box-regolare-4
+2026-07-15T13:06:39.551+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.products.ProdottoImpl        : updateProdotto: id=26
+2026-07-15T13:06:39.552+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.implementations.MessaggioImpl  : get prodotto.tipo.non.modificabile
+2026-07-15T13:06:39.552+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.catalogo.CatalogoServiceTest    : eccezione attesa: Il tipo di prodotto non e' modificabile
+2026-07-15T13:06:39.555+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.catalogo.CatalogoServiceTest    : TEST 5: attivo=false -> getBySlug e liste pubbliche non lo vedono
+2026-07-15T13:06:39.555+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.products.ProdottoImpl        : createProdotto: Playmat ritirato 5 [ACCESSORIO]
+2026-07-15T13:06:39.558+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.products.ProdottoImpl        : creato prodotto id=27 slug=playmat-ritirato-5
+2026-07-15T13:06:39.559+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.products.ProdottoImpl        : getBySlug: playmat-ritirato-5
+2026-07-15T13:06:39.568+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.products.ProdottoImpl        : updateProdotto: id=27
+2026-07-15T13:06:39.570+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.products.ProdottoImpl        : getBySlug: playmat-ritirato-5
+2026-07-15T13:06:39.571+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.implementations.MessaggioImpl  : get prodotto.non.trovato
+2026-07-15T13:06:39.572+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.catalogo.CatalogoServiceTest    : eccezione attesa: Prodotto non trovato
+2026-07-15T13:06:39.573+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.products.ProdottoImpl        : listByTipo: ACCESSORIO
+2026-07-15T13:06:39.581+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.catalogo.CatalogoServiceTest    : TEST 6: ricerca 'dRAgoN' trova 'Dragon Shield'
+2026-07-15T13:06:39.581+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.products.ProdottoImpl        : createProdotto: Dragon Shield Matte 6 [ACCESSORIO]
+2026-07-15T13:06:39.583+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.products.ProdottoImpl        : creato prodotto id=28 slug=dragon-shield-matte-6
+2026-07-15T13:06:39.584+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.products.ProdottoImpl        : searchByNome: dRAgoN shield matte 6
+2026-07-15T13:06:39.588+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.catalogo.CatalogoServiceTest    : trovati: 1
+2026-07-15T13:06:39.592+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.catalogo.CatalogoServiceTest    : TEST 7: default NA/en/NONFOIL; variante duplicata; update prezzo/giacenza
+2026-07-15T13:06:39.593+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.products.ProdottoImpl        : createProdotto: Deckbox pro 7 [ACCESSORIO]
+2026-07-15T13:06:39.595+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.products.ProdottoImpl        : creato prodotto id=29 slug=deckbox-pro-7
+2026-07-15T13:06:39.596+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.products.MagazzinoSKUImpl    : createSku: prodotto=29 [null/null/null]
+2026-07-15T13:06:39.601+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.products.MagazzinoSKUImpl    : creato sku id=24
+2026-07-15T13:06:39.603+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.catalogo.CatalogoServiceTest    : sku: NA/en/NONFOIL prezzo=12.50 disponibile=true
+2026-07-15T13:06:39.604+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.products.MagazzinoSKUImpl    : createSku: prodotto=29 [NA/EN/NONFOIL]
+2026-07-15T13:06:39.605+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.implementations.MessaggioImpl  : get sku.variante.duplicata
+2026-07-15T13:06:39.607+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.catalogo.CatalogoServiceTest    : eccezione attesa: Variante gia' esistente per questo prodotto
+2026-07-15T13:06:39.607+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.products.MagazzinoSKUImpl    : createSku: prodotto=29 [null/de/null]
+2026-07-15T13:06:39.609+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.products.MagazzinoSKUImpl    : creato sku id=25
+2026-07-15T13:06:39.610+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.products.MagazzinoSKUImpl    : listByProdotto: 29
+2026-07-15T13:06:39.614+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.products.MagazzinoSKUImpl    : updateSku: id=24
+2026-07-15T13:06:39.615+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.catalogo.CatalogoServiceTest    : dopo update: prezzo=14.00 quantita=0 disponibile=false
+2026-07-15T13:06:39.618+02:00  INFO 15688 --- [PlaneswalkerBazarBackend] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.betacom.mtgbazar.be.controllers.ControllerRestTest]: ControllerRestTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-07-15T13:06:39.638+02:00  INFO 15688 --- [PlaneswalkerBazarBackend] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.betacom.mtgbazar.be.PlaneswalkerBazarBackendApplication for test class com.betacom.mtgbazar.be.controllers.ControllerRestTest
+2026-07-15T13:06:39.640+02:00  INFO 15688 --- [PlaneswalkerBazarBackend] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.betacom.mtgbazar.be.controllers.ControllerRestTest]: ControllerRestTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-07-15T13:06:39.642+02:00  INFO 15688 --- [PlaneswalkerBazarBackend] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.betacom.mtgbazar.be.PlaneswalkerBazarBackendApplication for test class com.betacom.mtgbazar.be.controllers.ControllerRestTest
+2026-07-15T13:06:39.646+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.controllers.ControllerRestTest  : TEST 1: POST /registrazione -> 200, email normalizzata, NIENTE password nel JSON
+2026-07-15T13:06:39.795+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.c.users.UtenteController         : POST /api/utenti/registrazione
+2026-07-15T13:06:39.796+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registraUtente: API1@TEST.IT
+2026-07-15T13:06:39.869+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registrato utente id=64 con portafoglio id=56
+2026-07-15T13:06:39.941+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.controllers.ControllerRestTest  : TEST 2: gruppo Create + handler + V2, tutto via HTTP
+2026-07-15T13:06:39.952+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.e.GlobalExceptionHandler         : Validazione fallita: utente.email.invalid
+2026-07-15T13:06:39.958+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.implementations.MessaggioImpl  : get utente.email.invalid
+2026-07-15T13:06:39.967+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.controllers.ControllerRestTest  : TEST 3: stessa Req, gruppo diverso: senza id il PUT e' un 400
+2026-07-15T13:06:39.969+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.e.GlobalExceptionHandler         : Validazione fallita: utente.no.id
+2026-07-15T13:06:39.969+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.implementations.MessaggioImpl  : get utente.no.id
+2026-07-15T13:06:39.975+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.controllers.ControllerRestTest  : TEST 4: MtgException dal service -> handler -> 400 via HTTP
+2026-07-15T13:06:39.976+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registraUtente: api2@test.it
+2026-07-15T13:06:40.052+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registrato utente id=65 con portafoglio id=57
+2026-07-15T13:06:40.062+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.c.users.UtenteController         : POST /api/utenti/login
+2026-07-15T13:06:40.062+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : loginUtente: api2@test.it
+2026-07-15T13:06:40.135+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.implementations.MessaggioImpl  : get utente.credenziali.errate
+2026-07-15T13:06:40.139+02:00  WARN 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.e.GlobalExceptionHandler         : Errore applicativo: Email o password errati
+2026-07-15T13:06:40.145+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.controllers.ControllerRestTest  : TEST 5: GET /api/prodotti/{slug} -> dettaglio con varianti
+2026-07-15T13:06:40.153+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.c.users.ProdottoController       : GET /api/prodotti/api-playmat-3
+2026-07-15T13:06:40.153+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.products.ProdottoImpl        : getBySlug: api-playmat-3
+2026-07-15T13:06:40.174+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.c.users.ProdottoController       : GET /api/prodotti/non-esiste-3
+2026-07-15T13:06:40.175+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.products.ProdottoImpl        : getBySlug: non-esiste-3
+2026-07-15T13:06:40.175+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.implementations.MessaggioImpl  : get prodotto.non.trovato
+2026-07-15T13:06:40.178+02:00  WARN 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.e.GlobalExceptionHandler         : Errore applicativo: Prodotto non trovato
+2026-07-15T13:06:40.182+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.controllers.ControllerRestTest  : TEST 6: add-to-cart -> checkout -> conferma-consegna, tutto via HTTP
+2026-07-15T13:06:40.182+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registraUtente: api4@test.it
+2026-07-15T13:06:40.255+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registrato utente id=66 con portafoglio id=58
+2026-07-15T13:06:40.257+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : createIndirizzo: utente=66
+2026-07-15T13:06:40.259+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : creato indirizzo id=28 predefinito=true
+2026-07-15T13:06:40.261+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.PortafoglioImpl        : ricarica: utente=66 importo=50.00 metodo=BONIFICO
+2026-07-15T13:06:40.264+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.PortafoglioImpl        : confermaMovimento: id=41 approvato=true
+2026-07-15T13:06:40.277+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.c.users.CarrelloController       : POST /api/carrello/voci utente=66 sku=27
+2026-07-15T13:06:40.278+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : addVoce: utente=66 sku=27 quantita=2
+2026-07-15T13:06:40.279+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : creato carrello per utente 66
+2026-07-15T13:06:40.282+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : voce 24: quantita ora 2
+2026-07-15T13:06:40.292+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.c.users.OrdineController         : POST /api/ordini/checkout utente=66
+2026-07-15T13:06:40.294+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : checkout: utente=66 indirizzo=28
+2026-07-15T13:06:40.298+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : checkout: totale calcolato 30.00
+2026-07-15T13:06:40.303+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : checkout completato: ordine=14 totale=30.00
+2026-07-15T13:06:40.320+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.controllers.ControllerRestTest  : ordine creato via HTTP: id=14
+2026-07-15T13:06:40.322+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.c.users.CarrelloController       : GET /api/carrello/66
+2026-07-15T13:06:40.323+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : getCarrello: utente=66
+2026-07-15T13:06:40.328+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : spedisci: ordine=14 admin=67
+2026-07-15T13:06:40.330+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : ordine 14: CREATO -> SPEDITO
+2026-07-15T13:06:40.333+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.c.users.OrdineController         : POST /api/ordini/14/conferma-consegna utente=66
+2026-07-15T13:06:40.333+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : confermaConsegna: ordine=14 utente=66
+2026-07-15T13:06:40.335+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : ordine 14: SPEDITO -> CONSEGNATO
+2026-07-15T13:06:40.340+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.c.users.OrdineController         : GET /api/ordini/14/timeline utente=66
+2026-07-15T13:06:40.358+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.controllers.ControllerRestTest  : TEST 7: ownership check attraverso il layer web
+2026-07-15T13:06:40.358+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registraUtente: api7@test.it
+2026-07-15T13:06:40.436+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registrato utente id=68 con portafoglio id=59
+2026-07-15T13:06:40.437+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : createIndirizzo: utente=68
+2026-07-15T13:06:40.438+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : creato indirizzo id=29 predefinito=true
+2026-07-15T13:06:40.440+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.PortafoglioImpl        : ricarica: utente=68 importo=50.00 metodo=BONIFICO
+2026-07-15T13:06:40.443+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.PortafoglioImpl        : confermaMovimento: id=43 approvato=true
+2026-07-15T13:06:40.448+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.c.users.CarrelloController       : POST /api/carrello/voci utente=68 sku=28
+2026-07-15T13:06:40.448+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : addVoce: utente=68 sku=28 quantita=1
+2026-07-15T13:06:40.449+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : creato carrello per utente 68
+2026-07-15T13:06:40.452+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : voce 25: quantita ora 1
+2026-07-15T13:06:40.455+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.c.users.OrdineController         : POST /api/ordini/checkout utente=68
+2026-07-15T13:06:40.455+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : checkout: utente=68 indirizzo=29
+2026-07-15T13:06:40.461+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : checkout: totale calcolato 5.00
+2026-07-15T13:06:40.464+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : checkout completato: ordine=15 totale=5.00
+2026-07-15T13:06:40.467+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registraUtente: api9@test.it
+2026-07-15T13:06:40.541+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registrato utente id=69 con portafoglio id=60
+2026-07-15T13:06:40.544+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.c.users.OrdineController         : GET /api/ordini/15 utente=69
+2026-07-15T13:06:40.545+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.implementations.MessaggioImpl  : get ordine.non.trovato
+2026-07-15T13:06:40.546+02:00  WARN 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.e.GlobalExceptionHandler         : Errore applicativo: Ordine non trovato
+2026-07-15T13:06:40.550+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.be.controllers.ControllerRestTest  : TEST 8: POST /api/portafoglio/ricarica -> commissione server-side nel JSON
+2026-07-15T13:06:40.550+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registraUtente: api10@test.it
+2026-07-15T13:06:40.624+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registrato utente id=70 con portafoglio id=61
+2026-07-15T13:06:40.637+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.c.users.PortafoglioController    : POST /api/portafoglio/ricarica utente=70
+2026-07-15T13:06:40.638+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.PortafoglioImpl        : ricarica: utente=70 importo=10.00 metodo=PAYPAL
+2026-07-15T13:06:40.645+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.c.users.PortafoglioController    : GET /api/portafoglio/70
+2026-07-15T13:06:40.652+02:00  INFO 15688 --- [PlaneswalkerBazarBackend] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.betacom.mtgbazar.be.controllers.AdminControllerRestTest]: AdminControllerRestTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-07-15T13:06:40.653+02:00  INFO 15688 --- [PlaneswalkerBazarBackend] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.betacom.mtgbazar.be.PlaneswalkerBazarBackendApplication for test class com.betacom.mtgbazar.be.controllers.AdminControllerRestTest
+2026-07-15T13:06:40.655+02:00  INFO 15688 --- [PlaneswalkerBazarBackend] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.betacom.mtgbazar.be.controllers.AdminControllerRestTest]: AdminControllerRestTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-07-15T13:06:40.658+02:00  INFO 15688 --- [PlaneswalkerBazarBackend] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.betacom.mtgbazar.be.PlaneswalkerBazarBackendApplication for test class com.betacom.mtgbazar.be.controllers.AdminControllerRestTest
+2026-07-15T13:06:40.661+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.c.AdminControllerRestTest        : TEST 1: POST /api/admin/sku coi soli prezzo/quantita -> default; doppione -> 400
+2026-07-15T13:06:40.669+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.c.p.AdminMagazzinoController     : POST /api/admin/sku prodotto=33
+2026-07-15T13:06:40.669+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.products.MagazzinoSKUImpl    : createSku: prodotto=33 [null/null/null]
+2026-07-15T13:06:40.671+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.products.MagazzinoSKUImpl    : creato sku id=29
+2026-07-15T13:06:40.677+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.c.p.AdminMagazzinoController     : POST /api/admin/sku prodotto=33
+2026-07-15T13:06:40.677+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.products.MagazzinoSKUImpl    : createSku: prodotto=33 [null/null/null]
+2026-07-15T13:06:40.678+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.implementations.MessaggioImpl  : get sku.variante.duplicata
+2026-07-15T13:06:40.679+02:00  WARN 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.e.GlobalExceptionHandler         : Errore applicativo: Variante gia' esistente per questo prodotto
+2026-07-15T13:06:40.684+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.c.AdminControllerRestTest        : TEST 2: PUT /api/admin/sku -> prezzo nuovo, giacenza 0 -> non disponibile
+2026-07-15T13:06:40.688+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.c.p.AdminMagazzinoController     : PUT /api/admin/sku id=30
+2026-07-15T13:06:40.688+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.products.MagazzinoSKUImpl    : updateSku: id=30
+2026-07-15T13:06:40.694+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.c.AdminControllerRestTest        : TEST 3: POST prodotti -> slug generato; SINGLE dal form -> 400
+2026-07-15T13:06:40.699+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.c.p.AdminCatalogoController      : POST /api/admin/catalogo/prodotti Adm Booster Box! N.3
+2026-07-15T13:06:40.699+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.products.ProdottoImpl        : createProdotto: Adm Booster Box! N.3 [BOOSTER_BOX]
+2026-07-15T13:06:40.701+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.products.ProdottoImpl        : creato prodotto id=35 slug=adm-booster-box-n-3
+2026-07-15T13:06:40.704+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.c.p.AdminCatalogoController      : POST /api/admin/catalogo/prodotti Carta furbetta 3
+2026-07-15T13:06:40.704+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.products.ProdottoImpl        : createProdotto: Carta furbetta 3 [SINGLE]
+2026-07-15T13:06:40.704+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.implementations.MessaggioImpl  : get prodotto.tipo.non.modificabile
+2026-07-15T13:06:40.707+02:00  WARN 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.e.GlobalExceptionHandler         : Errore applicativo: Il tipo di prodotto non e' modificabile
+2026-07-15T13:06:40.710+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.c.AdminControllerRestTest        : TEST 4: POST espansioni -> codice minuscolo; doppione -> 400
+2026-07-15T13:06:40.715+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.c.p.AdminCatalogoController      : POST /api/admin/catalogo/espansioni AD4
+2026-07-15T13:06:40.716+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.products.EspansioneImpl      : createEspansione: AD4
+2026-07-15T13:06:40.717+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.products.EspansioneImpl      : creata espansione id=3
+2026-07-15T13:06:40.720+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.c.p.AdminCatalogoController      : POST /api/admin/catalogo/espansioni AD4
+2026-07-15T13:06:40.721+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.products.EspansioneImpl      : createEspansione: AD4
+2026-07-15T13:06:40.721+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.implementations.MessaggioImpl  : get espansione.codice.duplicato
+2026-07-15T13:06:40.722+02:00  WARN 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.e.GlobalExceptionHandler         : Errore applicativo: Codice set gia' esistente
+2026-07-15T13:06:40.727+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.c.AdminControllerRestTest        : TEST 5: coda CREATO -> spedisci -> transizione illegale -> 400
+2026-07-15T13:06:40.728+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registraUtente: adm5@test.it
+2026-07-15T13:06:40.801+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registrato utente id=71 con portafoglio id=62
+2026-07-15T13:06:40.803+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : createIndirizzo: utente=71
+2026-07-15T13:06:40.804+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : creato indirizzo id=30 predefinito=true
+2026-07-15T13:06:40.806+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.PortafoglioImpl        : ricarica: utente=71 importo=50.00 metodo=BONIFICO
+2026-07-15T13:06:40.809+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.PortafoglioImpl        : confermaMovimento: id=46 approvato=true
+2026-07-15T13:06:40.811+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : addVoce: utente=71 sku=31 quantita=1
+2026-07-15T13:06:40.813+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : creato carrello per utente 71
+2026-07-15T13:06:40.815+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : voce 26: quantita ora 1
+2026-07-15T13:06:40.816+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : checkout: utente=71 indirizzo=30
+2026-07-15T13:06:40.821+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : checkout: totale calcolato 5.00
+2026-07-15T13:06:40.825+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : checkout completato: ordine=16 totale=5.00
+2026-07-15T13:06:40.828+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.c.p.AdminOrdineController        : GET /api/admin/ordini?stato=CREATO
+2026-07-15T13:06:40.845+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.c.p.AdminOrdineController        : POST /api/admin/ordini/16/spedisci admin=72
+2026-07-15T13:06:40.845+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : spedisci: ordine=16 admin=72
+2026-07-15T13:06:40.848+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : ordine 16: CREATO -> SPEDITO
+2026-07-15T13:06:40.850+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.c.p.AdminOrdineController        : POST /api/admin/ordini/16/cancella admin=72
+2026-07-15T13:06:40.851+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : cancella: ordine=16 admin=72
+2026-07-15T13:06:40.852+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.implementations.MessaggioImpl  : get ordine.transizione.non.valida
+2026-07-15T13:06:40.852+02:00  WARN 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.e.GlobalExceptionHandler         : Errore applicativo: Cambio di stato non consentito
+2026-07-15T13:06:40.857+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.c.AdminControllerRestTest        : TEST 6: reso richiesto -> POST rimborsa -> RIMBORSATO e saldo pieno
+2026-07-15T13:06:40.858+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registraUtente: adm8@test.it
+2026-07-15T13:06:40.929+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registrato utente id=73 con portafoglio id=63
+2026-07-15T13:06:40.931+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : createIndirizzo: utente=73
+2026-07-15T13:06:40.932+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : creato indirizzo id=31 predefinito=true
+2026-07-15T13:06:40.933+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.PortafoglioImpl        : ricarica: utente=73 importo=50.00 metodo=BONIFICO
+2026-07-15T13:06:40.935+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.PortafoglioImpl        : confermaMovimento: id=48 approvato=true
+2026-07-15T13:06:40.938+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : addVoce: utente=73 sku=32 quantita=1
+2026-07-15T13:06:40.941+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : creato carrello per utente 73
+2026-07-15T13:06:40.943+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : voce 27: quantita ora 1
+2026-07-15T13:06:40.946+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : checkout: utente=73 indirizzo=31
+2026-07-15T13:06:40.949+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : checkout: totale calcolato 8.00
+2026-07-15T13:06:40.954+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : checkout completato: ordine=17 totale=8.00
+2026-07-15T13:06:40.955+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : spedisci: ordine=17 admin=74
+2026-07-15T13:06:40.958+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : ordine 17: CREATO -> SPEDITO
+2026-07-15T13:06:40.959+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : confermaConsegna: ordine=17 utente=73
+2026-07-15T13:06:40.961+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : ordine 17: SPEDITO -> CONSEGNATO
+2026-07-15T13:06:40.962+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : richiediReso: ordine=17 utente=73
+2026-07-15T13:06:40.964+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : ordine 17: CONSEGNATO -> RESO_RICHIESTO
+2026-07-15T13:06:40.966+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.c.p.AdminOrdineController        : POST /api/admin/ordini/17/rimborsa admin=74
+2026-07-15T13:06:40.966+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : rimborsa: ordine=17 admin=74
+2026-07-15T13:06:40.968+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : ordine 17: RESO_RICHIESTO -> RIMBORSATO
+2026-07-15T13:06:40.971+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.c.users.PortafoglioController    : GET /api/portafoglio/73
+2026-07-15T13:06:40.977+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.c.AdminControllerRestTest        : TEST 7: bonifico IN_ATTESA -> in coda -> conferma -> saldo accreditato
+2026-07-15T13:06:40.977+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registraUtente: adm11@test.it
+2026-07-15T13:06:41.049+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registrato utente id=75 con portafoglio id=64
+2026-07-15T13:06:41.049+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.PortafoglioImpl        : ricarica: utente=75 importo=75.00 metodo=BONIFICO
+2026-07-15T13:06:41.051+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.c.p.AdminMovimentoController     : GET /api/admin/movimenti/in-attesa
+2026-07-15T13:06:41.060+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.c.p.AdminMovimentoController     : POST /api/admin/movimenti/conferma id=51 approvato=true
+2026-07-15T13:06:41.061+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.PortafoglioImpl        : confermaMovimento: id=51 approvato=true
+2026-07-15T13:06:41.065+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.c.users.PortafoglioController    : GET /api/portafoglio/75
+2026-07-15T13:06:41.069+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.c.AdminControllerRestTest        : TEST 8: modera(false) -> la GET pubblica non la mostra piu'
+2026-07-15T13:06:41.069+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registraUtente: adm12@test.it
+2026-07-15T13:06:41.139+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.UtenteImpl             : registrato utente id=76 con portafoglio id=65
+2026-07-15T13:06:41.142+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : createIndirizzo: utente=76
+2026-07-15T13:06:41.144+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.IndirizzoImpl          : creato indirizzo id=32 predefinito=true
+2026-07-15T13:06:41.145+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.PortafoglioImpl        : ricarica: utente=76 importo=50.00 metodo=BONIFICO
+2026-07-15T13:06:41.147+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.PortafoglioImpl        : confermaMovimento: id=52 approvato=true
+2026-07-15T13:06:41.149+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : addVoce: utente=76 sku=33 quantita=1
+2026-07-15T13:06:41.150+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : creato carrello per utente 76
+2026-07-15T13:06:41.152+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.CarrelloImpl           : voce 28: quantita ora 1
+2026-07-15T13:06:41.153+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : checkout: utente=76 indirizzo=32
+2026-07-15T13:06:41.161+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : checkout: totale calcolato 20.00
+2026-07-15T13:06:41.163+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : checkout completato: ordine=18 totale=20.00
+2026-07-15T13:06:41.165+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : spedisci: ordine=18 admin=77
+2026-07-15T13:06:41.166+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : ordine 18: CREATO -> SPEDITO
+2026-07-15T13:06:41.167+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : confermaConsegna: ordine=18 utente=76
+2026-07-15T13:06:41.169+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.OrdineImpl             : ordine 18: SPEDITO -> CONSEGNATO
+2026-07-15T13:06:41.169+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.RecensioneImpl         : saveRecensione: utente=76 prodotto=38 ordine=18 voto=5
+2026-07-15T13:06:41.172+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.RecensioneImpl         : recensione 6 salvata (voto 5)
+2026-07-15T13:06:41.174+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.c.users.RecensioneController     : GET /api/recensioni/prodotto/38
+2026-07-15T13:06:41.174+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.RecensioneImpl         : listByProdotto: prodotto=38
+2026-07-15T13:06:41.179+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.c.p.AdminRecensioneController    : POST /api/admin/recensioni/6/modera approvata=false
+2026-07-15T13:06:41.179+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.RecensioneImpl         : modera: recensione=6 approvata=false
+2026-07-15T13:06:41.186+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.c.users.RecensioneController     : GET /api/recensioni/prodotto/38
+2026-07-15T13:06:41.186+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.RecensioneImpl         : listByProdotto: prodotto=38
+2026-07-15T13:06:41.188+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.c.users.RecensioneController     : GET /api/recensioni/prodotto/38/statistiche
+2026-07-15T13:06:41.189+02:00 DEBUG 15688 --- [PlaneswalkerBazarBackend] [main] c.b.m.b.s.i.users.RecensioneImpl         : getStatistiche: prodotto=38
+2026-07-15T13:06:41.210+02:00  INFO 15688 --- [PlaneswalkerBazarBackend] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-15T13:06:41.212+02:00  INFO 15688 --- [PlaneswalkerBazarBackend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-07-15T13:06:41.214+02:00  INFO 15688 --- [PlaneswalkerBazarBackend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

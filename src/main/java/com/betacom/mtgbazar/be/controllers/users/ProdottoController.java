@@ -1,4 +1,4 @@
-package com.betacom.mtgbazar.be.controllers.products;
+package com.betacom.mtgbazar.be.controllers.users;
 
 import java.util.List;
 
