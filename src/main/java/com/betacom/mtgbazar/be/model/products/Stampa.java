@@ -89,4 +89,12 @@ public class Stampa {
  
     @Column(name = "image_url", length = 500)
     private String imageUrl;
+    
+    @Column(nullable = false)
+    private Boolean attivo = Boolean.TRUE; //La stampa esiste
+
+    /** Impostato dalla sync: non piu' presente su Scryfall, in attesa di revisione admin. */
+    @Column(nullable = false)
+    private Boolean orfana = Boolean.FALSE;
+    
 }

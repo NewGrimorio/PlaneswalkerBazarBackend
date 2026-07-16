@@ -1,5 +1,6 @@
 package com.betacom.mtgbazar.be.repositories.products;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -25,4 +26,13 @@ public interface IStampaRepository extends JpaRepository<Stampa, Long> {
      * Query in META-INF: Stampa.findByCartaIdWithEspansione
      */
     List<Stampa> findByCartaIdWithEspansione(@Param("cartaId") Long cartaId);
+    
+    
+    /** Batch anti-N+1 per la sync: una pagina Scryfall (175 carte) = una SELECT. */
+    List<Stampa> findByScryfallIdIn(Collection<UUID> scryfallIds);
+
+    /** Orfani da revisionare nella pagina sync. */
+    List<Stampa> findByEspansioneIdAndOrfanaTrueAndAttivoTrue(Long espansioneId);
+    
+    List<Stampa> findByEspansioneIdAndAttivoTrue(Long espansioneId);
 }

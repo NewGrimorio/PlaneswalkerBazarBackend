@@ -1,7 +1,12 @@
 package com.betacom.mtgbazar.be.services.implementations.products;
 
+
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
+import java.util.UUID;
 import java.net.URI;
 import org.springframework.web.util.UriComponentsBuilder;
 
@@ -56,6 +61,8 @@ public class SincronizzazioneImpl implements ISincronizzazioneServices {
 
     /* Contatori del report (azzerati a ogni sync) */
     private int carteNuove, carteAggiornate, stampeNuove, stampeAggiornate, prodottiCreati;
+    /* Scryfall id visti in questo import: alimenta il rilevamento orfani */
+    private Set<UUID> vistiScryfallIds;
 
     @Override
     @Transactional
@@ -64,6 +71,7 @@ public class SincronizzazioneImpl implements ISincronizzazioneServices {
         String codice = codiceSet.trim().toLowerCase();
         log.debug("sincronizzaSet: {}", codice);
         carteNuove = carteAggiornate = stampeNuove = stampeAggiornate = prodottiCreati = 0;
+        vistiScryfallIds = new HashSet<>();
 
         // 1) Il set da Scryfall -> upsert espansione
         ScryfallSet setScryfall = chiamaScryfallSet(codice);
@@ -96,6 +104,18 @@ public class SincronizzazioneImpl implements ISincronizzazioneServices {
          log.debug("pagina completata: {} stampe finora", totale);
      	}
 
+        // 3) Rilevamento orfani: le stampe attive non viste in questo import.
+        // Il flag e' SOLO segnalazione: la disattivazione resta una decisione
+        // admin. Dentro la transazione del set: un import fallito a meta'
+        // non tocca ne' i dati ne' i flag (all-or-nothing).
+        List<Stampa> attive = stampaR.findByEspansioneIdAndAttivoTrue(espansione.getId());
+        attive.forEach(s -> s.setOrfana(!vistiScryfallIds.contains(s.getScryfallId())));
+        long stampeOrfane = attive.stream().filter(Stampa::getOrfana).count();
+        if (stampeOrfane > 0)
+            log.warn("sync {}: {} stampe orfane da revisionare", codice, stampeOrfane);
+ 
+        espansione.setDataUltimaSincronizzazione(LocalDateTime.now());
+ 
         long durata = System.currentTimeMillis() - inizio;
         log.debug("sync {} completata in {}ms: carte {}/{} stampe {}/{} prodotti {}",
                 codice, durata, carteNuove, carteAggiornate,
@@ -110,6 +130,7 @@ public class SincronizzazioneImpl implements ISincronizzazioneServices {
                 .stampeNuove(stampeNuove)
                 .stampeAggiornate(stampeAggiornate)
                 .prodottiCreati(prodottiCreati)
+                .stampeOrfane(stampeOrfane)
                 .durataMs(durata)
                 .build();
     }
@@ -221,6 +242,7 @@ public class SincronizzazioneImpl implements ISincronizzazioneServices {
     private Stampa upsertStampa(ScryfallCard card, Carta carta, Espansione espansione) {
         Stampa s = stampaR.findByScryfallId(card.id()).orElseGet(Stampa::new);
         boolean nuova = s.getId() == null;
+        vistiScryfallIds.add(card.id());
 
         s.setScryfallId(card.id());
         s.setCarta(carta);

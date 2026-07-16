@@ -1,6 +1,7 @@
 package com.betacom.mtgbazar.be.model.products;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 import jakarta.persistence.Column;
@@ -52,4 +53,7 @@ public class Espansione {
 
     @Column(name = "numero_carte")
     private Integer numeroCarte;
+    
+    @Column(name = "data_ultima_sincronizzazione")
+    private LocalDateTime dataUltimaSincronizzazione;
 }

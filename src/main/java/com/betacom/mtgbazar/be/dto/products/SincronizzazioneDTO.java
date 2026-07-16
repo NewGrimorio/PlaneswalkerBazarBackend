@@ -22,6 +22,7 @@ public class SincronizzazioneDTO {
     private Integer carteAggiornate;
     private Integer stampeNuove;
     private Integer stampeAggiornate;
+    private Long stampeOrfane;
     private Integer prodottiCreati;
     private Long durataMs;
 }
