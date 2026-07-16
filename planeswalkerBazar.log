@@ -472,3 +472,1039 @@ Caused by: org.postgresql.util.PSQLException: ERRORE: il valore nullo nella colo
 2026-07-16T15:45:00.084+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.s.i.p.SincronizzazioneImpl       : sync mh3 completata in 19133ms: carte 313/215 stampe 528/0 prodotti 528
 2026-07-16T15:45:00.145+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] c.b.m.b.c.users.EspansioneController     : GET /api/espansioni
 2026-07-16T15:45:00.147+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-16T16:01:08.911+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] .m.b.c.p.AdminSincronizzazioneController : POST /api/admin/sync/lci
+2026-07-16T16:01:08.914+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.s.i.p.SincronizzazioneImpl       : sincronizzaSet: lci
+2026-07-16T16:01:09.498+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.s.i.p.SincronizzazioneImpl       : espansione lci creata
+2026-07-16T16:01:12.647+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.s.i.p.SincronizzazioneImpl       : pagina completata: 175 stampe finora
+2026-07-16T16:01:18.640+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.s.i.p.SincronizzazioneImpl       : pagina completata: 350 stampe finora
+2026-07-16T16:01:21.493+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.s.i.p.SincronizzazioneImpl       : pagina completata: 416 stampe finora
+2026-07-16T16:01:21.510+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.s.i.p.SincronizzazioneImpl       : sync lci completata in 12596ms: carte 287/129 stampe 416/0 prodotti 416
+2026-07-16T16:01:21.550+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.c.users.EspansioneController     : GET /api/espansioni
+2026-07-16T16:01:21.551+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-16T16:01:58.448+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] .m.b.c.p.AdminSincronizzazioneController : POST /api/admin/sync/lea
+2026-07-16T16:01:58.452+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.s.i.p.SincronizzazioneImpl       : sincronizzaSet: lea
+2026-07-16T16:01:58.738+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.s.i.p.SincronizzazioneImpl       : espansione lea creata
+2026-07-16T16:02:01.785+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.s.i.p.SincronizzazioneImpl       : pagina completata: 175 stampe finora
+2026-07-16T16:02:05.078+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.s.i.p.SincronizzazioneImpl       : pagina completata: 295 stampe finora
+2026-07-16T16:02:05.087+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.s.i.p.SincronizzazioneImpl       : sync lea completata in 6635ms: carte 285/10 stampe 295/0 prodotti 295
+2026-07-16T16:02:05.124+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.c.users.EspansioneController     : GET /api/espansioni
+2026-07-16T16:02:05.127+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-16T16:02:42.062+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] .m.b.c.p.AdminSincronizzazioneController : POST /api/admin/sync/leb
+2026-07-16T16:02:42.069+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.s.i.p.SincronizzazioneImpl       : sincronizzaSet: leb
+2026-07-16T16:02:42.542+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.s.i.p.SincronizzazioneImpl       : espansione leb creata
+2026-07-16T16:02:45.530+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.s.i.p.SincronizzazioneImpl       : pagina completata: 175 stampe finora
+2026-07-16T16:02:49.475+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.s.i.p.SincronizzazioneImpl       : pagina completata: 302 stampe finora
+2026-07-16T16:02:49.485+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.s.i.p.SincronizzazioneImpl       : sync leb completata in 7416ms: carte 2/300 stampe 302/0 prodotti 302
+2026-07-16T16:02:49.527+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] c.b.m.b.c.users.EspansioneController     : GET /api/espansioni
+2026-07-16T16:02:49.528+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-16T16:04:11.165+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] .m.b.c.p.AdminSincronizzazioneController : POST /api/admin/sync/arn
+2026-07-16T16:04:11.172+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] c.b.m.b.s.i.p.SincronizzazioneImpl       : sincronizzaSet: arn
+2026-07-16T16:04:11.428+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] c.b.m.b.s.i.p.SincronizzazioneImpl       : espansione arn creata
+2026-07-16T16:04:12.533+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] c.b.m.b.s.i.p.SincronizzazioneImpl       : pagina completata: 78 stampe finora
+2026-07-16T16:04:12.536+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] c.b.m.b.s.i.p.SincronizzazioneImpl       : sync arn completata in 1365ms: carte 77/1 stampe 78/0 prodotti 78
+2026-07-16T16:04:12.565+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-8] c.b.m.b.c.users.EspansioneController     : GET /api/espansioni
+2026-07-16T16:04:12.566+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-8] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-16T16:04:33.178+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] .m.b.c.p.AdminSincronizzazioneController : POST /api/admin/sync/atq
+2026-07-16T16:04:33.182+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.s.i.p.SincronizzazioneImpl       : sincronizzaSet: atq
+2026-07-16T16:04:33.356+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.s.i.p.SincronizzazioneImpl       : espansione atq creata
+2026-07-16T16:04:34.656+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.s.i.p.SincronizzazioneImpl       : pagina completata: 100 stampe finora
+2026-07-16T16:04:34.659+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.s.i.p.SincronizzazioneImpl       : sync atq completata in 1477ms: carte 85/15 stampe 100/0 prodotti 100
+2026-07-16T16:04:34.680+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.c.users.EspansioneController     : GET /api/espansioni
+2026-07-16T16:04:34.681+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-16T16:04:48.565+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] .m.b.c.p.AdminSincronizzazioneController : POST /api/admin/sync/leg
+2026-07-16T16:04:48.570+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.s.i.p.SincronizzazioneImpl       : sincronizzaSet: leg
+2026-07-16T16:04:48.790+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.s.i.p.SincronizzazioneImpl       : espansione leg creata
+2026-07-16T16:04:51.561+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.s.i.p.SincronizzazioneImpl       : pagina completata: 175 stampe finora
+2026-07-16T16:04:55.781+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.s.i.p.SincronizzazioneImpl       : pagina completata: 310 stampe finora
+2026-07-16T16:04:55.792+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.s.i.p.SincronizzazioneImpl       : sync leg completata in 7222ms: carte 310/0 stampe 310/0 prodotti 310
+2026-07-16T16:04:55.829+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.c.users.EspansioneController     : GET /api/espansioni
+2026-07-16T16:04:55.831+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-16T16:05:53.888+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] .m.b.c.p.AdminSincronizzazioneController : POST /api/admin/sync/cmr
+2026-07-16T16:05:53.892+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.s.i.p.SincronizzazioneImpl       : sincronizzaSet: cmr
+2026-07-16T16:05:54.415+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.s.i.p.SincronizzazioneImpl       : espansione cmr creata
+2026-07-16T16:05:58.888+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.s.i.p.SincronizzazioneImpl       : pagina completata: 175 stampe finora
+2026-07-16T16:06:05.336+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.s.i.p.SincronizzazioneImpl       : pagina completata: 350 stampe finora
+2026-07-16T16:06:13.888+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.s.i.p.SincronizzazioneImpl       : pagina completata: 525 stampe finora
+2026-07-16T16:06:24.925+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.s.i.p.SincronizzazioneImpl       : pagina completata: 700 stampe finora
+2026-07-16T16:06:26.288+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.s.i.p.SincronizzazioneImpl       : pagina completata: 718 stampe finora
+2026-07-16T16:06:26.309+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.s.i.p.SincronizzazioneImpl       : sync cmr completata in 32417ms: carte 514/204 stampe 718/0 prodotti 718
+2026-07-16T16:06:26.343+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.c.users.EspansioneController     : GET /api/espansioni
+2026-07-16T16:06:26.344+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-16T16:07:30.811+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] .m.b.c.p.AdminSincronizzazioneController : POST /api/admin/sync/m3c
+2026-07-16T16:07:30.815+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.s.i.p.SincronizzazioneImpl       : sincronizzaSet: m3c
+2026-07-16T16:07:31.312+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.s.i.p.SincronizzazioneImpl       : espansione m3c creata
+2026-07-16T16:07:34.166+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.s.i.p.SincronizzazioneImpl       : pagina completata: 175 stampe finora
+2026-07-16T16:07:39.953+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.s.i.p.SincronizzazioneImpl       : pagina completata: 350 stampe finora
+2026-07-16T16:07:41.948+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.s.i.p.SincronizzazioneImpl       : pagina completata: 398 stampe finora
+2026-07-16T16:07:41.959+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.s.i.p.SincronizzazioneImpl       : sync m3c completata in 11144ms: carte 279/119 stampe 398/0 prodotti 398
+2026-07-16T16:07:41.987+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] c.b.m.b.c.users.EspansioneController     : GET /api/espansioni
+2026-07-16T16:07:41.988+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-16T16:07:55.691+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.c.users.EspansioneController     : GET /api/espansioni
+2026-07-16T16:07:55.692+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-16T16:07:58.360+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.c.users.EspansioneController     : GET /api/espansioni
+2026-07-16T16:07:58.362+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-16T16:09:12.406+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] .m.b.c.p.AdminSincronizzazioneController : POST /api/admin/sync/otj
+2026-07-16T16:09:12.412+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.s.i.p.SincronizzazioneImpl       : sincronizzaSet: otj
+2026-07-16T16:09:13.594+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.s.i.p.SincronizzazioneImpl       : espansione otj creata
+2026-07-16T16:09:16.356+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.s.i.p.SincronizzazioneImpl       : pagina completata: 175 stampe finora
+2026-07-16T16:09:22.095+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.s.i.p.SincronizzazioneImpl       : pagina completata: 350 stampe finora
+2026-07-16T16:09:23.143+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.s.i.p.SincronizzazioneImpl       : pagina completata: 374 stampe finora
+2026-07-16T16:09:23.156+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.s.i.p.SincronizzazioneImpl       : sync otj completata in 10744ms: carte 270/104 stampe 374/0 prodotti 374
+2026-07-16T16:09:23.184+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.c.users.EspansioneController     : GET /api/espansioni
+2026-07-16T16:09:23.185+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-16T16:10:40.378+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2026-07-16T16:10:40.385+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-13] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-16T16:10:40.396+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-07-16T16:10:40.405+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-13] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-16T16:10:40.407+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-13] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2026-07-16T16:10:40.417+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-13] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2026-07-16T16:10:40.569+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : Starting PlaneswalkerBazarBackendApplication using Java 25.0.2 with PID 29668 (C:\Users\Betacom\eclipse-workspace\PlaneswalkerBazarBackend\target\classes started by Betacom in C:\Users\Betacom\eclipse-workspace\PlaneswalkerBazarBackend)
+2026-07-16T16:10:40.569+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-07-16T16:10:40.569+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : No active profile set, falling back to 1 default profile: "default"
+2026-07-16T16:10:41.344+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-16T16:10:41.473+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 127 ms. Found 18 JPA repository interfaces.
+2026-07-16T16:10:41.627+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9090 (http)
+2026-07-16T16:10:41.628+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-16T16:10:41.628+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-16T16:10:41.655+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1081 ms
+2026-07-16T16:10:41.747+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2026-07-16T16:10:41.902+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection org.postgresql.jdbc.PgConnection@5016590
+2026-07-16T16:10:41.903+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2026-07-16T16:10:41.906+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:5432/db_jpa_bazar (PostgreSQL 18.4)
+2026-07-16T16:10:42.010+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 4 migrations (execution time 00:00.062s)
+2026-07-16T16:10:42.217+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 4
+2026-07-16T16:10:42.218+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2026-07-16T16:10:42.255+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-07-16T16:10:42.293+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-16T16:10:42.311+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/db_jpa_bazar]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.4
+	Default catalog/schema: db_jpa_bazar/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-16T16:10:42.422+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.core                   : HHH000038: Composite id class does not override equals(): com.betacom.mtgbazar.be.model.MessageID
+2026-07-16T16:10:42.575+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-16T16:10:42.726+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-16T16:10:43.242+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-16T16:10:43.427+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/db_jpa_bazar'
+2026-07-16T16:10:43.442+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-07-16T16:10:43.469+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9090 (http) with context path '/'
+2026-07-16T16:10:43.478+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : Started PlaneswalkerBazarBackendApplication in 2.962 seconds (process running for 6134.413)
+2026-07-16T16:10:43.480+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-07-16T16:10:43.480+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-07-16T16:10:43.481+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-07-16T16:10:48.004+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-07-16T16:10:48.007+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-17] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-16T16:10:48.014+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-07-16T16:10:48.018+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-17] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-16T16:10:48.019+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-17] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2026-07-16T16:10:48.027+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-17] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2026-07-16T16:10:48.165+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : Starting PlaneswalkerBazarBackendApplication using Java 25.0.2 with PID 29668 (C:\Users\Betacom\eclipse-workspace\PlaneswalkerBazarBackend\target\classes started by Betacom in C:\Users\Betacom\eclipse-workspace\PlaneswalkerBazarBackend)
+2026-07-16T16:10:48.166+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-07-16T16:10:48.166+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : No active profile set, falling back to 1 default profile: "default"
+2026-07-16T16:10:48.739+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-16T16:10:48.870+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 128 ms. Found 18 JPA repository interfaces.
+2026-07-16T16:10:48.965+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9090 (http)
+2026-07-16T16:10:48.965+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-16T16:10:48.966+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-16T16:10:48.983+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 816 ms
+2026-07-16T16:10:49.028+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2026-07-16T16:10:49.194+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection org.postgresql.jdbc.PgConnection@3fade9a8
+2026-07-16T16:10:49.195+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2026-07-16T16:10:49.196+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:5432/db_jpa_bazar (PostgreSQL 18.4)
+2026-07-16T16:10:49.290+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 4 migrations (execution time 00:00.063s)
+2026-07-16T16:10:49.507+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 4
+2026-07-16T16:10:49.508+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2026-07-16T16:10:49.547+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-07-16T16:10:49.581+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-16T16:10:49.599+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/db_jpa_bazar]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.4
+	Default catalog/schema: db_jpa_bazar/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-16T16:10:49.669+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.core                   : HHH000038: Composite id class does not override equals(): com.betacom.mtgbazar.be.model.MessageID
+2026-07-16T16:10:49.779+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-16T16:10:49.906+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-16T16:10:50.294+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-16T16:10:50.423+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/db_jpa_bazar'
+2026-07-16T16:10:50.433+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-07-16T16:10:50.451+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9090 (http) with context path '/'
+2026-07-16T16:10:50.454+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : Started PlaneswalkerBazarBackendApplication in 2.309 seconds (process running for 6141.389)
+2026-07-16T16:10:50.455+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-07-16T16:10:50.456+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-07-16T16:10:50.457+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-07-16T16:11:33.655+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-16T16:11:33.655+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-16T16:11:33.659+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-07-16T16:11:33.662+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.c.users.EspansioneController     : GET /api/espansioni
+2026-07-16T16:11:33.665+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-16T16:11:33.782+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.c.users.EspansioneController     : GET /api/espansioni
+2026-07-16T16:11:33.790+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-16T16:11:49.661+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.c.users.UtenteController         : POST /api/utenti/login
+2026-07-16T16:11:49.663+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.s.i.users.UtenteImpl             : loginUtente: admin@planeswalkerbazar.it
+2026-07-16T16:11:49.843+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.s.implementations.MessaggioImpl  : get utente.credenziali.errate
+2026-07-16T16:11:49.867+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.e.GlobalExceptionHandler         : Errore applicativo: Email o password errati
+2026-07-16T16:11:49.878+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.betacom.mtgbazar.be.exceptions.MtgException: Email o password errati]
+2026-07-16T16:12:02.472+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.c.users.UtenteController         : POST /api/utenti/login
+2026-07-16T16:12:02.473+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.s.i.users.UtenteImpl             : loginUtente: admin@planeswalkerbazar.it
+2026-07-16T16:12:02.639+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.s.implementations.MessaggioImpl  : get utente.credenziali.errate
+2026-07-16T16:12:02.644+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.e.GlobalExceptionHandler         : Errore applicativo: Email o password errati
+2026-07-16T16:12:02.646+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.betacom.mtgbazar.be.exceptions.MtgException: Email o password errati]
+2026-07-16T16:12:08.104+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] c.b.m.b.c.users.UtenteController         : POST /api/utenti/login
+2026-07-16T16:12:08.105+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] c.b.m.b.s.i.users.UtenteImpl             : loginUtente: admin@planeswalkerbazar.it
+2026-07-16T16:12:08.260+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] c.b.m.b.s.implementations.MessaggioImpl  : get utente.credenziali.errate
+2026-07-16T16:12:08.263+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] c.b.m.b.e.GlobalExceptionHandler         : Errore applicativo: Email o password errati
+2026-07-16T16:12:08.265+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.betacom.mtgbazar.be.exceptions.MtgException: Email o password errati]
+2026-07-16T16:12:11.020+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] c.b.m.b.c.users.EspansioneController     : GET /api/espansioni
+2026-07-16T16:12:11.021+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-16T16:12:22.563+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-8] c.b.m.b.c.users.UtenteController         : POST /api/utenti/login
+2026-07-16T16:12:22.566+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-8] c.b.m.b.s.i.users.UtenteImpl             : loginUtente: admin@planeswalkerbazar.it
+2026-07-16T16:12:24.216+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.c.users.EspansioneController     : GET /api/espansioni
+2026-07-16T16:12:24.217+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-16T16:12:50.957+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.c.users.EspansioneController     : GET /api/espansioni
+2026-07-16T16:12:50.959+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-16T16:12:53.101+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.c.users.EspansioneController     : GET /api/espansioni
+2026-07-16T16:12:53.103+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-16T16:12:57.573+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.c.users.EspansioneController     : GET /api/espansioni
+2026-07-16T16:12:57.574+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-16T16:13:00.587+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.c.users.EspansioneController     : GET /api/espansioni
+2026-07-16T16:13:00.593+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-16T16:13:02.721+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] c.b.m.b.c.users.EspansioneController     : GET /api/espansioni
+2026-07-16T16:13:02.722+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-16T16:23:37.138+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.c.users.UtenteController         : POST /api/utenti/login
+2026-07-16T16:23:37.142+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.s.i.users.UtenteImpl             : loginUtente: admin@planeswalkerbazar.it
+2026-07-16T16:25:23.139+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.c.users.EspansioneController     : GET /api/espansioni
+2026-07-16T16:25:23.140+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-16T16:25:39.769+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.c.users.UtenteController         : POST /api/utenti/login
+2026-07-16T16:25:39.772+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.s.i.users.UtenteImpl             : loginUtente: admin@planeswalkerbazar.it
+2026-07-16T16:25:40.863+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-8] c.b.m.b.c.users.EspansioneController     : GET /api/espansioni
+2026-07-16T16:25:40.869+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-8] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-16T16:25:40.872+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] c.b.m.b.c.users.ProdottoController       : GET /api/prodotti/tipo/BOOSTER
+2026-07-16T16:25:40.875+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] c.b.m.b.s.i.products.ProdottoImpl        : listByTipo: BOOSTER
+2026-07-16T16:25:46.128+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.c.users.ProdottoController       : GET /api/prodotti/tipo/BOOSTER_BOX
+2026-07-16T16:25:46.129+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.s.i.products.ProdottoImpl        : listByTipo: BOOSTER_BOX
+2026-07-16T16:25:46.775+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.c.users.ProdottoController       : GET /api/prodotti/tipo/SET_LOTTO
+2026-07-16T16:25:46.777+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.s.i.products.ProdottoImpl        : listByTipo: SET_LOTTO
+2026-07-16T16:25:47.321+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.c.users.ProdottoController       : GET /api/prodotti/tipo/BOOSTER_BOX
+2026-07-16T16:25:47.323+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.s.i.products.ProdottoImpl        : listByTipo: BOOSTER_BOX
+2026-07-16T16:25:47.969+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.c.users.ProdottoController       : GET /api/prodotti/tipo/SET_LOTTO
+2026-07-16T16:25:47.971+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.s.i.products.ProdottoImpl        : listByTipo: SET_LOTTO
+2026-07-16T16:25:48.295+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.c.users.ProdottoController       : GET /api/prodotti/tipo/SIGILLATO
+2026-07-16T16:25:48.297+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.s.i.products.ProdottoImpl        : listByTipo: SIGILLATO
+2026-07-16T16:25:48.775+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.c.users.ProdottoController       : GET /api/prodotti/tipo/ACCESSORIO
+2026-07-16T16:25:48.777+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.s.i.products.ProdottoImpl        : listByTipo: ACCESSORIO
+2026-07-16T16:25:49.664+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.c.users.ProdottoController       : GET /api/prodotti/tipo/BOOSTER_BOX
+2026-07-16T16:25:49.665+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.s.i.products.ProdottoImpl        : listByTipo: BOOSTER_BOX
+2026-07-16T16:27:50.216+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.c.users.EspansioneController     : GET /api/espansioni
+2026-07-16T16:27:50.221+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-16T16:27:50.287+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.c.users.EspansioneController     : GET /api/espansioni
+2026-07-16T16:27:50.288+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-16T16:28:00.351+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.c.users.UtenteController         : POST /api/utenti/login
+2026-07-16T16:28:00.353+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.s.i.users.UtenteImpl             : loginUtente: admin@planeswalkerbazar.it
+2026-07-16T16:28:01.447+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.c.users.ProdottoController       : GET /api/prodotti/tipo/BOOSTER
+2026-07-16T16:28:01.449+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.s.i.products.ProdottoImpl        : listByTipo: BOOSTER
+2026-07-16T16:28:01.455+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.c.users.EspansioneController     : GET /api/espansioni
+2026-07-16T16:28:01.458+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-16T16:31:42.401+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.c.p.AdminCatalogoController      : POST /api/admin/catalogo/prodotti Modern Horizon 3 Play Booster Box 36 bustine (ENG)
+2026-07-16T16:31:42.403+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.s.i.products.ProdottoImpl        : createProdotto: Modern Horizon 3 Play Booster Box 36 bustine (ENG) [BOOSTER_BOX]
+2026-07-16T16:31:42.445+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.s.i.products.ProdottoImpl        : creato prodotto id=3990 slug=modern-horizon-3-play-booster-box-36-bustine-eng
+2026-07-16T16:31:42.502+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.c.users.ProdottoController       : GET /api/prodotti/tipo/BOOSTER
+2026-07-16T16:31:42.505+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.s.i.products.ProdottoImpl        : listByTipo: BOOSTER
+2026-07-16T16:31:45.090+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.c.users.ProdottoController       : GET /api/prodotti/tipo/BOOSTER_BOX
+2026-07-16T16:31:45.093+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.s.i.products.ProdottoImpl        : listByTipo: BOOSTER_BOX
+2026-07-16T16:31:46.811+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.c.users.ProdottoController       : GET /api/prodotti/tipo/BOOSTER
+2026-07-16T16:31:46.812+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.s.i.products.ProdottoImpl        : listByTipo: BOOSTER
+2026-07-16T16:31:47.353+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.c.users.ProdottoController       : GET /api/prodotti/tipo/BOOSTER_BOX
+2026-07-16T16:31:47.355+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.s.i.products.ProdottoImpl        : listByTipo: BOOSTER_BOX
+2026-07-16T16:31:54.120+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.c.p.AdminCatalogoController      : PUT /api/admin/catalogo/prodotti id=3990
+2026-07-16T16:31:54.121+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.s.i.products.ProdottoImpl        : updateProdotto: id=3990
+2026-07-16T16:31:54.154+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.c.users.ProdottoController       : GET /api/prodotti/tipo/BOOSTER_BOX
+2026-07-16T16:31:54.157+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.s.i.products.ProdottoImpl        : listByTipo: BOOSTER_BOX
+2026-07-16T16:31:54.969+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-8] c.b.m.b.c.p.AdminCatalogoController      : PUT /api/admin/catalogo/prodotti id=3990
+2026-07-16T16:31:54.971+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-8] c.b.m.b.s.i.products.ProdottoImpl        : updateProdotto: id=3990
+2026-07-16T16:31:56.011+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] c.b.m.b.c.p.AdminCatalogoController      : PUT /api/admin/catalogo/prodotti id=3990
+2026-07-16T16:31:56.012+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] c.b.m.b.s.i.products.ProdottoImpl        : updateProdotto: id=3990
+2026-07-16T16:32:08.698+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] c.b.m.b.c.users.ProdottoController       : GET /api/prodotti/tipo/BOOSTER_BOX
+2026-07-16T16:32:08.700+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] c.b.m.b.s.i.products.ProdottoImpl        : listByTipo: BOOSTER_BOX
+2026-07-16T16:32:17.938+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.c.users.ProdottoController       : GET /api/prodotti/tipo/ACCESSORIO
+2026-07-16T16:32:17.939+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.s.i.products.ProdottoImpl        : listByTipo: ACCESSORIO
+2026-07-16T16:32:18.617+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.c.users.ProdottoController       : GET /api/prodotti/tipo/SIGILLATO
+2026-07-16T16:32:18.619+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.s.i.products.ProdottoImpl        : listByTipo: SIGILLATO
+2026-07-16T16:32:19.354+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.c.users.ProdottoController       : GET /api/prodotti/tipo/SET_LOTTO
+2026-07-16T16:32:19.355+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.s.i.products.ProdottoImpl        : listByTipo: SET_LOTTO
+2026-07-16T16:32:19.913+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.c.users.ProdottoController       : GET /api/prodotti/tipo/BOOSTER_BOX
+2026-07-16T16:32:19.915+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.s.i.products.ProdottoImpl        : listByTipo: BOOSTER_BOX
+2026-07-16T16:32:27.605+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.c.users.ProdottoController       : GET /api/prodotti/tipo/BOOSTER
+2026-07-16T16:32:27.609+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.s.i.products.ProdottoImpl        : listByTipo: BOOSTER
+2026-07-16T16:32:27.612+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.c.users.EspansioneController     : GET /api/espansioni
+2026-07-16T16:32:27.613+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-16T16:32:31.901+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] c.b.m.b.c.users.EspansioneController     : GET /api/espansioni
+2026-07-16T16:32:31.902+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-16T16:32:31.903+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-8] c.b.m.b.c.users.ProdottoController       : GET /api/prodotti/tipo/BOOSTER
+2026-07-16T16:32:31.907+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-8] c.b.m.b.s.i.products.ProdottoImpl        : listByTipo: BOOSTER
+2026-07-16T16:32:33.482+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] c.b.m.b.c.users.ProdottoController       : GET /api/prodotti/tipo/BOOSTER_BOX
+2026-07-16T16:32:33.484+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] c.b.m.b.s.i.products.ProdottoImpl        : listByTipo: BOOSTER_BOX
+2026-07-16T16:33:55.925+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.c.users.ProdottoController       : GET /api/prodotti/tipo/BOOSTER_BOX
+2026-07-16T16:33:55.926+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.s.i.products.ProdottoImpl        : listByTipo: BOOSTER_BOX
+2026-07-16T16:50:48.472+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2026-07-16T16:50:48.476+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-21] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-16T16:50:48.480+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-07-16T16:50:48.488+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-21] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-16T16:50:48.491+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-21] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2026-07-16T16:50:48.495+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-21] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2026-07-16T16:50:48.635+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : Starting PlaneswalkerBazarBackendApplication using Java 25.0.2 with PID 29668 (C:\Users\Betacom\eclipse-workspace\PlaneswalkerBazarBackend\target\classes started by Betacom in C:\Users\Betacom\eclipse-workspace\PlaneswalkerBazarBackend)
+2026-07-16T16:50:48.636+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-07-16T16:50:48.636+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : No active profile set, falling back to 1 default profile: "default"
+2026-07-16T16:50:49.349+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-16T16:50:49.477+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 124 ms. Found 18 JPA repository interfaces.
+2026-07-16T16:50:49.598+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9090 (http)
+2026-07-16T16:50:49.599+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-16T16:50:49.600+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-16T16:50:49.626+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 988 ms
+2026-07-16T16:50:49.686+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2026-07-16T16:50:49.840+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Added connection org.postgresql.jdbc.PgConnection@53407c26
+2026-07-16T16:50:49.841+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2026-07-16T16:50:49.841+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:5432/db_jpa_bazar (PostgreSQL 18.4)
+2026-07-16T16:50:49.931+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 4 migrations (execution time 00:00.056s)
+2026-07-16T16:50:50.165+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 4
+2026-07-16T16:50:50.166+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2026-07-16T16:50:50.238+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-07-16T16:50:50.264+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-16T16:50:50.280+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/db_jpa_bazar]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.4
+	Default catalog/schema: db_jpa_bazar/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-16T16:50:50.352+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.core                   : HHH000038: Composite id class does not override equals(): com.betacom.mtgbazar.be.model.MessageID
+2026-07-16T16:50:50.588+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-16T16:50:50.746+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-16T16:50:51.757+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-16T16:50:52.277+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/db_jpa_bazar'
+2026-07-16T16:50:52.321+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-07-16T16:50:52.394+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9090 (http) with context path '/'
+2026-07-16T16:50:52.405+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : Started PlaneswalkerBazarBackendApplication in 3.793 seconds (process running for 8543.327)
+2026-07-16T16:50:52.408+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-07-16T16:50:52.409+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-07-16T16:50:52.411+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-07-16T16:52:14.235+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-07-16T16:52:14.238+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-25] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-16T16:52:14.250+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-07-16T16:52:14.256+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-25] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-16T16:52:14.257+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-25] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2026-07-16T16:52:14.264+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-25] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2026-07-16T16:52:14.366+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : Starting PlaneswalkerBazarBackendApplication using Java 25.0.2 with PID 29668 (C:\Users\Betacom\eclipse-workspace\PlaneswalkerBazarBackend\target\classes started by Betacom in C:\Users\Betacom\eclipse-workspace\PlaneswalkerBazarBackend)
+2026-07-16T16:52:14.366+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-07-16T16:52:14.366+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : No active profile set, falling back to 1 default profile: "default"
+2026-07-16T16:52:14.902+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-16T16:52:15.045+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 140 ms. Found 18 JPA repository interfaces.
+2026-07-16T16:52:15.150+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9090 (http)
+2026-07-16T16:52:15.151+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-16T16:52:15.151+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-16T16:52:15.168+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 800 ms
+2026-07-16T16:52:15.209+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2026-07-16T16:52:15.372+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-8 - Added connection org.postgresql.jdbc.PgConnection@6a54e692
+2026-07-16T16:52:15.372+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2026-07-16T16:52:15.374+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:5432/db_jpa_bazar (PostgreSQL 18.4)
+2026-07-16T16:52:15.457+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 4 migrations (execution time 00:00.055s)
+2026-07-16T16:52:15.663+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 4
+2026-07-16T16:52:15.664+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2026-07-16T16:52:15.681+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-07-16T16:52:15.705+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-16T16:52:15.730+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/db_jpa_bazar]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.4
+	Default catalog/schema: db_jpa_bazar/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-16T16:52:15.795+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.core                   : HHH000038: Composite id class does not override equals(): com.betacom.mtgbazar.be.model.MessageID
+2026-07-16T16:52:15.880+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-16T16:52:16.079+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-16T16:52:16.429+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-16T16:52:16.546+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/db_jpa_bazar'
+2026-07-16T16:52:16.555+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-07-16T16:52:16.575+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9090 (http) with context path '/'
+2026-07-16T16:52:16.579+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : Started PlaneswalkerBazarBackendApplication in 2.237 seconds (process running for 8627.501)
+2026-07-16T16:52:16.580+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-07-16T16:52:16.580+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-07-16T16:52:16.580+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-07-16T16:53:46.839+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-07-16T16:53:46.840+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-29] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-16T16:53:46.844+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-07-16T16:53:46.847+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-29] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-16T16:53:46.847+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-29] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2026-07-16T16:53:46.850+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-29] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
+2026-07-16T16:53:46.939+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : Starting PlaneswalkerBazarBackendApplication using Java 25.0.2 with PID 29668 (C:\Users\Betacom\eclipse-workspace\PlaneswalkerBazarBackend\target\classes started by Betacom in C:\Users\Betacom\eclipse-workspace\PlaneswalkerBazarBackend)
+2026-07-16T16:53:46.939+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-07-16T16:53:46.939+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : No active profile set, falling back to 1 default profile: "default"
+2026-07-16T16:53:47.557+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-16T16:53:47.675+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 115 ms. Found 18 JPA repository interfaces.
+2026-07-16T16:53:47.763+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9090 (http)
+2026-07-16T16:53:47.764+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-16T16:53:47.764+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-16T16:53:47.786+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 846 ms
+2026-07-16T16:53:47.855+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Starting...
+2026-07-16T16:53:48.035+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-9 - Added connection org.postgresql.jdbc.PgConnection@5f48b2bc
+2026-07-16T16:53:48.035+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Start completed.
+2026-07-16T16:53:48.037+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:5432/db_jpa_bazar (PostgreSQL 18.4)
+2026-07-16T16:53:48.126+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 4 migrations (execution time 00:00.053s)
+2026-07-16T16:53:48.374+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 4
+2026-07-16T16:53:48.374+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2026-07-16T16:53:48.397+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-07-16T16:53:48.420+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-16T16:53:48.439+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/db_jpa_bazar]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.4
+	Default catalog/schema: db_jpa_bazar/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-16T16:53:48.526+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.core                   : HHH000038: Composite id class does not override equals(): com.betacom.mtgbazar.be.model.MessageID
+2026-07-16T16:53:48.639+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-16T16:53:48.807+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-16T16:53:49.140+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-16T16:53:49.256+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/db_jpa_bazar'
+2026-07-16T16:53:49.266+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-07-16T16:53:49.283+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9090 (http) with context path '/'
+2026-07-16T16:53:49.286+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : Started PlaneswalkerBazarBackendApplication in 2.364 seconds (process running for 8720.208)
+2026-07-16T16:53:49.287+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-07-16T16:53:49.287+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-07-16T16:53:49.287+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-07-16T16:55:32.072+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2026-07-16T16:55:32.074+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-33] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-16T16:55:32.085+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-07-16T16:55:32.090+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-33] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-16T16:55:32.091+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-33] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown initiated...
+2026-07-16T16:55:32.097+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-33] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown completed.
+2026-07-16T16:55:32.195+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : Starting PlaneswalkerBazarBackendApplication using Java 25.0.2 with PID 29668 (C:\Users\Betacom\eclipse-workspace\PlaneswalkerBazarBackend\target\classes started by Betacom in C:\Users\Betacom\eclipse-workspace\PlaneswalkerBazarBackend)
+2026-07-16T16:55:32.195+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-07-16T16:55:32.195+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : No active profile set, falling back to 1 default profile: "default"
+2026-07-16T16:55:32.851+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-16T16:55:32.986+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 133 ms. Found 18 JPA repository interfaces.
+2026-07-16T16:55:33.080+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9090 (http)
+2026-07-16T16:55:33.081+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-16T16:55:33.081+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-16T16:55:33.097+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 900 ms
+2026-07-16T16:55:33.138+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Starting...
+2026-07-16T16:55:33.346+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-10 - Added connection org.postgresql.jdbc.PgConnection@550b1740
+2026-07-16T16:55:33.346+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Start completed.
+2026-07-16T16:55:33.348+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:5432/db_jpa_bazar (PostgreSQL 18.4)
+2026-07-16T16:55:33.450+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 4 migrations (execution time 00:00.059s)
+2026-07-16T16:55:33.668+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 4
+2026-07-16T16:55:33.669+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2026-07-16T16:55:33.837+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-07-16T16:55:33.900+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-16T16:55:33.920+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/db_jpa_bazar]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.4
+	Default catalog/schema: db_jpa_bazar/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-16T16:55:34.099+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.core                   : HHH000038: Composite id class does not override equals(): com.betacom.mtgbazar.be.model.MessageID
+2026-07-16T16:55:34.379+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-16T16:55:34.543+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-16T16:55:35.483+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-16T16:55:35.943+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/db_jpa_bazar'
+2026-07-16T16:55:35.979+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-07-16T16:55:36.041+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9090 (http) with context path '/'
+2026-07-16T16:55:36.052+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : Started PlaneswalkerBazarBackendApplication in 3.873 seconds (process running for 8826.973)
+2026-07-16T16:55:36.053+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-07-16T16:55:36.055+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-07-16T16:55:36.055+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-07-16T16:56:25.201+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-07-16T16:56:25.203+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-37] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-16T16:56:25.212+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-07-16T16:56:25.220+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-37] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-16T16:56:25.221+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-37] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown initiated...
+2026-07-16T16:56:25.227+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-37] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown completed.
+2026-07-16T16:56:25.349+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : Starting PlaneswalkerBazarBackendApplication using Java 25.0.2 with PID 29668 (C:\Users\Betacom\eclipse-workspace\PlaneswalkerBazarBackend\target\classes started by Betacom in C:\Users\Betacom\eclipse-workspace\PlaneswalkerBazarBackend)
+2026-07-16T16:56:25.349+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-07-16T16:56:25.349+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : No active profile set, falling back to 1 default profile: "default"
+2026-07-16T16:56:26.008+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-16T16:56:26.146+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 137 ms. Found 18 JPA repository interfaces.
+2026-07-16T16:56:26.242+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9090 (http)
+2026-07-16T16:56:26.243+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-16T16:56:26.243+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-16T16:56:26.263+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 913 ms
+2026-07-16T16:56:26.306+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Starting...
+2026-07-16T16:56:26.501+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-11 - Added connection org.postgresql.jdbc.PgConnection@5b0bd0de
+2026-07-16T16:56:26.502+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Start completed.
+2026-07-16T16:56:26.506+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:5432/db_jpa_bazar (PostgreSQL 18.4)
+2026-07-16T16:56:26.627+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 4 migrations (execution time 00:00.078s)
+2026-07-16T16:56:26.839+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 4
+2026-07-16T16:56:26.840+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2026-07-16T16:56:26.870+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-07-16T16:56:26.900+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-16T16:56:26.918+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/db_jpa_bazar]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.4
+	Default catalog/schema: db_jpa_bazar/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-16T16:56:26.982+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.core                   : HHH000038: Composite id class does not override equals(): com.betacom.mtgbazar.be.model.MessageID
+2026-07-16T16:56:27.087+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-16T16:56:27.241+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-16T16:56:27.647+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-16T16:56:27.764+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/db_jpa_bazar'
+2026-07-16T16:56:27.773+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-07-16T16:56:27.803+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9090 (http) with context path '/'
+2026-07-16T16:56:27.807+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : Started PlaneswalkerBazarBackendApplication in 2.474 seconds (process running for 8878.728)
+2026-07-16T16:56:27.808+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-07-16T16:56:27.808+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-07-16T16:56:27.809+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-07-16T17:02:37.826+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2026-07-16T17:02:37.828+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-41] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-16T17:02:37.836+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-07-16T17:02:37.842+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-41] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-16T17:02:37.843+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-41] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown initiated...
+2026-07-16T17:02:37.847+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-41] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown completed.
+2026-07-16T17:02:37.937+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : Starting PlaneswalkerBazarBackendApplication using Java 25.0.2 with PID 29668 (C:\Users\Betacom\eclipse-workspace\PlaneswalkerBazarBackend\target\classes started by Betacom in C:\Users\Betacom\eclipse-workspace\PlaneswalkerBazarBackend)
+2026-07-16T17:02:37.938+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-07-16T17:02:37.938+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : No active profile set, falling back to 1 default profile: "default"
+2026-07-16T17:02:38.561+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-16T17:02:38.688+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 126 ms. Found 18 JPA repository interfaces.
+2026-07-16T17:02:38.810+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9090 (http)
+2026-07-16T17:02:38.812+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-16T17:02:38.812+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-16T17:02:38.830+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 889 ms
+2026-07-16T17:02:38.894+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Starting...
+2026-07-16T17:02:39.075+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-12 - Added connection org.postgresql.jdbc.PgConnection@64df848b
+2026-07-16T17:02:39.076+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Start completed.
+2026-07-16T17:02:39.079+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:5432/db_jpa_bazar (PostgreSQL 18.4)
+2026-07-16T17:02:39.158+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 4 migrations (execution time 00:00.046s)
+2026-07-16T17:02:39.380+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 4
+2026-07-16T17:02:39.380+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2026-07-16T17:02:39.418+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-07-16T17:02:39.453+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-16T17:02:39.470+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/db_jpa_bazar]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.4
+	Default catalog/schema: db_jpa_bazar/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-16T17:02:39.643+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.core                   : HHH000038: Composite id class does not override equals(): com.betacom.mtgbazar.be.model.MessageID
+2026-07-16T17:02:39.928+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-16T17:02:40.075+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-16T17:02:41.040+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-16T17:02:41.621+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/db_jpa_bazar'
+2026-07-16T17:02:41.683+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-07-16T17:02:41.757+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9090 (http) with context path '/'
+2026-07-16T17:02:41.767+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : Started PlaneswalkerBazarBackendApplication in 3.847 seconds (process running for 9252.686)
+2026-07-16T17:02:41.769+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-07-16T17:02:41.770+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-07-16T17:02:41.772+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-07-16T17:03:04.228+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-07-16T17:03:04.230+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-45] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-16T17:03:04.233+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-07-16T17:03:04.237+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-45] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-16T17:03:04.238+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-45] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Shutdown initiated...
+2026-07-16T17:03:04.242+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-45] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Shutdown completed.
+2026-07-16T17:03:04.362+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : Starting PlaneswalkerBazarBackendApplication using Java 25.0.2 with PID 29668 (C:\Users\Betacom\eclipse-workspace\PlaneswalkerBazarBackend\target\classes started by Betacom in C:\Users\Betacom\eclipse-workspace\PlaneswalkerBazarBackend)
+2026-07-16T17:03:04.362+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-07-16T17:03:04.362+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : No active profile set, falling back to 1 default profile: "default"
+2026-07-16T17:03:04.888+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-16T17:03:05.019+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 129 ms. Found 18 JPA repository interfaces.
+2026-07-16T17:03:05.120+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9090 (http)
+2026-07-16T17:03:05.121+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-16T17:03:05.121+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-16T17:03:05.139+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 775 ms
+2026-07-16T17:03:05.194+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Starting...
+2026-07-16T17:03:05.344+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-13 - Added connection org.postgresql.jdbc.PgConnection@115b3021
+2026-07-16T17:03:05.344+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Start completed.
+2026-07-16T17:03:05.347+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:5432/db_jpa_bazar (PostgreSQL 18.4)
+2026-07-16T17:03:05.445+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 4 migrations (execution time 00:00.064s)
+2026-07-16T17:03:05.670+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 4
+2026-07-16T17:03:05.670+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2026-07-16T17:03:05.689+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-07-16T17:03:05.709+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-16T17:03:05.727+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/db_jpa_bazar]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.4
+	Default catalog/schema: db_jpa_bazar/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-16T17:03:05.793+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.core                   : HHH000038: Composite id class does not override equals(): com.betacom.mtgbazar.be.model.MessageID
+2026-07-16T17:03:05.871+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-16T17:03:06.024+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-16T17:03:06.333+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-16T17:03:06.446+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/db_jpa_bazar'
+2026-07-16T17:03:06.453+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-07-16T17:03:06.471+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9090 (http) with context path '/'
+2026-07-16T17:03:06.476+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : Started PlaneswalkerBazarBackendApplication in 2.13 seconds (process running for 9277.396)
+2026-07-16T17:03:06.477+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-07-16T17:03:06.477+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-07-16T17:03:06.478+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-07-16T17:03:20.371+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-07-16T17:03:20.374+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-49] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-16T17:03:20.381+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-07-16T17:03:20.390+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-49] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-16T17:03:20.391+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-49] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Shutdown initiated...
+2026-07-16T17:03:20.393+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-49] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Shutdown completed.
+2026-07-16T17:03:20.510+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : Starting PlaneswalkerBazarBackendApplication using Java 25.0.2 with PID 29668 (C:\Users\Betacom\eclipse-workspace\PlaneswalkerBazarBackend\target\classes started by Betacom in C:\Users\Betacom\eclipse-workspace\PlaneswalkerBazarBackend)
+2026-07-16T17:03:20.511+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-07-16T17:03:20.511+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : No active profile set, falling back to 1 default profile: "default"
+2026-07-16T17:03:21.104+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-16T17:03:21.223+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 117 ms. Found 18 JPA repository interfaces.
+2026-07-16T17:03:21.309+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9090 (http)
+2026-07-16T17:03:21.309+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-16T17:03:21.310+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-16T17:03:21.328+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 816 ms
+2026-07-16T17:03:21.396+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Starting...
+2026-07-16T17:03:21.535+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-14 - Added connection org.postgresql.jdbc.PgConnection@3035081d
+2026-07-16T17:03:21.536+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Start completed.
+2026-07-16T17:03:21.536+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:5432/db_jpa_bazar (PostgreSQL 18.4)
+2026-07-16T17:03:21.620+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 4 migrations (execution time 00:00.055s)
+2026-07-16T17:03:21.812+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 4
+2026-07-16T17:03:21.813+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2026-07-16T17:03:21.832+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-07-16T17:03:21.854+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-16T17:03:21.871+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/db_jpa_bazar]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.4
+	Default catalog/schema: db_jpa_bazar/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-16T17:03:21.935+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.core                   : HHH000038: Composite id class does not override equals(): com.betacom.mtgbazar.be.model.MessageID
+2026-07-16T17:03:22.010+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-16T17:03:22.160+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-16T17:03:22.494+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-16T17:03:22.612+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/db_jpa_bazar'
+2026-07-16T17:03:22.623+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-07-16T17:03:22.645+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9090 (http) with context path '/'
+2026-07-16T17:03:22.647+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : Started PlaneswalkerBazarBackendApplication in 2.155 seconds (process running for 9293.567)
+2026-07-16T17:03:22.648+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-07-16T17:03:22.648+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-07-16T17:03:22.649+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-07-16T17:03:44.161+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2026-07-16T17:03:44.164+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-53] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-16T17:03:44.169+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-07-16T17:03:44.174+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-53] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-16T17:03:44.174+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-53] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Shutdown initiated...
+2026-07-16T17:03:44.179+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-53] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Shutdown completed.
+2026-07-16T17:03:44.276+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : Starting PlaneswalkerBazarBackendApplication using Java 25.0.2 with PID 29668 (C:\Users\Betacom\eclipse-workspace\PlaneswalkerBazarBackend\target\classes started by Betacom in C:\Users\Betacom\eclipse-workspace\PlaneswalkerBazarBackend)
+2026-07-16T17:03:44.276+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-07-16T17:03:44.276+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : No active profile set, falling back to 1 default profile: "default"
+2026-07-16T17:03:45.347+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-16T17:03:45.567+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 217 ms. Found 18 JPA repository interfaces.
+2026-07-16T17:03:45.667+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9090 (http)
+2026-07-16T17:03:45.668+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-16T17:03:45.668+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-16T17:03:45.690+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1413 ms
+2026-07-16T17:03:45.730+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Starting...
+2026-07-16T17:03:45.899+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-15 - Added connection org.postgresql.jdbc.PgConnection@43e22a5
+2026-07-16T17:03:45.900+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Start completed.
+2026-07-16T17:03:45.901+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:5432/db_jpa_bazar (PostgreSQL 18.4)
+2026-07-16T17:03:45.992+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 4 migrations (execution time 00:00.057s)
+2026-07-16T17:03:46.198+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 4
+2026-07-16T17:03:46.199+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2026-07-16T17:03:46.252+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-07-16T17:03:46.270+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-16T17:03:46.286+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/db_jpa_bazar]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.4
+	Default catalog/schema: db_jpa_bazar/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-16T17:03:46.361+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.core                   : HHH000038: Composite id class does not override equals(): com.betacom.mtgbazar.be.model.MessageID
+2026-07-16T17:03:46.454+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-16T17:03:46.604+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-16T17:03:47.302+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-16T17:03:47.845+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/db_jpa_bazar'
+2026-07-16T17:03:47.892+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-07-16T17:03:47.962+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9090 (http) with context path '/'
+2026-07-16T17:03:47.970+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : Started PlaneswalkerBazarBackendApplication in 3.709 seconds (process running for 9318.89)
+2026-07-16T17:03:47.976+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-07-16T17:03:47.977+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-07-16T17:03:47.980+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-07-16T17:04:40.085+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 4 class path changes (0 additions, 0 deletions, 4 modifications)
+2026-07-16T17:04:40.086+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-57] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-16T17:04:40.092+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-07-16T17:04:40.096+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-57] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-16T17:04:40.096+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-57] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Shutdown initiated...
+2026-07-16T17:04:40.100+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-57] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Shutdown completed.
+2026-07-16T17:04:40.222+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : Starting PlaneswalkerBazarBackendApplication using Java 25.0.2 with PID 29668 (C:\Users\Betacom\eclipse-workspace\PlaneswalkerBazarBackend\target\classes started by Betacom in C:\Users\Betacom\eclipse-workspace\PlaneswalkerBazarBackend)
+2026-07-16T17:04:40.222+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-07-16T17:04:40.222+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : No active profile set, falling back to 1 default profile: "default"
+2026-07-16T17:04:40.776+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-16T17:04:40.882+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 104 ms. Found 18 JPA repository interfaces.
+2026-07-16T17:04:41.007+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9090 (http)
+2026-07-16T17:04:41.008+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-16T17:04:41.008+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-16T17:04:41.031+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 807 ms
+2026-07-16T17:04:41.069+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-16 - Starting...
+2026-07-16T17:04:41.229+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-16 - Added connection org.postgresql.jdbc.PgConnection@113b40a4
+2026-07-16T17:04:41.229+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-16 - Start completed.
+2026-07-16T17:04:41.230+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:5432/db_jpa_bazar (PostgreSQL 18.4)
+2026-07-16T17:04:41.342+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 4 migrations (execution time 00:00.064s)
+2026-07-16T17:04:41.585+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 4
+2026-07-16T17:04:41.585+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2026-07-16T17:04:41.622+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-07-16T17:04:41.649+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-16T17:04:41.667+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/db_jpa_bazar]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.4
+	Default catalog/schema: db_jpa_bazar/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-16T17:04:41.729+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.core                   : HHH000038: Composite id class does not override equals(): com.betacom.mtgbazar.be.model.MessageID
+2026-07-16T17:04:41.812+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-16T17:04:41.937+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-16T17:04:42.320+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-16T17:04:42.439+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/db_jpa_bazar'
+2026-07-16T17:04:42.450+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-07-16T17:04:42.477+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9090 (http) with context path '/'
+2026-07-16T17:04:42.480+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : Started PlaneswalkerBazarBackendApplication in 2.278 seconds (process running for 9373.4)
+2026-07-16T17:04:42.481+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-07-16T17:04:42.482+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-07-16T17:04:42.482+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-07-16T17:05:10.927+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-07-16T17:05:10.928+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-61] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-16T17:05:10.932+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-07-16T17:05:10.936+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-61] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-16T17:05:10.937+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-61] com.zaxxer.hikari.HikariDataSource       : HikariPool-16 - Shutdown initiated...
+2026-07-16T17:05:10.939+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-61] com.zaxxer.hikari.HikariDataSource       : HikariPool-16 - Shutdown completed.
+2026-07-16T17:05:11.059+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : Starting PlaneswalkerBazarBackendApplication using Java 25.0.2 with PID 29668 (C:\Users\Betacom\eclipse-workspace\PlaneswalkerBazarBackend\target\classes started by Betacom in C:\Users\Betacom\eclipse-workspace\PlaneswalkerBazarBackend)
+2026-07-16T17:05:11.059+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-07-16T17:05:11.059+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : No active profile set, falling back to 1 default profile: "default"
+2026-07-16T17:05:11.637+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-16T17:05:11.740+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 102 ms. Found 18 JPA repository interfaces.
+2026-07-16T17:05:11.830+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9090 (http)
+2026-07-16T17:05:11.831+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-16T17:05:11.831+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-16T17:05:11.850+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 790 ms
+2026-07-16T17:05:11.917+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-17 - Starting...
+2026-07-16T17:05:12.070+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-17 - Added connection org.postgresql.jdbc.PgConnection@339bf99c
+2026-07-16T17:05:12.070+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-17 - Start completed.
+2026-07-16T17:05:12.071+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:5432/db_jpa_bazar (PostgreSQL 18.4)
+2026-07-16T17:05:12.165+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 4 migrations (execution time 00:00.061s)
+2026-07-16T17:05:12.355+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 4
+2026-07-16T17:05:12.355+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2026-07-16T17:05:12.371+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-07-16T17:05:12.387+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-16T17:05:12.407+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/db_jpa_bazar]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.4
+	Default catalog/schema: db_jpa_bazar/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-16T17:05:12.462+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.core                   : HHH000038: Composite id class does not override equals(): com.betacom.mtgbazar.be.model.MessageID
+2026-07-16T17:05:12.524+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-16T17:05:12.688+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-16T17:05:12.982+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'immagineImpl' defined in file [C:\Users\Betacom\eclipse-workspace\PlaneswalkerBazarBackend\target\classes\com\betacom\mtgbazar\be\services\implementations\products\ImmagineImpl.class]: Failed to instantiate [com.betacom.mtgbazar.be.services.implementations.products.ImmagineImpl]: Constructor threw exception
+2026-07-16T17:05:12.982+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-16T17:05:12.983+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-17 - Shutdown initiated...
+2026-07-16T17:05:13.224+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-17 - Shutdown completed.
+2026-07-16T17:05:13.227+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-07-16T17:05:13.242+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-07-16T17:05:13.266+02:00 ERROR 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'immagineImpl' defined in file [C:\Users\Betacom\eclipse-workspace\PlaneswalkerBazarBackend\target\classes\com\betacom\mtgbazar\be\services\implementations\products\ImmagineImpl.class]: Failed to instantiate [com.betacom.mtgbazar.be.services.implementations.products.ImmagineImpl]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:321) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:309) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1380) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1219) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1225) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1191) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1121) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:994) ~[spring-context-7.0.8.jar:7.0.8]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.8.jar:7.0.8]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.1.0.jar:4.1.0]
+	at com.betacom.mtgbazar.be.PlaneswalkerBazarBackendApplication.main(PlaneswalkerBazarBackendApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.1.0.jar:4.1.0]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.betacom.mtgbazar.be.services.implementations.products.ImmagineImpl]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:220) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:129) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:318) ~[spring-beans-7.0.8.jar:7.0.8]
+	... 24 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problem: 
+	The declared package "com.betacom.mtgbazar.be.services.implementations" does not match the expected package "com.betacom.mtgbazar.be.services.implementations.products"
+
+	at com.betacom.mtgbazar.be.services.implementations.products.ImmagineImpl.<init>(ImmagineImpl.java:1) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:207) ~[spring-beans-7.0.8.jar:7.0.8]
+	... 26 common frames omitted
+
+2026-07-16T17:05:32.489+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : Starting PlaneswalkerBazarBackendApplication using Java 25.0.2 with PID 29668 (C:\Users\Betacom\eclipse-workspace\PlaneswalkerBazarBackend\target\classes started by Betacom in C:\Users\Betacom\eclipse-workspace\PlaneswalkerBazarBackend)
+2026-07-16T17:05:32.489+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-07-16T17:05:32.489+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : No active profile set, falling back to 1 default profile: "default"
+2026-07-16T17:05:33.058+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-16T17:05:33.206+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 146 ms. Found 18 JPA repository interfaces.
+2026-07-16T17:05:33.293+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9090 (http)
+2026-07-16T17:05:33.294+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-16T17:05:33.295+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-16T17:05:33.312+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 821 ms
+2026-07-16T17:05:33.348+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-18 - Starting...
+2026-07-16T17:05:33.504+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-18 - Added connection org.postgresql.jdbc.PgConnection@59ff6955
+2026-07-16T17:05:33.504+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-18 - Start completed.
+2026-07-16T17:05:33.506+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:5432/db_jpa_bazar (PostgreSQL 18.4)
+2026-07-16T17:05:33.589+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 4 migrations (execution time 00:00.053s)
+2026-07-16T17:05:33.788+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 4
+2026-07-16T17:05:33.788+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2026-07-16T17:05:33.811+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-07-16T17:05:33.828+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-16T17:05:33.846+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/db_jpa_bazar]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.4
+	Default catalog/schema: db_jpa_bazar/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-16T17:05:33.957+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.core                   : HHH000038: Composite id class does not override equals(): com.betacom.mtgbazar.be.model.MessageID
+2026-07-16T17:05:34.021+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-16T17:05:34.164+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-16T17:05:34.524+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-16T17:05:34.663+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/db_jpa_bazar'
+2026-07-16T17:05:34.672+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-07-16T17:05:34.696+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9090 (http) with context path '/'
+2026-07-16T17:05:34.700+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : Started PlaneswalkerBazarBackendApplication in 2.237 seconds (process running for 9425.62)
+2026-07-16T17:05:34.701+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-07-16T17:05:34.701+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-07-16T17:05:34.702+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-07-16T17:05:51.656+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-07-16T17:05:51.658+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-65] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-16T17:05:51.665+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-07-16T17:05:51.670+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-65] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-16T17:05:51.670+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-65] com.zaxxer.hikari.HikariDataSource       : HikariPool-18 - Shutdown initiated...
+2026-07-16T17:05:51.672+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-65] com.zaxxer.hikari.HikariDataSource       : HikariPool-18 - Shutdown completed.
+2026-07-16T17:05:51.786+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : Starting PlaneswalkerBazarBackendApplication using Java 25.0.2 with PID 29668 (C:\Users\Betacom\eclipse-workspace\PlaneswalkerBazarBackend\target\classes started by Betacom in C:\Users\Betacom\eclipse-workspace\PlaneswalkerBazarBackend)
+2026-07-16T17:05:51.786+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-07-16T17:05:51.786+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : No active profile set, falling back to 1 default profile: "default"
+2026-07-16T17:05:52.343+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-16T17:05:52.457+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 113 ms. Found 18 JPA repository interfaces.
+2026-07-16T17:05:52.589+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9090 (http)
+2026-07-16T17:05:52.590+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-16T17:05:52.590+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-16T17:05:52.606+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 819 ms
+2026-07-16T17:05:52.645+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-19 - Starting...
+2026-07-16T17:05:52.803+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-19 - Added connection org.postgresql.jdbc.PgConnection@5060302f
+2026-07-16T17:05:52.804+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-19 - Start completed.
+2026-07-16T17:05:52.805+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:5432/db_jpa_bazar (PostgreSQL 18.4)
+2026-07-16T17:05:52.899+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 4 migrations (execution time 00:00.059s)
+2026-07-16T17:05:53.137+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 4
+2026-07-16T17:05:53.138+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2026-07-16T17:05:53.164+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-07-16T17:05:53.182+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-16T17:05:53.197+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/db_jpa_bazar]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.4
+	Default catalog/schema: db_jpa_bazar/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-16T17:05:53.246+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.core                   : HHH000038: Composite id class does not override equals(): com.betacom.mtgbazar.be.model.MessageID
+2026-07-16T17:05:53.308+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-16T17:05:53.462+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-16T17:05:53.795+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-16T17:05:53.917+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/db_jpa_bazar'
+2026-07-16T17:05:53.926+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-07-16T17:05:53.945+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9090 (http) with context path '/'
+2026-07-16T17:05:53.949+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : Started PlaneswalkerBazarBackendApplication in 2.178 seconds (process running for 9444.868)
+2026-07-16T17:05:53.949+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-07-16T17:05:53.950+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-07-16T17:05:53.950+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-07-16T17:07:30.906+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-07-16T17:07:30.910+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-72] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-16T17:07:30.921+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-07-16T17:07:30.928+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-72] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-16T17:07:30.929+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-72] com.zaxxer.hikari.HikariDataSource       : HikariPool-19 - Shutdown initiated...
+2026-07-16T17:07:30.934+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-72] com.zaxxer.hikari.HikariDataSource       : HikariPool-19 - Shutdown completed.
+2026-07-16T17:07:31.056+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : Starting PlaneswalkerBazarBackendApplication using Java 25.0.2 with PID 29668 (C:\Users\Betacom\eclipse-workspace\PlaneswalkerBazarBackend\target\classes started by Betacom in C:\Users\Betacom\eclipse-workspace\PlaneswalkerBazarBackend)
+2026-07-16T17:07:31.056+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-07-16T17:07:31.057+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : No active profile set, falling back to 1 default profile: "default"
+2026-07-16T17:07:31.648+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-16T17:07:31.764+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 115 ms. Found 18 JPA repository interfaces.
+2026-07-16T17:07:31.871+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9090 (http)
+2026-07-16T17:07:31.872+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-16T17:07:31.873+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-16T17:07:31.889+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 831 ms
+2026-07-16T17:07:31.972+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-20 - Starting...
+2026-07-16T17:07:32.140+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-20 - Added connection org.postgresql.jdbc.PgConnection@52426ef4
+2026-07-16T17:07:32.140+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-20 - Start completed.
+2026-07-16T17:07:32.143+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:5432/db_jpa_bazar (PostgreSQL 18.4)
+2026-07-16T17:07:32.238+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 4 migrations (execution time 00:00.057s)
+2026-07-16T17:07:32.459+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 4
+2026-07-16T17:07:32.460+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2026-07-16T17:07:32.490+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-07-16T17:07:32.513+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-16T17:07:32.527+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/db_jpa_bazar]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.4
+	Default catalog/schema: db_jpa_bazar/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-16T17:07:32.581+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.core                   : HHH000038: Composite id class does not override equals(): com.betacom.mtgbazar.be.model.MessageID
+2026-07-16T17:07:32.705+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-16T17:07:32.898+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-16T17:07:33.321+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-16T17:07:33.525+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/db_jpa_bazar'
+2026-07-16T17:07:33.543+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-07-16T17:07:33.561+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9090 (http) with context path '/'
+2026-07-16T17:07:33.565+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : Started PlaneswalkerBazarBackendApplication in 2.526 seconds (process running for 9544.484)
+2026-07-16T17:07:33.566+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-07-16T17:07:33.566+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-07-16T17:07:33.567+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-07-16T17:09:41.482+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [RMI TCP Connection(168)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2026-07-16T17:09:41.484+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [RMI TCP Connection(168)-127.0.0.1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-16T17:09:41.489+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-07-16T17:09:41.493+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [RMI TCP Connection(168)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-16T17:09:41.495+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [RMI TCP Connection(168)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-20 - Shutdown initiated...
+2026-07-16T17:09:41.502+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [RMI TCP Connection(168)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-20 - Shutdown completed.
+2026-07-16T17:18:03.372+02:00  INFO 22412 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : Starting PlaneswalkerBazarBackendApplication using Java 25.0.2 with PID 22412 (C:\Users\Betacom\eclipse-workspace\PlaneswalkerBazarBackend\target\classes started by Betacom in C:\Users\Betacom\eclipse-workspace\PlaneswalkerBazarBackend)
+2026-07-16T17:18:03.374+02:00 DEBUG 22412 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-07-16T17:18:03.374+02:00  INFO 22412 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : No active profile set, falling back to 1 default profile: "default"
+2026-07-16T17:18:03.407+02:00  INFO 22412 --- [PlaneswalkerBazarBackend] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-16T17:18:03.407+02:00  INFO 22412 --- [PlaneswalkerBazarBackend] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-07-16T17:18:04.542+02:00  INFO 22412 --- [PlaneswalkerBazarBackend] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-16T17:18:04.742+02:00  INFO 22412 --- [PlaneswalkerBazarBackend] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 191 ms. Found 18 JPA repository interfaces.
+2026-07-16T17:18:05.271+02:00  INFO 22412 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9090 (http)
+2026-07-16T17:18:05.286+02:00  INFO 22412 --- [PlaneswalkerBazarBackend] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-16T17:18:05.286+02:00  INFO 22412 --- [PlaneswalkerBazarBackend] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-16T17:18:05.326+02:00  INFO 22412 --- [PlaneswalkerBazarBackend] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1919 ms
+2026-07-16T17:18:05.618+02:00  INFO 22412 --- [PlaneswalkerBazarBackend] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-16T17:18:05.997+02:00  INFO 22412 --- [PlaneswalkerBazarBackend] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@25f8d342
+2026-07-16T17:18:05.998+02:00  INFO 22412 --- [PlaneswalkerBazarBackend] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-16T17:18:06.014+02:00  INFO 22412 --- [PlaneswalkerBazarBackend] [restartedMain] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:5432/db_jpa_bazar (PostgreSQL 18.4)
+2026-07-16T17:18:06.171+02:00  INFO 22412 --- [PlaneswalkerBazarBackend] [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 5 migrations (execution time 00:00.097s)
+2026-07-16T17:18:06.373+02:00  INFO 22412 --- [PlaneswalkerBazarBackend] [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 4
+2026-07-16T17:18:06.393+02:00  INFO 22412 --- [PlaneswalkerBazarBackend] [restartedMain] o.f.core.internal.command.DbMigrate      : Migrating schema "public" to version "5 - messaggi upload immagini"
+2026-07-16T17:18:06.444+02:00  INFO 22412 --- [PlaneswalkerBazarBackend] [restartedMain] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema "public", now at version v5 (execution time 00:00.023s)
+2026-07-16T17:18:06.547+02:00  INFO 22412 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-07-16T17:18:06.625+02:00  INFO 22412 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-07-16T17:18:07.017+02:00  INFO 22412 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-16T17:18:07.134+02:00  INFO 22412 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/db_jpa_bazar]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.4
+	Default catalog/schema: db_jpa_bazar/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-16T17:18:07.642+02:00  WARN 22412 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.core                   : HHH000038: Composite id class does not override equals(): com.betacom.mtgbazar.be.model.MessageID
+2026-07-16T17:18:08.314+02:00  INFO 22412 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-16T17:18:08.486+02:00  INFO 22412 --- [PlaneswalkerBazarBackend] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-16T17:18:08.579+02:00  INFO 22412 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-07-16T17:18:10.051+02:00  WARN 22412 --- [PlaneswalkerBazarBackend] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-16T17:18:10.530+02:00  INFO 22412 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/db_jpa_bazar'
+2026-07-16T17:18:10.576+02:00  INFO 22412 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-07-16T17:18:10.714+02:00  INFO 22412 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9090 (http) with context path '/'
+2026-07-16T17:18:10.722+02:00  INFO 22412 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : Started PlaneswalkerBazarBackendApplication in 7.676 seconds (process running for 8.404)
+2026-07-16T17:18:10.734+02:00  WARN 22412 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-07-16T17:18:10.734+02:00  WARN 22412 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-07-16T17:18:11.454+02:00  INFO 22412 --- [PlaneswalkerBazarBackend] [RMI TCP Connection(4)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-16T17:18:11.454+02:00  INFO 22412 --- [PlaneswalkerBazarBackend] [RMI TCP Connection(4)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-16T17:18:11.457+02:00  INFO 22412 --- [PlaneswalkerBazarBackend] [RMI TCP Connection(4)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms

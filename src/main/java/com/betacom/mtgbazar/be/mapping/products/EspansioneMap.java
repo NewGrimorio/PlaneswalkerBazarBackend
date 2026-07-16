@@ -19,6 +19,7 @@ public class EspansioneMap {
                 .dataUscita(e.getDataUscita())
                 .iconUrl(e.getIconUrl())
                 .numeroCarte(e.getNumeroCarte())
+                .dataUltimaSincronizzazione(e.getDataUltimaSincronizzazione())
                 .build();
     }
 

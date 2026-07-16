@@ -3,7 +3,7 @@ target/
 .mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
-
+ 
 ### STS ###
 .apt_generated
 .classpath
@@ -12,13 +12,13 @@ target/
 .settings
 .springBeans
 .sts4-cache
-
+ 
 ### IntelliJ IDEA ###
 .idea
 *.iws
 *.iml
 *.ipr
-
+ 
 ### NetBeans ###
 /nbproject/private/
 /nbbuild/
@@ -28,6 +28,21 @@ target/
 build/
 !**/src/main/**/build/
 !**/src/test/**/build/
-
+ 
 ### VS Code ###
 .vscode/
+ 
+### Log applicazione (logging.file.name + rotazioni compresse) ###
+*.log
+*.log.*.gz
+ 
+### Upload immagini: i byte vivono sul filesystem, mai nel repository ###
+uploads/
+ 
+### Script generati da hbm2ddl schema-generation (lo schema vero e' Flyway) ###
+define.sql
+drop.sql
+ 
+### Sistema operativo ###
+.DS_Store
+Thumbs.db

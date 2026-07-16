@@ -1,6 +1,7 @@
 package com.betacom.mtgbazar.be.dto.products;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -25,5 +26,6 @@ public class EspansioneDTO {
     private LocalDate dataUscita;
     private String iconUrl;
     private Integer numeroCarte;
+    private LocalDateTime dataUltimaSincronizzazione;
     
 }
