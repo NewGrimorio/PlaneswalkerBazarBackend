@@ -129,3 +129,346 @@
 2026-07-16T14:28:43.133+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [RMI TCP Connection(4)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2026-07-16T14:28:43.134+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [RMI TCP Connection(4)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2026-07-16T14:28:43.136+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [RMI TCP Connection(4)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-07-16T14:44:53.820+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.c.users.EspansioneController     : GET /api/espansioni
+2026-07-16T14:44:53.847+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-16T14:45:25.452+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.c.users.UtenteController         : POST /api/utenti/login
+2026-07-16T14:45:25.454+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.s.i.users.UtenteImpl             : loginUtente: admin@planeswalkerbazar.it
+2026-07-16T15:33:22.771+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-8] c.b.m.b.c.users.EspansioneController     : GET /api/espansioni
+2026-07-16T15:33:22.870+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-8] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-16T15:33:23.577+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] c.b.m.b.c.users.EspansioneController     : GET /api/espansioni
+2026-07-16T15:33:23.580+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-16T15:33:42.564+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.c.users.UtenteController         : POST /api/utenti/login
+2026-07-16T15:33:42.567+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.s.i.users.UtenteImpl             : loginUtente: admin@planeswalkerbazar.it
+2026-07-16T15:33:44.769+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.c.users.EspansioneController     : GET /api/espansioni
+2026-07-16T15:33:44.771+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-16T15:33:56.136+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] .m.b.c.p.AdminSincronizzazioneController : POST /api/admin/sync/mat
+2026-07-16T15:33:56.141+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.s.i.p.SincronizzazioneImpl       : sincronizzaSet: mat
+2026-07-16T15:34:00.795+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.s.i.p.SincronizzazioneImpl       : espansione mat aggiornata
+2026-07-16T15:34:04.501+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.s.i.p.SincronizzazioneImpl       : pagina completata: 175 stampe finora
+2026-07-16T15:34:05.560+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.s.i.p.SincronizzazioneImpl       : pagina completata: 230 stampe finora
+2026-07-16T15:34:05.595+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.s.i.p.SincronizzazioneImpl       : sync mat completata in 9454ms: carte 0/230 stampe 0/230 prodotti 0
+2026-07-16T15:34:05.709+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.c.users.EspansioneController     : GET /api/espansioni
+2026-07-16T15:34:05.711+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-16T15:34:28.882+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] .m.b.c.p.AdminSincronizzazioneController : POST /api/admin/sync/mh3
+2026-07-16T15:34:28.886+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] c.b.m.b.s.i.p.SincronizzazioneImpl       : sincronizzaSet: mh3
+2026-07-16T15:34:29.089+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] c.b.m.b.s.i.p.SincronizzazioneImpl       : espansione mh3 creata
+2026-07-16T15:34:33.014+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] c.b.m.b.s.i.p.SincronizzazioneImpl       : pagina completata: 175 stampe finora
+2026-07-16T15:34:34.823+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 0, SQLState: 23502
+2026-07-16T15:34:34.824+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] org.hibernate.orm.jdbc.error             : ERRORE: il valore nullo nella colonna "colori" della relazione "carta" viola il vincolo non nullo
+  Dettaglio: La riga in errore contiene (291, 2588f348-d7a3-46c8-9ace-dca53ed5ef99, Ajani, Nacatl Pariah // Ajani, Nacatl Avenger, null, 2.0, Legendary Creature — Cat Warrior // Legendary Planeswalker —..., null, null, null, null, RW, Transform, {"standard":"not_legal","future":"not_legal","historic":"banned"..., [{"name":"Ajani, Nacatl Pariah","mana_cost":"{1}{W}","type_line"...).
+2026-07-16T15:34:34.864+02:00 ERROR 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] c.b.m.b.e.GlobalExceptionHandler         : Errore imprevisto
+
+org.springframework.dao.DataIntegrityViolationException: could not execute statement [ERRORE: il valore nullo nella colonna "colori" della relazione "carta" viola il vincolo non nullo
+  Dettaglio: La riga in errore contiene (291, 2588f348-d7a3-46c8-9ace-dca53ed5ef99, Ajani, Nacatl Pariah // Ajani, Nacatl Avenger, null, 2.0, Legendary Creature — Cat Warrior // Legendary Planeswalker —..., null, null, null, null, RW, Transform, {"standard":"not_legal","future":"not_legal","historic":"banned"..., [{"name":"Ajani, Nacatl Pariah","mana_cost":"{1}{W}","type_line"...).] [insert into carta (card_faces,colori,costituzione,costo_mana,forza,identita_colore,legal,nome,oracle_id,parole_chiave,testo_oracle,tipo_riga,valore_mana) values (?,?,?,?,?,?,?,?,?,?,?,?,?)]; SQL [insert into carta (card_faces,colori,costituzione,costo_mana,forza,identita_colore,legal,nome,oracle_id,parole_chiave,testo_oracle,tipo_riga,valore_mana) values (?,?,?,?,?,?,?,?,?,?,?,?,?)]; constraint [null]
+	at org.springframework.orm.jpa.hibernate.HibernateExceptionTranslator.convertHibernateAccessException(HibernateExceptionTranslator.java:169) ~[spring-orm-7.0.8.jar:7.0.8]
+	at org.springframework.orm.jpa.hibernate.HibernateExceptionTranslator.convertHibernateAccessException(HibernateExceptionTranslator.java:131) ~[spring-orm-7.0.8.jar:7.0.8]
+	at org.springframework.orm.jpa.hibernate.HibernateExceptionTranslator.translateExceptionIfPossible(HibernateExceptionTranslator.java:105) ~[spring-orm-7.0.8.jar:7.0.8]
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:223) ~[spring-orm-7.0.8.jar:7.0.8]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:577) ~[spring-orm-7.0.8.jar:7.0.8]
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61) ~[spring-tx-7.0.8.jar:7.0.8]
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:346) ~[spring-tx-7.0.8.jar:7.0.8]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:157) ~[spring-tx-7.0.8.jar:7.0.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.8.jar:7.0.8]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:166) ~[spring-data-jpa-4.1.0.jar:4.1.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.8.jar:7.0.8]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:222) ~[spring-aop-7.0.8.jar:7.0.8]
+	at jdk.proxy4/jdk.proxy4.$Proxy180.save(Unknown Source) ~[na:na]
+	at com.betacom.mtgbazar.be.services.implementations.products.SincronizzazioneImpl.upsertCarta(SincronizzazioneImpl.java:235) ~[classes/:na]
+	at com.betacom.mtgbazar.be.services.implementations.products.SincronizzazioneImpl.importaCarta(SincronizzazioneImpl.java:211) ~[classes/:na]
+	at com.betacom.mtgbazar.be.services.implementations.products.SincronizzazioneImpl.sincronizzaSet(SincronizzazioneImpl.java:97) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-7.0.8.jar:7.0.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190) ~[spring-aop-7.0.8.jar:7.0.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:158) ~[spring-aop-7.0.8.jar:7.0.8]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:133) ~[spring-tx-7.0.8.jar:7.0.8]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:371) ~[spring-tx-7.0.8.jar:7.0.8]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:130) ~[spring-tx-7.0.8.jar:7.0.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.8.jar:7.0.8]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:719) ~[spring-aop-7.0.8.jar:7.0.8]
+	at com.betacom.mtgbazar.be.services.implementations.products.SincronizzazioneImpl$$SpringCGLIB$$0.sincronizzaSet(<generated>) ~[classes/:na]
+	at com.betacom.mtgbazar.be.controllers.products.AdminSincronizzazioneController.sincronizza(AdminSincronizzazioneController.java:27) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649) ~[tomcat-embed-core-11.0.22.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.22.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1272) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at java.base/java.lang.Thread.run(Thread.java:1474) ~[na:na]
+Caused by: org.hibernate.exception.ConstraintViolationException: could not execute statement [ERRORE: il valore nullo nella colonna "colori" della relazione "carta" viola il vincolo non nullo
+  Dettaglio: La riga in errore contiene (291, 2588f348-d7a3-46c8-9ace-dca53ed5ef99, Ajani, Nacatl Pariah // Ajani, Nacatl Avenger, null, 2.0, Legendary Creature — Cat Warrior // Legendary Planeswalker —..., null, null, null, null, RW, Transform, {"standard":"not_legal","future":"not_legal","historic":"banned"..., [{"name":"Ajani, Nacatl Pariah","mana_cost":"{1}{W}","type_line"...).] [insert into carta (card_faces,colori,costituzione,costo_mana,forza,identita_colore,legal,nome,oracle_id,parole_chiave,testo_oracle,tipo_riga,valore_mana) values (?,?,?,?,?,?,?,?,?,?,?,?,?)]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:73) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:34) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:115) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:189) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at org.hibernate.id.insert.GetGeneratedKeysDelegate.performMutation(GetGeneratedKeysDelegate.java:96) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at org.hibernate.engine.jdbc.mutation.internal.MutationExecutorSingleNonBatched.performNonBatchedOperations(MutationExecutorSingleNonBatched.java:45) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:65) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:54) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.doStaticInserts(InsertCoordinatorStandard.java:183) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.coordinateInsert(InsertCoordinatorStandard.java:123) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.insert(InsertCoordinatorStandard.java:87) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:87) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:667) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:291) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:270) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:322) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:384) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:298) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:228) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:144) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:144) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.persist(DefaultPersistEventListener.java:91) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:75) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:51) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:138) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:695) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:678) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:360) ~[spring-orm-7.0.8.jar:7.0.8]
+	at jdk.proxy4/jdk.proxy4.$Proxy154.persist(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityHandlerInvocationHandler.invokeMethod(SharedEntityManagerCreator.java:239) ~[spring-orm-7.0.8.jar:7.0.8]
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:383) ~[spring-orm-7.0.8.jar:7.0.8]
+	at jdk.proxy4/jdk.proxy4.$Proxy154.persist(Unknown Source) ~[na:na]
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:664) ~[spring-data-jpa-4.1.0.jar:4.1.0]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-7.0.8.jar:7.0.8]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:278) ~[spring-data-commons-4.1.0.jar:4.1.0]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:169) ~[spring-data-commons-4.1.0.jar:4.1.0]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158) ~[spring-data-commons-4.1.0.jar:4.1.0]
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:545) ~[spring-data-commons-4.1.0.jar:4.1.0]
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:290) ~[spring-data-commons-4.1.0.jar:4.1.0]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:690) ~[spring-data-commons-4.1.0.jar:4.1.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.8.jar:7.0.8]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:171) ~[spring-data-commons-4.1.0.jar:4.1.0]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:146) ~[spring-data-commons-4.1.0.jar:4.1.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.8.jar:7.0.8]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:69) ~[spring-data-commons-4.1.0.jar:4.1.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.8.jar:7.0.8]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:133) ~[spring-tx-7.0.8.jar:7.0.8]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:371) ~[spring-tx-7.0.8.jar:7.0.8]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:130) ~[spring-tx-7.0.8.jar:7.0.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.8.jar:7.0.8]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:135) ~[spring-tx-7.0.8.jar:7.0.8]
+	... 66 common frames omitted
+Caused by: org.postgresql.util.PSQLException: ERRORE: il valore nullo nella colonna "colori" della relazione "carta" viola il vincolo non nullo
+  Dettaglio: La riga in errore contiene (291, 2588f348-d7a3-46c8-9ace-dca53ed5ef99, Ajani, Nacatl Pariah // Ajani, Nacatl Avenger, null, 2.0, Legendary Creature — Cat Warrior // Legendary Planeswalker —..., null, null, null, null, RW, Transform, {"standard":"not_legal","future":"not_legal","historic":"banned"..., [{"name":"Ajani, Nacatl Pariah","mana_cost":"{1}{W}","type_line"...).
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2904) ~[postgresql-42.7.11.jar:42.7.11]
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2589) ~[postgresql-42.7.11.jar:42.7.11]
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:431) ~[postgresql-42.7.11.jar:42.7.11]
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:534) ~[postgresql-42.7.11.jar:42.7.11]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:437) ~[postgresql-42.7.11.jar:42.7.11]
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:196) ~[postgresql-42.7.11.jar:42.7.11]
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:157) ~[postgresql-42.7.11.jar:42.7.11]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java) ~[HikariCP-7.0.2.jar:na]
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:185) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	... 119 common frames omitted
+
+2026-07-16T15:34:34.895+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] c.b.m.b.s.implementations.MessaggioImpl  : get errore.generico
+2026-07-16T15:34:34.941+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.dao.DataIntegrityViolationException: could not execute statement [ERRORE: il valore nullo nella colonna "colori" della relazione "carta" viola il vincolo non nullo<EOL>  Dettaglio: La riga in errore contiene (291, 2588f348-d7a3-46c8-9ace-dca53ed5ef99, Ajani, Nacatl Pariah // Ajani, Nacatl Avenger, null, 2.0, Legendary Creature — Cat Warrior // Legendary Planeswalker —..., null, null, null, null, RW, Transform, {"standard":"not_legal","future":"not_legal","historic":"banned"..., [{"name":"Ajani, Nacatl Pariah","mana_cost":"{1}{W}","type_line"...).] [insert into carta (card_faces,colori,costituzione,costo_mana,forza,identita_colore,legal,nome,oracle_id,parole_chiave,testo_oracle,tipo_riga,valore_mana) values (?,?,?,?,?,?,?,?,?,?,?,?,?)]; SQL [insert into carta (card_faces,colori,costituzione,costo_mana,forza,identita_colore,legal,nome,oracle_id,parole_chiave,testo_oracle,tipo_riga,valore_mana) values (?,?,?,?,?,?,?,?,?,?,?,?,?)]; constraint [null]]
+2026-07-16T15:41:41.782+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-07-16T15:41:41.793+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-16T15:41:41.804+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-07-16T15:41:41.815+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-16T15:41:41.824+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-07-16T15:41:41.829+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-07-16T15:41:41.955+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : Starting PlaneswalkerBazarBackendApplication using Java 25.0.2 with PID 29668 (C:\Users\Betacom\eclipse-workspace\PlaneswalkerBazarBackend\target\classes started by Betacom in C:\Users\Betacom\eclipse-workspace\PlaneswalkerBazarBackend)
+2026-07-16T15:41:41.955+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-07-16T15:41:41.955+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : No active profile set, falling back to 1 default profile: "default"
+2026-07-16T15:41:42.649+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-16T15:41:42.771+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 119 ms. Found 18 JPA repository interfaces.
+2026-07-16T15:41:42.942+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9090 (http)
+2026-07-16T15:41:42.943+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-16T15:41:42.944+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-16T15:41:42.966+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1008 ms
+2026-07-16T15:41:43.029+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-07-16T15:41:43.206+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@1a4401e9
+2026-07-16T15:41:43.206+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-07-16T15:41:43.209+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:5432/db_jpa_bazar (PostgreSQL 18.4)
+2026-07-16T15:41:43.303+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 4 migrations (execution time 00:00.060s)
+2026-07-16T15:41:43.489+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 4
+2026-07-16T15:41:43.490+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2026-07-16T15:41:43.534+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-07-16T15:41:43.578+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-16T15:41:43.596+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/db_jpa_bazar]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.4
+	Default catalog/schema: db_jpa_bazar/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-16T15:41:43.713+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.core                   : HHH000038: Composite id class does not override equals(): com.betacom.mtgbazar.be.model.MessageID
+2026-07-16T15:41:43.882+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-16T15:41:44.036+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-16T15:41:44.498+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-16T15:41:44.734+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/db_jpa_bazar'
+2026-07-16T15:41:44.757+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-07-16T15:41:44.781+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9090 (http) with context path '/'
+2026-07-16T15:41:44.789+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : Started PlaneswalkerBazarBackendApplication in 2.872 seconds (process running for 4395.742)
+2026-07-16T15:41:44.790+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-07-16T15:41:44.790+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-07-16T15:41:44.792+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-07-16T15:41:48.319+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-07-16T15:41:48.321+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-5] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-16T15:41:48.327+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-07-16T15:41:48.331+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-16T15:41:48.332+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2026-07-16T15:41:48.334+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2026-07-16T15:41:48.411+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : Starting PlaneswalkerBazarBackendApplication using Java 25.0.2 with PID 29668 (C:\Users\Betacom\eclipse-workspace\PlaneswalkerBazarBackend\target\classes started by Betacom in C:\Users\Betacom\eclipse-workspace\PlaneswalkerBazarBackend)
+2026-07-16T15:41:48.411+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-07-16T15:41:48.412+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : No active profile set, falling back to 1 default profile: "default"
+2026-07-16T15:41:48.996+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-16T15:41:49.110+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 113 ms. Found 18 JPA repository interfaces.
+2026-07-16T15:41:49.233+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9090 (http)
+2026-07-16T15:41:49.233+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-16T15:41:49.233+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-16T15:41:49.250+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 838 ms
+2026-07-16T15:41:49.293+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2026-07-16T15:41:49.490+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection org.postgresql.jdbc.PgConnection@5abac3ac
+2026-07-16T15:41:49.491+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2026-07-16T15:41:49.495+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:5432/db_jpa_bazar (PostgreSQL 18.4)
+2026-07-16T15:41:49.613+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 4 migrations (execution time 00:00.063s)
+2026-07-16T15:41:49.839+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 4
+2026-07-16T15:41:49.840+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2026-07-16T15:41:49.913+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-07-16T15:41:50.001+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-16T15:41:50.037+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/db_jpa_bazar]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.4
+	Default catalog/schema: db_jpa_bazar/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-16T15:41:50.273+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.core                   : HHH000038: Composite id class does not override equals(): com.betacom.mtgbazar.be.model.MessageID
+2026-07-16T15:41:50.640+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-16T15:41:50.810+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-16T15:41:51.891+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-16T15:41:52.409+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/db_jpa_bazar'
+2026-07-16T15:41:52.445+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-07-16T15:41:52.588+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9090 (http) with context path '/'
+2026-07-16T15:41:52.599+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : Started PlaneswalkerBazarBackendApplication in 4.207 seconds (process running for 4403.553)
+2026-07-16T15:41:52.602+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-07-16T15:41:52.603+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-07-16T15:41:52.604+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-07-16T15:43:55.605+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-07-16T15:43:55.609+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-9] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-16T15:43:55.615+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-07-16T15:43:55.623+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-9] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-16T15:43:55.624+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2026-07-16T15:43:55.627+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2026-07-16T15:43:55.750+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : Starting PlaneswalkerBazarBackendApplication using Java 25.0.2 with PID 29668 (C:\Users\Betacom\eclipse-workspace\PlaneswalkerBazarBackend\target\classes started by Betacom in C:\Users\Betacom\eclipse-workspace\PlaneswalkerBazarBackend)
+2026-07-16T15:43:55.750+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-07-16T15:43:55.750+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : No active profile set, falling back to 1 default profile: "default"
+2026-07-16T15:43:56.451+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-16T15:43:56.661+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 208 ms. Found 18 JPA repository interfaces.
+2026-07-16T15:43:56.768+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9090 (http)
+2026-07-16T15:43:56.770+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-16T15:43:56.770+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-16T15:43:56.790+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1038 ms
+2026-07-16T15:43:56.839+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2026-07-16T15:43:57.016+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection org.postgresql.jdbc.PgConnection@37c664ab
+2026-07-16T15:43:57.017+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2026-07-16T15:43:57.017+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:5432/db_jpa_bazar (PostgreSQL 18.4)
+2026-07-16T15:43:57.107+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 4 migrations (execution time 00:00.059s)
+2026-07-16T15:43:57.292+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 4
+2026-07-16T15:43:57.292+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2026-07-16T15:43:57.357+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-07-16T15:43:57.392+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-16T15:43:57.415+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/db_jpa_bazar]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.4
+	Default catalog/schema: db_jpa_bazar/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-16T15:43:57.486+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.core                   : HHH000038: Composite id class does not override equals(): com.betacom.mtgbazar.be.model.MessageID
+2026-07-16T15:43:57.579+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-16T15:43:57.705+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-16T15:43:58.114+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-16T15:43:58.298+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/db_jpa_bazar'
+2026-07-16T15:43:58.317+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-07-16T15:43:58.345+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9090 (http) with context path '/'
+2026-07-16T15:43:58.348+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : Started PlaneswalkerBazarBackendApplication in 2.615 seconds (process running for 4529.299)
+2026-07-16T15:43:58.349+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-07-16T15:43:58.349+02:00  WARN 29668 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-07-16T15:43:58.350+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-07-16T15:44:13.219+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-16T15:44:13.220+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-16T15:44:13.227+02:00  INFO 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-07-16T15:44:13.232+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.c.users.EspansioneController     : GET /api/espansioni
+2026-07-16T15:44:13.234+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-16T15:44:13.388+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.c.users.EspansioneController     : GET /api/espansioni
+2026-07-16T15:44:13.391+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-16T15:44:35.083+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.c.users.UtenteController         : POST /api/utenti/login
+2026-07-16T15:44:35.083+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.s.i.users.UtenteImpl             : loginUtente: admin@planeswalkerbazar.it
+2026-07-16T15:44:36.601+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] c.b.m.b.c.users.EspansioneController     : GET /api/espansioni
+2026-07-16T15:44:36.604+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-16T15:44:40.950+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] .m.b.c.p.AdminSincronizzazioneController : POST /api/admin/sync/mh3
+2026-07-16T15:44:40.951+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.s.i.p.SincronizzazioneImpl       : sincronizzaSet: mh3
+2026-07-16T15:44:41.545+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.s.i.p.SincronizzazioneImpl       : espansione mh3 creata
+2026-07-16T15:44:46.000+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.s.i.p.SincronizzazioneImpl       : pagina completata: 175 stampe finora
+2026-07-16T15:44:51.845+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.s.i.p.SincronizzazioneImpl       : pagina completata: 350 stampe finora
+2026-07-16T15:44:59.737+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.s.i.p.SincronizzazioneImpl       : pagina completata: 525 stampe finora
+2026-07-16T15:45:00.058+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.s.i.p.SincronizzazioneImpl       : pagina completata: 528 stampe finora
+2026-07-16T15:45:00.084+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.s.i.p.SincronizzazioneImpl       : sync mh3 completata in 19133ms: carte 313/215 stampe 528/0 prodotti 528
+2026-07-16T15:45:00.145+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] c.b.m.b.c.users.EspansioneController     : GET /api/espansioni
+2026-07-16T15:45:00.147+02:00 DEBUG 29668 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni

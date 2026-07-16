@@ -1,5 +1,7 @@
 package com.betacom.mtgbazar.be.scryfall;
 
+import java.util.List;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
  
@@ -12,5 +14,6 @@ public record ScryfallCardFace(
         @JsonProperty("oracle_text") String oracleText,
         String power,
         String toughness,
+        List<String> colors,
         @JsonProperty("image_uris")  ScryfallImageUris imageUris) {
 }

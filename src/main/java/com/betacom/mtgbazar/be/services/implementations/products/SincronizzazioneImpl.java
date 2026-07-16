@@ -32,6 +32,7 @@ import com.betacom.mtgbazar.be.repositories.products.IPrezzoRiferimentoRepositor
 import com.betacom.mtgbazar.be.repositories.products.IProdottoRepository;
 import com.betacom.mtgbazar.be.repositories.products.IStampaRepository;
 import com.betacom.mtgbazar.be.scryfall.ScryfallCard;
+import com.betacom.mtgbazar.be.scryfall.ScryfallCardFace;
 import com.betacom.mtgbazar.be.scryfall.ScryfallCardList;
 import com.betacom.mtgbazar.be.scryfall.ScryfallSet;
 import com.betacom.mtgbazar.be.services.IMessaggioServices;
@@ -63,6 +64,7 @@ public class SincronizzazioneImpl implements ISincronizzazioneServices {
     private int carteNuove, carteAggiornate, stampeNuove, stampeAggiornate, prodottiCreati;
     /* Scryfall id visti in questo import: alimenta il rilevamento orfani */
     private Set<UUID> vistiScryfallIds;
+    private static final String ORDINE_COLORI = "WUBRG";
 
     @Override
     @Transactional
@@ -227,7 +229,8 @@ public class SincronizzazioneImpl implements ISincronizzazioneServices {
         c.setTestoOracle(card.oracleText());
         c.setForza(card.power());
         c.setCostituzione(card.toughness());
-        c.setColori(joinNoSep(card.colors()));
+        //c.setColori(joinNoSep(card.colors()));
+        c.setColori(coloriDi(card));
         c.setIdentitaColore(joinNoSep(card.colorIdentity()));
         c.setParoleChiave(joinCsv(card.keywords()));
         c.setLegal(toJson(card.legalities()));
@@ -330,8 +333,9 @@ public class SincronizzazioneImpl implements ISincronizzazioneServices {
         }
     }
 
+    
     private String joinNoSep(List<String> valori) {
-        return valori == null ? null : String.join("", valori);
+        return valori == null ? "" : String.join("", valori);
     }
 
     private String joinCsv(List<String> valori) {
@@ -356,6 +360,22 @@ public class SincronizzazioneImpl implements ISincronizzazioneServices {
         while (prodottoR.existsBySlug(slug))
             slug = base + "-" + i++;
         return slug;
+    }
+    
+    private String coloriDi(ScryfallCard card) {
+        if (card.colors() != null)
+            return String.join("", card.colors());
+
+        if (card.cardFaces() != null) {
+            Set<String> unione = new HashSet<>();
+            for (ScryfallCardFace f : card.cardFaces())
+                if (f.colors() != null) unione.addAll(f.colors());
+            StringBuilder sb = new StringBuilder();
+            for (char c : ORDINE_COLORI.toCharArray())
+                if (unione.contains(String.valueOf(c))) sb.append(c);
+            return sb.toString();
+        }
+        return "";
     }
     
 }
