@@ -37,4 +37,15 @@ public interface IProdottoRepository extends JpaRepository<Prodotto, Long> {
      * Query in META-INF: Prodotto.searchByNome
      */
     List<Prodotto> searchByNome(@Param("testo") String testo);
+    
+    /** Lista ADMIN per categoria: include i disattivati (il negozio usa la variante AndAttivoTrue). */
+    List<Prodotto> findByTipoProdotto(TipoProdotto tipoProdotto);
+    
+    /** Ricerca ADMIN: include i disattivati. Query in META-INF: Prodotto.searchByNomeAdmin */
+    List<Prodotto> searchByNomeAdmin(@Param("testo") String testo);
+    
+    /** Sfoglia ADMIN: prodotti di un'espansione per tipo, inclusi i disattivati. */
+    List<Prodotto> findByEspansioneIdAndTipoProdottoOrderByNomeAsc(
+            Long espansioneId, TipoProdotto tipoProdotto);
+    
 }

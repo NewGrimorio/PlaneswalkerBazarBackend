@@ -9,5 +9,6 @@ public enum TipoProdotto {
     BOOSTER_BOX,
     SET_LOTTO,
     SIGILLATO,
-    ACCESSORIO
+    ACCESSORIO,
+    MAZZO
 }

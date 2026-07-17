@@ -134,6 +134,28 @@ public class ProdottoImpl implements IProdottoServices {
 
         return ProdottoMap.buildProdottoDTO(p);
     }
+    
+    @Override
+    @Transactional(readOnly = true)
+    public List<ProdottoDTO> listByTipoAdmin(TipoProdotto tipo) {
+        log.debug("listByTipoAdmin: {}", tipo);
+        return ProdottoMap.buildProdottoDTOList(prodottoR.findByTipoProdotto(tipo));
+    }
+    
+    @Override
+    @Transactional(readOnly = true)
+    public List<ProdottoDTO> searchByNomeAdmin(String testo) {
+        log.debug("searchByNomeAdmin: {}", testo);
+        return ProdottoMap.buildProdottoDTOList(prodottoR.searchByNomeAdmin(testo));
+    }
+    
+    @Override
+    @Transactional(readOnly = true)
+    public List<ProdottoDTO> listByEspansioneETipoAdmin(Long espansioneId, TipoProdotto tipo) {
+        log.debug("listByEspansioneETipoAdmin: espansione={} tipo={}", espansioneId, tipo);
+        return ProdottoMap.buildProdottoDTOList(
+                prodottoR.findByEspansioneIdAndTipoProdottoOrderByNomeAsc(espansioneId, tipo));
+    }
 
     // ------------------------------------------------------------------
 

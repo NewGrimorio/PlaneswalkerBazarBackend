@@ -35,4 +35,10 @@ public interface IProdottoServices {
     /** Modifica null-safe; il TIPO e' immutabile (cambia la natura del prodotto). */
     ProdottoDTO updateProdotto(ProdottoReq req);
     
+    List<ProdottoDTO> listByTipoAdmin(TipoProdotto tipo);
+    
+    List<ProdottoDTO> searchByNomeAdmin(String testo);
+    
+    List<ProdottoDTO> listByEspansioneETipoAdmin(Long espansioneId, TipoProdotto tipo);
+    
 }
