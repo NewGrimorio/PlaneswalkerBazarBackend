@@ -1,6 +1,5 @@
 package com.betacom.mtgbazar.be.services.implementations.products;
 
-
 import java.util.List;
 
 import org.springframework.stereotype.Service;
@@ -13,6 +12,7 @@ import com.betacom.mtgbazar.be.model.products.MagazzinoSKU;
 import com.betacom.mtgbazar.be.model.products.Prodotto;
 import com.betacom.mtgbazar.be.model.products.enums.Condizione;
 import com.betacom.mtgbazar.be.model.products.enums.Finitura;
+import com.betacom.mtgbazar.be.model.products.enums.TipoProdotto;
 import com.betacom.mtgbazar.be.repositories.products.IMagazzinoSKURepository;
 import com.betacom.mtgbazar.be.repositories.products.IProdottoRepository;
 import com.betacom.mtgbazar.be.request.products.MagazzinoSKUReq;
@@ -27,72 +27,94 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class MagazzinoSKUImpl implements IMagazzinoSKUServices {
 
-   private final IMagazzinoSKURepository skuR;
-   private final IProdottoRepository prodottoR;
-   private final IMessaggioServices msg;
+    private final IMagazzinoSKURepository skuR;
+    private final IProdottoRepository prodottoR;
+    private final IMessaggioServices msg;
 
-   @Override
-   @Transactional(readOnly = true)
-   public List<MagazzinoSKUDTO> listByProdotto(Long prodottoId) {
-       log.debug("listByProdotto: {}", prodottoId);
-       caricaProdotto(prodottoId);
-       return MagazzinoSKUMap.buildMagazzinoSKUDTOList(
-               skuR.findByProdottoId(prodottoId));
-   }
+    @Override
+    @Transactional(readOnly = true)
+    public List<MagazzinoSKUDTO> listByProdotto(Long prodottoId) {
+        log.debug("listByProdotto: {}", prodottoId);
+        caricaProdotto(prodottoId);
+        return MagazzinoSKUMap.buildMagazzinoSKUDTOList(
+                skuR.findByProdottoId(prodottoId));
+    }
 
-   @Override
-   @Transactional
-   public MagazzinoSKUDTO createSku(MagazzinoSKUReq req) {
-       log.debug("createSku: prodotto={} [{}/{}/{}]", req.getProdottoId(),
-               req.getCondizione(), req.getLingua(), req.getFinitura());
+    @Override
+    @Transactional
+    public MagazzinoSKUDTO createSku(MagazzinoSKUReq req) {
+        log.debug("createSku: prodotto={} [{}/{}/{}]", req.getProdottoId(),
+                req.getCondizione(), req.getLingua(), req.getFinitura());
 
-       Prodotto p = caricaProdotto(req.getProdottoId());
+        Prodotto p = caricaProdotto(req.getProdottoId());
 
-       // Default della variante (allineati ai default del DB)
-       Condizione condizione = req.getCondizione() == null ? Condizione.NA : req.getCondizione();
-       String lingua = req.getLingua() == null ? "en" : req.getLingua().trim().toLowerCase();
-       Finitura finitura = req.getFinitura() == null ? Finitura.NONFOIL : req.getFinitura();
+        // Un solo SKU per i prodotti non-SINGLE: la lingua sta nell'anagrafica
+        // del prodotto (es. "... (ENG)"), le varianti sono un concetto da carte
+        if (p.getTipoProdotto() != TipoProdotto.SINGLE
+                && skuR.existsByProdottoId(p.getId()))
+            throw new MtgException(msg.get("sku.prodotto.gia.presente"));
 
-       // Anticipa il vincolo uq_magazzino_sku_var con un errore pulito
-       if (skuR.existsByProdottoIdAndCondizioneAndLinguaAndFinitura(
-               p.getId(), condizione, lingua, finitura))
-           throw new MtgException(msg.get("sku.variante.duplicata"));
+        // Default della variante (allineati ai default del DB)
+        Condizione condizione = req.getCondizione() == null ? Condizione.NA : req.getCondizione();
+        String lingua = req.getLingua() == null ? "en" : req.getLingua().trim().toLowerCase();
+        Finitura finitura = req.getFinitura() == null ? Finitura.NONFOIL : req.getFinitura();
 
-       MagazzinoSKU s = new MagazzinoSKU();
-       s.setProdotto(p);
-       s.setCondizione(condizione);
-       s.setLingua(lingua);
-       s.setFinitura(finitura);
-       s.setPrezzo(req.getPrezzo());
-       s.setQuantita(req.getQuantita());
-       if (req.getAttivo() != null) s.setAttivo(req.getAttivo());
-       skuR.save(s);
+        // Anticipa il vincolo uq_magazzino_sku_var con un errore pulito
+        if (skuR.existsByProdottoIdAndCondizioneAndLinguaAndFinitura(
+                p.getId(), condizione, lingua, finitura))
+            throw new MtgException(msg.get("sku.variante.duplicata"));
 
-       log.debug("creato sku id={}", s.getId());
-       return MagazzinoSKUMap.buildMagazzinoSKUDTO(s);
-   }
+        MagazzinoSKU s = new MagazzinoSKU();
+        s.setProdotto(p);
+        s.setCondizione(condizione);
+        s.setLingua(lingua);
+        s.setFinitura(finitura);
+        s.setPrezzo(req.getPrezzo());
+        s.setQuantita(req.getQuantita());
+        if (req.getAttivo() != null) s.setAttivo(req.getAttivo());
+        skuR.save(s);
 
-   @Override
-   @Transactional
-   public MagazzinoSKUDTO updateSku(MagazzinoSKUReq req) {
-       log.debug("updateSku: id={}", req.getId());
+        log.debug("creato sku id={}", s.getId());
+        return MagazzinoSKUMap.buildMagazzinoSKUDTO(s);
+    }
 
-       MagazzinoSKU s = skuR.findById(req.getId())
-               .orElseThrow(() -> new MtgException(msg.get("sku.non.trovato")));
+    @Override
+    @Transactional
+    public MagazzinoSKUDTO updateSku(MagazzinoSKUReq req) {
+        log.debug("updateSku: id={}", req.getId());
 
-       // La variante e' IMMUTABILE: si toccano solo prezzo/quantita/attivo.
-       // NB: qui niente lock — e' il pannello admin, non il checkout; la
-       // giacenza impostata a mano e' una DECISIONE, non un decremento.
-       if (req.getPrezzo() != null)   s.setPrezzo(req.getPrezzo());
-       if (req.getQuantita() != null) s.setQuantita(req.getQuantita());
-       if (req.getAttivo() != null)   s.setAttivo(req.getAttivo());
+        MagazzinoSKU s = skuR.findById(req.getId())
+                .orElseThrow(() -> new MtgException(msg.get("sku.non.trovato")));
 
-       return MagazzinoSKUMap.buildMagazzinoSKUDTO(s);
-   }
+        // Condizione e finitura sono l'identita' FISICA della variante: immutabili.
+        // La lingua e' modificabile SOLO per i non-SINGLE (correzione admin): per
+        // le carte la lingua identifica la variante -> variante nuova = SKU nuovo.
+        // Gli ordini passati sono protetti dallo snapshot; unico effetto collaterale
+        // possibile, le voci carrello vive che puntano a questo SKU cambiano lingua.
+        if (req.getLingua() != null) {
+            String nuova = req.getLingua().trim().toLowerCase();
+            if (!nuova.equals(s.getLingua())) {
+                if (s.getProdotto().getTipoProdotto() == TipoProdotto.SINGLE)
+                    throw new MtgException(msg.get("sku.lingua.immutabile"));
+                if (skuR.existsByProdottoIdAndCondizioneAndLinguaAndFinitura(
+                        s.getProdotto().getId(), s.getCondizione(), nuova, s.getFinitura()))
+                    throw new MtgException(msg.get("sku.variante.duplicata"));
+                s.setLingua(nuova);
+            }
+        }
 
-   private Prodotto caricaProdotto(Long id) {
-       return prodottoR.findById(id)
-               .orElseThrow(() -> new MtgException(msg.get("prodotto.non.trovato")));
-   }
-   
+        // NB: qui niente lock — e' il pannello admin, non il checkout; la
+        // giacenza impostata a mano e' una DECISIONE, non un decremento.
+        if (req.getPrezzo() != null)   s.setPrezzo(req.getPrezzo());
+        if (req.getQuantita() != null) s.setQuantita(req.getQuantita());
+        if (req.getAttivo() != null)   s.setAttivo(req.getAttivo());
+
+        return MagazzinoSKUMap.buildMagazzinoSKUDTO(s);
+    }
+
+    private Prodotto caricaProdotto(Long id) {
+        return prodottoR.findById(id)
+                .orElseThrow(() -> new MtgException(msg.get("prodotto.non.trovato")));
+    }
+
 }

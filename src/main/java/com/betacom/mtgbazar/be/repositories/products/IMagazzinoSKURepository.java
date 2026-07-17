@@ -44,8 +44,13 @@ public interface IMagazzinoSKURepository extends JpaRepository<MagazzinoSKU, Lon
      */
     @Lock(LockModeType.PESSIMISTIC_WRITE)
     List<MagazzinoSKU> findByIdInForUpdate(@Param("ids") Collection<Long> ids);
-    
+
     List<MagazzinoSKU> findByProdottoId(Long prodottoId);
+
     boolean existsByProdottoIdAndCondizioneAndLinguaAndFinitura(
             Long prodottoId, Condizione condizione, String lingua, Finitura finitura);
+
+    /** Guard non-SINGLE: un prodotto commerciale ha al massimo uno SKU. */
+    boolean existsByProdottoId(Long prodottoId);
+    
 }
