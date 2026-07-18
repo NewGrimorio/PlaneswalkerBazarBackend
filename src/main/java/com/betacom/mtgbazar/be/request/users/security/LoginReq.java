@@ -11,8 +11,12 @@ import lombok.ToString;
 @ToString
 public class LoginReq {
 
-    @NotBlank(message = "utente.no.email")
-    private String email;
+    //@NotBlank(message = "utente.no.email")
+    //private String email;
+	
+	/** Email o username: la '@' decide il percorso di lookup. */
+    @NotBlank(message = "utente.no.identificativo")
+    private String identificativo;
 
     @NotBlank(message = "utente.no.pwd")
     @ToString.Exclude

@@ -200,14 +200,14 @@ public class ControllerRestTest {
  
         UtenteDTO utente = creaCliente();
         String body = """
-                {"email": "%s", "password": "passwordSbagliata"}
+                {"identificativo": "%s", "password": "passwordSbagliata"}
                 """.formatted(utente.getEmail());
  
         mockMvc.perform(post("/api/utenti/login")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(body))
                 .andExpect(status().isBadRequest())
-                .andExpect(jsonPath("$.msg").value("Email o password errati"));
+                .andExpect(jsonPath("$.msg").value("Credenziali errate"));
     }
  
     // ------------------------------------------------------------------

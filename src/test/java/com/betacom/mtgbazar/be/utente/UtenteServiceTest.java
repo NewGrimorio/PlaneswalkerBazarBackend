@@ -34,7 +34,7 @@ import com.betacom.mtgbazar.be.services.interfaces.users.IUtenteServices;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * Test di UtenteImpl su H2 (Flyway V1..V8 dal contesto).
+ * Test di UtenteImpl su H2 (Flyway V1..V9 dal contesto).
  * Ogni test crea i PROPRI utenti con email, username e CF univoci
  * (prefisso ust): indipendenti dall'ordine e dagli altri test della suite.
  */
@@ -161,7 +161,7 @@ public class UtenteServiceTest {
         UtenteDTO registrato = utenteS.registraUtente(req);
 
         LoginReq login = new LoginReq();
-        login.setEmail(" " + req.getEmail().toUpperCase());
+        login.setIdentificativo(" " + req.getEmail().toUpperCase());
         login.setPassword(PASSWORD);
 
         UtenteDTO dto = utenteS.loginUtente(login);
@@ -171,24 +171,24 @@ public class UtenteServiceTest {
 
     @Test
     @Order(6)
-    public void loginConPasswordErrataOEmailInesistenteStessoMessaggio() {
-        log.debug("TEST 6: password errata ed email inesistente devono dare LO STESSO errore");
+    public void loginConPasswordErrataOIdentificativoInesistenteStessoMessaggio() {
+        log.debug("TEST 6: password errata e identificativo inesistente devono dare LO STESSO errore");
 
         UtenteReq req = buildReq();
         utenteS.registraUtente(req);
 
         LoginReq pwdErrata = new LoginReq();
-        pwdErrata.setEmail(req.getEmail());
+        pwdErrata.setIdentificativo(req.getEmail());
         pwdErrata.setPassword("passwordSbagliata");
         MtgException ex1 = assertThrows(MtgException.class, () -> utenteS.loginUtente(pwdErrata));
 
         LoginReq emailInesistente = new LoginReq();
-        emailInesistente.setEmail("nessuno" + SEQ.get() + "@test.it");
+        emailInesistente.setIdentificativo("nessuno" + SEQ.get() + "@test.it");
         emailInesistente.setPassword(PASSWORD);
         MtgException ex2 = assertThrows(MtgException.class, () -> utenteS.loginUtente(emailInesistente));
 
         log.debug("messaggi: '{}' / '{}'", ex1.getMessage(), ex2.getMessage());
-        assertEquals("Email o password errati", ex1.getMessage());
+        assertEquals("Credenziali errate", ex1.getMessage());
         assertEquals(ex1.getMessage(), ex2.getMessage());   // anti user-enumeration
     }
 
@@ -210,7 +210,7 @@ public class UtenteServiceTest {
         errata.setVecchiaPassword("nonSonoIo123");
         errata.setNuovaPassword("nuovaPassword1");
         MtgException ex = assertThrows(MtgException.class, () -> utenteS.changePassword(errata));
-        assertEquals("Email o password errati", ex.getMessage());
+        assertEquals("Credenziali errate", ex.getMessage());
 
         // vecchia corretta -> cambio ok
         CambioPasswordReq ok = new CambioPasswordReq();
@@ -222,12 +222,12 @@ public class UtenteServiceTest {
 
         // la nuova entra, la vecchia no
         LoginReq conNuova = new LoginReq();
-        conNuova.setEmail(req.getEmail());
+        conNuova.setIdentificativo(req.getEmail());
         conNuova.setPassword("nuovaPassword1");
         assertEquals(dto.getId(), utenteS.loginUtente(conNuova).getId());
 
         LoginReq conVecchia = new LoginReq();
-        conVecchia.setEmail(req.getEmail());
+        conVecchia.setIdentificativo(req.getEmail());
         conVecchia.setPassword(PASSWORD);
         assertThrows(MtgException.class, () -> utenteS.loginUtente(conVecchia));
     }
@@ -261,7 +261,7 @@ public class UtenteServiceTest {
         assertEquals(nuova, dopo.getEmail());                   // normalizzata
 
         LoginReq login = new LoginReq();
-        login.setEmail(nuova);
+        login.setIdentificativo(nuova);
         login.setPassword(PASSWORD);
         assertEquals(a.getId(), utenteS.loginUtente(login).getId());
     }
@@ -358,6 +358,21 @@ public class UtenteServiceTest {
         UtenteDTO dopo = utenteS.updateProfilo(ok);
         log.debug("username cambiato in {}", dopo.getUsername());
         assertEquals(nuovo, dopo.getUsername());
+    }
+
+    @Test
+    @Order(13)
+    public void loginConUsernameAncheSporcoFunziona() {
+        log.debug("TEST 13: login con USERNAME maiuscolo e spazi -> stesso utente");
+
+        UtenteReq req = buildReq();
+        UtenteDTO registrato = utenteS.registraUtente(req);
+
+        LoginReq login = new LoginReq();
+        login.setIdentificativo("  " + req.getUsername().toUpperCase() + " ");
+        login.setPassword(PASSWORD);
+
+        assertEquals(registrato.getId(), utenteS.loginUtente(login).getId());
     }
     
 }

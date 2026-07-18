@@ -108,14 +108,22 @@ public class UtenteImpl implements IUtenteServices {
     @Override
     @Transactional(readOnly = true)
     public UtenteDTO loginUtente(LoginReq req) {
-        log.debug("loginUtente: {}", req.getEmail());
+        log.debug("loginUtente: {}", req.getIdentificativo());
 
-        Utente u = utenteR.findByEmail(normalizzaEmail(req.getEmail()))
+        // Email e username vivono entrambi in minuscolo: una normalizzazione sola
+        String id = req.getIdentificativo() == null ? null
+                : req.getIdentificativo().trim().toLowerCase();
+
+        // Discriminatore '@': lo username non puo' contenerla (pattern),
+        // l'email deve. Una sola query, percorso deterministico.
+        Utente u = (id != null && id.contains("@")
+                        ? utenteR.findByEmail(id)
+                        : utenteR.findByUsername(id))
                 .filter(Utente::getAttivo)
                 .orElseThrow(() -> new MtgException(msg.get("utente.credenziali.errate")));
 
-        // Stesso messaggio per "email inesistente" e "password sbagliata":
-        // non riveliamo quali email sono registrate (user enumeration).
+        // Stesso messaggio per "identificativo inesistente" e "password
+        // sbagliata": non riveliamo nulla (user enumeration)
         if (!passwordEncoder.matches(req.getPassword(), u.getPasswordHash()))
             throw new MtgException(msg.get("utente.credenziali.errate"));
 
