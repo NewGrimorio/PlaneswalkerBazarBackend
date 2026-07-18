@@ -12,6 +12,7 @@ public class UtenteMap {
         return UtenteDTO.builder()
                 .id(u.getId())
                 .email(u.getEmail())
+                .username(u.getUsername())
                 .ruolo(u.getRuolo().name())
                 .nome(u.getNome())
                 .cognome(u.getCognome())
@@ -29,13 +30,12 @@ public class UtenteMap {
     }
 
     /**
-     * Nome mostrabile in pubblico ("Marco R."): usato da recensioni e
-     * timeline ordini. MAI email o id di altri utenti verso l'esterno.
+     * Identita' pubblica dell'utente: lo username, nato esattamente per
+     * questo. Usato da recensioni e timeline ordini.
+     * MAI email o id di altri utenti verso l'esterno.
      */
     public static String nomeVisualizzabile(Utente u) {
         if (u == null) return "Sistema";
-        String cognome = (u.getCognome() == null || u.getCognome().isBlank())
-                ? "" : " " + u.getCognome().substring(0, 1).toUpperCase() + ".";
-        return u.getNome() + cognome;
+        return u.getUsername();
     }
 }

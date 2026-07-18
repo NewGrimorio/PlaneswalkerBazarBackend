@@ -1,6 +1,5 @@
 package com.betacom.mtgbazar.be.recensione;
 
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -110,6 +109,7 @@ public class RecensioneServiceTest {
     private UtenteDTO creaCliente(String email) {
         UtenteReq req = new UtenteReq();
         req.setEmail(email);
+        req.setUsername(email.substring(0, email.indexOf('@')));  // localpart: univoca come l'email
         req.setPassword("passwordSicura1");
         req.setNome("Rita");
         req.setCognome("Costa");
@@ -129,8 +129,10 @@ public class RecensioneServiceTest {
     }
  
     private Utente creaAdmin() {
+        int n = SEQ.incrementAndGet();
         Utente a = new Utente();
-        a.setEmail("recadmin" + SEQ.incrementAndGet() + "@test.it");
+        a.setEmail("recadmin" + n + "@test.it");
+        a.setUsername("recadmin" + n);
         a.setPasswordHash("$2a$10$fintoHashPerITest0000000000000000000000000000000000");
         a.setRuolo(RuoloUtente.ADMIN);
         a.setNome("Alice");
@@ -193,7 +195,8 @@ public class RecensioneServiceTest {
  
         assertEquals((short) 5, dto.getVoto());
         assertEquals("APPROVATA", dto.getStato());
-        assertEquals("Rita C.", dto.getAutore());              // mai email/id
+        //assertEquals("Rita C.", dto.getAutore());              // mai email/id
+        assertEquals(utente.getUsername(), dto.getAutore());   // identita' pubblica: mai email/id
         assertTrue(dto.getAcquistoVerificato());
  
         List<RecensioneDTO> lista = recensioneS.listByProdotto(prodotto.getId());
@@ -323,4 +326,5 @@ public class RecensioneServiceTest {
         assertEquals(2L, stats.getConteggio());
         assertEquals(2, recensioneS.listByProdotto(prodotto.getId()).size());
     }
+    
 }

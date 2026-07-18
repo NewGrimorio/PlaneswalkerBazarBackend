@@ -1,6 +1,5 @@
 package com.betacom.mtgbazar.be.contobancario;
 
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -52,6 +51,7 @@ public class ContoBancarioServiceTest {
         int n = SEQ.incrementAndGet();
         UtenteReq req = new UtenteReq();
         req.setEmail("cbt" + n + "@test.it");
+        req.setUsername("cbt" + n);
         req.setPassword("passwordSicura1");
         req.setNome("Carlo");
         req.setCognome("Bruni");
@@ -141,6 +141,7 @@ public class ContoBancarioServiceTest {
         int n = SEQ.incrementAndGet();
         UtenteReq reqB = new UtenteReq();
         reqB.setEmail("cbt" + n + "b@test.it");
+        reqB.setUsername("cbt" + n + "b");
         reqB.setPassword("passwordSicura1");
         reqB.setNome("Bruno");
         reqB.setCognome("Bianchi");

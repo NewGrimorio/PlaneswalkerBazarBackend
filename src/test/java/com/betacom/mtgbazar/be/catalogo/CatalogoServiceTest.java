@@ -234,20 +234,17 @@ public class CatalogoServiceTest {
         assertEquals("NONFOIL", sku.getFinitura());
         assertTrue(sku.getDisponibile());
  
-        // stessa variante (anche con default espliciti) -> duplicata
-        MagazzinoSKUReq doppione = buildSkuReq(p.getId(), "9.99", 5);
-        doppione.setCondizione(Condizione.NA);
-        doppione.setLingua("EN");                             // case diverso: normalizzata
-        doppione.setFinitura(Finitura.NONFOIL);
-        MtgException ex = assertThrows(MtgException.class, () -> skuS.createSku(doppione));
+     // REGOLA V7: un prodotto non-SINGLE ha al massimo UNO SKU — la lingua
+        // vive nell'anagrafica del prodotto, le varianti sono un concetto da
+        // carte. Qualsiasi seconda creazione (anche lingua diversa) e'
+        // rifiutata PRIMA del controllo variante.
+        MagazzinoSKUReq secondo = buildSkuReq(p.getId(), "11.00", 3);
+        secondo.setLingua("de");
+        MtgException ex = assertThrows(MtgException.class, () -> skuS.createSku(secondo));
         log.debug("eccezione attesa: {}", ex.getMessage());
-        assertEquals("Variante gia' esistente per questo prodotto", ex.getMessage());
- 
-        // lingua diversa -> variante legittima
-        MagazzinoSKUReq tedesco = buildSkuReq(p.getId(), "11.00", 3);
-        tedesco.setLingua("de");
-        skuS.createSku(tedesco);
-        assertEquals(2, skuS.listByProdotto(p.getId()).size());
+        assertEquals("Questo prodotto ha gia' le scorte inserite: modificale dalla riga esistente",
+                ex.getMessage());
+        assertEquals(1, skuS.listByProdotto(p.getId()).size());
  
         // update: prezzo e giacenza a zero -> non disponibile
         MagazzinoSKUReq update = new MagazzinoSKUReq();

@@ -43,6 +43,15 @@ public class UtenteImpl implements IUtenteServices {
         return email == null ? null : email.trim().toLowerCase();
     }
 
+    /**
+     * Gemello di normalizzaEmail per lo username: il DB conserva SOLO
+     * minuscole, cosi' il vincolo UNIQUE coincide con l'unicita' che
+     * percepiscono gli umani ("Antonio" e "antonio" sono la stessa persona).
+     */
+    private String normalizzaUsername(String username) {
+        return username == null ? null : username.trim().toLowerCase();
+    }
+
     private String normalizzaCF(String cf) {
         return cf == null ? null : cf.trim().toUpperCase();
     }
@@ -63,6 +72,10 @@ public class UtenteImpl implements IUtenteServices {
         if (utenteR.existsByEmail(email))
             throw new MtgException(msg.get("utente.email.duplicata"));
 
+        String username = normalizzaUsername(req.getUsername());
+        if (utenteR.existsByUsername(username))
+            throw new MtgException(msg.get("utente.username.duplicato"));
+
         String cf = normalizzaCF(req.getCodiceFiscale());
         if (cf != null && utenteR.existsByCodiceFiscale(cf))
             throw new MtgException(msg.get("utente.cf.duplicato"));
@@ -71,6 +84,7 @@ public class UtenteImpl implements IUtenteServices {
 
         Utente u = new Utente();
         u.setEmail(email);
+        u.setUsername(username);
         u.setPasswordHash(passwordEncoder.encode(req.getPassword()));
         u.setRuolo(RuoloUtente.CLIENTE);
         u.setNome(req.getNome());
@@ -114,6 +128,17 @@ public class UtenteImpl implements IUtenteServices {
         log.debug("updateProfilo: id={}", req.getId());
 
         Utente u = caricaAttivo(req.getId());
+
+        // Username: identita' pubblica, modificabile (a differenza dell'email
+        // che e' credenziale). Niente anti-enumeration: "gia' in uso" e'
+        // l'errore giusto per un dato pubblico per definizione.
+        if (req.getUsername() != null) {
+            String username = normalizzaUsername(req.getUsername());
+            if (!username.equals(u.getUsername())
+                    && utenteR.existsByUsername(username))
+                throw new MtgException(msg.get("utente.username.duplicato"));
+            u.setUsername(username);
+        }
 
         String cf = normalizzaCF(req.getCodiceFiscale());
         if (cf != null && !cf.equals(u.getCodiceFiscale())
@@ -178,5 +203,5 @@ public class UtenteImpl implements IUtenteServices {
                 .filter(Utente::getAttivo)
                 .orElseThrow(() -> new MtgException(msg.get("utente.non.trovato")));
     }
-    
+
 }

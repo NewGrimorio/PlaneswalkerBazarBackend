@@ -54,6 +54,7 @@ public class IndirizzoServiceTest {
         int n = SEQ.incrementAndGet();
         UtenteReq req = new UtenteReq();
         req.setEmail("ind" + n + "@test.it");
+        req.setUsername("ind" + n);
         req.setPassword("passwordSicura1");
         req.setNome("Anna");
         req.setCognome("Verdi");
@@ -219,6 +220,7 @@ public class IndirizzoServiceTest {
         int n = SEQ.incrementAndGet();
         UtenteReq reqB = new UtenteReq();
         reqB.setEmail("ind" + n + "b@test.it");
+        reqB.setUsername("ind" + n + "b");
         reqB.setPassword("passwordSicura1");
         reqB.setNome("Bruno");
         reqB.setCognome("Bianchi");
@@ -250,4 +252,5 @@ public class IndirizzoServiceTest {
         assertEquals("Via Etnea", listaA.get(0).getVia());
         assertTrue(listaA.get(0).getPredefinito());
     }
+    
 }

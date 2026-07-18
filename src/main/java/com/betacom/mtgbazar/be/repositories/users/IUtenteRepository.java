@@ -15,9 +15,11 @@ public interface IUtenteRepository extends JpaRepository<Utente, Long> {
      * nel service PRIMA di chiamare questo metodo, in salvataggio E ricerca.
      */
     Optional<Utente> findByEmail(String email);
-
+    
     /** Per la validazione in registrazione: errore pulito prima del vincolo DB. */
     boolean existsByEmail(String email);
 
     boolean existsByCodiceFiscale(String codiceFiscale);
+    
+    boolean existsByUsername(String username);
 }

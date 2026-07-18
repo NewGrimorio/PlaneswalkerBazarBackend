@@ -61,6 +61,7 @@ public class CarrelloServiceTest {
  
         UtenteReq req = new UtenteReq();
         req.setEmail("crt" + n + "@test.it");
+        req.setUsername("crt" + n);
         req.setPassword("passwordSicura1");
         req.setNome("Clara");
         req.setCognome("Neri");
@@ -187,6 +188,7 @@ public class CarrelloServiceTest {
         int n = SEQ.incrementAndGet();
         UtenteReq reqB = new UtenteReq();
         reqB.setEmail("crt" + n + "b@test.it");
+        reqB.setUsername("crt" + n + "b");
         reqB.setPassword("passwordSicura1");
         reqB.setNome("Bruno");
         reqB.setCognome("Bianchi");
@@ -254,4 +256,3 @@ public class CarrelloServiceTest {
     }
     
 }
- 

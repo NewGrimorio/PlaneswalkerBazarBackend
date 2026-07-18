@@ -61,14 +61,16 @@ public class PortafoglioServiceTest {
 
     @BeforeEach
     public void setUp() {
+    	int n = SEQ.incrementAndGet();
         utente = new Utente();
-        utente.setEmail("pwt" + SEQ.incrementAndGet() + "@test.it");
+        utente.setEmail("pwt" + n + "@test.it");
+        utente.setUsername("pwt" + n);
         utente.setPasswordHash("$2a$10$fintoHashPerITest0000000000000000000000000000000000");
         utente.setRuolo(RuoloUtente.CLIENTE);
         utente.setNome("Test");
         utente.setCognome("Portafoglio");
         utenteR.save(utente);
-        log.debug("setUp: creato utente {} ({})", utente.getId(), utente.getEmail());
+        log.debug("setUp: creato utente {} ({})", utente.getId(), utente.getUsername());
 
         Portafoglio p = new Portafoglio();
         p.setUtente(utente);

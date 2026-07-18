@@ -77,7 +77,9 @@ public class ControllerRestTest {
  
     private UtenteDTO creaCliente() {
         UtenteReq req = new UtenteReq();
-        req.setEmail("api" + SEQ.incrementAndGet() + "@test.it");
+        int n = SEQ.incrementAndGet();
+        req.setEmail("api" + n + "@test.it");
+        req.setUsername("api" + n);
         req.setPassword(PASSWORD);
         req.setNome("Aldo");
         req.setCognome("Baglio");
@@ -137,8 +139,10 @@ public class ControllerRestTest {
 
         UtenteReq req = new UtenteReq();
         String email = "api" + SEQ.incrementAndGet() + "@test.it";
+        String username = email.substring(0, email.indexOf('@'));
         req.setEmail(email.toUpperCase());        // solo MAIUSCOLE: @Email la accetta,
                                                   // gli spazi no (validazione al confine!)
+        req.setUsername(username.toUpperCase());  // idem: normalizzato dal service
         req.setPassword(PASSWORD);
         req.setNome("Giovanni");
         req.setCognome("Storti");
@@ -149,6 +153,7 @@ public class ControllerRestTest {
                         .content(json(req)))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.email").value(email))          // normalizzata in minuscolo
+                .andExpect(jsonPath("$.username").value(username))
                 .andExpect(jsonPath("$.ruolo").value("CLIENTE"))
                 .andExpect(jsonPath("$.password").doesNotExist())
                 .andExpect(jsonPath("$.passwordHash").doesNotExist());
@@ -161,6 +166,7 @@ public class ControllerRestTest {
  
         UtenteReq sporca = new UtenteReq();
         sporca.setEmail("  api" + SEQ.get() + "@test.it ");
+        sporca.setUsername("marina" + SEQ.get());  // valido: l'unica violazione deve restare l'email
         sporca.setPassword(PASSWORD);
         sporca.setNome("Marina");
         sporca.setCognome("Massironi");
@@ -277,8 +283,10 @@ public class ControllerRestTest {
                 .andExpect(jsonPath("$.numeroArticoli").value(0));
  
         // spedizione (fixture via service: il controller admin non esiste ancora)
+        int nAdmin = SEQ.incrementAndGet();
         Utente admin = new Utente();
-        admin.setEmail("apiadmin" + SEQ.incrementAndGet() + "@test.it");
+        admin.setEmail("apiadmin" + nAdmin + "@test.it");
+        admin.setUsername("apiadmin" + nAdmin);
         admin.setPasswordHash("$2a$10$fintoHashPerITest0000000000000000000000000000000000");
         admin.setRuolo(RuoloUtente.ADMIN);
         admin.setNome("Alice");

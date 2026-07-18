@@ -34,7 +34,12 @@ public class UtenteReq {
     @Email(groups = {ValidationGroups.Create.class, ValidationGroups.Update.class},
            message = "utente.email.invalid")
     private String email;
-
+    
+    @NotBlank(groups = ValidationGroups.Create.class, message = "utente.no.username")
+    @Pattern(regexp = "^[a-zA-Z0-9._-]{3,30}$", message = "utente.username.invalid",
+             groups = {ValidationGroups.Create.class, ValidationGroups.Update.class})
+    private String username;
+    
     @NotNull(groups = ValidationGroups.Create.class, message = "utente.no.pwd")
     @NotBlank(groups = ValidationGroups.Create.class, message = "utente.no.pwd")
     @Size(min = 8, max = 72, groups = ValidationGroups.Create.class,

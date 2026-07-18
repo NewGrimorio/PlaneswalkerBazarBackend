@@ -109,6 +109,7 @@ public class OrdineServiceTest {
     private UtenteDTO creaCliente(String email) {
         UtenteReq req = new UtenteReq();
         req.setEmail(email);
+        req.setUsername(email.substring(0, email.indexOf('@')));  // localpart: univoca come l'email
         req.setPassword("passwordSicura1");
         req.setNome("Anna");
         req.setCognome("Verdi");
@@ -206,7 +207,8 @@ public class OrdineServiceTest {
         assertEquals(1, timeline.size());
         assertNull(timeline.get(0).getStatoDa());
         assertEquals("CREATO", timeline.get(0).getStatoA());
-        assertEquals("Anna V.", timeline.get(0).getEseguitoDa());
+        //assertEquals("Anna V.", timeline.get(0).getEseguitoDa());
+        assertEquals(utente.getUsername(), timeline.get(0).getEseguitoDa());
     }
  
     @Test
@@ -411,8 +413,10 @@ public class OrdineServiceTest {
  
     /** L'admin non nasce dalla registrazione: fixture via repository. */
     private Utente creaAdmin() {
+        int n = SEQ.incrementAndGet();
         Utente admin = new Utente();
-        admin.setEmail("ordadmin" + SEQ.incrementAndGet() + "@test.it");
+        admin.setEmail("ordadmin" + n + "@test.it");
+        admin.setUsername("ordadmin" + n);
         admin.setPasswordHash("$2a$10$fintoHashPerITest0000000000000000000000000000000000");
         admin.setRuolo(RuoloUtente.ADMIN);
         admin.setNome("Alice");

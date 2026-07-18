@@ -24,6 +24,7 @@ import lombok.ToString;
 public class UtenteDTO {
     private Long id;
     private String email;
+    private String username;
     private String ruolo;
     private String nome;
     private String cognome;

@@ -82,7 +82,9 @@ public class AdminControllerRestTest {
  
     private UtenteDTO creaCliente() {
         UtenteReq req = new UtenteReq();
-        req.setEmail("adm" + SEQ.incrementAndGet() + "@test.it");
+        int n = SEQ.incrementAndGet();
+        req.setEmail("adm" + n + "@test.it");
+        req.setUsername("adm" + n);
         req.setPassword("passwordSicura1");
         req.setNome("Rita");
         req.setCognome("Costa");
@@ -91,8 +93,10 @@ public class AdminControllerRestTest {
     }
  
     private Utente creaAdmin() {
+        int n = SEQ.incrementAndGet();
         Utente a = new Utente();
-        a.setEmail("admadmin" + SEQ.incrementAndGet() + "@test.it");
+        a.setEmail("admadmin" + n + "@test.it");
+        a.setUsername("admadmin" + n);
         a.setPasswordHash("$2a$10$fintoHashPerITest0000000000000000000000000000000000");
         a.setRuolo(RuoloUtente.ADMIN);
         a.setNome("Alice");
@@ -157,8 +161,8 @@ public class AdminControllerRestTest {
  
     @Test
     @Order(1)
-    public void creaSkuViaHttpConDefaultEVarianteDuplicata() throws Exception {
-        log.debug("TEST 1: POST /api/admin/sku coi soli prezzo/quantita -> default; doppione -> 400");
+    public void creaSkuViaHttpConDefaultEUnicoPerProdotto() throws Exception {
+        log.debug("TEST 1: POST /api/admin/sku coi soli prezzo/quantita -> default; secondo SKU -> 400 (regola V7)");
         Prodotto p = creaProdotto("Adm Playmat " + SEQ.incrementAndGet());
  
         String body = """
@@ -173,11 +177,12 @@ public class AdminControllerRestTest {
                 .andExpect(jsonPath("$.finitura").value("NONFOIL"))
                 .andExpect(jsonPath("$.disponibile").value(true));
  
-        // stessa variante -> il vincolo anticipato risponde 400 pulito
+        // REGOLA V7: un non-SINGLE ha al massimo UNO SKU — il guard risponde
+        // PRIMA del controllo variante, qualunque sia la variante richiesta
         mockMvc.perform(post("/api/admin/sku")
                         .contentType(MediaType.APPLICATION_JSON).content(body))
                 .andExpect(status().isBadRequest())
-                .andExpect(jsonPath("$.msg").value("Variante gia' esistente per questo prodotto"));
+                .andExpect(jsonPath("$.msg").value("Questo prodotto ha gia' le scorte inserite: modificale dalla riga esistente"));
     }
  
     @Test
@@ -378,4 +383,5 @@ public class AdminControllerRestTest {
         mockMvc.perform(get("/api/recensioni/prodotto/{prodottoId}/statistiche", prodottoId))
                 .andExpect(jsonPath("$.conteggio").value(0));
     }
+    
 }

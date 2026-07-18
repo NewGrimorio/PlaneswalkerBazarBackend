@@ -47,6 +47,9 @@ public class Utente {
  
     @Column(nullable = false, unique = true, length = 320)
     private String email;
+    
+    @Column(nullable = false, unique = true, length = 30)
+    private String username;
  
     @Column(name = "password_hash", nullable = false, length = 100)
     private String passwordHash;
