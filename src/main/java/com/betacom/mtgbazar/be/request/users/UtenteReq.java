@@ -57,13 +57,16 @@ public class UtenteReq {
     @Size(max = 100, message = "utente.cognome.maxlength")
     private String cognome;
 
-    @Pattern(regexp = "^[0-9+ ]{6,30}$", message = "utente.telefono.invalid")
+    @Pattern(regexp = "^[0-9+ ]{6,30}$", message = "utente.telefono.invalid",
+            groups = {ValidationGroups.Create.class, ValidationGroups.Update.class})
     private String telefono;
 
-    @Past(message = "utente.nascita.invalid")
+    @Past(message = "utente.nascita.invalid",
+            groups = {ValidationGroups.Create.class, ValidationGroups.Update.class})
     private LocalDate dataNascita;
 
-    @Pattern(regexp = "^[A-Za-z0-9]{16}$", message = "utente.cf.invalid")
+    @Pattern(regexp = "^[A-Za-z0-9]{16}$", message = "utente.cf.invalid",
+               groups = {ValidationGroups.Create.class, ValidationGroups.Update.class})
     private String codiceFiscale;
     
 }

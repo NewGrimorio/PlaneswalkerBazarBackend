@@ -261,3 +261,193 @@
 2026-07-18T14:48:39.181+02:00  WARN 10328 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
 2026-07-18T14:48:39.181+02:00  WARN 10328 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
 2026-07-18T14:48:39.182+02:00  INFO 10328 --- [PlaneswalkerBazarBackend] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-07-18T15:04:04.890+02:00  INFO 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-18T15:04:04.894+02:00  INFO 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-18T15:04:04.900+02:00  INFO 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2026-07-18T15:04:04.905+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.c.users.EspansioneController     : GET /api/espansioni
+2026-07-18T15:04:04.911+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-18T15:08:27.886+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.c.users.EspansioneController     : GET /api/espansioni
+2026-07-18T15:08:27.887+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-18T15:08:57.433+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.c.users.EspansioneController     : GET /api/espansioni
+2026-07-18T15:08:57.435+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-18T15:09:49.661+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] c.b.m.b.c.users.EspansioneController     : GET /api/espansioni
+2026-07-18T15:09:49.661+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-18T15:09:49.676+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] c.b.m.b.c.users.EspansioneController     : GET /api/espansioni
+2026-07-18T15:09:49.678+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-18T15:11:54.755+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.c.users.UtenteController         : POST /api/utenti/login
+2026-07-18T15:11:54.755+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.s.i.users.UtenteImpl             : loginUtente: admin.1
+2026-07-18T15:12:30.677+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.c.users.UtenteController         : POST /api/utenti/login
+2026-07-18T15:12:30.678+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.s.i.users.UtenteImpl             : loginUtente: admin@planeswalkerbazar.it
+2026-07-18T15:14:17.897+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] c.b.m.b.c.users.UtenteController         : POST /api/utenti/login
+2026-07-18T15:14:17.899+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] c.b.m.b.s.i.users.UtenteImpl             : loginUtente: ALICE.1
+2026-07-18T15:14:17.934+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] c.b.m.b.s.implementations.MessaggioImpl  : get utente.credenziali.errate
+2026-07-18T15:14:17.987+02:00  WARN 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] c.b.m.b.e.GlobalExceptionHandler         : Errore applicativo: Credenziali errate
+2026-07-18T15:14:18.006+02:00  WARN 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.betacom.mtgbazar.be.exceptions.MtgException: Credenziali errate]
+2026-07-18T15:14:27.543+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] c.b.m.b.c.users.UtenteController         : POST /api/utenti/login
+2026-07-18T15:14:27.543+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] c.b.m.b.s.i.users.UtenteImpl             : loginUtente: ALICE.1
+2026-07-18T15:14:27.545+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] c.b.m.b.s.implementations.MessaggioImpl  : get utente.credenziali.errate
+2026-07-18T15:14:27.550+02:00  WARN 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] c.b.m.b.e.GlobalExceptionHandler         : Errore applicativo: Credenziali errate
+2026-07-18T15:14:27.554+02:00  WARN 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.betacom.mtgbazar.be.exceptions.MtgException: Credenziali errate]
+2026-07-18T15:14:31.276+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-8] c.b.m.b.c.users.UtenteController         : POST /api/utenti/login
+2026-07-18T15:14:31.276+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-8] c.b.m.b.s.i.users.UtenteImpl             : loginUtente: alice.1
+2026-07-18T15:14:31.276+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-8] c.b.m.b.s.implementations.MessaggioImpl  : get utente.credenziali.errate
+2026-07-18T15:14:31.287+02:00  WARN 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-8] c.b.m.b.e.GlobalExceptionHandler         : Errore applicativo: Credenziali errate
+2026-07-18T15:14:31.287+02:00  WARN 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.betacom.mtgbazar.be.exceptions.MtgException: Credenziali errate]
+2026-07-18T15:15:01.873+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.c.users.UtenteController         : POST /api/utenti/login
+2026-07-18T15:15:01.876+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.s.i.users.UtenteImpl             : loginUtente: alice.1
+2026-07-18T15:15:01.877+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.s.implementations.MessaggioImpl  : get utente.credenziali.errate
+2026-07-18T15:15:01.884+02:00  WARN 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.e.GlobalExceptionHandler         : Errore applicativo: Credenziali errate
+2026-07-18T15:15:01.886+02:00  WARN 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.betacom.mtgbazar.be.exceptions.MtgException: Credenziali errate]
+2026-07-18T15:15:08.565+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.c.users.UtenteController         : POST /api/utenti/login
+2026-07-18T15:15:08.566+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.s.i.users.UtenteImpl             : loginUtente: alice.1
+2026-07-18T15:15:08.570+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.s.implementations.MessaggioImpl  : get utente.credenziali.errate
+2026-07-18T15:15:08.574+02:00  WARN 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.e.GlobalExceptionHandler         : Errore applicativo: Credenziali errate
+2026-07-18T15:15:08.576+02:00  WARN 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.betacom.mtgbazar.be.exceptions.MtgException: Credenziali errate]
+2026-07-18T15:15:12.739+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.c.users.UtenteController         : POST /api/utenti/login
+2026-07-18T15:15:12.741+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.s.i.users.UtenteImpl             : loginUtente: alice.1
+2026-07-18T15:15:12.744+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.s.implementations.MessaggioImpl  : get utente.credenziali.errate
+2026-07-18T15:15:12.744+02:00  WARN 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.e.GlobalExceptionHandler         : Errore applicativo: Credenziali errate
+2026-07-18T15:15:12.744+02:00  WARN 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.betacom.mtgbazar.be.exceptions.MtgException: Credenziali errate]
+2026-07-18T15:15:13.251+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.c.users.UtenteController         : POST /api/utenti/login
+2026-07-18T15:15:13.251+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.s.i.users.UtenteImpl             : loginUtente: alice.1
+2026-07-18T15:15:13.253+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.s.implementations.MessaggioImpl  : get utente.credenziali.errate
+2026-07-18T15:15:13.259+02:00  WARN 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.e.GlobalExceptionHandler         : Errore applicativo: Credenziali errate
+2026-07-18T15:15:13.260+02:00  WARN 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.betacom.mtgbazar.be.exceptions.MtgException: Credenziali errate]
+2026-07-18T15:15:13.479+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.c.users.UtenteController         : POST /api/utenti/login
+2026-07-18T15:15:13.479+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.s.i.users.UtenteImpl             : loginUtente: alice.1
+2026-07-18T15:15:13.479+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.s.implementations.MessaggioImpl  : get utente.credenziali.errate
+2026-07-18T15:15:13.489+02:00  WARN 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.e.GlobalExceptionHandler         : Errore applicativo: Credenziali errate
+2026-07-18T15:15:13.489+02:00  WARN 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.betacom.mtgbazar.be.exceptions.MtgException: Credenziali errate]
+2026-07-18T15:15:13.611+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.c.users.UtenteController         : POST /api/utenti/login
+2026-07-18T15:15:13.611+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.s.i.users.UtenteImpl             : loginUtente: alice.1
+2026-07-18T15:15:13.615+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.s.implementations.MessaggioImpl  : get utente.credenziali.errate
+2026-07-18T15:15:13.619+02:00  WARN 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.e.GlobalExceptionHandler         : Errore applicativo: Credenziali errate
+2026-07-18T15:15:13.624+02:00  WARN 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.betacom.mtgbazar.be.exceptions.MtgException: Credenziali errate]
+2026-07-18T15:15:13.744+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.c.users.UtenteController         : POST /api/utenti/login
+2026-07-18T15:15:13.744+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.s.i.users.UtenteImpl             : loginUtente: alice.1
+2026-07-18T15:15:13.744+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.s.implementations.MessaggioImpl  : get utente.credenziali.errate
+2026-07-18T15:15:13.751+02:00  WARN 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.e.GlobalExceptionHandler         : Errore applicativo: Credenziali errate
+2026-07-18T15:15:13.756+02:00  WARN 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.betacom.mtgbazar.be.exceptions.MtgException: Credenziali errate]
+2026-07-18T15:15:13.874+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] c.b.m.b.c.users.UtenteController         : POST /api/utenti/login
+2026-07-18T15:15:13.874+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] c.b.m.b.s.i.users.UtenteImpl             : loginUtente: alice.1
+2026-07-18T15:15:13.884+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] c.b.m.b.s.implementations.MessaggioImpl  : get utente.credenziali.errate
+2026-07-18T15:15:13.890+02:00  WARN 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] c.b.m.b.e.GlobalExceptionHandler         : Errore applicativo: Credenziali errate
+2026-07-18T15:15:13.893+02:00  WARN 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.betacom.mtgbazar.be.exceptions.MtgException: Credenziali errate]
+2026-07-18T15:15:14.028+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] c.b.m.b.c.users.UtenteController         : POST /api/utenti/login
+2026-07-18T15:15:14.028+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] c.b.m.b.s.i.users.UtenteImpl             : loginUtente: alice.1
+2026-07-18T15:15:14.028+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] c.b.m.b.s.implementations.MessaggioImpl  : get utente.credenziali.errate
+2026-07-18T15:15:14.048+02:00  WARN 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] c.b.m.b.e.GlobalExceptionHandler         : Errore applicativo: Credenziali errate
+2026-07-18T15:15:14.048+02:00  WARN 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.betacom.mtgbazar.be.exceptions.MtgException: Credenziali errate]
+2026-07-18T15:15:15.680+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-8] c.b.m.b.c.users.UtenteController         : POST /api/utenti/login
+2026-07-18T15:15:15.684+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-8] c.b.m.b.s.i.users.UtenteImpl             : loginUtente: alice.1
+2026-07-18T15:15:15.687+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-8] c.b.m.b.s.implementations.MessaggioImpl  : get utente.credenziali.errate
+2026-07-18T15:15:15.691+02:00  WARN 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-8] c.b.m.b.e.GlobalExceptionHandler         : Errore applicativo: Credenziali errate
+2026-07-18T15:15:15.694+02:00  WARN 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.betacom.mtgbazar.be.exceptions.MtgException: Credenziali errate]
+2026-07-18T15:15:19.183+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.c.users.UtenteController         : POST /api/utenti/login
+2026-07-18T15:15:19.187+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.s.i.users.UtenteImpl             : loginUtente: alice.1
+2026-07-18T15:15:19.191+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.s.implementations.MessaggioImpl  : get utente.credenziali.errate
+2026-07-18T15:15:19.191+02:00  WARN 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.e.GlobalExceptionHandler         : Errore applicativo: Credenziali errate
+2026-07-18T15:15:19.191+02:00  WARN 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.betacom.mtgbazar.be.exceptions.MtgException: Credenziali errate]
+2026-07-18T15:15:39.105+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.c.users.UtenteController         : POST /api/utenti/login
+2026-07-18T15:15:39.109+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.s.i.users.UtenteImpl             : loginUtente: ADMIN.1
+2026-07-18T15:19:16.000+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.c.users.UtenteController         : POST /api/utenti/login
+2026-07-18T15:19:16.002+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.s.i.users.UtenteImpl             : loginUtente: ADMIN.1
+2026-07-18T15:19:16.239+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.s.implementations.MessaggioImpl  : get utente.credenziali.errate
+2026-07-18T15:19:16.255+02:00  WARN 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.e.GlobalExceptionHandler         : Errore applicativo: Credenziali errate
+2026-07-18T15:19:16.255+02:00  WARN 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.betacom.mtgbazar.be.exceptions.MtgException: Credenziali errate]
+2026-07-18T15:19:53.275+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.c.users.UtenteController         : POST /api/utenti/login
+2026-07-18T15:19:53.275+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.s.i.users.UtenteImpl             : loginUtente: admin.1
+2026-07-18T15:36:53.302+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] c.b.m.b.c.users.EspansioneController     : GET /api/espansioni
+2026-07-18T15:36:53.310+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-18T15:36:53.379+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-8] c.b.m.b.c.users.EspansioneController     : GET /api/espansioni
+2026-07-18T15:36:53.379+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-8] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-18T15:37:09.548+02:00  WARN 10328 --- [PlaneswalkerBazarBackend] [HikariPool-4:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Thread starvation or clock leap detected (housekeeper delta=5m789ms558µs900ns).
+2026-07-18T15:51:33.036+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.c.users.EspansioneController     : GET /api/espansioni
+2026-07-18T15:51:33.039+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-18T15:55:24.021+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.c.users.EspansioneController     : GET /api/espansioni
+2026-07-18T15:55:24.021+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-18T15:55:47.205+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.c.users.EspansioneController     : GET /api/espansioni
+2026-07-18T15:55:47.205+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-18T15:55:54.658+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.c.users.EspansioneController     : GET /api/espansioni
+2026-07-18T15:55:54.658+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-18T15:56:22.472+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.c.users.EspansioneController     : GET /api/espansioni
+2026-07-18T15:56:22.475+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-18T15:57:35.256+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.c.users.UtenteController         : POST /api/utenti/login
+2026-07-18T15:57:35.257+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.s.i.users.UtenteImpl             : loginUtente: admin.1
+2026-07-18T15:57:35.423+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.s.implementations.MessaggioImpl  : get utente.credenziali.errate
+2026-07-18T15:57:35.439+02:00  WARN 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.e.GlobalExceptionHandler         : Errore applicativo: Credenziali errate
+2026-07-18T15:57:35.453+02:00  WARN 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.betacom.mtgbazar.be.exceptions.MtgException: Credenziali errate]
+2026-07-18T15:57:41.753+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.c.users.UtenteController         : POST /api/utenti/login
+2026-07-18T15:57:41.756+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.s.i.users.UtenteImpl             : loginUtente: admin.1
+2026-07-18T15:57:44.231+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.c.users.EspansioneController     : GET /api/espansioni
+2026-07-18T15:57:44.233+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-18T15:57:46.538+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.c.users.EspansioneController     : GET /api/espansioni
+2026-07-18T15:57:46.539+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-18T15:57:46.551+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.c.p.AdminCatalogoController      : GET /api/admin/catalogo/prodotti/tipo/BOOSTER
+2026-07-18T15:57:46.557+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.s.i.products.ProdottoImpl        : listByTipoAdmin: BOOSTER
+2026-07-18T16:07:54.629+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.c.users.EspansioneController     : GET /api/espansioni
+2026-07-18T16:07:54.631+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-18T16:07:54.719+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.c.users.EspansioneController     : GET /api/espansioni
+2026-07-18T16:07:54.719+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-18T16:08:05.765+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.c.users.EspansioneController     : GET /api/espansioni
+2026-07-18T16:08:05.767+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-18T16:08:16.720+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.c.users.UtenteController         : POST /api/utenti/login
+2026-07-18T16:08:16.720+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.s.i.users.UtenteImpl             : loginUtente: admin.1
+2026-07-18T16:08:22.393+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-8] c.b.m.b.c.users.UtenteController         : GET /api/utenti/1
+2026-07-18T16:08:22.405+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.c.users.IndirizzoController      : GET /api/indirizzi?utenteId=1
+2026-07-18T16:08:22.407+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.s.i.users.IndirizzoImpl          : listIndirizzi: utente=1
+2026-07-18T16:18:41.513+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.c.users.UtenteController         : PUT /api/utenti/profilo id=1
+2026-07-18T16:18:41.515+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.s.i.users.UtenteImpl             : updateProfilo: id=1
+2026-07-18T16:19:33.348+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.c.users.UtenteController         : PUT /api/utenti/profilo id=1
+2026-07-18T16:19:33.348+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.s.i.users.UtenteImpl             : updateProfilo: id=1
+2026-07-18T16:27:08.995+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] c.b.m.b.c.users.EspansioneController     : GET /api/espansioni
+2026-07-18T16:27:08.997+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-18T16:27:09.058+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-8] c.b.m.b.c.users.EspansioneController     : GET /api/espansioni
+2026-07-18T16:27:09.059+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-8] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-18T16:29:46.060+02:00  INFO 10328 --- [PlaneswalkerBazarBackend] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-07-18T16:29:46.062+02:00  INFO 10328 --- [PlaneswalkerBazarBackend] [Thread-13] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-18T16:29:46.066+02:00  INFO 10328 --- [PlaneswalkerBazarBackend] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-07-18T16:29:46.071+02:00  INFO 10328 --- [PlaneswalkerBazarBackend] [Thread-13] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-18T16:29:46.072+02:00  INFO 10328 --- [PlaneswalkerBazarBackend] [Thread-13] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2026-07-18T16:29:46.074+02:00  INFO 10328 --- [PlaneswalkerBazarBackend] [Thread-13] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2026-07-18T16:29:46.195+02:00  INFO 10328 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : Starting PlaneswalkerBazarBackendApplication using Java 25.0.2 with PID 10328 (C:\Users\Betacom\eclipse-workspace\PlaneswalkerBazarBackend\target\classes started by Betacom in C:\Users\Betacom\eclipse-workspace\PlaneswalkerBazarBackend)
+2026-07-18T16:29:46.196+02:00 DEBUG 10328 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-07-18T16:29:46.196+02:00  INFO 10328 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : No active profile set, falling back to 1 default profile: "default"
+2026-07-18T16:29:47.019+02:00  INFO 10328 --- [PlaneswalkerBazarBackend] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-18T16:29:47.154+02:00  INFO 10328 --- [PlaneswalkerBazarBackend] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 133 ms. Found 18 JPA repository interfaces.
+2026-07-18T16:29:47.286+02:00  INFO 10328 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9090 (http)
+2026-07-18T16:29:47.287+02:00  INFO 10328 --- [PlaneswalkerBazarBackend] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-18T16:29:47.287+02:00  INFO 10328 --- [PlaneswalkerBazarBackend] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-18T16:29:47.307+02:00  INFO 10328 --- [PlaneswalkerBazarBackend] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1109 ms
+2026-07-18T16:29:47.396+02:00  INFO 10328 --- [PlaneswalkerBazarBackend] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2026-07-18T16:29:47.569+02:00  INFO 10328 --- [PlaneswalkerBazarBackend] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection org.postgresql.jdbc.PgConnection@3e1dfaf6
+2026-07-18T16:29:47.569+02:00  INFO 10328 --- [PlaneswalkerBazarBackend] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2026-07-18T16:29:47.571+02:00  INFO 10328 --- [PlaneswalkerBazarBackend] [restartedMain] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:5432/db_jpa_bazar (PostgreSQL 18.4)
+2026-07-18T16:29:47.731+02:00  INFO 10328 --- [PlaneswalkerBazarBackend] [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 9 migrations (execution time 00:00.104s)
+2026-07-18T16:29:47.901+02:00  INFO 10328 --- [PlaneswalkerBazarBackend] [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 9
+2026-07-18T16:29:47.902+02:00  INFO 10328 --- [PlaneswalkerBazarBackend] [restartedMain] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2026-07-18T16:29:47.929+02:00  INFO 10328 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-07-18T16:29:47.965+02:00  INFO 10328 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-18T16:29:47.981+02:00  INFO 10328 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/db_jpa_bazar]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.4
+	Default catalog/schema: db_jpa_bazar/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-18T16:29:48.083+02:00  WARN 10328 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.core                   : HHH000038: Composite id class does not override equals(): com.betacom.mtgbazar.be.model.MessageID
+2026-07-18T16:29:48.233+02:00  INFO 10328 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-18T16:29:48.389+02:00  INFO 10328 --- [PlaneswalkerBazarBackend] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-18T16:29:48.841+02:00  WARN 10328 --- [PlaneswalkerBazarBackend] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-18T16:29:49.011+02:00  INFO 10328 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/db_jpa_bazar'
+2026-07-18T16:29:49.024+02:00  INFO 10328 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-07-18T16:29:49.043+02:00  INFO 10328 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9090 (http) with context path '/'
+2026-07-18T16:29:49.048+02:00  INFO 10328 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : Started PlaneswalkerBazarBackendApplication in 2.885 seconds (process running for 7639.862)
+2026-07-18T16:29:49.049+02:00  WARN 10328 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-07-18T16:29:49.049+02:00  WARN 10328 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-07-18T16:29:49.050+02:00  INFO 10328 --- [PlaneswalkerBazarBackend] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
