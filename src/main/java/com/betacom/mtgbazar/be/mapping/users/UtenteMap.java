@@ -13,6 +13,7 @@ public class UtenteMap {
                 .id(u.getId())
                 .email(u.getEmail())
                 .username(u.getUsername())
+                .immagineProfilo(u.getImmagineProfilo())
                 .ruolo(u.getRuolo().name())
                 .nome(u.getNome())
                 .cognome(u.getCognome())
@@ -38,4 +39,5 @@ public class UtenteMap {
         if (u == null) return "Sistema";
         return u.getUsername();
     }
+    
 }

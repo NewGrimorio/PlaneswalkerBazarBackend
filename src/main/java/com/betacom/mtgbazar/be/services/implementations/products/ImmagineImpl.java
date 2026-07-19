@@ -40,6 +40,7 @@ public class ImmagineImpl implements IImmagineServices {
 
     @Value("${app.upload.dir}")
     private String uploadDir;
+    private static final String PREFISSO_URL = "/immagini/";
 
     @PostConstruct
     private void initCartellaUpload() {
@@ -74,6 +75,29 @@ public class ImmagineImpl implements IImmagineServices {
         }
         log.debug("immagine salvata: {}/{}", sottocartella, nomeFile);
         return new ImmagineDTO("/immagini/" + sottocartella + "/" + nomeFile);
+    }
+    
+    @Override
+    public void eliminaImmagine(String percorsoRelativo) {
+        if (percorsoRelativo == null || !percorsoRelativo.startsWith(PREFISSO_URL))
+            return;   // esterni (es. URL assoluti) o null: niente da fare
+
+        Path base = Path.of(uploadDir).toAbsolutePath().normalize();
+        Path file = base.resolve(percorsoRelativo.substring(PREFISSO_URL.length()))
+                        .normalize();
+
+        // Difesa in profondita': il percorso risolto DEVE stare nel recinto
+        if (!file.startsWith(base)) {
+            log.warn("eliminaImmagine: percorso fuori recinto ignorato: {}", percorsoRelativo);
+            return;
+        }
+        try {
+            Files.deleteIfExists(file);
+            log.debug("immagine eliminata: {}", percorsoRelativo);
+        } catch (IOException e) {
+            // best effort: un orfano su disco e' meglio di una transazione fallita
+            log.warn("eliminazione immagine fallita: {}", percorsoRelativo, e);
+        }
     }
     
 }

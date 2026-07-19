@@ -1,5 +1,7 @@
 package com.betacom.mtgbazar.be.services.interfaces.users;
 
+import org.springframework.web.multipart.MultipartFile;
+
 import com.betacom.mtgbazar.be.dto.users.UtenteDTO;
 import com.betacom.mtgbazar.be.request.users.UtenteReq;
 import com.betacom.mtgbazar.be.request.users.security.CambioEmailReq;
@@ -36,5 +38,11 @@ public interface IUtenteServices {
     UtenteDTO changeEmail(CambioEmailReq req);
 
     UtenteDTO getById(Long id);
+    
+    //IMMAGGINI
+    
+    UtenteDTO updateImmagineProfilo(Long utenteId, MultipartFile file);
+
+    UtenteDTO removeImmagineProfilo(Long utenteId);
     
 }

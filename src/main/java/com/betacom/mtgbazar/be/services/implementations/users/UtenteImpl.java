@@ -6,6 +6,7 @@ import java.time.LocalDate;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.betacom.mtgbazar.be.dto.users.UtenteDTO;
 import com.betacom.mtgbazar.be.exceptions.MtgException;
@@ -20,6 +21,7 @@ import com.betacom.mtgbazar.be.request.users.security.CambioEmailReq;
 import com.betacom.mtgbazar.be.request.users.security.CambioPasswordReq;
 import com.betacom.mtgbazar.be.request.users.security.LoginReq;
 import com.betacom.mtgbazar.be.services.IMessaggioServices;
+import com.betacom.mtgbazar.be.services.interfaces.products.IImmagineServices;
 import com.betacom.mtgbazar.be.services.interfaces.users.IUtenteServices;
 
 import lombok.RequiredArgsConstructor;
@@ -32,6 +34,7 @@ public class UtenteImpl implements IUtenteServices {
 
     private final IUtenteRepository utenteR;
     private final IPortafoglioRepository portafoglioR;
+    private final IImmagineServices immagineS;
     private final PasswordEncoder passwordEncoder;
     private final IMessaggioServices msg;
 
@@ -210,6 +213,40 @@ public class UtenteImpl implements IUtenteServices {
         return utenteR.findById(id)
                 .filter(Utente::getAttivo)
                 .orElseThrow(() -> new MtgException(msg.get("utente.non.trovato")));
+    }
+    
+    //IMMAGINI 
+    
+    @Override
+    @Transactional
+    public UtenteDTO updateImmagineProfilo(Long utenteId, MultipartFile file) {
+        log.debug("updateImmagineProfilo: id={}", utenteId);
+
+        Utente u = caricaAttivo(utenteId);
+
+        // Prima il salvataggio del nuovo (puo' fallire: tipo non valido, IO):
+        // se esplode, la transazione salta e la foto vecchia resta intatta
+        String nuovo = immagineS.salvaImmagine(file, "utenti").getUrl();
+
+        // Poi la pulizia del vecchio, best effort
+        String vecchio = u.getImmagineProfilo();
+        u.setImmagineProfilo(nuovo);
+        if (vecchio != null) immagineS.eliminaImmagine(vecchio);
+
+        return UtenteMap.buildUtenteDTO(u);
+    }
+
+    @Override
+    @Transactional
+    public UtenteDTO removeImmagineProfilo(Long utenteId) {
+        log.debug("removeImmagineProfilo: id={}", utenteId);
+
+        Utente u = caricaAttivo(utenteId);
+        String vecchio = u.getImmagineProfilo();
+        u.setImmagineProfilo(null);          // null = torna al default del frontend
+        if (vecchio != null) immagineS.eliminaImmagine(vecchio);
+
+        return UtenteMap.buildUtenteDTO(u);
     }
 
 }

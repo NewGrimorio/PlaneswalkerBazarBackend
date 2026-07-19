@@ -6,4 +6,6 @@ import com.betacom.mtgbazar.be.dto.products.ImmagineDTO;
 
 public interface IImmagineServices {
 	ImmagineDTO salvaImmagine(MultipartFile file, String sottocartella);
+	
+	void eliminaImmagine(String percorsoRelativo);
 }

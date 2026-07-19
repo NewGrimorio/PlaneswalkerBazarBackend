@@ -1,14 +1,17 @@
 package com.betacom.mtgbazar.be.controllers.users;
 
 import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
- 
+import org.springframework.web.multipart.MultipartFile;
+
 import com.betacom.mtgbazar.be.dto.users.UtenteDTO;
 import com.betacom.mtgbazar.be.request.ValidationGroups;
 import com.betacom.mtgbazar.be.request.users.UtenteReq;
@@ -69,6 +72,21 @@ public class UtenteController {
     public UtenteDTO changeEmail(@Validated @RequestBody CambioEmailReq req) {
         log.debug("PUT /api/utenti/email id={}", req.getUtenteId());
         return utenteS.changeEmail(req);
+    }
+    
+    //IMMAGINI
+    
+    @PostMapping("/{id}/immagine-profilo")
+    public UtenteDTO uploadImmagineProfilo(@PathVariable Long id,
+                                           @RequestParam("file") MultipartFile file) {
+        log.debug("POST /api/utenti/{}/immagine-profilo", id);
+        return utenteS.updateImmagineProfilo(id, file);
+    }
+
+    @DeleteMapping("/{id}/immagine-profilo")
+    public UtenteDTO deleteImmagineProfilo(@PathVariable Long id) {
+        log.debug("DELETE /api/utenti/{}/immagine-profilo", id);
+        return utenteS.removeImmagineProfilo(id);
     }
     
 }

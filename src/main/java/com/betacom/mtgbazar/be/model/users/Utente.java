@@ -88,5 +88,8 @@ public class Utente {
     @Column(name = "update_date", nullable = false)
     private LocalDateTime updateDate;
     
+    @Column(name = "immagine_profilo", length = 500)
+    private String immagineProfilo;
+    
 }
  

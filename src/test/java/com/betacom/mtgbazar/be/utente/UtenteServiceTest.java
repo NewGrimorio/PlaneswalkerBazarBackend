@@ -1,13 +1,15 @@
 package com.betacom.mtgbazar.be.utente;
 
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 import java.math.BigDecimal;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.time.LocalDate;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -19,6 +21,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.webmvc.test.autoconfigure.AutoConfigureMockMvc;
+import org.springframework.mock.web.MockMultipartFile;
 
 import com.betacom.mtgbazar.be.dto.users.UtenteDTO;
 import com.betacom.mtgbazar.be.exceptions.MtgException;
@@ -373,6 +376,45 @@ public class UtenteServiceTest {
         login.setPassword(PASSWORD);
 
         assertEquals(registrato.getId(), utenteS.loginUtente(login).getId());
+    }
+    
+    @Test
+    @Order(14)
+    public void immagineProfiloUploadSostituzioneERimozione() throws Exception {
+        log.debug("TEST 14: upload avatar, sostituzione (vecchio file eliminato), rimozione");
+
+        UtenteDTO dto = utenteS.registraUtente(buildReq());
+        assertNull(dto.getImmagineProfilo());   // nasce senza foto: default frontend
+
+        // upload: campo valorizzato con percorso relativo
+        MockMultipartFile foto1 = new MockMultipartFile(
+                "file", "avatar.png", "image/png", new byte[]{1, 2, 3});
+        UtenteDTO conFoto = utenteS.updateImmagineProfilo(dto.getId(), foto1);
+        assertNotNull(conFoto.getImmagineProfilo());
+        assertTrue(conFoto.getImmagineProfilo().startsWith("/immagini/utenti/"));
+
+        // il file esiste davvero su disco
+        Path base = Path.of("./target/test-uploads").toAbsolutePath().normalize();
+        Path file1 = base.resolve(conFoto.getImmagineProfilo().substring("/immagini/".length()));
+        assertTrue(Files.exists(file1));
+
+        // sostituzione: nuovo percorso, vecchio file eliminato
+        MockMultipartFile foto2 = new MockMultipartFile(
+                "file", "avatar2.png", "image/png", new byte[]{4, 5, 6});
+        UtenteDTO conFoto2 = utenteS.updateImmagineProfilo(dto.getId(), foto2);
+        assertNotEquals(conFoto.getImmagineProfilo(), conFoto2.getImmagineProfilo());
+        assertTrue(Files.notExists(file1));     // pulizia avvenuta
+
+        // tipo non ammesso -> errore pulito dei messaggi V5
+        MockMultipartFile pdf = new MockMultipartFile(
+                "file", "doc.pdf", "application/pdf", new byte[]{7});
+        MtgException ex = assertThrows(MtgException.class,
+                () -> utenteS.updateImmagineProfilo(dto.getId(), pdf));
+        assertEquals("Formato non supportato (ammessi: JPG, PNG, WebP)", ex.getMessage());
+
+        // rimozione: campo null, file sparito
+        UtenteDTO senzaFoto = utenteS.removeImmagineProfilo(dto.getId());
+        assertNull(senzaFoto.getImmagineProfilo());
     }
     
 }
