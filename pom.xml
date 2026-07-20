@@ -120,10 +120,48 @@
     		<groupId>org.springframework.boot</groupId>
     		<artifactId>spring-boot-flyway</artifactId>
 		</dependency>
-		<!-- Hashing delle password -->
+		<!-- Sicurezza: encoder password (BCrypt) -->
 		<dependency>
    			 <groupId>org.springframework.security</groupId>
     		<artifactId>spring-security-crypto</artifactId>
+		</dependency>
+		<!-- Sicurezza: Spring Security + validazione JWT come Resource Server OAuth2 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security-oauth2-resource-server</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security-oauth2-resource-server-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<!-- Generazione JWT (jjwt): api a compile, impl e jackson solo a runtime -->
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt-api</artifactId>
+			<version>0.13.0</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt-impl</artifactId>
+			<version>0.13.0</version>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt-jackson</artifactId>
+			<version>0.13.0</version>
+			<scope>runtime</scope>
 		</dependency>
 		<!-- Osservabilità in produazione-->
 		<dependency>

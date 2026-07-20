@@ -368,7 +368,7 @@ public class AdminControllerRestTest {
         Long prodottoId = sku.getProdotto().getId();
  
         // visibile al pubblico
-        mockMvc.perform(get("/api/recensioni/prodotto/{prodottoId}", prodottoId))
+        mockMvc.perform(get("/api/public/recensioni/prodotto/{prodottoId}", prodottoId))
                 .andExpect(jsonPath("$.length()").value(1));
  
         // moderazione via HTTP
@@ -378,9 +378,9 @@ public class AdminControllerRestTest {
                 .andExpect(jsonPath("$.stato").value("RIFIUTATA"));
  
         // sparita dalla lettura pubblica, statistiche azzerate
-        mockMvc.perform(get("/api/recensioni/prodotto/{prodottoId}", prodottoId))
+        mockMvc.perform(get("/api/public/recensioni/prodotto/{prodottoId}", prodottoId))
                 .andExpect(jsonPath("$.length()").value(0));
-        mockMvc.perform(get("/api/recensioni/prodotto/{prodottoId}/statistiche", prodottoId))
+        mockMvc.perform(get("/api/public/recensioni/prodotto/{prodottoId}/statistiche", prodottoId))
                 .andExpect(jsonPath("$.conteggio").value(0));
     }
     

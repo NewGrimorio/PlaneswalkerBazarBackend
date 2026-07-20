@@ -17,16 +17,19 @@ import com.betacom.mtgbazar.be.request.ValidationGroups;
 import com.betacom.mtgbazar.be.request.users.UtenteReq;
 import com.betacom.mtgbazar.be.request.users.security.CambioEmailReq;
 import com.betacom.mtgbazar.be.request.users.security.CambioPasswordReq;
-import com.betacom.mtgbazar.be.request.users.security.LoginReq;
 import com.betacom.mtgbazar.be.services.interfaces.users.IUtenteServices;
- 
+
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
- 
+
 /**
- * Registrazione, login e gestione account. I gruppi di validazione
- * entrano in gioco QUI: Create per la registrazione, Update per il
- * profilo — stessa Req, regole diverse.
+ * Gestione del PROFILO utente: dopo la Fase A questo controller vive
+ * interamente nel tier AUTENTICATO. Login e registrazione (gli unici
+ * due endpoint aperti che aveva) sono migrati in AuthController
+ * (/api/auth): niente eccezioni puntuali nella SecurityConfig.
+ *
+ * I gruppi di validazione restano il cuore: Update per il profilo,
+ * request dedicate per password ed email — stessa disciplina di prima.
  */
 @RestController
 @RequestMapping("/api/utenti")
@@ -35,19 +38,6 @@ import lombok.extern.slf4j.Slf4j;
 public class UtenteController {
  
     private final IUtenteServices utenteS;
- 
-    @PostMapping("/registrazione")
-    public UtenteDTO registra(
-            @Validated(ValidationGroups.Create.class) @RequestBody UtenteReq req) {
-        log.debug("POST /api/utenti/registrazione");
-        return utenteS.registraUtente(req);
-    }
- 
-    @PostMapping("/login")
-    public UtenteDTO login(@Validated @RequestBody LoginReq req) {
-        log.debug("POST /api/utenti/login");
-        return utenteS.loginUtente(req);
-    }
  
     @GetMapping("/{id}")
     public UtenteDTO getById(@PathVariable Long id) {

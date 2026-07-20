@@ -148,7 +148,7 @@ public class ControllerRestTest {
         req.setCognome("Storti");
         req.setDataNascita(LocalDate.of(1985, 2, 2));
 
-        mockMvc.perform(post("/api/utenti/registrazione")
+        mockMvc.perform(post("/api/auth/registrazione")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(json(req)))
                 .andExpect(status().isOk())
@@ -170,7 +170,7 @@ public class ControllerRestTest {
         sporca.setPassword(PASSWORD);
         sporca.setNome("Marina");
         sporca.setCognome("Massironi");
-        mockMvc.perform(post("/api/utenti/registrazione")
+        mockMvc.perform(post("/api/auth/registrazione")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(json(sporca)))
                 .andExpect(status().isBadRequest())
@@ -203,7 +203,7 @@ public class ControllerRestTest {
                 {"identificativo": "%s", "password": "passwordSbagliata"}
                 """.formatted(utente.getEmail());
  
-        mockMvc.perform(post("/api/utenti/login")
+        mockMvc.perform(post("/api/auth/login")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(body))
                 .andExpect(status().isBadRequest())
@@ -217,20 +217,20 @@ public class ControllerRestTest {
     @Test
     @Order(5)
     public void paginaProdottoViaSlugConSkus() throws Exception {
-        log.debug("TEST 5: GET /api/prodotti/{slug} -> dettaglio con varianti");
+        log.debug("TEST 5: GET /api/public/prodotti/{slug} -> dettaglio con varianti");
  
         int n = SEQ.incrementAndGet();
         MagazzinoSKU sku = creaProdottoConSku("Api Playmat " + n, "10.00", 5);
         String slug = sku.getProdotto().getSlug();
  
-        mockMvc.perform(get("/api/prodotti/{slug}", slug))
+        mockMvc.perform(get("/api/public/prodotti/{slug}", slug))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.nome").value("Api Playmat " + n))
                 .andExpect(jsonPath("$.skus[0].prezzo").value(10.00))
                 .andExpect(jsonPath("$.skus[0].disponibile").value(true));
  
         // e uno slug inventato e' un 400 pulito, non un 500
-        mockMvc.perform(get("/api/prodotti/{slug}", "non-esiste-" + n))
+        mockMvc.perform(get("/api/public/prodotti/{slug}", "non-esiste-" + n))
                 .andExpect(status().isBadRequest())
                 .andExpect(jsonPath("$.msg").value("Prodotto non trovato"));
     }

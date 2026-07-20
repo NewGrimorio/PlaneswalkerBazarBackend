@@ -13,9 +13,9 @@ import com.betacom.mtgbazar.be.services.interfaces.products.IEspansioneServices;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
  
-/** Espansioni PUBBLICHE: il menu dei set del negozio. */
+/** Espansioni PUBBLICHE: il menu dei set del negozio, sotto /api/public. */
 @RestController
-@RequestMapping("/api/espansioni")
+@RequestMapping("/api/public/espansioni")
 @RequiredArgsConstructor
 @Slf4j
 public class EspansioneController {
@@ -24,13 +24,13 @@ public class EspansioneController {
  
     @GetMapping
     public List<EspansioneDTO> list() {
-        log.debug("GET /api/espansioni");
+        log.debug("GET /api/public/espansioni");
         return espansioneS.listEspansioni();
     }
  
     @GetMapping("/{codice}")
     public EspansioneDTO getByCodice(@PathVariable String codice) {
-        log.debug("GET /api/espansioni/{}", codice);
+        log.debug("GET /api/public/espansioni/{}", codice);
         return espansioneS.getByCodice(codice);
     }
     
