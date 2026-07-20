@@ -5,7 +5,8 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
- 
+import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.jwt; 
+
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -176,23 +177,77 @@ public class ControllerRestTest {
                 .andExpect(status().isBadRequest())
                 .andExpect(jsonPath("$.msg").value("Formato email non valido"));
     }
+    
+ // ============================================================================
+ // PATCH per ControllerRestTest.java — FASE C1
+ // ============================================================================
+ //
+ // 1) AGGIUNGERE questo import statico in cima al file, accanto agli altri
+//     MockMvcRequestBuilders / post-processors:
+ //
+
+ //
+//     (arriva da spring-security-test, gia' nel pom come scope test).
+ //
+ // ----------------------------------------------------------------------------
+ // 2) SOSTITUIRE integralmente il vecchio TEST 3
+//     (updateProfiloSenzaIdBoccataDalGruppoUpdate, righe ~180-194) con i DUE
+//     metodi qui sotto. Il vecchio verificava "senza id -> 400"; ma in Fase C
+//     l'id non arriva piu' dal body — arriva dal token. Quindi:
+//       - TEST 3   cambia natura: senza TOKEN -> 401 (SecurityUtils/AuthToken)
+//       - TEST 3b  e' nuovo e DIMOSTRA la Fase C: col token il profilo si
+//                  aggiorna sull'utente del token, e un id "altrui" iniettato
+//                  nel body viene IGNORATO (prova che l'IDOR e' chiuso).
+ // ----------------------------------------------------------------------------
+  
+     @Test
+     @Order(3)
+     public void updateProfiloSenzaTokenERespinto() throws Exception {
+         log.debug("TEST 3: FASE C — PUT profilo senza token -> 401 (id dal token, non dal body)");
+  
+         UtenteReq req = new UtenteReq();
+         req.setNome("Senza");
+         req.setCognome("Token");
+  
+         // Nessun .with(jwt()): in dev il principal e' anonimo, SecurityUtils
+         // non riesce a ricavare l'id e alza AuthTokenException -> 401.
+         mockMvc.perform(put("/api/utenti/profilo")
+                         .contentType(MediaType.APPLICATION_JSON)
+                         .content(json(req)))
+                 .andExpect(status().isUnauthorized());
+     }
+  
+     @Test
+     @Order(3)
+     public void updateProfiloUsaIdDalTokenNonDalBody() throws Exception {
+         log.debug("TEST 3b: FASE C — il profilo si aggiorna sull'utente del TOKEN, "
+                 + "un id altrui nel body viene ignorato (IDOR-proof)");
+  
+         UtenteDTO vero = creaCliente();      // e' lui che deve essere aggiornato
+         UtenteDTO altro = creaCliente();     // la sua identita' NON deve essere toccata
+  
+         // Nel body infilo di proposito l'id di 'altro': deve essere ignorato.
+         UtenteReq req = new UtenteReq();
+         req.setId(altro.getId());            // <- tentativo di IDOR
+         req.setNome("NuovoNome");
+         req.setCognome("NuovoCognome");
+         req.setUsername(vero.getUsername()); // Update valida lo username col Pattern
+  
+         // Il token dice: sono 'vero' (subject = id come stringa)
+         mockMvc.perform(put("/api/utenti/profilo")
+                         .with(jwt().jwt(j -> j.subject(vero.getId().toString())))
+                         .contentType(MediaType.APPLICATION_JSON)
+                         .content(json(req)))
+                 .andExpect(status().isOk())
+                 .andExpect(jsonPath("$.id").value(vero.getId()))        // ha vinto il TOKEN
+                 .andExpect(jsonPath("$.nome").value("NuovoNome"));
+  
+         // Controprova: 'altro' e' rimasto intatto
+         UtenteDTO altroDopo = utenteS.getById(altro.getId());
+         org.junit.jupiter.api.Assertions.assertNotEquals("NuovoNome", altroDopo.getNome());
+     }
  
-    @Test
-    @Order(3)
-    public void updateProfiloSenzaIdBoccataDalGruppoUpdate() throws Exception {
-        log.debug("TEST 3: stessa Req, gruppo diverso: senza id il PUT e' un 400");
- 
-        UtenteReq req = new UtenteReq();
-        req.setNome("Senza");
-        req.setCognome("Id");
- 
-        mockMvc.perform(put("/api/utenti/profilo")
-                        .contentType(MediaType.APPLICATION_JSON)
-                        .content(json(req)))
-                .andExpect(status().isBadRequest())
-                .andExpect(jsonPath("$.msg").value("Identificativo utente mancante"));
-    }
- 
+  
     @Test
     @Order(4)
     public void loginErratoRestituisce400ColMessaggioDelHandler() throws Exception {

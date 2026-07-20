@@ -1287,3 +1287,537 @@ Caused by: java.lang.IllegalStateException: app.jwt.secret decodifica a 504 bit:
 2026-07-20T16:32:46.726+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.s.implementations.MessaggioImpl  : get auth.refresh.invalido
 2026-07-20T16:32:46.736+02:00  WARN 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.e.GlobalExceptionHandler         : Token rifiutato: Sessione scaduta o non valida: effettua di nuovo il login
 2026-07-20T16:32:46.741+02:00  WARN 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.betacom.mtgbazar.be.exceptions.AuthTokenException: Sessione scaduta o non valida: effettua di nuovo il login]
+2026-07-20T16:58:25.055+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T16:58:25.057+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T16:58:27.465+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.c.users.AuthController           : POST /api/auth/refresh
+2026-07-20T16:58:27.616+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.s.i.RefreshTokenImpl             : refresh ruotato: utente=1 famiglia=cc10939d-5c02-45af-b6fb-54a96e39287c
+2026-07-20T16:58:27.666+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.s.implementations.JwtImpl        : access token emesso per utente id=1
+2026-07-20T16:58:27.794+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T16:58:27.796+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T16:58:39.295+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.c.users.AuthController           : POST /api/auth/login
+2026-07-20T16:58:39.295+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.s.CustomUserDetailsService       : loadUserByUsername: admin
+2026-07-20T16:58:39.507+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.s.implementations.JwtImpl        : access token emesso per utente id=1
+2026-07-20T16:58:39.507+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.s.i.RefreshTokenImpl             : emetti refresh: utente=1
+2026-07-20T17:01:57.905+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T17:01:57.907+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T17:02:00.036+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T17:02:00.038+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T17:02:00.058+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-8] c.b.m.b.c.p.AdminCatalogoController      : GET /api/admin/catalogo/prodotti/tipo/BOOSTER
+2026-07-20T17:02:00.065+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-8] c.b.m.b.s.i.products.ProdottoImpl        : listByTipoAdmin: BOOSTER
+2026-07-20T17:02:02.175+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.c.p.AdminCatalogoController      : GET /api/admin/catalogo/prodotti/tipo/BOOSTER_BOX
+2026-07-20T17:02:02.175+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.s.i.products.ProdottoImpl        : listByTipoAdmin: BOOSTER_BOX
+2026-07-20T17:02:03.029+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] c.b.m.b.c.p.AdminCatalogoController      : GET /api/admin/catalogo/prodotti/tipo/MAZZO
+2026-07-20T17:02:03.029+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] c.b.m.b.s.i.products.ProdottoImpl        : listByTipoAdmin: MAZZO
+2026-07-20T17:02:03.697+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.c.p.AdminCatalogoController      : GET /api/admin/catalogo/prodotti/tipo/SET_LOTTO
+2026-07-20T17:02:03.697+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.s.i.products.ProdottoImpl        : listByTipoAdmin: SET_LOTTO
+2026-07-20T17:02:03.995+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.c.p.AdminCatalogoController      : GET /api/admin/catalogo/prodotti/tipo/SIGILLATO
+2026-07-20T17:02:03.997+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.s.i.products.ProdottoImpl        : listByTipoAdmin: SIGILLATO
+2026-07-20T17:02:04.278+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] c.b.m.b.c.p.AdminCatalogoController      : GET /api/admin/catalogo/prodotti/tipo/ACCESSORIO
+2026-07-20T17:02:04.278+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] c.b.m.b.s.i.products.ProdottoImpl        : listByTipoAdmin: ACCESSORIO
+2026-07-20T17:02:45.850+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T17:02:45.850+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T17:02:45.953+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T17:02:45.953+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T17:02:46.232+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.c.users.AuthController           : POST /api/auth/refresh
+2026-07-20T17:02:46.241+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.s.i.RefreshTokenImpl             : refresh ruotato: utente=1 famiglia=d279284f-399b-4a96-941f-56b144fc7e19
+2026-07-20T17:02:46.265+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.s.implementations.JwtImpl        : access token emesso per utente id=1
+2026-07-20T17:02:46.307+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T17:02:46.307+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T17:03:02.535+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.c.users.AuthController           : POST /api/auth/login
+2026-07-20T17:03:02.535+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.s.CustomUserDetailsService       : loadUserByUsername: admin
+2026-07-20T17:03:02.744+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.s.implementations.JwtImpl        : access token emesso per utente id=1
+2026-07-20T17:03:02.745+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.s.i.RefreshTokenImpl             : emetti refresh: utente=1
+2026-07-20T17:03:15.596+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T17:03:15.596+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T17:03:15.662+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T17:03:15.662+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T17:03:16.003+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.c.users.AuthController           : POST /api/auth/refresh
+2026-07-20T17:03:16.012+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.s.i.RefreshTokenImpl             : refresh ruotato: utente=1 famiglia=9fae5e5f-2dbc-45d0-89cd-7f695f5967b2
+2026-07-20T17:03:16.020+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.s.implementations.JwtImpl        : access token emesso per utente id=1
+2026-07-20T17:03:16.054+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T17:03:16.055+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T17:06:18.634+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T17:06:18.635+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T17:06:19.133+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.c.users.AuthController           : POST /api/auth/refresh
+2026-07-20T17:06:19.168+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.s.i.RefreshTokenImpl             : refresh ruotato: utente=1 famiglia=9fae5e5f-2dbc-45d0-89cd-7f695f5967b2
+2026-07-20T17:06:19.180+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.s.implementations.JwtImpl        : access token emesso per utente id=1
+2026-07-20T17:06:19.307+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T17:06:19.343+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T17:06:34.752+02:00  INFO 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 3538 ms
+2026-07-20T17:09:20.180+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.c.users.AuthController           : POST /api/auth/login
+2026-07-20T17:09:20.180+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.s.CustomUserDetailsService       : loadUserByUsername: admin
+2026-07-20T17:09:20.386+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.s.implementations.JwtImpl        : access token emesso per utente id=1
+2026-07-20T17:09:20.386+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.s.i.RefreshTokenImpl             : emetti refresh: utente=1
+2026-07-20T17:09:24.828+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T17:09:24.828+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T17:09:24.886+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T17:09:24.886+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T17:09:25.317+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.c.users.AuthController           : POST /api/auth/refresh
+2026-07-20T17:09:25.326+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.s.i.RefreshTokenImpl             : refresh ruotato: utente=1 famiglia=be491266-f162-4c1e-8b19-d0e4a663f239
+2026-07-20T17:09:25.332+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.s.implementations.JwtImpl        : access token emesso per utente id=1
+2026-07-20T17:09:25.382+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T17:09:25.382+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T17:15:54.472+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T17:15:54.476+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T17:15:55.340+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-8] c.b.m.b.c.users.AuthController           : POST /api/auth/refresh
+2026-07-20T17:15:55.547+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-8] c.b.m.b.s.i.RefreshTokenImpl             : refresh ruotato: utente=1 famiglia=be491266-f162-4c1e-8b19-d0e4a663f239
+2026-07-20T17:15:55.596+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-8] c.b.m.b.s.implementations.JwtImpl        : access token emesso per utente id=1
+2026-07-20T17:15:56.130+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T17:15:56.137+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T17:16:05.586+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.c.users.AuthController           : POST /api/auth/login
+2026-07-20T17:16:05.590+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.s.CustomUserDetailsService       : loadUserByUsername: admin
+2026-07-20T17:16:05.803+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.s.implementations.JwtImpl        : access token emesso per utente id=1
+2026-07-20T17:16:05.807+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.s.i.RefreshTokenImpl             : emetti refresh: utente=1
+2026-07-20T17:16:08.642+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T17:16:08.642+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T17:16:08.755+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T17:16:08.756+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T17:16:08.887+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.c.users.AuthController           : POST /api/auth/refresh
+2026-07-20T17:16:08.896+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.s.i.RefreshTokenImpl             : refresh ruotato: utente=1 famiglia=b9f0ad4c-84a3-40d7-b836-d1ad5beefbb9
+2026-07-20T17:16:08.903+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.s.implementations.JwtImpl        : access token emesso per utente id=1
+2026-07-20T17:16:08.928+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T17:16:08.928+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T17:16:42.928+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T17:16:42.928+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T17:16:43.061+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.c.users.AuthController           : POST /api/auth/refresh
+2026-07-20T17:16:43.071+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.s.i.RefreshTokenImpl             : refresh ruotato: utente=1 famiglia=b9f0ad4c-84a3-40d7-b836-d1ad5beefbb9
+2026-07-20T17:16:43.071+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.s.implementations.JwtImpl        : access token emesso per utente id=1
+2026-07-20T17:16:43.099+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T17:16:43.102+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T17:17:32.977+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T17:17:32.979+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T17:17:33.193+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.c.users.AuthController           : POST /api/auth/refresh
+2026-07-20T17:17:33.295+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.s.i.RefreshTokenImpl             : refresh ruotato: utente=1 famiglia=b9f0ad4c-84a3-40d7-b836-d1ad5beefbb9
+2026-07-20T17:17:33.304+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.s.implementations.JwtImpl        : access token emesso per utente id=1
+2026-07-20T17:17:33.339+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T17:17:33.339+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T17:17:50.517+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.c.users.AuthController           : POST /api/auth/refresh
+2026-07-20T17:17:50.525+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.s.i.RefreshTokenImpl             : refresh ruotato: utente=1 famiglia=b9f0ad4c-84a3-40d7-b836-d1ad5beefbb9
+2026-07-20T17:17:50.527+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.s.implementations.JwtImpl        : access token emesso per utente id=1
+2026-07-20T17:17:50.550+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T17:17:50.557+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T17:17:51.770+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-8] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T17:17:51.772+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-8] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T17:18:16.395+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T17:18:16.397+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T17:18:16.697+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.c.users.AuthController           : POST /api/auth/refresh
+2026-07-20T17:18:16.710+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.s.i.RefreshTokenImpl             : refresh ruotato: utente=1 famiglia=b9f0ad4c-84a3-40d7-b836-d1ad5beefbb9
+2026-07-20T17:18:16.738+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.s.implementations.JwtImpl        : access token emesso per utente id=1
+2026-07-20T17:18:16.820+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T17:18:16.825+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T17:18:23.481+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-8] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T17:18:23.481+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-8] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T17:18:23.915+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T17:18:23.916+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T17:18:23.924+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.c.p.AdminCatalogoController      : GET /api/admin/catalogo/prodotti/tipo/BOOSTER
+2026-07-20T17:18:23.925+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.s.i.products.ProdottoImpl        : listByTipoAdmin: BOOSTER
+2026-07-20T17:18:32.557+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.c.users.AuthController           : POST /api/auth/logout
+2026-07-20T17:18:32.570+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.s.i.RefreshTokenImpl             : logout: famiglia b9f0ad4c-84a3-40d7-b836-d1ad5beefbb9 revocata (1 token)
+2026-07-20T17:18:41.340+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-8] c.b.m.b.c.users.AuthController           : POST /api/auth/login
+2026-07-20T17:18:41.340+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-8] c.b.m.b.s.CustomUserDetailsService       : loadUserByUsername: admin
+2026-07-20T17:18:41.537+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-8] c.b.m.b.s.implementations.JwtImpl        : access token emesso per utente id=1
+2026-07-20T17:18:41.542+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-8] c.b.m.b.s.i.RefreshTokenImpl             : emetti refresh: utente=1
+2026-07-20T17:18:43.778+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T17:18:43.780+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T17:18:44.335+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T17:18:44.338+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T17:18:44.342+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.c.p.AdminCatalogoController      : GET /api/admin/catalogo/prodotti/tipo/BOOSTER
+2026-07-20T17:18:44.344+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.s.i.products.ProdottoImpl        : listByTipoAdmin: BOOSTER
+2026-07-20T17:27:24.338+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T17:27:24.344+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T17:27:24.792+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.c.p.AdminCatalogoController      : GET /api/admin/catalogo/prodotti/tipo/BOOSTER
+2026-07-20T17:27:24.792+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.s.i.products.ProdottoImpl        : listByTipoAdmin: BOOSTER
+2026-07-20T17:27:25.179+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.c.p.AdminCatalogoController      : GET /api/admin/catalogo/prodotti/tipo/MAZZO
+2026-07-20T17:27:25.180+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.s.i.products.ProdottoImpl        : listByTipoAdmin: MAZZO
+2026-07-20T17:27:25.612+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] c.b.m.b.c.p.AdminCatalogoController      : GET /api/admin/catalogo/prodotti/tipo/SET_LOTTO
+2026-07-20T17:27:25.612+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] c.b.m.b.s.i.products.ProdottoImpl        : listByTipoAdmin: SET_LOTTO
+2026-07-20T17:27:26.053+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.c.p.AdminCatalogoController      : GET /api/admin/catalogo/prodotti/tipo/SIGILLATO
+2026-07-20T17:27:26.053+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.s.i.products.ProdottoImpl        : listByTipoAdmin: SIGILLATO
+2026-07-20T17:27:26.388+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.c.p.AdminCatalogoController      : GET /api/admin/catalogo/prodotti/tipo/ACCESSORIO
+2026-07-20T17:27:26.388+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.s.i.products.ProdottoImpl        : listByTipoAdmin: ACCESSORIO
+2026-07-20T17:27:27.481+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.c.p.AdminCatalogoController      : GET /api/admin/catalogo/prodotti/tipo/BOOSTER
+2026-07-20T17:27:27.485+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T17:27:27.485+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.s.i.products.ProdottoImpl        : listByTipoAdmin: BOOSTER
+2026-07-20T17:27:27.485+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T17:27:28.158+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T17:27:28.158+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T17:32:25.860+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.c.p.AdminCatalogoController      : GET /api/admin/catalogo/prodotti/tipo/BOOSTER
+2026-07-20T17:32:25.862+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.s.i.products.ProdottoImpl        : listByTipoAdmin: BOOSTER
+2026-07-20T17:32:25.863+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T17:32:25.865+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T17:32:28.173+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.c.p.AdminCatalogoController      : GET /api/admin/catalogo/prodotti/tipo/BOOSTER_BOX
+2026-07-20T17:32:28.174+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.s.i.products.ProdottoImpl        : listByTipoAdmin: BOOSTER_BOX
+2026-07-20T17:32:28.756+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] c.b.m.b.c.p.AdminCatalogoController      : GET /api/admin/catalogo/prodotti/tipo/MAZZO
+2026-07-20T17:32:28.758+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] c.b.m.b.s.i.products.ProdottoImpl        : listByTipoAdmin: MAZZO
+2026-07-20T17:32:29.982+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-8] c.b.m.b.c.p.AdminCatalogoController      : GET /api/admin/catalogo/prodotti/tipo/SET_LOTTO
+2026-07-20T17:32:29.983+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-8] c.b.m.b.s.i.products.ProdottoImpl        : listByTipoAdmin: SET_LOTTO
+2026-07-20T17:32:30.380+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.c.p.AdminCatalogoController      : GET /api/admin/catalogo/prodotti/tipo/SIGILLATO
+2026-07-20T17:32:30.381+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.s.i.products.ProdottoImpl        : listByTipoAdmin: SIGILLATO
+2026-07-20T17:32:30.716+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.c.p.AdminCatalogoController      : GET /api/admin/catalogo/prodotti/tipo/ACCESSORIO
+2026-07-20T17:32:30.718+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.s.i.products.ProdottoImpl        : listByTipoAdmin: ACCESSORIO
+2026-07-20T17:34:12.217+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-8] c.b.m.b.c.p.AdminCatalogoController      : POST /api/admin/catalogo/prodotti/immagine
+2026-07-20T17:34:12.253+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-8] c.b.m.b.s.i.products.ImmagineImpl        : immagine salvata: prodotti/906dbf37-5851-4266-a6e6-d0f43ebcd29a.webp
+2026-07-20T17:34:27.892+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.c.p.AdminCatalogoController      : POST /api/admin/catalogo/prodotti Ultimate Guard - Tappetino Rin e Seri, Inseparabili
+2026-07-20T17:34:27.894+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.s.i.products.ProdottoImpl        : createProdotto: Ultimate Guard - Tappetino Rin e Seri, Inseparabili [ACCESSORIO]
+2026-07-20T17:34:27.963+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.s.i.products.ProdottoImpl        : creato prodotto id=5649 slug=ultimate-guard-tappetino-rin-e-seri-inseparabili
+2026-07-20T17:34:27.992+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.c.p.AdminCatalogoController      : GET /api/admin/catalogo/prodotti/tipo/ACCESSORIO
+2026-07-20T17:34:27.994+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.s.i.products.ProdottoImpl        : listByTipoAdmin: ACCESSORIO
+2026-07-20T17:34:35.447+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] c.b.m.b.c.p.AdminCatalogoController      : GET /api/admin/catalogo/prodotti/tipo/ACCESSORIO
+2026-07-20T17:34:35.449+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] c.b.m.b.s.i.products.ProdottoImpl        : listByTipoAdmin: ACCESSORIO
+2026-07-20T17:34:43.477+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.c.p.AdminCatalogoController      : GET /api/admin/catalogo/prodotti/tipo/SET_LOTTO
+2026-07-20T17:34:43.479+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.s.i.products.ProdottoImpl        : listByTipoAdmin: SET_LOTTO
+2026-07-20T17:34:43.981+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] c.b.m.b.c.p.AdminCatalogoController      : GET /api/admin/catalogo/prodotti/tipo/SIGILLATO
+2026-07-20T17:34:43.982+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] c.b.m.b.s.i.products.ProdottoImpl        : listByTipoAdmin: SIGILLATO
+2026-07-20T17:34:45.323+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.c.p.AdminCatalogoController      : GET /api/admin/catalogo/prodotti/tipo/ACCESSORIO
+2026-07-20T17:34:45.325+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.s.i.products.ProdottoImpl        : listByTipoAdmin: ACCESSORIO
+2026-07-20T17:34:47.193+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.c.p.AdminMagazzinoController     : GET /api/admin/sku?prodottoId=5649
+2026-07-20T17:34:47.195+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.s.i.products.MagazzinoSKUImpl    : listByProdotto: 5649
+2026-07-20T17:34:57.272+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] c.b.m.b.c.p.AdminMagazzinoController     : POST /api/admin/sku prodotto=5649
+2026-07-20T17:34:57.273+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] c.b.m.b.s.i.products.MagazzinoSKUImpl    : createSku: prodotto=5649 [null/en/null]
+2026-07-20T17:34:57.343+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] c.b.m.b.s.i.products.MagazzinoSKUImpl    : creato sku id=12
+2026-07-20T17:35:31.397+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-8] c.b.m.b.c.p.AdminCatalogoController      : GET /api/admin/catalogo/prodotti/tipo/BOOSTER
+2026-07-20T17:35:31.399+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-8] c.b.m.b.s.i.products.ProdottoImpl        : listByTipoAdmin: BOOSTER
+2026-07-20T17:35:31.400+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T17:35:31.402+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T17:35:31.914+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T17:35:31.916+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T17:39:36.929+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-8] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T17:39:36.931+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-8] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T17:39:37.506+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T17:39:37.507+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T17:39:37.520+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.c.p.AdminCatalogoController      : GET /api/admin/catalogo/prodotti/tipo/BOOSTER
+2026-07-20T17:39:37.521+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.s.i.products.ProdottoImpl        : listByTipoAdmin: BOOSTER
+2026-07-20T17:39:50.702+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.c.p.AdminCatalogoController      : GET /api/admin/catalogo/prodotti/tipo/BOOSTER
+2026-07-20T17:39:50.708+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.s.i.products.ProdottoImpl        : listByTipoAdmin: BOOSTER
+2026-07-20T17:39:50.714+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T17:39:50.723+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T17:39:51.344+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T17:39:51.346+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T17:53:51.049+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T17:53:51.054+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T17:53:51.605+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T17:53:51.607+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T17:53:51.617+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.c.p.AdminCatalogoController      : GET /api/admin/catalogo/prodotti/tipo/BOOSTER
+2026-07-20T17:53:51.617+02:00 DEBUG 17464 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.s.i.products.ProdottoImpl        : listByTipoAdmin: BOOSTER
+2026-07-20T20:11:58.246+02:00  INFO 16128 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : Starting PlaneswalkerBazarBackendApplication using Java 25.0.2 with PID 16128 (C:\Users\Betacom\eclipse-workspace\PlaneswalkerBazarBackend\target\classes started by Betacom in C:\Users\Betacom\eclipse-workspace\PlaneswalkerBazarBackend)
+2026-07-20T20:11:58.248+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-07-20T20:11:58.250+02:00  INFO 16128 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : The following 1 profile is active: "dev"
+2026-07-20T20:11:58.292+02:00  INFO 16128 --- [PlaneswalkerBazarBackend] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-20T20:11:58.293+02:00  INFO 16128 --- [PlaneswalkerBazarBackend] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-07-20T20:11:59.943+02:00  INFO 16128 --- [PlaneswalkerBazarBackend] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-20T20:12:00.210+02:00  INFO 16128 --- [PlaneswalkerBazarBackend] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 251 ms. Found 19 JPA repository interfaces.
+2026-07-20T20:12:01.172+02:00  INFO 16128 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9090 (http)
+2026-07-20T20:12:01.198+02:00  INFO 16128 --- [PlaneswalkerBazarBackend] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-20T20:12:01.199+02:00  INFO 16128 --- [PlaneswalkerBazarBackend] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-20T20:12:01.263+02:00  INFO 16128 --- [PlaneswalkerBazarBackend] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2969 ms
+2026-07-20T20:12:01.803+02:00  INFO 16128 --- [PlaneswalkerBazarBackend] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-20T20:12:02.286+02:00  INFO 16128 --- [PlaneswalkerBazarBackend] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1234909c
+2026-07-20T20:12:02.288+02:00  INFO 16128 --- [PlaneswalkerBazarBackend] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-20T20:12:02.310+02:00  INFO 16128 --- [PlaneswalkerBazarBackend] [restartedMain] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:5432/db_jpa_bazar (PostgreSQL 18.4)
+2026-07-20T20:12:02.479+02:00  INFO 16128 --- [PlaneswalkerBazarBackend] [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 11 migrations (execution time 00:00.094s)
+2026-07-20T20:12:02.579+02:00  INFO 16128 --- [PlaneswalkerBazarBackend] [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 11
+2026-07-20T20:12:02.586+02:00  INFO 16128 --- [PlaneswalkerBazarBackend] [restartedMain] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2026-07-20T20:12:02.684+02:00  INFO 16128 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-07-20T20:12:02.730+02:00  INFO 16128 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-07-20T20:12:03.123+02:00  INFO 16128 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-20T20:12:03.219+02:00  INFO 16128 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/db_jpa_bazar]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.4
+	Default catalog/schema: db_jpa_bazar/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-20T20:12:03.807+02:00  WARN 16128 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.core                   : HHH000038: Composite id class does not override equals(): com.betacom.mtgbazar.be.model.MessageID
+2026-07-20T20:12:04.774+02:00  INFO 16128 --- [PlaneswalkerBazarBackend] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-20T20:12:04.970+02:00  INFO 16128 --- [PlaneswalkerBazarBackend] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-20T20:12:05.071+02:00  INFO 16128 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-07-20T20:12:06.757+02:00  INFO 16128 --- [PlaneswalkerBazarBackend] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2026-07-20T20:12:07.003+02:00  WARN 16128 --- [PlaneswalkerBazarBackend] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-20T20:12:07.215+02:00  WARN 16128 --- [PlaneswalkerBazarBackend] [restartedMain] c.b.m.b.c.SecurityConfig$SicurezzaDev    : :::: PROFILO dev — identita' dai token ATTIVA, autorizzazione DISATTIVATA ::::
+2026-07-20T20:12:08.235+02:00  INFO 16128 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/db_jpa_bazar'
+2026-07-20T20:12:08.303+02:00  INFO 16128 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-07-20T20:12:08.466+02:00  INFO 16128 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9090 (http) with context path '/'
+2026-07-20T20:12:08.483+02:00  INFO 16128 --- [PlaneswalkerBazarBackend] [restartedMain] .m.b.PlaneswalkerBazarBackendApplication : Started PlaneswalkerBazarBackendApplication in 10.672 seconds (process running for 11.659)
+2026-07-20T20:12:08.495+02:00  WARN 16128 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-07-20T20:12:08.495+02:00  WARN 16128 --- [PlaneswalkerBazarBackend] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-07-20T20:12:09.056+02:00  INFO 16128 --- [PlaneswalkerBazarBackend] [RMI TCP Connection(4)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-20T20:12:09.056+02:00  INFO 16128 --- [PlaneswalkerBazarBackend] [RMI TCP Connection(4)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-20T20:12:09.059+02:00  INFO 16128 --- [PlaneswalkerBazarBackend] [RMI TCP Connection(4)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-07-20T20:12:20.171+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T20:12:20.194+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T20:12:20.967+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.c.users.AuthController           : POST /api/auth/refresh
+2026-07-20T20:12:21.150+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.s.i.RefreshTokenImpl             : refresh ruotato: utente=1 famiglia=002c3367-8f57-4563-b74f-f43081b7d98c
+2026-07-20T20:12:21.433+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.s.implementations.JwtImpl        : access token emesso per utente id=1
+2026-07-20T20:12:21.687+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T20:12:21.687+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T20:12:29.184+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T20:12:29.184+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.c.p.AdminCatalogoController      : GET /api/admin/catalogo/prodotti/tipo/BOOSTER
+2026-07-20T20:12:29.184+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T20:12:29.184+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.s.i.products.ProdottoImpl        : listByTipoAdmin: BOOSTER
+2026-07-20T20:12:32.889+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T20:12:32.894+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.c.p.AdminCatalogoController      : GET /api/admin/catalogo/prodotti/tipo/BOOSTER
+2026-07-20T20:12:32.895+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T20:12:32.896+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.s.i.products.ProdottoImpl        : listByTipoAdmin: BOOSTER
+2026-07-20T20:12:34.730+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] c.b.m.b.c.p.AdminCatalogoController      : GET /api/admin/catalogo/prodotti/tipo/BOOSTER_BOX
+2026-07-20T20:12:34.734+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] c.b.m.b.s.i.products.ProdottoImpl        : listByTipoAdmin: BOOSTER_BOX
+2026-07-20T20:12:38.469+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.c.p.AdminCatalogoController      : GET /api/admin/catalogo/prodotti/tipo/MAZZO
+2026-07-20T20:12:38.471+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.s.i.products.ProdottoImpl        : listByTipoAdmin: MAZZO
+2026-07-20T20:12:38.833+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.c.p.AdminCatalogoController      : GET /api/admin/catalogo/prodotti/tipo/SET_LOTTO
+2026-07-20T20:12:38.833+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.s.i.products.ProdottoImpl        : listByTipoAdmin: SET_LOTTO
+2026-07-20T20:12:39.234+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] c.b.m.b.c.p.AdminCatalogoController      : GET /api/admin/catalogo/prodotti/tipo/SIGILLATO
+2026-07-20T20:12:39.234+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] c.b.m.b.s.i.products.ProdottoImpl        : listByTipoAdmin: SIGILLATO
+2026-07-20T20:14:39.382+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.c.p.AdminCatalogoController      : POST /api/admin/catalogo/prodotti/immagine
+2026-07-20T20:14:39.410+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.s.i.products.ImmagineImpl        : immagine salvata: prodotti/cedbc8da-c63d-4c0d-ade7-601d9c6b25c1.webp
+2026-07-20T20:14:48.532+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] c.b.m.b.c.p.AdminCatalogoController      : POST /api/admin/catalogo/prodotti Magic: The Gathering - Final Fantasy - Bundle 4 Mazzi Commander Deck (ITA)
+2026-07-20T20:14:48.536+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] c.b.m.b.s.i.products.ProdottoImpl        : createProdotto: Magic: The Gathering - Final Fantasy - Bundle 4 Mazzi Commander Deck (ITA) [SIGILLATO]
+2026-07-20T20:14:48.591+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] c.b.m.b.s.i.products.ProdottoImpl        : creato prodotto id=5650 slug=magic-the-gathering-final-fantasy-bundle-4-mazzi-commander-deck-ita
+2026-07-20T20:14:48.630+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.c.p.AdminCatalogoController      : GET /api/admin/catalogo/prodotti/tipo/SIGILLATO
+2026-07-20T20:14:48.632+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.s.i.products.ProdottoImpl        : listByTipoAdmin: SIGILLATO
+2026-07-20T20:14:53.521+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.c.p.AdminCatalogoController      : GET /api/admin/catalogo/prodotti/tipo/BOOSTER
+2026-07-20T20:14:53.521+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.s.i.products.ProdottoImpl        : listByTipoAdmin: BOOSTER
+2026-07-20T20:14:53.960+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.c.p.AdminCatalogoController      : GET /api/admin/catalogo/prodotti/tipo/BOOSTER_BOX
+2026-07-20T20:14:53.968+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.s.i.products.ProdottoImpl        : listByTipoAdmin: BOOSTER_BOX
+2026-07-20T20:14:54.329+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.c.p.AdminCatalogoController      : GET /api/admin/catalogo/prodotti/tipo/MAZZO
+2026-07-20T20:14:54.329+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.s.i.products.ProdottoImpl        : listByTipoAdmin: MAZZO
+2026-07-20T20:14:54.669+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] c.b.m.b.c.p.AdminCatalogoController      : GET /api/admin/catalogo/prodotti/tipo/SET_LOTTO
+2026-07-20T20:14:54.669+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] c.b.m.b.s.i.products.ProdottoImpl        : listByTipoAdmin: SET_LOTTO
+2026-07-20T20:14:55.002+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.c.p.AdminCatalogoController      : GET /api/admin/catalogo/prodotti/tipo/SIGILLATO
+2026-07-20T20:14:55.002+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.s.i.products.ProdottoImpl        : listByTipoAdmin: SIGILLATO
+2026-07-20T20:14:55.353+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.c.p.AdminCatalogoController      : GET /api/admin/catalogo/prodotti/tipo/ACCESSORIO
+2026-07-20T20:14:55.370+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.s.i.products.ProdottoImpl        : listByTipoAdmin: ACCESSORIO
+2026-07-20T20:14:56.206+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T20:14:56.216+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T20:18:02.309+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] c.b.m.b.c.users.AuthController           : GET /api/auth/me
+2026-07-20T20:18:02.313+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] c.b.m.b.s.implementations.MessaggioImpl  : get auth.non.autenticato
+2026-07-20T20:18:02.326+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.c.users.IndirizzoController      : GET /api/indirizzi utente=1
+2026-07-20T20:18:02.329+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.s.i.users.IndirizzoImpl          : listIndirizzi: utente=1
+2026-07-20T20:18:02.337+02:00  WARN 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] c.b.m.b.e.GlobalExceptionHandler         : Token rifiutato: Accesso non autorizzato: effettua il login
+2026-07-20T20:18:02.345+02:00  WARN 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.betacom.mtgbazar.be.exceptions.AuthTokenException: Accesso non autorizzato: effettua il login]
+2026-07-20T20:18:40.319+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.c.users.UtenteController         : PUT /api/utenti/profilo id=1
+2026-07-20T20:18:40.326+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.s.i.users.UtenteImpl             : updateProfilo: id=1
+2026-07-20T20:19:20.534+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.c.users.UtenteController         : PUT /api/utenti/profilo id=1
+2026-07-20T20:19:20.541+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.s.i.users.UtenteImpl             : updateProfilo: id=1
+2026-07-20T20:22:00.635+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] c.b.m.b.c.users.UtenteController         : PUT /api/utenti/profilo id=1
+2026-07-20T20:22:00.639+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] c.b.m.b.s.i.users.UtenteImpl             : updateProfilo: id=1
+2026-07-20T20:24:12.950+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.c.users.UtenteController         : PUT /api/utenti/profilo id=1
+2026-07-20T20:24:12.952+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.s.i.users.UtenteImpl             : updateProfilo: id=1
+2026-07-20T20:24:29.297+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.c.users.UtenteController         : PUT /api/utenti/profilo id=1
+2026-07-20T20:24:29.297+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.s.i.users.UtenteImpl             : updateProfilo: id=1
+2026-07-20T20:24:38.221+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T20:24:38.224+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T20:24:41.558+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T20:24:41.558+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-8] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T20:24:41.566+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-8] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T20:24:41.566+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T20:24:42.171+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.c.users.AuthController           : POST /api/auth/refresh
+2026-07-20T20:24:42.188+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.s.i.RefreshTokenImpl             : refresh ruotato: utente=1 famiglia=002c3367-8f57-4563-b74f-f43081b7d98c
+2026-07-20T20:24:42.202+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.s.implementations.JwtImpl        : access token emesso per utente id=1
+2026-07-20T20:24:42.252+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T20:24:42.255+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T20:24:42.306+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T20:24:42.309+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T20:24:54.157+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.c.users.AuthController           : GET /api/auth/me
+2026-07-20T20:24:54.159+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.s.implementations.MessaggioImpl  : get auth.non.autenticato
+2026-07-20T20:24:54.169+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] c.b.m.b.c.users.IndirizzoController      : GET /api/indirizzi utente=1
+2026-07-20T20:24:54.169+02:00  WARN 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.e.GlobalExceptionHandler         : Token rifiutato: Accesso non autorizzato: effettua il login
+2026-07-20T20:24:54.171+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] c.b.m.b.s.i.users.IndirizzoImpl          : listIndirizzi: utente=1
+2026-07-20T20:24:54.171+02:00  WARN 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.betacom.mtgbazar.be.exceptions.AuthTokenException: Accesso non autorizzato: effettua il login]
+2026-07-20T20:24:59.058+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-8] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T20:24:59.058+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-8] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T20:24:59.184+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.c.users.AuthController           : GET /api/auth/me
+2026-07-20T20:24:59.184+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.s.implementations.MessaggioImpl  : get auth.non.autenticato
+2026-07-20T20:24:59.184+02:00  WARN 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.e.GlobalExceptionHandler         : Token rifiutato: Accesso non autorizzato: effettua il login
+2026-07-20T20:24:59.184+02:00  WARN 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.betacom.mtgbazar.be.exceptions.AuthTokenException: Accesso non autorizzato: effettua il login]
+2026-07-20T20:24:59.200+02:00  WARN 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.e.GlobalExceptionHandler         : Token rifiutato: Accesso non autorizzato: effettua il login
+2026-07-20T20:24:59.200+02:00  WARN 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.betacom.mtgbazar.be.exceptions.AuthTokenException: Accesso non autorizzato: effettua il login]
+2026-07-20T20:24:59.215+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.c.users.AuthController           : POST /api/auth/refresh
+2026-07-20T20:24:59.217+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.s.implementations.MessaggioImpl  : get auth.refresh.invalido
+2026-07-20T20:24:59.266+02:00  WARN 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.e.GlobalExceptionHandler         : Token rifiutato: Sessione scaduta o non valida: effettua di nuovo il login
+2026-07-20T20:24:59.273+02:00  WARN 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.betacom.mtgbazar.be.exceptions.AuthTokenException: Sessione scaduta o non valida: effettua di nuovo il login]
+2026-07-20T20:24:59.353+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T20:24:59.355+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T20:24:59.858+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.c.users.AuthController           : POST /api/auth/refresh
+2026-07-20T20:24:59.925+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.s.i.RefreshTokenImpl             : refresh ruotato: utente=1 famiglia=002c3367-8f57-4563-b74f-f43081b7d98c
+2026-07-20T20:24:59.936+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.s.implementations.JwtImpl        : access token emesso per utente id=1
+2026-07-20T20:25:00.083+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T20:25:00.104+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T20:25:02.853+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.c.users.AuthController           : GET /api/auth/me
+2026-07-20T20:25:02.855+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.s.implementations.MessaggioImpl  : get auth.non.autenticato
+2026-07-20T20:25:02.860+02:00  WARN 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.e.GlobalExceptionHandler         : Token rifiutato: Accesso non autorizzato: effettua il login
+2026-07-20T20:25:02.862+02:00  WARN 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.betacom.mtgbazar.be.exceptions.AuthTokenException: Accesso non autorizzato: effettua il login]
+2026-07-20T20:25:02.867+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.c.users.IndirizzoController      : GET /api/indirizzi utente=1
+2026-07-20T20:25:02.868+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.s.i.users.IndirizzoImpl          : listIndirizzi: utente=1
+2026-07-20T20:25:04.287+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T20:25:04.289+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T20:25:04.357+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.c.users.AuthController           : GET /api/auth/me
+2026-07-20T20:25:04.357+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.s.implementations.MessaggioImpl  : get auth.non.autenticato
+2026-07-20T20:25:04.357+02:00  WARN 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] c.b.m.b.e.GlobalExceptionHandler         : Token rifiutato: Accesso non autorizzato: effettua il login
+2026-07-20T20:25:04.359+02:00  WARN 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.betacom.mtgbazar.be.exceptions.AuthTokenException: Accesso non autorizzato: effettua il login]
+2026-07-20T20:25:04.361+02:00  WARN 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.e.GlobalExceptionHandler         : Token rifiutato: Accesso non autorizzato: effettua il login
+2026-07-20T20:25:04.365+02:00  WARN 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.betacom.mtgbazar.be.exceptions.AuthTokenException: Accesso non autorizzato: effettua il login]
+2026-07-20T20:25:04.368+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-8] c.b.m.b.c.users.AuthController           : POST /api/auth/refresh
+2026-07-20T20:25:04.368+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-8] c.b.m.b.s.implementations.MessaggioImpl  : get auth.refresh.invalido
+2026-07-20T20:25:04.368+02:00  WARN 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-8] c.b.m.b.e.GlobalExceptionHandler         : Token rifiutato: Sessione scaduta o non valida: effettua di nuovo il login
+2026-07-20T20:25:04.368+02:00  WARN 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.betacom.mtgbazar.be.exceptions.AuthTokenException: Sessione scaduta o non valida: effettua di nuovo il login]
+2026-07-20T20:25:04.445+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T20:25:04.447+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T20:25:04.935+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.c.users.AuthController           : POST /api/auth/refresh
+2026-07-20T20:25:04.944+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.s.i.RefreshTokenImpl             : refresh ruotato: utente=1 famiglia=002c3367-8f57-4563-b74f-f43081b7d98c
+2026-07-20T20:25:04.949+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.s.implementations.JwtImpl        : access token emesso per utente id=1
+2026-07-20T20:25:04.983+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T20:25:04.983+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T20:26:12.262+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T20:26:12.263+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T20:26:14.937+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.c.users.AuthController           : GET /api/auth/me
+2026-07-20T20:26:14.937+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.s.implementations.MessaggioImpl  : get auth.non.autenticato
+2026-07-20T20:26:14.942+02:00  WARN 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.e.GlobalExceptionHandler         : Token rifiutato: Accesso non autorizzato: effettua il login
+2026-07-20T20:26:14.943+02:00  WARN 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.betacom.mtgbazar.be.exceptions.AuthTokenException: Accesso non autorizzato: effettua il login]
+2026-07-20T20:26:14.952+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] c.b.m.b.c.users.IndirizzoController      : GET /api/indirizzi utente=1
+2026-07-20T20:26:14.954+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] c.b.m.b.s.i.users.IndirizzoImpl          : listIndirizzi: utente=1
+2026-07-20T20:28:07.742+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T20:28:07.742+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.c.users.AuthController           : GET /api/auth/me
+2026-07-20T20:28:07.742+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.s.implementations.MessaggioImpl  : get auth.non.autenticato
+2026-07-20T20:28:07.744+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T20:28:07.744+02:00  WARN 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.e.GlobalExceptionHandler         : Token rifiutato: Accesso non autorizzato: effettua il login
+2026-07-20T20:28:07.746+02:00  WARN 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.betacom.mtgbazar.be.exceptions.AuthTokenException: Accesso non autorizzato: effettua il login]
+2026-07-20T20:28:07.748+02:00  WARN 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.e.GlobalExceptionHandler         : Token rifiutato: Accesso non autorizzato: effettua il login
+2026-07-20T20:28:07.750+02:00  WARN 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.betacom.mtgbazar.be.exceptions.AuthTokenException: Accesso non autorizzato: effettua il login]
+2026-07-20T20:28:07.764+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.c.users.AuthController           : POST /api/auth/refresh
+2026-07-20T20:28:07.764+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.s.implementations.MessaggioImpl  : get auth.refresh.invalido
+2026-07-20T20:28:07.772+02:00  WARN 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.e.GlobalExceptionHandler         : Token rifiutato: Sessione scaduta o non valida: effettua di nuovo il login
+2026-07-20T20:28:07.772+02:00  WARN 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.betacom.mtgbazar.be.exceptions.AuthTokenException: Sessione scaduta o non valida: effettua di nuovo il login]
+2026-07-20T20:28:07.829+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T20:28:07.829+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T20:28:08.356+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] c.b.m.b.c.users.AuthController           : POST /api/auth/refresh
+2026-07-20T20:28:08.364+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] c.b.m.b.s.i.RefreshTokenImpl             : refresh ruotato: utente=1 famiglia=002c3367-8f57-4563-b74f-f43081b7d98c
+2026-07-20T20:28:08.370+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] c.b.m.b.s.implementations.JwtImpl        : access token emesso per utente id=1
+2026-07-20T20:28:08.409+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-8] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T20:28:08.409+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-8] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T20:34:36.931+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T20:34:36.932+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T20:34:38.067+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.c.users.AuthController           : POST /api/auth/refresh
+2026-07-20T20:34:38.099+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.s.i.RefreshTokenImpl             : refresh ruotato: utente=1 famiglia=002c3367-8f57-4563-b74f-f43081b7d98c
+2026-07-20T20:34:38.175+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.s.implementations.JwtImpl        : access token emesso per utente id=1
+2026-07-20T20:34:39.210+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T20:34:39.215+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T20:35:38.911+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T20:35:38.914+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T20:35:39.888+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.c.users.AuthController           : POST /api/auth/refresh
+2026-07-20T20:35:39.931+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.s.i.RefreshTokenImpl             : refresh ruotato: utente=1 famiglia=002c3367-8f57-4563-b74f-f43081b7d98c
+2026-07-20T20:35:39.945+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.s.implementations.JwtImpl        : access token emesso per utente id=1
+2026-07-20T20:35:40.112+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T20:35:40.119+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T20:35:46.359+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] c.b.m.b.c.users.AuthController           : GET /api/auth/me
+2026-07-20T20:35:46.364+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.c.users.IndirizzoController      : GET /api/indirizzi utente=1
+2026-07-20T20:35:46.365+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.s.i.users.IndirizzoImpl          : listIndirizzi: utente=1
+2026-07-20T20:36:13.351+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.c.users.UtenteController         : PUT /api/utenti/profilo id=1
+2026-07-20T20:36:13.353+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.s.i.users.UtenteImpl             : updateProfilo: id=1
+2026-07-20T20:37:14.388+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-8] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T20:37:14.392+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] c.b.m.b.c.users.AuthController           : GET /api/auth/me
+2026-07-20T20:37:14.392+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] c.b.m.b.s.implementations.MessaggioImpl  : get auth.non.autenticato
+2026-07-20T20:37:14.392+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-8] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T20:37:14.394+02:00  WARN 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.e.GlobalExceptionHandler         : Token rifiutato: Accesso non autorizzato: effettua il login
+2026-07-20T20:37:14.399+02:00  WARN 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.betacom.mtgbazar.be.exceptions.AuthTokenException: Accesso non autorizzato: effettua il login]
+2026-07-20T20:37:14.414+02:00  WARN 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] c.b.m.b.e.GlobalExceptionHandler         : Token rifiutato: Accesso non autorizzato: effettua il login
+2026-07-20T20:37:14.414+02:00  WARN 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.betacom.mtgbazar.be.exceptions.AuthTokenException: Accesso non autorizzato: effettua il login]
+2026-07-20T20:37:14.414+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.c.users.AuthController           : POST /api/auth/refresh
+2026-07-20T20:37:14.419+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.s.implementations.MessaggioImpl  : get auth.refresh.invalido
+2026-07-20T20:37:14.421+02:00  WARN 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.e.GlobalExceptionHandler         : Token rifiutato: Sessione scaduta o non valida: effettua di nuovo il login
+2026-07-20T20:37:14.421+02:00  WARN 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.betacom.mtgbazar.be.exceptions.AuthTokenException: Sessione scaduta o non valida: effettua di nuovo il login]
+2026-07-20T20:37:14.575+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T20:37:14.577+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T20:37:14.957+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.c.users.AuthController           : POST /api/auth/refresh
+2026-07-20T20:37:14.966+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.s.i.RefreshTokenImpl             : refresh ruotato: utente=1 famiglia=002c3367-8f57-4563-b74f-f43081b7d98c
+2026-07-20T20:37:14.982+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.s.implementations.JwtImpl        : access token emesso per utente id=1
+2026-07-20T20:37:15.034+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T20:37:15.036+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T20:37:21.200+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.c.users.AuthController           : GET /api/auth/me
+2026-07-20T20:37:21.207+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.c.users.IndirizzoController      : GET /api/indirizzi utente=1
+2026-07-20T20:37:21.207+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.s.i.users.IndirizzoImpl          : listIndirizzi: utente=1
+2026-07-20T20:42:10.905+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T20:42:10.908+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.c.users.AuthController           : GET /api/auth/me
+2026-07-20T20:42:10.908+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T20:42:10.908+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.s.implementations.MessaggioImpl  : get auth.non.autenticato
+2026-07-20T20:42:10.908+02:00  WARN 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.e.GlobalExceptionHandler         : Token rifiutato: Accesso non autorizzato: effettua il login
+2026-07-20T20:42:10.910+02:00  WARN 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.betacom.mtgbazar.be.exceptions.AuthTokenException: Accesso non autorizzato: effettua il login]
+2026-07-20T20:42:10.921+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.c.users.AuthController           : POST /api/auth/refresh
+2026-07-20T20:42:10.921+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.s.implementations.MessaggioImpl  : get auth.refresh.invalido
+2026-07-20T20:42:10.926+02:00  WARN 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.e.GlobalExceptionHandler         : Token rifiutato: Accesso non autorizzato: effettua il login
+2026-07-20T20:42:10.928+02:00  WARN 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.betacom.mtgbazar.be.exceptions.AuthTokenException: Accesso non autorizzato: effettua il login]
+2026-07-20T20:42:10.942+02:00  WARN 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.e.GlobalExceptionHandler         : Token rifiutato: Sessione scaduta o non valida: effettua di nuovo il login
+2026-07-20T20:42:10.950+02:00  WARN 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.betacom.mtgbazar.be.exceptions.AuthTokenException: Sessione scaduta o non valida: effettua di nuovo il login]
+2026-07-20T20:42:10.990+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T20:42:10.990+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T20:42:11.948+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] c.b.m.b.c.users.AuthController           : POST /api/auth/refresh
+2026-07-20T20:42:12.070+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] c.b.m.b.s.i.RefreshTokenImpl             : refresh ruotato: utente=1 famiglia=002c3367-8f57-4563-b74f-f43081b7d98c
+2026-07-20T20:42:12.152+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] c.b.m.b.s.implementations.JwtImpl        : access token emesso per utente id=1
+2026-07-20T20:42:12.337+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T20:42:12.337+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T20:43:12.895+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T20:43:12.897+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T20:43:13.769+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.c.users.AuthController           : POST /api/auth/refresh
+2026-07-20T20:43:13.772+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T20:43:13.793+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T20:43:13.807+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.s.i.RefreshTokenImpl             : refresh ruotato: utente=1 famiglia=002c3367-8f57-4563-b74f-f43081b7d98c
+2026-07-20T20:43:13.821+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.s.implementations.JwtImpl        : access token emesso per utente id=1
+2026-07-20T20:43:29.003+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T20:43:29.008+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T20:43:29.645+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.c.users.AuthController           : POST /api/auth/refresh
+2026-07-20T20:43:29.655+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T20:43:29.663+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T20:43:29.678+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.s.i.RefreshTokenImpl             : refresh ruotato: utente=1 famiglia=002c3367-8f57-4563-b74f-f43081b7d98c
+2026-07-20T20:43:29.734+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.s.implementations.JwtImpl        : access token emesso per utente id=1
+2026-07-20T20:43:56.055+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T20:43:56.055+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T20:43:56.585+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.c.users.AuthController           : POST /api/auth/refresh
+2026-07-20T20:43:56.593+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.s.i.RefreshTokenImpl             : refresh ruotato: utente=1 famiglia=002c3367-8f57-4563-b74f-f43081b7d98c
+2026-07-20T20:43:56.598+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T20:43:56.600+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T20:43:56.600+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.s.implementations.JwtImpl        : access token emesso per utente id=1
+2026-07-20T20:44:12.820+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T20:44:12.824+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T20:44:13.519+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-8] c.b.m.b.c.users.AuthController           : POST /api/auth/refresh
+2026-07-20T20:44:13.526+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T20:44:13.526+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-8] c.b.m.b.s.i.RefreshTokenImpl             : refresh ruotato: utente=1 famiglia=002c3367-8f57-4563-b74f-f43081b7d98c
+2026-07-20T20:44:13.526+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T20:44:13.567+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-8] c.b.m.b.s.implementations.JwtImpl        : access token emesso per utente id=1
+2026-07-20T20:44:32.844+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T20:44:32.846+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T20:44:33.906+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.c.users.AuthController           : POST /api/auth/refresh
+2026-07-20T20:44:33.914+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T20:44:33.929+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-6] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T20:44:33.950+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.s.i.RefreshTokenImpl             : refresh ruotato: utente=1 famiglia=002c3367-8f57-4563-b74f-f43081b7d98c
+2026-07-20T20:44:33.997+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.s.implementations.JwtImpl        : access token emesso per utente id=1
+2026-07-20T20:44:58.210+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T20:44:58.216+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T20:44:58.611+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.c.users.AuthController           : POST /api/auth/refresh
+2026-07-20T20:44:58.615+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T20:44:58.617+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T20:44:58.737+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.s.i.RefreshTokenImpl             : refresh ruotato: utente=1 famiglia=002c3367-8f57-4563-b74f-f43081b7d98c
+2026-07-20T20:44:58.867+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.s.implementations.JwtImpl        : access token emesso per utente id=1
+2026-07-20T20:45:00.888+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.c.users.AuthController           : GET /api/auth/me
+2026-07-20T20:45:00.894+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.c.users.IndirizzoController      : GET /api/indirizzi utente=1
+2026-07-20T20:45:00.894+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-1] c.b.m.b.s.i.users.IndirizzoImpl          : listIndirizzi: utente=1
+2026-07-20T20:45:03.524+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T20:45:03.527+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T20:45:03.625+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.c.users.AuthController           : GET /api/auth/me
+2026-07-20T20:45:03.625+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.s.implementations.MessaggioImpl  : get auth.non.autenticato
+2026-07-20T20:45:03.625+02:00  WARN 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] c.b.m.b.e.GlobalExceptionHandler         : Token rifiutato: Accesso non autorizzato: effettua il login
+2026-07-20T20:45:03.628+02:00  WARN 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.betacom.mtgbazar.be.exceptions.AuthTokenException: Accesso non autorizzato: effettua il login]
+2026-07-20T20:45:03.630+02:00  WARN 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] c.b.m.b.e.GlobalExceptionHandler         : Token rifiutato: Accesso non autorizzato: effettua il login
+2026-07-20T20:45:03.632+02:00  WARN 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.betacom.mtgbazar.be.exceptions.AuthTokenException: Accesso non autorizzato: effettua il login]
+2026-07-20T20:45:04.181+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.c.users.AuthController           : POST /api/auth/refresh
+2026-07-20T20:45:04.187+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.s.i.RefreshTokenImpl             : refresh ruotato: utente=1 famiglia=002c3367-8f57-4563-b74f-f43081b7d98c
+2026-07-20T20:45:04.189+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.c.users.EspansioneController     : GET /api/public/espansioni
+2026-07-20T20:45:04.191+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-10] c.b.m.b.s.i.products.EspansioneImpl      : listEspansioni
+2026-07-20T20:45:04.195+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-4] c.b.m.b.s.implementations.JwtImpl        : access token emesso per utente id=1
+2026-07-20T20:45:04.280+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-7] c.b.m.b.c.users.AuthController           : GET /api/auth/me
+2026-07-20T20:45:04.298+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.c.users.IndirizzoController      : GET /api/indirizzi utente=1
+2026-07-20T20:45:04.307+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-2] c.b.m.b.s.i.users.IndirizzoImpl          : listIndirizzi: utente=1
+2026-07-20T20:45:29.407+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.c.users.UtenteController         : PUT /api/utenti/profilo id=1
+2026-07-20T20:45:29.413+02:00 DEBUG 16128 --- [PlaneswalkerBazarBackend] [http-nio-9090-exec-5] c.b.m.b.s.i.users.UtenteImpl             : updateProfilo: id=1

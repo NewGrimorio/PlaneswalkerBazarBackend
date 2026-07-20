@@ -14,6 +14,9 @@ import lombok.ToString;
  * Create = nuovo indirizzo in rubrica; Update = modifica.
  * L'utenteId serve per l'ownership check nel service; il flag
  * "predefinito" viaggia qui e il service aggiorna la FK su utente.
+ *
+ * FASE C: l'utenteId ha perso il @NotNull — il client non ha piu'
+ * l'autorita' di dichiararlo. Lo valorizza il CONTROLLER dal token.
  */
 @Getter
 @Setter
@@ -23,8 +26,7 @@ public class IndirizzoReq {
     @NotNull(groups = ValidationGroups.Update.class, message = "indirizzo.no.id")
     private Long id;
 
-    @NotNull(groups = {ValidationGroups.Create.class, ValidationGroups.Update.class},
-             message = "indirizzo.no.utente")
+    /** Valorizzato dal controller (token), mai dal client. */
     private Long utenteId;
 
     @Size(max = 50, message = "indirizzo.etichetta.maxlength")

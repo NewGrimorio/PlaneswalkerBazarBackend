@@ -26,10 +26,11 @@ import lombok.extern.slf4j.Slf4j;
 /**
  * Sicurezza dell'applicazione, governata dai PROFILI Spring:
  *
- *   - dev  : security disattivata (tutto permitAll). E' il profilo di
- *            lavoro quotidiano e quello dei test (H2). Il login emette
- *            comunque token veri: manca solo l'ENFORCEMENT.
- *   - prod : regole vere + validazione JWT come Resource Server.
+ *   - dev  : IDENTIFICA ma non IMPONE (Fase C). Il Resource Server
+ *            valida i Bearer token, quindi i controller conoscono
+ *            l'identita' (subject = id utente); l'autorizzazione
+ *            pero' resta permitAll: nessuna porta chiusa in sviluppo.
+ *   - prod : identificazione E enforcement (regole complete).
  *
  * Proprieta' voluta: se NESSUN profilo e' attivo non esiste alcuna
  * filter chain nostra e Boot blinda tutto da solo. L'errore possibile
@@ -44,34 +45,17 @@ import lombok.extern.slf4j.Slf4j;
 @Configuration
 public class SecurityConfig {
 
-    /**
-     * Encoder BCrypt (spring-security-crypto): il salt lo genera e lo
-     * include nell'hash lui; la verifica SOLO con matches(). E' anche
-     * l'encoder che il DaoAuthenticationProvider usa nel login.
-     */
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
 
-    /**
-     * L'AuthenticationManager globale: dietro c'e' il
-     * DaoAuthenticationProvider che Boot costruisce da solo trovando
-     * il nostro CustomUserDetailsService + il PasswordEncoder.
-     * Lo usa AuthController.login().
-     */
     @Bean
     public AuthenticationManager authenticationManager(AuthenticationConfiguration config)
             throws Exception {
         return config.getAuthenticationManager();
     }
 
-    /**
-     * CORS per l'Angular su 4200. allowCredentials(true) e' essenziale:
-     * il refresh token viaggia in un cookie HttpOnly e senza credenziali
-     * abilitate il browser non lo invierebbe mai. In produzione
-     * l'origine diventera' il dominio reale del sito.
-     */
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration config = new CorsConfiguration();
@@ -87,7 +71,13 @@ public class SecurityConfig {
     }
 
     // ------------------------------------------------------------------
-    // PROFILO dev: tutto aperto, ma dichiarato ad alta voce nel log.
+    // PROFILO dev (Fase C): Resource Server ATTIVO, autorizzazione NO.
+    // Chi manda un Bearer valido viene riconosciuto (i controller
+    // leggono l'id dal token, come in prod); chi non lo manda passa
+    // comunque, ma da anonimo — e gli endpoint identitari, dovendo
+    // fare Long.valueOf del subject, falliranno: in dev il frontend
+    // il token lo manda sempre (interceptor), quindi non accade mai
+    // nell'uso normale, solo nei curl a mano senza token.
     // ------------------------------------------------------------------
     @Slf4j
     @Configuration
@@ -95,12 +85,21 @@ public class SecurityConfig {
     public static class SicurezzaDev {
 
         @Bean
-        public SecurityFilterChain filterChainDev(HttpSecurity http) throws Exception {
-            log.warn(":::: PROFILO dev — Spring Security DISATTIVATA (tutto permitAll) ::::");
+        public SecurityFilterChain filterChainDev(HttpSecurity http,
+                                                  JwtDecoder jwtDecoder,
+                                                  JwtAuthenticationConverter jwtAuthenticationConverter,
+                                                  AuthenticationEntryPoint authEntryPoint)
+                throws Exception {
+            log.warn(":::: PROFILO dev — identita' dai token ATTIVA, autorizzazione DISATTIVATA ::::");
 
             http.cors(Customizer.withDefaults())
                 .csrf(csrf -> csrf.disable())
-                .authorizeHttpRequests(auth -> auth.anyRequest().permitAll());
+                .authorizeHttpRequests(auth -> auth.anyRequest().permitAll())
+                .oauth2ResourceServer(oauth -> oauth
+                        .jwt(jwt -> jwt
+                                .decoder(jwtDecoder)
+                                .jwtAuthenticationConverter(jwtAuthenticationConverter))
+                        .authenticationEntryPoint(authEntryPoint));
 
             return http.build();
         }
@@ -129,27 +128,17 @@ public class SecurityConfig {
                 .csrf(csrf -> csrf.disable())
                 .sessionManagement(sm -> sm.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth -> auth
-                        // identita': i soli endpoint di auth raggiungibili da sloggati
                         .requestMatchers("/api/auth/login", "/api/auth/registrazione",
                                          "/api/auth/refresh", "/api/auth/logout").permitAll()
-                        // vetrina del negozio
                         .requestMatchers("/api/public/**").permitAll()
-                        // immagini prodotti/profili: le vetrine le mostrano da sloggati
                         .requestMatchers("/immagini/**").permitAll()
-                        // monitoraggio: il solo health check e' pubblico
                         .requestMatchers("/actuator/health").permitAll()
-                        // documentazione API (da valutare se chiuderla al go-live)
                         .requestMatchers("/swagger-ui/**", "/swagger-ui.html", "/v3/api-docs/**").permitAll()
-                        // pannello di gestione
                         .requestMatchers("/api/admin/**").hasRole("ADMIN")
-                        // DEFAULT DENY: tutto il resto richiede un utente autenticato.
-                        // NB: /api/auth/me cade volutamente qui.
                         .anyRequest().authenticated())
-                // 401/403 della filter chain in JSON {"msg": ...}
                 .exceptionHandling(ex -> ex
                         .authenticationEntryPoint(authEntryPoint)
                         .accessDeniedHandler(accessDeniedHandler))
-                // validazione dei Bearer token: firma, scadenza, ruoli
                 .oauth2ResourceServer(oauth -> oauth
                         .jwt(jwt -> jwt
                                 .decoder(jwtDecoder)

@@ -20,13 +20,18 @@ import lombok.ToString;
  * La password viaggia SOLO in Create: il cambio password ha la sua
  * request dedicata (CambioPasswordReq), con la verifica della vecchia.
  * NB: @ToString.Exclude sulla password, non deve mai finire nei log.
+ *
+ * FASE C: l'id ha perso il @NotNull(Update) — il client non ha piu'
+ * l'autorita' di dichiararlo. Il campo resta come veicolo interno:
+ * lo valorizza il CONTROLLER dal subject del token, e qualunque
+ * valore arrivi dal client viene sovrascritto.
  */
 @Getter
 @Setter
 @ToString
 public class UtenteReq {
 
-    @NotNull(groups = ValidationGroups.Update.class, message = "utente.no.id")
+    /** Valorizzato dal controller (token), mai dal client. */
     private Long id;
 
     @NotNull(groups = ValidationGroups.Create.class, message = "utente.no.email")

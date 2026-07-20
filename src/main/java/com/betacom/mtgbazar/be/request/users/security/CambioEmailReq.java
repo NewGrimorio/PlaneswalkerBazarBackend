@@ -2,7 +2,6 @@ package com.betacom.mtgbazar.be.request.users.security;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -13,7 +12,7 @@ import lombok.ToString;
 @ToString
 public class CambioEmailReq {
 
-    @NotNull(message = "utente.no.id")
+    /** FASE C: valorizzato dal controller (token), mai dal client. */
     private Long utenteId;
 
     @NotBlank(message = "utente.no.email")
