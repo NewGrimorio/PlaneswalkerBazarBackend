@@ -5,12 +5,18 @@ import java.util.List;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
+import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.Customizer;
+import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.oauth2.jwt.JwtDecoder;
+import org.springframework.security.oauth2.server.resource.authentication.JwtAuthenticationConverter;
+import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.access.AccessDeniedHandler;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
@@ -21,19 +27,13 @@ import lombok.extern.slf4j.Slf4j;
  * Sicurezza dell'applicazione, governata dai PROFILI Spring:
  *
  *   - dev  : security disattivata (tutto permitAll). E' il profilo di
- *            lavoro quotidiano e quello dei test (H2).
- *   - prod : regole vere. In Fase B qui si aggancia la validazione JWT
- *            (oauth2ResourceServer); per ora documenta la mappa dei
- *            permessi ed e' fail-closed.
+ *            lavoro quotidiano e quello dei test (H2). Il login emette
+ *            comunque token veri: manca solo l'ENFORCEMENT.
+ *   - prod : regole vere + validazione JWT come Resource Server.
  *
  * Proprieta' voluta: se NESSUN profilo e' attivo non esiste alcuna
  * filter chain nostra e Boot blinda tutto da solo. L'errore possibile
  * e' "troppo chiuso", mai "troppo aperto".
- *
- * Il CORS vive QUI e non piu' in un WebMvcConfigurer (WebAngularConfig,
- * rimossa): quando la filter chain e' attiva e' lei a dover conoscere
- * origini e credenziali, altrimenti i preflight muoiono prima di
- * arrivare a Spring MVC. Una sola fonte di verita'.
  *
  * Convenzione dei path (il livello di autorizzazione si legge nell'URL):
  *   /api/auth/**    login, registrazione, refresh, logout  -> aperti
@@ -46,9 +46,8 @@ public class SecurityConfig {
 
     /**
      * Encoder BCrypt (spring-security-crypto): il salt lo genera e lo
-     * include nell'hash lui; la verifica SOLO con matches(), mai
-     * confrontando stringhe. Bean unico, condiviso da entrambi i profili
-     * e dai test.
+     * include nell'hash lui; la verifica SOLO con matches(). E' anche
+     * l'encoder che il DaoAuthenticationProvider usa nel login.
      */
     @Bean
     public PasswordEncoder passwordEncoder() {
@@ -56,10 +55,22 @@ public class SecurityConfig {
     }
 
     /**
-     * CORS per l'Angular su 4200. allowCredentials(true) serve gia' ora
-     * e servira' soprattutto in Fase B: il refresh token viaggia in un
-     * cookie HttpOnly. In produzione l'origine diventera' il dominio
-     * reale del sito.
+     * L'AuthenticationManager globale: dietro c'e' il
+     * DaoAuthenticationProvider che Boot costruisce da solo trovando
+     * il nostro CustomUserDetailsService + il PasswordEncoder.
+     * Lo usa AuthController.login().
+     */
+    @Bean
+    public AuthenticationManager authenticationManager(AuthenticationConfiguration config)
+            throws Exception {
+        return config.getAuthenticationManager();
+    }
+
+    /**
+     * CORS per l'Angular su 4200. allowCredentials(true) e' essenziale:
+     * il refresh token viaggia in un cookie HttpOnly e senza credenziali
+     * abilitate il browser non lo invierebbe mai. In produzione
+     * l'origine diventera' il dominio reale del sito.
      */
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
@@ -77,8 +88,6 @@ public class SecurityConfig {
 
     // ------------------------------------------------------------------
     // PROFILO dev: tutto aperto, ma dichiarato ad alta voce nel log.
-    // E' la BasicSecurityConfig del tutor, governata pero' dal profilo
-    // e non da un'annotazione da togliere a mano.
     // ------------------------------------------------------------------
     @Slf4j
     @Configuration
@@ -98,9 +107,9 @@ public class SecurityConfig {
     }
 
     // ------------------------------------------------------------------
-    // PROFILO prod: la mappa dei permessi del sito, sei righe leggibili
-    // come un contratto. STATELESS: niente sessione HTTP, l'identita'
-    // arrivera' dal Bearer token a ogni richiesta (Fase B).
+    // PROFILO prod: la mappa dei permessi + la validazione dei Bearer
+    // token come Resource Server OAuth2. STATELESS: niente sessione,
+    // l'identita' arriva dal token a ogni richiesta.
     // ------------------------------------------------------------------
     @Slf4j
     @Configuration
@@ -108,7 +117,12 @@ public class SecurityConfig {
     public static class SicurezzaProd {
 
         @Bean
-        public SecurityFilterChain filterChainProd(HttpSecurity http) throws Exception {
+        public SecurityFilterChain filterChainProd(HttpSecurity http,
+                                                   JwtDecoder jwtDecoder,
+                                                   JwtAuthenticationConverter jwtAuthenticationConverter,
+                                                   AuthenticationEntryPoint authEntryPoint,
+                                                   AccessDeniedHandler accessDeniedHandler)
+                throws Exception {
             log.info(":::: PROFILO prod — Spring Security ATTIVA ::::");
 
             http.cors(Customizer.withDefaults())
@@ -130,10 +144,17 @@ public class SecurityConfig {
                         .requestMatchers("/api/admin/**").hasRole("ADMIN")
                         // DEFAULT DENY: tutto il resto richiede un utente autenticato.
                         // NB: /api/auth/me cade volutamente qui.
-                        .anyRequest().authenticated());
-
-            // FASE B: qui si aggancia la validazione dei Bearer token:
-            // http.oauth2ResourceServer(oauth -> oauth.jwt(...));
+                        .anyRequest().authenticated())
+                // 401/403 della filter chain in JSON {"msg": ...}
+                .exceptionHandling(ex -> ex
+                        .authenticationEntryPoint(authEntryPoint)
+                        .accessDeniedHandler(accessDeniedHandler))
+                // validazione dei Bearer token: firma, scadenza, ruoli
+                .oauth2ResourceServer(oauth -> oauth
+                        .jwt(jwt -> jwt
+                                .decoder(jwtDecoder)
+                                .jwtAuthenticationConverter(jwtAuthenticationConverter))
+                        .authenticationEntryPoint(authEntryPoint));
 
             return http.build();
         }
