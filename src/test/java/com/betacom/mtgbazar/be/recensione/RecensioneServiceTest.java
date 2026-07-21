@@ -3,6 +3,8 @@ package com.betacom.mtgbazar.be.recensione;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import com.betacom.mtgbazar.be.model.users.enums.StatoRecensione;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -325,6 +327,44 @@ public class RecensioneServiceTest {
         assertEquals(4.5, stats.getMedia());
         assertEquals(2L, stats.getConteggio());
         assertEquals(2, recensioneS.listByProdotto(prodotto.getId()).size());
+    }
+    
+    @Test
+    @Order(8)
+    public void codaModerazioneAdminFiltraPerStatoEPortaIlProdotto() {
+        log.debug("TEST 8: listByStatoAdmin -> filtra per stato e popola prodottoNome");
+ 
+        // Una recensione dell'utente sul prodotto del setUp
+        OrdineDTO ordine = ordineConsegnato(utente, indirizzo, sku.getId());
+        RecensioneDTO mia = recensioneS.saveRecensione(buildReq(ordine.getId(), 5, "Ottimo"));
+ 
+        // Nella coda ADMIN degli APPROVATI compare, col NOME del prodotto
+        // (a differenza della vista pubblica, dove prodottoNome resta null)
+        List<RecensioneDTO> approvate = recensioneS.listByStatoAdmin(StatoRecensione.APPROVATA);
+        RecensioneDTO inCoda = approvate.stream()
+                .filter(r -> r.getId().equals(mia.getId()))
+                .findFirst().orElseThrow();
+        log.debug("in coda approvate: id={} prodottoNome={}",
+                inCoda.getId(), inCoda.getProdottoNome());
+        assertEquals(prodotto.getNome(), inCoda.getProdottoNome());   // il nome c'e'
+        assertEquals(prodotto.getId(), inCoda.getProdottoId());
+        assertNotNull(inCoda.getProdottoNome());
+ 
+        // Non e' ancora tra le RIFIUTATE
+        boolean traRifiutate = recensioneS.listByStatoAdmin(StatoRecensione.RIFIUTATA).stream()
+                .anyMatch(r -> r.getId().equals(mia.getId()));
+        assertTrue(!traRifiutate);
+ 
+        // La nascondo: passa da APPROVATA a RIFIUTATA -> cambia coda
+        recensioneS.modera(mia.getId(), Boolean.FALSE);
+ 
+        boolean ancoraApprovata = recensioneS.listByStatoAdmin(StatoRecensione.APPROVATA).stream()
+                .anyMatch(r -> r.getId().equals(mia.getId()));
+        assertTrue(!ancoraApprovata);                                  // uscita dagli approvati
+ 
+        boolean oraRifiutata = recensioneS.listByStatoAdmin(StatoRecensione.RIFIUTATA).stream()
+                .anyMatch(r -> r.getId().equals(mia.getId()));
+        assertTrue(oraRifiutata);                                      // entrata nei rifiutati
     }
     
 }

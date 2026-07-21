@@ -120,4 +120,12 @@ public class RecensioneImpl implements IRecensioneServices {
         return RecensioneMap.buildRecensioneDTO(r);
     }
     
+    @Override
+    @Transactional(readOnly = true)
+    public List<RecensioneDTO> listByStatoAdmin(StatoRecensione stato) {
+        log.debug("listByStatoAdmin: stato={}", stato);
+        return RecensioneMap.buildRecensioneDTOAdminList(
+                recensioneR.findByStatoOrderByCreationDateAsc(stato));
+    }
+    
 }

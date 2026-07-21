@@ -4,6 +4,7 @@ import java.util.List;
  
 import com.betacom.mtgbazar.be.dto.users.RecensioneDTO;
 import com.betacom.mtgbazar.be.dto.users.RecensioneStatisticheDTO;
+import com.betacom.mtgbazar.be.model.users.enums.StatoRecensione;
 import com.betacom.mtgbazar.be.request.users.RecensioneReq;
  
 /**
@@ -29,5 +30,7 @@ public interface IRecensioneServices {
  
     /** ADMIN: nasconde (false) o ripristina (true) una recensione. */
     RecensioneDTO modera(Long recensioneId, Boolean approvata);
+    
+    List<RecensioneDTO> listByStatoAdmin(StatoRecensione stato);
     
 }

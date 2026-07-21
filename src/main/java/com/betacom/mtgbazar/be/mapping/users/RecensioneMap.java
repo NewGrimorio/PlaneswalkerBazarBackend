@@ -10,11 +10,36 @@ import com.betacom.mtgbazar.be.model.users.Recensione;
 public class RecensioneMap {
 
     /*
-     * PRE-REQUISITO: utente fetchato (serve per il nome visualizzabile).
-     * acquistoVerificato = true per costruzione: nel nostro modello non
-     * esistono recensioni senza ordine consegnato.
+     * Vista PUBBLICA. PRE-REQUISITO: utente fetchato (nome visualizzabile).
+     * prodottoId e' letto dal PROXY (solo getId(): niente lazy load);
+     * prodottoNome resta null qui (il prodotto e' gia' il contesto).
+     * acquistoVerificato = true per costruzione.
      */
     public static RecensioneDTO buildRecensioneDTO(Recensione r) {
+        return builderComune(r).build();
+    }
+
+    /*
+     * Vista ADMIN (moderazione). PRE-REQUISITO: utente E prodotto
+     * fetchati (query Recensione.findByStatoWithProdotto), perche' qui
+     * si legge prodotto.getNome(): l'operatore deve vedere di quale
+     * prodotto e' la recensione.
+     */
+    public static RecensioneDTO buildRecensioneDTOAdmin(Recensione r) {
+        return builderComune(r)
+                .prodottoNome(r.getProdotto() == null ? null : r.getProdotto().getNome())
+                .build();
+    }
+
+    public static List<RecensioneDTO> buildRecensioneDTOList(Collection<Recensione> lR) {
+        return lR.stream().map(r -> buildRecensioneDTO(r)).toList();
+    }
+
+    public static List<RecensioneDTO> buildRecensioneDTOAdminList(Collection<Recensione> lR) {
+        return lR.stream().map(r -> buildRecensioneDTOAdmin(r)).toList();
+    }
+
+    private static RecensioneDTO.RecensioneDTOBuilder builderComune(Recensione r) {
         return RecensioneDTO.builder()
                 .id(r.getId())
                 .voto(r.getVoto())
@@ -23,21 +48,13 @@ public class RecensioneMap {
                 .stato(r.getStato().name())
                 .autore(UtenteMap.nomeVisualizzabile(r.getUtente()))
                 .acquistoVerificato(Boolean.TRUE)
+                .prodottoId(r.getProdotto() == null ? null : r.getProdotto().getId())  // proxy.getId(): safe
                 .creationDate(r.getCreationDate())
-                .updateDate(r.getUpdateDate())
-                .build();
-    }
-
-    public static List<RecensioneDTO> buildRecensioneDTOList(Collection<Recensione> lR) {
-        return lR.stream()
-                .map(r -> buildRecensioneDTO(r))
-                .toList();
+                .updateDate(r.getUpdateDate());
     }
 
     /*
-     * Costruito dai due valori della named query
-     * Recensione.statisticheByProdotto: [AVG(voto), COUNT(*)].
-     * media null (nessuna recensione) -> 0.0 e conteggio 0.
+     * Statistiche pagina prodotto: media (1 decimale, null->0.0) e conteggio.
      */
     public static RecensioneStatisticheDTO buildStatisticheDTO(Double media, Long conteggio) {
         return RecensioneStatisticheDTO.builder()
@@ -45,4 +62,5 @@ public class RecensioneMap {
                 .conteggio(conteggio == null ? 0L : conteggio)
                 .build();
     }
+    
 }
