@@ -39,7 +39,7 @@ public interface IUtenteServices {
 
     UtenteDTO getById(Long id);
     
-    //IMMAGGINI
+    //IMMAGINI
     
     UtenteDTO updateImmagineProfilo(Long utenteId, MultipartFile file);
 
