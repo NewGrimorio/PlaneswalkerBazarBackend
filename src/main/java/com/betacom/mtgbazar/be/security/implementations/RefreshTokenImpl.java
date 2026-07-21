@@ -105,6 +105,17 @@ public class RefreshTokenImpl implements IRefreshTokenServices {
                 });
     }
 
+    @Override
+    @Transactional
+    public int revocaTutteLeSessioni(Long utenteId) {
+        // "Disconnetti tutti i dispositivi": la promessa mantenuta dei
+        // token persistiti. Chiamata dal cambio password nella STESSA
+        // transazione: o password nuova E sessioni morte, o niente.
+        int n = refreshR.revocaTutteByUtenteId(utenteId);
+        log.info("revocaTutteLeSessioni: utente={} token revocati={}", utenteId, n);
+        return n;
+    }
+
     // ------------------------------------------------------------------
     // Interni
     // ------------------------------------------------------------------

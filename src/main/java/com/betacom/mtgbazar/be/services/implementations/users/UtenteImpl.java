@@ -23,6 +23,7 @@ import com.betacom.mtgbazar.be.request.users.security.LoginReq;
 import com.betacom.mtgbazar.be.services.IMessaggioServices;
 import com.betacom.mtgbazar.be.services.interfaces.products.IImmagineServices;
 import com.betacom.mtgbazar.be.services.interfaces.users.IUtenteServices;
+import com.betacom.mtgbazar.be.security.interfaces.IRefreshTokenServices;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -37,6 +38,7 @@ public class UtenteImpl implements IUtenteServices {
     private final IImmagineServices immagineS;
     private final PasswordEncoder passwordEncoder;
     private final IMessaggioServices msg;
+    private final IRefreshTokenServices refreshTokenS;
 
     /**
      * UNICO punto di normalizzazione dell'email di tutto il progetto:
@@ -173,13 +175,21 @@ public class UtenteImpl implements IUtenteServices {
     @Transactional
     public UtenteDTO changePassword(CambioPasswordReq req) {
         log.debug("changePassword: id={}", req.getUtenteId());
-
+ 
         Utente u = caricaAttivo(req.getUtenteId());
-
+ 
         if (!passwordEncoder.matches(req.getVecchiaPassword(), u.getPasswordHash()))
             throw new MtgException(msg.get("utente.credenziali.errate"));
-
+ 
         u.setPasswordHash(passwordEncoder.encode(req.getNuovaPassword()));
+ 
+        // Cambio password = EVENTO DI SICUREZZA: tutte le sessioni
+        // esistenti muoiono, su ogni dispositivo. Chi cambia la password
+        // perche' sospetta un furto butta fuori il ladro — e' la promessa
+        // per cui i refresh token sono persistiti e non stateless.
+        // Stessa transazione: o password nuova E sessioni revocate, o niente.
+        refreshTokenS.revocaTutteLeSessioni(u.getId());
+ 
         return UtenteMap.buildUtenteDTO(u);
     }
 

@@ -34,6 +34,10 @@ import com.betacom.mtgbazar.be.request.users.security.CambioPasswordReq;
 import com.betacom.mtgbazar.be.request.users.security.LoginReq;
 import com.betacom.mtgbazar.be.services.interfaces.users.IUtenteServices;
 
+import com.betacom.mtgbazar.be.security.interfaces.IRefreshTokenServices;
+
+
+
 import lombok.extern.slf4j.Slf4j;
 
 /**
@@ -50,6 +54,8 @@ public class UtenteServiceTest {
     @Autowired private IUtenteServices utenteS;
     @Autowired private IUtenteRepository utenteR;
     @Autowired private IPortafoglioRepository portafoglioR;
+    @Autowired private IRefreshTokenServices refreshS;
+    
 
     private static final AtomicInteger SEQ = new AtomicInteger();
     private static final String PASSWORD = "passwordSicura1";
@@ -415,6 +421,33 @@ public class UtenteServiceTest {
         // rimozione: campo null, file sparito
         UtenteDTO senzaFoto = utenteS.removeImmagineProfilo(dto.getId());
         assertNull(senzaFoto.getImmagineProfilo());
+    }
+    
+    @Test
+    @Order(15)
+    public void cambioPasswordRevocaTutteLeSessioni() {
+        log.debug("TEST 15: cambio password -> ogni refresh token esistente muore");
+ 
+        UtenteReq req = buildReq();
+        UtenteDTO dto = utenteS.registraUtente(req);
+ 
+        // due "dispositivi": due famiglie di refresh vive
+        String tokenPc = refreshS.emetti(dto.getId(), "pc-test");
+        String tokenTelefono = refreshS.emetti(dto.getId(), "telefono-test");
+ 
+        CambioPasswordReq cambio = new CambioPasswordReq();
+        cambio.setUtenteId(dto.getId());
+        cambio.setVecchiaPassword(PASSWORD);
+        cambio.setNuovaPassword("nuovaPassword2");
+        utenteS.changePassword(cambio);
+ 
+        // entrambe le sessioni sono morte: la rotazione viene rifiutata
+        org.junit.jupiter.api.Assertions.assertThrows(
+                com.betacom.mtgbazar.be.exceptions.AuthTokenException.class,
+                () -> refreshS.ruota(tokenPc, "pc-test"));
+        org.junit.jupiter.api.Assertions.assertThrows(
+                com.betacom.mtgbazar.be.exceptions.AuthTokenException.class,
+                () -> refreshS.ruota(tokenTelefono, "telefono-test"));
     }
     
 }

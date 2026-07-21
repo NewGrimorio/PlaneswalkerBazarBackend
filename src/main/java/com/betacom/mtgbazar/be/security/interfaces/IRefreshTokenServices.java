@@ -32,4 +32,15 @@ public interface IRefreshTokenServices {
 
     /** Logout: revoca la famiglia del token presentato. Idempotente e silenziosa. */
     void revoca(String tokenChiaro);
+
+    /**
+     * "Disconnetti tutti i dispositivi": revoca OGNI famiglia
+     * dell'utente. E' il motivo per cui i refresh sono persistiti e
+     * non stateless: la chiama il cambio password (chi cambia perche'
+     * sospetta un furto butta fuori il ladro), e in futuro la
+     * disattivazione dell'account.
+     * @return quanti token sono stati revocati (log e test).
+     */
+    int revocaTutteLeSessioni(Long utenteId);
+    
 }
