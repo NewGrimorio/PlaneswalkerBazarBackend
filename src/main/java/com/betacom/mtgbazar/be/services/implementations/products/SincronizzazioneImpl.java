@@ -48,7 +48,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class SincronizzazioneImpl implements ISincronizzazioneServices {
 
-    /** Pausa tra le pagine: Scryfall chiede 50-100ms tra le richieste. */
+    //Pausa tra le pagine: Scryfall chiede 50-100ms tra le richieste.
     private static final long PAUSA_TRA_PAGINE_MS = 100;
 
     private final RestClient scryfallRestClient;
@@ -60,9 +60,9 @@ public class SincronizzazioneImpl implements ISincronizzazioneServices {
     private final IMessaggioServices msg;
     private final ObjectMapper objectMapper;
 
-    /* Contatori del report (azzerati a ogni sync) */
+    //Contatori del report (azzerati a ogni sync) 
     private int carteNuove, carteAggiornate, stampeNuove, stampeAggiornate, prodottiCreati;
-    /* Scryfall id visti in questo import: alimenta il rilevamento orfani */
+    //Scryfall id visti in questo import: alimenta il rilevamento orfani 
     private Set<UUID> vistiScryfallIds;
     private static final String ORDINE_COLORI = "WUBRG";
 

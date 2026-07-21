@@ -1,11 +1,11 @@
 package com.betacom.mtgbazar.be.controllers;
 
+import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.jwt;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.jwt; 
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -21,6 +21,7 @@ import org.springframework.boot.webmvc.test.autoconfigure.AutoConfigureMockMvc;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
+import org.springframework.test.web.servlet.request.RequestPostProcessor;
  
 import com.betacom.mtgbazar.be.dto.users.IndirizzoDTO;
 import com.betacom.mtgbazar.be.dto.users.MovimentoDTO;
@@ -51,6 +52,11 @@ import lombok.extern.slf4j.Slf4j;
  * validazione e GlobalExceptionHandler — cio' che i test service non
  * vedono. Le fixture usano i service veri; le chiamate sotto esame
  * passano da HTTP. Prefisso api.
+ *
+ * FASE C: l'identita' non viaggia piu' nel body/param/URL ma nel token.
+ * Nei test si simula con asUser(id) -> .with(jwt().jwt(sub = id)).
+ * Gira in profilo dev: resource server ATTIVO (popola l'Authentication),
+ * autorizzazione permitAll (nessuna porta chiusa).
  */
 @SpringBootTest
 @Slf4j
@@ -71,6 +77,11 @@ public class ControllerRestTest {
  
     private static final AtomicInteger SEQ = new AtomicInteger();
     private static final String PASSWORD = "passwordSicura1";
+
+    /** FASE C: "la richiesta arriva da questo utente" — subject = id. */
+    private static RequestPostProcessor asUser(Long id) {
+        return jwt().jwt(j -> j.subject(id.toString()));
+    }
  
     // ------------------------------------------------------------------
     // Helper fixture (via service, NON via HTTP: sotto esame c'e' il web layer)
@@ -177,81 +188,58 @@ public class ControllerRestTest {
                 .andExpect(status().isBadRequest())
                 .andExpect(jsonPath("$.msg").value("Formato email non valido"));
     }
-    
- // ============================================================================
- // PATCH per ControllerRestTest.java — FASE C1
- // ============================================================================
- //
- // 1) AGGIUNGERE questo import statico in cima al file, accanto agli altri
-//     MockMvcRequestBuilders / post-processors:
- //
 
- //
-//     (arriva da spring-security-test, gia' nel pom come scope test).
- //
- // ----------------------------------------------------------------------------
- // 2) SOSTITUIRE integralmente il vecchio TEST 3
-//     (updateProfiloSenzaIdBoccataDalGruppoUpdate, righe ~180-194) con i DUE
-//     metodi qui sotto. Il vecchio verificava "senza id -> 400"; ma in Fase C
-//     l'id non arriva piu' dal body — arriva dal token. Quindi:
-//       - TEST 3   cambia natura: senza TOKEN -> 401 (SecurityUtils/AuthToken)
-//       - TEST 3b  e' nuovo e DIMOSTRA la Fase C: col token il profilo si
-//                  aggiorna sull'utente del token, e un id "altrui" iniettato
-//                  nel body viene IGNORATO (prova che l'IDOR e' chiuso).
- // ----------------------------------------------------------------------------
-  
-     @Test
-     @Order(3)
-     public void updateProfiloSenzaTokenERespinto() throws Exception {
-         log.debug("TEST 3: FASE C — PUT profilo senza token -> 401 (id dal token, non dal body)");
-  
-         UtenteReq req = new UtenteReq();
-         req.setNome("Senza");
-         req.setCognome("Token");
-  
-         // Nessun .with(jwt()): in dev il principal e' anonimo, SecurityUtils
-         // non riesce a ricavare l'id e alza AuthTokenException -> 401.
-         mockMvc.perform(put("/api/utenti/profilo")
-                         .contentType(MediaType.APPLICATION_JSON)
-                         .content(json(req)))
-                 .andExpect(status().isUnauthorized());
-     }
-  
-     @Test
-     @Order(3)
-     public void updateProfiloUsaIdDalTokenNonDalBody() throws Exception {
-         log.debug("TEST 3b: FASE C — il profilo si aggiorna sull'utente del TOKEN, "
-                 + "un id altrui nel body viene ignorato (IDOR-proof)");
-  
-         UtenteDTO vero = creaCliente();      // e' lui che deve essere aggiornato
-         UtenteDTO altro = creaCliente();     // la sua identita' NON deve essere toccata
-  
-         // Nel body infilo di proposito l'id di 'altro': deve essere ignorato.
-         UtenteReq req = new UtenteReq();
-         req.setId(altro.getId());            // <- tentativo di IDOR
-         req.setNome("NuovoNome");
-         req.setCognome("NuovoCognome");
-         req.setUsername(vero.getUsername()); // Update valida lo username col Pattern
-  
-         // Il token dice: sono 'vero' (subject = id come stringa)
-         mockMvc.perform(put("/api/utenti/profilo")
-                         .with(jwt().jwt(j -> j.subject(vero.getId().toString())))
-                         .contentType(MediaType.APPLICATION_JSON)
-                         .content(json(req)))
-                 .andExpect(status().isOk())
-                 .andExpect(jsonPath("$.id").value(vero.getId()))        // ha vinto il TOKEN
-                 .andExpect(jsonPath("$.nome").value("NuovoNome"));
-  
-         // Controprova: 'altro' e' rimasto intatto
-         UtenteDTO altroDopo = utenteS.getById(altro.getId());
-         org.junit.jupiter.api.Assertions.assertNotEquals("NuovoNome", altroDopo.getNome());
-     }
+    @Test
+    @Order(3)
+    public void updateProfiloSenzaTokenERespinto() throws Exception {
+        log.debug("TEST 3: FASE C — PUT profilo senza token -> 401 (id dal token, non dal body)");
+
+        UtenteReq req = new UtenteReq();
+        req.setNome("Senza");
+        req.setCognome("Token");
+
+        // Nessun .with(jwt()): in dev il principal e' anonimo, SecurityUtils
+        // non riesce a ricavare l'id e alza AuthTokenException -> 401.
+        mockMvc.perform(put("/api/utenti/profilo")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(json(req)))
+                .andExpect(status().isUnauthorized());
+    }
+
+    @Test
+    @Order(9)
+    public void updateProfiloUsaIdDalTokenNonDalBody() throws Exception {
+        log.debug("TEST 3b: FASE C — il profilo si aggiorna sull'utente del TOKEN, "
+                + "un id altrui nel body viene ignorato (IDOR-proof)");
+
+        UtenteDTO vero = creaCliente();      // e' lui che deve essere aggiornato
+        UtenteDTO altro = creaCliente();     // la sua identita' NON deve essere toccata
+
+        // Nel body infilo di proposito l'id di 'altro': deve essere ignorato.
+        UtenteReq req = new UtenteReq();
+        req.setId(altro.getId());            // <- tentativo di IDOR
+        req.setNome("NuovoNome");
+        req.setCognome("NuovoCognome");
+        req.setUsername(vero.getUsername()); // Update valida lo username col Pattern
+
+        // Il token dice: sono 'vero' (subject = id come stringa)
+        mockMvc.perform(put("/api/utenti/profilo")
+                        .with(asUser(vero.getId()))
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(json(req)))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.id").value(vero.getId()))        // ha vinto il TOKEN
+                .andExpect(jsonPath("$.nome").value("NuovoNome"));
+
+        // Controprova: 'altro' e' rimasto intatto
+        UtenteDTO altroDopo = utenteS.getById(altro.getId());
+        org.junit.jupiter.api.Assertions.assertNotEquals("NuovoNome", altroDopo.getNome());
+    }
  
-  
     @Test
     @Order(4)
-    public void loginErratoRestituisce400ColMessaggioDelHandler() throws Exception {
-        log.debug("TEST 4: MtgException dal service -> handler -> 400 via HTTP");
+    public void loginErratoRestituisce401ColMessaggioDelHandler() throws Exception {
+        log.debug("TEST 4: credenziali errate -> handler -> 401 via HTTP");
  
         UtenteDTO utente = creaCliente();
         String body = """
@@ -304,11 +292,11 @@ public class ControllerRestTest {
         accredita(utente.getId(), "50.00");
         MagazzinoSKU sku = creaProdottoConSku("Api Deckbox " + SEQ.incrementAndGet(), "15.00", 5);
  
-        // add-to-cart via HTTP
+        // add-to-cart via HTTP — FASE C: niente utenteId nel body, arriva dal token
         String voceBody = """
-                {"utenteId": %d, "skuId": %d, "quantita": 2}
-                """.formatted(utente.getId(), sku.getId());
-        mockMvc.perform(post("/api/carrello/voci")
+                {"skuId": %d, "quantita": 2}
+                """.formatted(sku.getId());
+        mockMvc.perform(post("/api/carrello/voci").with(asUser(utente.getId()))
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(voceBody))
                 .andExpect(status().isOk())
@@ -317,9 +305,9 @@ public class ControllerRestTest {
  
         // checkout via HTTP
         String checkoutBody = """
-                {"utenteId": %d, "indirizzoId": %d}
-                """.formatted(utente.getId(), indirizzo.getId());
-        MvcResult res = mockMvc.perform(post("/api/ordini/checkout")
+                {"indirizzoId": %d}
+                """.formatted(indirizzo.getId());
+        MvcResult res = mockMvc.perform(post("/api/ordini/checkout").with(asUser(utente.getId()))
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(checkoutBody))
                 .andExpect(status().isOk())
@@ -332,12 +320,12 @@ public class ControllerRestTest {
                 .get("id").asLong();
         log.debug("ordine creato via HTTP: id={}", ordineId);
  
-        // carrello svuotato (via HTTP)
-        mockMvc.perform(get("/api/carrello/{utenteId}", utente.getId()))
+        // carrello svuotato — FASE C: GET /api/carrello (niente segmento), token
+        mockMvc.perform(get("/api/carrello").with(asUser(utente.getId())))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.numeroArticoli").value(0));
  
-        // spedizione (fixture via service: il controller admin non esiste ancora)
+        // spedizione (fixture via service)
         int nAdmin = SEQ.incrementAndGet();
         Utente admin = new Utente();
         admin.setEmail("apiadmin" + nAdmin + "@test.it");
@@ -349,15 +337,15 @@ public class ControllerRestTest {
         utenteR.save(admin);
         ordineS.spedisci(ordineId, admin.getId());
  
-        // conferma-consegna: il path KEBAB-CASE sotto esame
+        // conferma-consegna: il path KEBAB-CASE sotto esame, identita' dal token
         mockMvc.perform(post("/api/ordini/{id}/conferma-consegna", ordineId)
-                        .param("utenteId", utente.getId().toString()))
+                        .with(asUser(utente.getId())))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.stato").value("CONSEGNATO"));
  
         // timeline: 3 tappe via HTTP
         mockMvc.perform(get("/api/ordini/{id}/timeline", ordineId)
-                        .param("utenteId", utente.getId().toString()))
+                        .with(asUser(utente.getId())))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.length()").value(3))
                 .andExpect(jsonPath("$[2].statoA").value("CONSEGNATO"));
@@ -366,7 +354,7 @@ public class ControllerRestTest {
     @Test
     @Order(7)
     public void ordineAltruiViaHttpNonEsiste() throws Exception {
-        log.debug("TEST 7: ownership check attraverso il layer web");
+        log.debug("TEST 7: FASE C — B non puo' nemmeno DICHIARARSI un altro: e' il token a dirlo");
  
         UtenteDTO a = creaCliente();
         IndirizzoDTO indA = creaIndirizzo(a.getId());
@@ -374,23 +362,25 @@ public class ControllerRestTest {
         MagazzinoSKU sku = creaProdottoConSku("Api Bustine " + SEQ.incrementAndGet(), "5.00", 10);
  
         String voceBody = """
-                {"utenteId": %d, "skuId": %d, "quantita": 1}
-                """.formatted(a.getId(), sku.getId());
-        mockMvc.perform(post("/api/carrello/voci")
+                {"skuId": %d, "quantita": 1}
+                """.formatted(sku.getId());
+        mockMvc.perform(post("/api/carrello/voci").with(asUser(a.getId()))
                 .contentType(MediaType.APPLICATION_JSON).content(voceBody))
                 .andExpect(status().isOk());
         String checkoutBody = """
-                {"utenteId": %d, "indirizzoId": %d}
-                """.formatted(a.getId(), indA.getId());
-        MvcResult res = mockMvc.perform(post("/api/ordini/checkout")
+                {"indirizzoId": %d}
+                """.formatted(indA.getId());
+        MvcResult res = mockMvc.perform(post("/api/ordini/checkout").with(asUser(a.getId()))
                         .contentType(MediaType.APPLICATION_JSON).content(checkoutBody))
                 .andExpect(status().isOk()).andReturn();
         long ordineId = objectMapper.readTree(res.getResponse().getContentAsString())
                 .get("id").asLong();
  
+        // B, autenticato col SUO token, chiede l'ordine di A: il service non
+        // lo trova per B -> 400. B non ha mai potuto "fingersi" A.
         UtenteDTO b = creaCliente();
         mockMvc.perform(get("/api/ordini/{id}", ordineId)
-                        .param("utenteId", b.getId().toString()))
+                        .with(asUser(b.getId())))
                 .andExpect(status().isBadRequest())
                 .andExpect(jsonPath("$.msg").value("Ordine non trovato"));
     }
@@ -401,18 +391,20 @@ public class ControllerRestTest {
         log.debug("TEST 8: POST /api/portafoglio/ricarica -> commissione server-side nel JSON");
  
         UtenteDTO utente = creaCliente();
+        // FASE C: niente utenteId nel body, arriva dal token
         String body = """
-                {"utenteId": %d, "importo": 10.00, "metodo": "PAYPAL"}
-                """.formatted(utente.getId());
+                {"importo": 10.00, "metodo": "PAYPAL"}
+                """;
  
-        mockMvc.perform(post("/api/portafoglio/ricarica")
+        mockMvc.perform(post("/api/portafoglio/ricarica").with(asUser(utente.getId()))
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(body))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.stato").value("COMPLETATO"))
                 .andExpect(jsonPath("$.commissione").value(0.85));
  
-        mockMvc.perform(get("/api/portafoglio/{utenteId}", utente.getId()))
+        // GET saldo — FASE C: /api/portafoglio (niente segmento), token
+        mockMvc.perform(get("/api/portafoglio").with(asUser(utente.getId())))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.saldo").value(9.15));
     }

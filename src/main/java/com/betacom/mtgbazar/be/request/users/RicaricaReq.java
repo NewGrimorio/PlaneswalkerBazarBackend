@@ -23,7 +23,7 @@ import lombok.ToString;
 @ToString
 public class RicaricaReq {
 
-    @NotNull(message = "portafoglio.no.utente")
+	/** FASE C: valorizzato dal controller dal token, mai dal client. */
     private Long utenteId;
 
     @NotNull(message = "portafoglio.no.importo")

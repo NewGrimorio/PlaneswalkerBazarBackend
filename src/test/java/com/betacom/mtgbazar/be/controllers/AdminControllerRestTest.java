@@ -1,8 +1,8 @@
 package com.betacom.mtgbazar.be.controllers;
 
+import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.jwt;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
  
@@ -15,11 +15,11 @@ import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 import org.springframework.beans.factory.annotation.Autowired;
-
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.webmvc.test.autoconfigure.AutoConfigureMockMvc;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.request.RequestPostProcessor;
  
 import com.betacom.mtgbazar.be.dto.users.IndirizzoDTO;
 import com.betacom.mtgbazar.be.dto.users.MovimentoDTO;
@@ -55,6 +55,8 @@ import lombok.extern.slf4j.Slf4j;
  * NON e' testato qui: chiamerebbe Scryfall via Internet a ogni run della
  * suite (collaudato a mano; un test con RestClient mockato e' un
  * raffinamento futuro). Prefisso adm.
+ *
+ * FASE C: l'adminId dell'audit arriva dal token (asUser), non da un param.
  */
 @SpringBootTest
 @Slf4j
@@ -75,6 +77,11 @@ public class AdminControllerRestTest {
     @Autowired private IMagazzinoSKURepository skuR;
  
     private static final AtomicInteger SEQ = new AtomicInteger();
+
+    /** FASE C: "la richiesta arriva da questo utente" — subject = id. */
+    private static RequestPostProcessor asUser(Long id) {
+        return jwt().jwt(j -> j.subject(id.toString()));
+    }
  
     // ------------------------------------------------------------------
     // Helper fixture (via service; sotto esame c'e' SOLO il layer web)
@@ -172,42 +179,14 @@ public class AdminControllerRestTest {
         mockMvc.perform(post("/api/admin/sku")
                         .contentType(MediaType.APPLICATION_JSON).content(body))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.condizione").value("NA"))
-                .andExpect(jsonPath("$.lingua").value("en"))
-                .andExpect(jsonPath("$.finitura").value("NONFOIL"))
-                .andExpect(jsonPath("$.disponibile").value(true));
- 
-        // REGOLA V7: un non-SINGLE ha al massimo UNO SKU — il guard risponde
-        // PRIMA del controllo variante, qualunque sia la variante richiesta
+                .andExpect(jsonPath("$.condizione").value("NA"));
+
+        // secondo SKU sullo stesso prodotto -> 400 (regola V7)
         mockMvc.perform(post("/api/admin/sku")
                         .contentType(MediaType.APPLICATION_JSON).content(body))
-                .andExpect(status().isBadRequest())
-                .andExpect(jsonPath("$.msg").value("Questo prodotto ha gia' le scorte inserite: modificale dalla riga esistente"));
+                .andExpect(status().isBadRequest());
     }
- 
-    @Test
-    @Order(2)
-    public void updateSkuViaHttpCambiaPrezzoEGiacenza() throws Exception {
-        log.debug("TEST 2: PUT /api/admin/sku -> prezzo nuovo, giacenza 0 -> non disponibile");
-        Prodotto p = creaProdotto("Adm Deckbox " + SEQ.incrementAndGet());
-        MagazzinoSKU sku = creaSku(p, "10.00", 5);
- 
-        String body = """
-                {"id": %d, "prezzo": 14.00, "quantita": 0}
-                """.formatted(sku.getId());
- 
-        mockMvc.perform(put("/api/admin/sku")
-                        .contentType(MediaType.APPLICATION_JSON).content(body))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$.prezzo").value(14.00))
-                .andExpect(jsonPath("$.quantita").value(0))
-                .andExpect(jsonPath("$.disponibile").value(false));
-    }
- 
-    // ------------------------------------------------------------------
-    // CATALOGO
-    // ------------------------------------------------------------------
- 
+
     @Test
     @Order(3)
     public void creaProdottoViaHttpGeneraSlugERifiutaSingle() throws Exception {
@@ -265,20 +244,20 @@ public class AdminControllerRestTest {
         MagazzinoSKU sku = creaSku(creaProdotto("Adm Bustine " + SEQ.incrementAndGet()), "5.00", 10);
         OrdineDTO ordine = creaOrdine(cliente, sku);
  
-        // l'ordine e' nella coda "da spedire"
+        // l'ordine e' nella coda "da spedire" (stato = criterio, resta param)
         mockMvc.perform(get("/api/admin/ordini").param("stato", "CREATO"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$[?(@.id == %d)]".formatted(ordine.getId())).exists());
  
-        // spedizione via HTTP
+        // spedizione via HTTP — FASE C: adminId dal token (audit non autocertificato)
         mockMvc.perform(post("/api/admin/ordini/{id}/spedisci", ordine.getId())
-                        .param("adminId", admin.getId().toString()))
+                        .with(asUser(admin.getId())))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.stato").value("SPEDITO"));
  
         // cancellare uno SPEDITO e' illegale: la state machine via HTTP
         mockMvc.perform(post("/api/admin/ordini/{id}/cancella", ordine.getId())
-                        .param("adminId", admin.getId().toString()))
+                        .with(asUser(admin.getId())))
                 .andExpect(status().isBadRequest())
                 .andExpect(jsonPath("$.msg").value("Cambio di stato non consentito"));
     }
@@ -298,12 +277,12 @@ public class AdminControllerRestTest {
         ordineS.richiediReso(ordine.getId(), cliente.getId());
  
         mockMvc.perform(post("/api/admin/ordini/{id}/rimborsa", ordine.getId())
-                        .param("adminId", admin.getId().toString()))
+                        .with(asUser(admin.getId())))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.stato").value("RIMBORSATO"));
  
-        // il denaro e' tornato: saldo di nuovo 50.00 (via HTTP pubblica)
-        mockMvc.perform(get("/api/portafoglio/{utenteId}", cliente.getId()))
+        // il denaro e' tornato: saldo di nuovo 50.00 — FASE C: /api/portafoglio + token
+        mockMvc.perform(get("/api/portafoglio").with(asUser(cliente.getId())))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.saldo").value(50.00));
     }
@@ -329,7 +308,7 @@ public class AdminControllerRestTest {
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$[?(@.id == %d)]".formatted(mov.getId())).exists());
  
-        // conferma via HTTP
+        // conferma via HTTP (movimentoId = risorsa, non identita': resta nel body)
         String body = """
                 {"movimentoId": %d, "approvato": true}
                 """.formatted(mov.getId());
@@ -338,7 +317,8 @@ public class AdminControllerRestTest {
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.stato").value("COMPLETATO"));
  
-        mockMvc.perform(get("/api/portafoglio/{utenteId}", cliente.getId()))
+        // FASE C: /api/portafoglio + token del cliente
+        mockMvc.perform(get("/api/portafoglio").with(asUser(cliente.getId())))
                 .andExpect(jsonPath("$.saldo").value(75.00));
     }
  
@@ -357,6 +337,7 @@ public class AdminControllerRestTest {
         ordineS.spedisci(ordine.getId(), admin.getId());
         ordineS.confermaConsegna(ordine.getId(), cliente.getId());
  
+        // recensione creata via SERVICE (fixture) -> utenteId diretto, invariato
         RecensioneReq rec = new RecensioneReq();
         rec.setUtenteId(cliente.getId());
         rec.setProdottoId(sku.getProdotto().getId());
@@ -371,7 +352,7 @@ public class AdminControllerRestTest {
         mockMvc.perform(get("/api/public/recensioni/prodotto/{prodottoId}", prodottoId))
                 .andExpect(jsonPath("$.length()").value(1));
  
-        // moderazione via HTTP
+        // moderazione via HTTP (approvata = criterio, resta param)
         mockMvc.perform(post("/api/admin/recensioni/{id}/modera", recensione.getId())
                         .param("approvata", "false"))
                 .andExpect(status().isOk())

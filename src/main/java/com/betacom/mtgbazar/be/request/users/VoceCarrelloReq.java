@@ -16,7 +16,7 @@ import lombok.ToString;
 @ToString
 public class VoceCarrelloReq {
 
-    @NotNull(message = "carrello.no.utente")
+	/** FASE C: valorizzato dal controller dal token, mai dal client. */
     private Long utenteId;
 
     @NotNull(message = "carrello.no.sku")

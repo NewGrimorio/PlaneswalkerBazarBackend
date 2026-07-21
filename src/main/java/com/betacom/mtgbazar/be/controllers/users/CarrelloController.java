@@ -1,5 +1,6 @@
 package com.betacom.mtgbazar.be.controllers.users;
 
+import org.springframework.security.core.Authentication;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,12 +13,18 @@ import org.springframework.web.bind.annotation.RestController;
  
 import com.betacom.mtgbazar.be.dto.users.CarrelloDTO;
 import com.betacom.mtgbazar.be.request.users.VoceCarrelloReq;
+import com.betacom.mtgbazar.be.security.SecurityUtils;
 import com.betacom.mtgbazar.be.services.interfaces.users.ICarrelloServices;
  
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
  
-/** Carrello: ogni operazione restituisce il carrello aggiornato. */
+/**
+ * Carrello — FASE C: l'utenteId nasce dal token, non dal client.
+ * Sparisce il segmento /{utenteId} dagli URL: GET /api/carrello e'
+ * "il MIO carrello", punto. L'ownership check nel service resta
+ * (difesa su "quale voce", complementare a "chi sono").
+ */
 @RestController
 @RequestMapping("/api/carrello")
 @RequiredArgsConstructor
@@ -26,33 +33,40 @@ public class CarrelloController {
  
     private final ICarrelloServices carrelloS;
  
-    @GetMapping("/{utenteId}")
-    public CarrelloDTO get(@PathVariable Long utenteId) {
-        log.debug("GET /api/carrello/{}", utenteId);
+    @GetMapping
+    public CarrelloDTO get(Authentication authentication) {
+        Long utenteId = SecurityUtils.utenteId(authentication);
+        log.debug("GET /api/carrello utente={}", utenteId);
         return carrelloS.getCarrello(utenteId);
     }
  
     @PostMapping("/voci")
-    public CarrelloDTO addVoce(@Validated @RequestBody VoceCarrelloReq req) {
+    public CarrelloDTO addVoce(@Validated @RequestBody VoceCarrelloReq req,
+                               Authentication authentication) {
+        req.setUtenteId(SecurityUtils.utenteId(authentication));
         log.debug("POST /api/carrello/voci utente={} sku={}", req.getUtenteId(), req.getSkuId());
         return carrelloS.addVoce(req);
     }
  
     @PutMapping("/voci")
-    public CarrelloDTO updateVoce(@Validated @RequestBody VoceCarrelloReq req) {
+    public CarrelloDTO updateVoce(@Validated @RequestBody VoceCarrelloReq req,
+                                  Authentication authentication) {
+        req.setUtenteId(SecurityUtils.utenteId(authentication));
         log.debug("PUT /api/carrello/voci utente={} sku={}", req.getUtenteId(), req.getSkuId());
         return carrelloS.updateVoce(req);
     }
  
-    @DeleteMapping("/{utenteId}/voci/{voceId}")
-    public CarrelloDTO removeVoce(@PathVariable Long utenteId, @PathVariable Long voceId) {
-        log.debug("DELETE /api/carrello/{}/voci/{}", utenteId, voceId);
+    @DeleteMapping("/voci/{voceId}")
+    public CarrelloDTO removeVoce(@PathVariable Long voceId, Authentication authentication) {
+        Long utenteId = SecurityUtils.utenteId(authentication);
+        log.debug("DELETE /api/carrello/voci/{} utente={}", voceId, utenteId);
         return carrelloS.removeVoce(utenteId, voceId);
     }
  
-    @DeleteMapping("/{utenteId}")
-    public void clear(@PathVariable Long utenteId) {
-        log.debug("DELETE /api/carrello/{}", utenteId);
+    @DeleteMapping
+    public void clear(Authentication authentication) {
+        Long utenteId = SecurityUtils.utenteId(authentication);
+        log.debug("DELETE /api/carrello utente={}", utenteId);
         carrelloS.clearCarrello(utenteId);
     }
     

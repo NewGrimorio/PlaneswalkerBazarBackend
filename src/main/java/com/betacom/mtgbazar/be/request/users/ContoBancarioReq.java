@@ -15,7 +15,7 @@ import lombok.ToString;
 @ToString
 public class ContoBancarioReq {
 
-    @NotNull(message = "conto.no.utente")
+	/** FASE C: valorizzato dal controller dal token, mai dal client. */
     private Long utenteId;
 
     @NotBlank(message = "conto.no.intestatario")

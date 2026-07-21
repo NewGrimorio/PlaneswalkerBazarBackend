@@ -17,7 +17,7 @@ import lombok.ToString;
 @ToString
 public class CheckoutReq {
 
-    @NotNull(message = "ordine.no.utente")
+    
     private Long utenteId;
 
     @NotNull(message = "ordine.no.indirizzo")
