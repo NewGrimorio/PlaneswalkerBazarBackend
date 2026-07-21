@@ -8,6 +8,7 @@ import com.betacom.mtgbazar.be.catalogo.CatalogoServiceTest;
 import com.betacom.mtgbazar.be.contobancario.ContoBancarioServiceTest;
 import com.betacom.mtgbazar.be.controllers.AdminControllerRestTest;
 import com.betacom.mtgbazar.be.controllers.ControllerRestTest;
+import com.betacom.mtgbazar.be.controllers.SecurityProdProfileTest;
 import com.betacom.mtgbazar.be.indirizzo.IndirizzoServiceTest;
 import com.betacom.mtgbazar.be.ordine.OrdineServiceTest;
 import com.betacom.mtgbazar.be.portafoglio.PortafoglioServiceTest;
@@ -25,7 +26,8 @@ import com.betacom.mtgbazar.be.utente.UtenteServiceTest;
     RecensioneServiceTest.class,
     CatalogoServiceTest.class,
     ControllerRestTest.class,
-    AdminControllerRestTest.class
+    AdminControllerRestTest.class,
+    SecurityProdProfileTest.class
     // qui si accoderanno UtenteServiceTest, CarrelloServiceTest, OrdineServiceTest...
 })
 
