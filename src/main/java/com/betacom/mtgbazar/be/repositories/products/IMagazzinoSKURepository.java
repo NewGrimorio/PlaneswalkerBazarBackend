@@ -12,6 +12,7 @@ import org.springframework.stereotype.Repository;
 import com.betacom.mtgbazar.be.model.products.MagazzinoSKU;
 import com.betacom.mtgbazar.be.model.products.enums.Condizione;
 import com.betacom.mtgbazar.be.model.products.enums.Finitura;
+import com.betacom.mtgbazar.be.model.products.enums.TipoProdotto;
 
 import jakarta.persistence.LockModeType;
 
@@ -52,5 +53,24 @@ public interface IMagazzinoSKURepository extends JpaRepository<MagazzinoSKU, Lon
 
     /** Guard non-SINGLE: un prodotto commerciale ha al massimo uno SKU. */
     boolean existsByProdottoId(Long prodottoId);
+
+    // ------------------------------------------------------------------
+    // Dashboard "sotto scorta" — ESCLUSE le carte singole
+    // ------------------------------------------------------------------
+
+    /**
+     * Contatore sotto scorta, escluso un tipo (SINGLE): la giacenza bassa
+     * e' fisiologica per le singole, contarle sarebbe rumore.
+     * Query in META-INF: MagazzinoSKU.countSottoScortaEsclusoTipo
+     */
+    long countSottoScortaEsclusoTipo(@Param("soglia") int soglia,
+                                     @Param("tipoEscluso") TipoProdotto tipoEscluso);
+
+    /**
+     * Lista sotto scorta (col prodotto fetchato), escluso un tipo, dal
+     * piu' urgente. Query in META-INF: MagazzinoSKU.sottoScortaEsclusoTipo
+     */
+    List<MagazzinoSKU> sottoScortaEsclusoTipo(@Param("soglia") int soglia,
+                                              @Param("tipoEscluso") TipoProdotto tipoEscluso);
     
 }

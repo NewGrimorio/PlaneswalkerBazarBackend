@@ -32,4 +32,7 @@ public interface IRecensioneRepository extends JpaRepository<Recensione, Long> {
     /** Pannello admin: recensioni in coda di moderazione. */
     List<Recensione> findByStatoOrderByCreationDateAsc(StatoRecensione stato);
     
+    /** Dashboard: quante recensioni in un dato stato (es. APPROVATA). */
+    long countByStato(StatoRecensione stato);
+    
 }

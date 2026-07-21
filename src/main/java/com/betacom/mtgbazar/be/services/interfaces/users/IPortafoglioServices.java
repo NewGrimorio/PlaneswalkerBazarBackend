@@ -7,6 +7,8 @@ import com.betacom.mtgbazar.be.dto.users.PortafoglioDTO;
 import com.betacom.mtgbazar.be.request.users.ConfermaMovimentoReq;
 import com.betacom.mtgbazar.be.request.users.PrelievoReq;
 import com.betacom.mtgbazar.be.request.users.RicaricaReq;
+import com.betacom.mtgbazar.be.model.users.enums.MetodoMovimento;
+import com.betacom.mtgbazar.be.model.users.enums.StatoMovimento;
  
 /**
  * Operazioni sul portafoglio. Gli errori di business viaggiano come
@@ -45,5 +47,7 @@ public interface IPortafoglioServices {
      * Prelievo approvato -> chiusura; rifiutato -> ri-accredito (lock).
      */
     MovimentoDTO confermaMovimento(ConfermaMovimentoReq req);
+    
+    List<MovimentoDTO> storicoAdmin(StatoMovimento stato, MetodoMovimento metodo);
     
 }

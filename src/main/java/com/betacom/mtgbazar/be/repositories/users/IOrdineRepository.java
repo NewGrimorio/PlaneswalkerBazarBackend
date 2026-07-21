@@ -23,4 +23,7 @@ public interface IOrdineRepository extends JpaRepository<Ordine, Long> {
  
     /** Pannello admin: coda di lavoro per stato, dalla piu' vecchia. */
     List<Ordine> findByStatoOrderByCreationDateAsc(StatOrdine stato);
+    
+    /** Dashboard: quanti ordini in un dato stato (es. CREATO = da spedire). */
+    long countByStato(StatOrdine stato);
 }

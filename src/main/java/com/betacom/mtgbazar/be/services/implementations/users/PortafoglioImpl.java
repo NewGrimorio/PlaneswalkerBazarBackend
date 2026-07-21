@@ -208,4 +208,12 @@ public class PortafoglioImpl implements IPortafoglioServices {
         return MovimentoMap.buildMovimentoDTO(m);
     }
     
+    @Override
+    @Transactional(readOnly = true)
+    public List<MovimentoDTO> storicoAdmin(StatoMovimento stato, MetodoMovimento metodo) {
+        log.debug("storicoAdmin: stato={} metodo={}", stato, metodo);
+        return MovimentoMap.buildMovimentoDTOAdminList(
+                movimentoRepository.storicoAdmin(stato, metodo));
+    }
+    
 }

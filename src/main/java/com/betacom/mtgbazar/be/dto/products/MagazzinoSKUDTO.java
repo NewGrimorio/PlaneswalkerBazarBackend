@@ -26,4 +26,7 @@ public class MagazzinoSKUDTO {
     private Integer quantita;
     private Boolean attivo;
     private Boolean disponibile;        // quantita > 0 && attivo
+
+    /** Popolato solo nelle viste admin che uniscono il prodotto (es. restock). */
+    private String prodottoNome;
 }

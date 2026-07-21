@@ -11,9 +11,13 @@ import lombok.Setter;
 import lombok.ToString;
 
 /**
- * Una riga dello storico transazioni ("Tutte le transazioni").
- * importo sempre positivo + tipo: e' il frontend che mostra il segno
- * (RICARICA/RIMBORSO in verde, PRELIEVO/PAGAMENTO_ORDINE in rosso).
+ * Una riga dello storico transazioni. importo sempre positivo + tipo:
+ * e' il frontend che mostra il segno (RICARICA/RIMBORSO in verde,
+ * PRELIEVO/PAGAMENTO_ORDINE in rosso).
+ *
+ * utenteId/utenteUsername/utenteNome: popolati SOLO nella vista ADMIN
+ * (storico globale), dove serve sapere DI CHI e' il movimento. Nello
+ * storico personale del cliente restano null (e' gia' il suo).
  */
 @Getter
 @Setter
@@ -34,4 +38,10 @@ public class MovimentoDTO {
     private Long contoBancarioId;
     private LocalDateTime creationDate;
     private LocalDateTime completionDate;
+
+    // --- Solo vista admin ---
+    private Long utenteId;
+    private String utenteUsername;
+    private String utenteNome;
+    
 }
