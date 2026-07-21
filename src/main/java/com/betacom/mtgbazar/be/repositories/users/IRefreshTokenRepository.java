@@ -1,5 +1,6 @@
 package com.betacom.mtgbazar.be.repositories.users;
 
+import java.time.LocalDateTime;
 import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -10,11 +11,10 @@ import org.springframework.stereotype.Repository;
 import com.betacom.mtgbazar.be.model.users.RefreshToken;
 
 /**
- * Le JPQL delle due revoche vivono in META-INF/jpa-named-queries.properties
- * (RefreshToken.revocaFamiglia, RefreshToken.revocaTutteByUtenteId),
- * risolte per convenzione NomeEntity.nomeMetodo. Qui resta SOLO
- * l'annotazione di comportamento @Modifying — come @Lock altrove:
- * il "come eseguire" sta sul metodo, il "cosa eseguire" nelle properties.
+ * Le JPQL vivono in META-INF/jpa-named-queries.properties, risolte per
+ * convenzione NomeEntity.nomeMetodo. Qui resta SOLO l'annotazione di
+ * comportamento @Modifying — come @Lock altrove: il "come eseguire"
+ * sta sul metodo, il "cosa eseguire" nelle properties.
  */
 @Repository
 public interface IRefreshTokenRepository extends JpaRepository<RefreshToken, Long> {
@@ -37,4 +37,14 @@ public interface IRefreshTokenRepository extends JpaRepository<RefreshToken, Lon
      */
     @Modifying
     int revocaTutteByUtenteId(@Param("utenteId") Long utenteId);
+
+    /**
+     * PULIZIA periodica (job @Scheduled): cancella FISICAMENTE i token
+     * scaduti prima della soglia. Non "revoca" — elimina: un token
+     * scaduto e' gia' inservibile, qui si libera solo spazio. La soglia
+     * porta un margine di grazia oltre la scadenza, per non distruggere
+     * tracce utili a un'eventuale analisi di riuso troppo presto.
+     */
+    @Modifying
+    int deleteScadutiPrimaDi(@Param("soglia") LocalDateTime soglia);
 }
