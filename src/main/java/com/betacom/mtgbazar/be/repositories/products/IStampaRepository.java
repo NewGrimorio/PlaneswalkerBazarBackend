@@ -30,9 +30,13 @@ public interface IStampaRepository extends JpaRepository<Stampa, Long> {
     
     /** Batch anti-N+1 per la sync: una pagina Scryfall (175 carte) = una SELECT. */
     List<Stampa> findByScryfallIdIn(Collection<UUID> scryfallIds);
+    
+    long countByCardtraderBlueprintIdIsNull();
 
     /** Orfani da revisionare nella pagina sync. */
     List<Stampa> findByEspansioneIdAndOrfanaTrueAndAttivoTrue(Long espansioneId);
     
     List<Stampa> findByEspansioneIdAndAttivoTrue(Long espansioneId);
+    
+    
 }

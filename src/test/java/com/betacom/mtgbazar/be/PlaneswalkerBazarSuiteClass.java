@@ -3,6 +3,8 @@ package com.betacom.mtgbazar.be;
 import org.junit.platform.suite.api.SelectClasses;
 import org.junit.platform.suite.api.Suite;
 
+import com.betacom.mtgbazar.be.cardtrader.CardtraderArricchimentoTxTest;
+import com.betacom.mtgbazar.be.cardtrader.CardtraderSyncImplTest;
 import com.betacom.mtgbazar.be.carrello.CarrelloServiceTest;
 import com.betacom.mtgbazar.be.catalogo.CatalogoServiceTest;
 import com.betacom.mtgbazar.be.contobancario.ContoBancarioServiceTest;
@@ -27,7 +29,9 @@ import com.betacom.mtgbazar.be.utente.UtenteServiceTest;
     CatalogoServiceTest.class,
     ControllerRestTest.class,
     AdminControllerRestTest.class,
-    SecurityProdProfileTest.class
+    SecurityProdProfileTest.class,
+    CardtraderSyncImplTest.class,
+    CardtraderArricchimentoTxTest.class
     // qui si accoderanno UtenteServiceTest, CarrelloServiceTest, OrdineServiceTest...
 })
 
