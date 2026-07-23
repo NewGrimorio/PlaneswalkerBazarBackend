@@ -1,5 +1,7 @@
 package com.betacom.mtgbazar.be.request.users;
 
+import com.betacom.mtgbazar.be.model.users.enums.TipoSpedizione;
+
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
@@ -22,4 +24,6 @@ public class CheckoutReq {
 
     @NotNull(message = "ordine.no.indirizzo")
     private Long indirizzoId;
+    
+    private TipoSpedizione tipoSpedizione;
 }

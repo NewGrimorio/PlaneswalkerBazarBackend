@@ -30,6 +30,7 @@ import com.betacom.mtgbazar.be.model.users.enums.MetodoMovimento;
 import com.betacom.mtgbazar.be.model.users.enums.StatOrdine;
 import com.betacom.mtgbazar.be.model.users.enums.StatoMovimento;
 import com.betacom.mtgbazar.be.model.users.enums.TipoMovimento;
+import com.betacom.mtgbazar.be.model.users.enums.TipoSpedizione;
 import com.betacom.mtgbazar.be.repositories.products.IMagazzinoSKURepository;
 import com.betacom.mtgbazar.be.repositories.users.ICarrelloRepository;
 import com.betacom.mtgbazar.be.repositories.users.IIndirizzoRepository;
@@ -102,19 +103,30 @@ public class OrdineImpl implements IOrdineServices {
         // refresh() ri-legge la riga dal DB — che ormai possediamo.
         skuLockati.values().forEach(em::refresh);
  
-        // 4) Verifica scorte e calcolo totale SUI DATI LOCKATI
-        BigDecimal totale = BigDecimal.ZERO;
+     // 4) Verifica scorte e calcolo IMPONIBILE MERCE sui dati lockati
+        BigDecimal totaleMerce = BigDecimal.ZERO;
         for (VoceCarrello v : voci) {
             MagazzinoSKU sku = skuLockati.get(v.getSku().getId());
             if (sku == null || !Boolean.TRUE.equals(sku.getAttivo())
                     || sku.getQuantita() < v.getQuantita())
                 throw new MtgException(msg.get("sku.non.disponibile"));
-            totale = totale.add(sku.getPrezzo()
+            totaleMerce = totaleMerce.add(sku.getPrezzo()
                     .multiply(BigDecimal.valueOf(v.getQuantita())));
         }
-        log.debug("checkout: totale calcolato {}", totale);
+        //log.debug("checkout: totale calcolato {}", totale);
+     // 4b) SPEDIZIONE — la scelta del client e' solo una preferenza:
+        // il server ricalcola (sopra soglia = express offerta). La soglia
+        // si valuta sulla MERCE, mai sul totale: altrimenti il costo
+        // dipenderebbe da se' stesso.
+        TipoSpedizione.Esito sped = TipoSpedizione.applica(req.getTipoSpedizione(), totaleMerce);
+        BigDecimal totale = totaleMerce.add(sped.costo());
+        log.debug("checkout: merce {} + spedizione {} ({}) = totale {}",
+                totaleMerce, sped.costo(), sped.tipo(), totale);
  
         // 5) LOCK SUL PORTAFOGLIO — SEMPRE DOPO gli SKU (regola di progetto)
+        // La capienza si verifica sul totale COMPLETO: se controllassimo la
+        // sola merce, un saldo esatto passerebbe qui e sbatterebbe contro il
+        // CHECK saldo >= 0 del DB — un 500 tecnico al posto del nostro messaggio.
         Portafoglio p = portafoglioR.findByUtenteIdForUpdate(u.getId())
                 .orElseThrow(() -> new MtgException(msg.get("portafoglio.non.trovato")));
         if (p.getSaldo().compareTo(totale) < 0)
@@ -131,6 +143,8 @@ public class OrdineImpl implements IOrdineServices {
         o.setUtente(u);
         o.setStato(StatOrdine.CREATO);
         o.setTotale(totale);
+        o.setSpeseSpedizione(sped.costo());
+        o.setTipoSpedizione(sped.tipo());
         o.setSpedDestinatario(ind.getDestinatario());
         o.setSpedVia(ind.getVia());
         o.setSpedCivico(ind.getCivico());

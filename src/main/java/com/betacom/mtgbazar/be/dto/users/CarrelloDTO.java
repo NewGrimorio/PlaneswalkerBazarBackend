@@ -22,4 +22,7 @@ public class CarrelloDTO {
     private List<VoceCarrelloDTO> voci;
     private BigDecimal totale;
     private Integer numeroArticoli;
+    private Boolean spedizioneOfferta;              // sopra soglia
+    private BigDecimal mancaPerSpedizioneGratuita;  // 0 se gia' offerta
+    private List<OpzioneSpedizioneDTO> opzioniSpedizione;
 }

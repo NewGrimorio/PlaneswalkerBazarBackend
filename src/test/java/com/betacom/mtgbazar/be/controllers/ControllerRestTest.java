@@ -308,14 +308,14 @@ public class ControllerRestTest {
                 {"indirizzoId": %d}
                 """.formatted(indirizzo.getId());
         MvcResult res = mockMvc.perform(post("/api/ordini/checkout").with(asUser(utente.getId()))
-                        .contentType(MediaType.APPLICATION_JSON)
-                        .content(checkoutBody))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$.stato").value("CREATO"))
-                .andExpect(jsonPath("$.totale").value(30.00))
-                .andExpect(jsonPath("$.spedVia").value("Via Etnea"))
-                .andExpect(jsonPath("$.voci[0].quantita").value(2))
-                .andReturn();
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(checkoutBody))
+			        .andExpect(status().isOk())
+			        .andExpect(jsonPath("$.stato").value("CREATO"))
+			        .andExpect(jsonPath("$.totale").value(34.90))     // 30.00 merce + 4.90 STANDARD
+			        .andExpect(jsonPath("$.spedVia").value("Via Etnea"))
+			        .andExpect(jsonPath("$.voci[0].quantita").value(2))
+			        .andReturn();
         long ordineId = objectMapper.readTree(res.getResponse().getContentAsString())
                 .get("id").asLong();
         log.debug("ordine creato via HTTP: id={}", ordineId);

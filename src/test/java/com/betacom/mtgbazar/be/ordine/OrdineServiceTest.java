@@ -35,6 +35,7 @@ import com.betacom.mtgbazar.be.model.products.enums.TipoProdotto;
 import com.betacom.mtgbazar.be.model.users.Utente;
 import com.betacom.mtgbazar.be.model.users.enums.MetodoMovimento;
 import com.betacom.mtgbazar.be.model.users.enums.RuoloUtente;
+import com.betacom.mtgbazar.be.model.users.enums.TipoSpedizione;
 import com.betacom.mtgbazar.be.repositories.products.IMagazzinoSKURepository;
 import com.betacom.mtgbazar.be.repositories.products.IProdottoRepository;
 import com.betacom.mtgbazar.be.repositories.users.IUtenteRepository;
@@ -176,38 +177,40 @@ public class OrdineServiceTest {
         log.debug("TEST 1: checkout 3x10.00 con saldo 50 — verifica di TUTTI gli effetti");
         accredita(utente.getId(), "50.00");
         mettiNelCarrello(utente.getId(), sku.getId(), 3);
- 
+
         OrdineDTO ordine = ordineS.checkout(checkoutReq(utente.getId(), indirizzo.getId()));
         log.debug("ordine creato: id={} stato={} totale={}",
                 ordine.getId(), ordine.getStato(), ordine.getTotale());
- 
-        // ordine e snapshot
+
+        // ordine e snapshot — 30.00 di merce, sotto soglia: STANDARD a 4.90
         assertEquals("CREATO", ordine.getStato());
-        assertEquals(0, new BigDecimal("30.00").compareTo(ordine.getTotale()));
+        assertEquals(0, new BigDecimal("34.90").compareTo(ordine.getTotale()));
+        assertEquals(0, new BigDecimal("4.90").compareTo(ordine.getSpeseSpedizione()));
+        assertEquals("STANDARD", ordine.getTipoSpedizione());
         assertEquals("Via Etnea", ordine.getSpedVia());
         assertEquals("Catania", ordine.getSpedCitta());
         assertEquals(1, ordine.getVoci().size());
         assertEquals(3, ordine.getVoci().get(0).getQuantita());
+        // la spedizione NON e' una voce d'ordine: il prezzo di riga resta la merce
         assertEquals(0, new BigDecimal("10.00").compareTo(ordine.getVoci().get(0).getPrezzoUnitario()));
         assertTrue(ordine.getVoci().get(0).getDescrizione().contains("Playmat"));
- 
+
         // effetti collaterali
         assertEquals(2, giacenza());                                   // 5 - 3
-        assertEquals(0, new BigDecimal("20.00").compareTo(saldo(utente.getId())));  // 50 - 30
+        assertEquals(0, new BigDecimal("15.10").compareTo(saldo(utente.getId())));  // 50 - 34.90
         assertEquals(0, carrelloS.getCarrello(utente.getId()).getVoci().size());    // svuotato
- 
+
         // ledger: l'ultimo movimento e' il PAGAMENTO_ORDINE
         List<MovimentoDTO> storico = portafoglioS.storico(utente.getId());
         log.debug("ledger: {}", storico.stream().map(MovimentoDTO::getTipo).toList());
         assertEquals("PAGAMENTO_ORDINE", storico.get(0).getTipo());
         assertEquals(ordine.getId(), storico.get(0).getOrdineId());
- 
+
         // timeline: una riga, null -> CREATO
         List<StoricoStatoOrdineDTO> timeline = ordineS.getTimeline(ordine.getId(), utente.getId());
         assertEquals(1, timeline.size());
         assertNull(timeline.get(0).getStatoDa());
         assertEquals("CREATO", timeline.get(0).getStatoA());
-        //assertEquals("Anna V.", timeline.get(0).getEseguitoDa());
         assertEquals(utente.getUsername(), timeline.get(0).getEseguitoDa());
     }
  
@@ -274,16 +277,17 @@ public class OrdineServiceTest {
         mettiNelCarrello(utente.getId(), sku.getId(), 3);
         OrdineDTO ordine = ordineS.checkout(checkoutReq(utente.getId(), indirizzo.getId()));
         assertEquals(2, giacenza());
- 
+        // addebito PRIMA dell'annullo: senza questo assert il test resterebbe
+        // verde anche se la spedizione non venisse mai addebitata (50 -> 50)
+        assertEquals(0, new BigDecimal("15.10").compareTo(saldo(utente.getId())));
+
         OrdineDTO annullato = ordineS.annulla(ordine.getId(), utente.getId());
         log.debug("dopo annullo: stato={} giacenza={} saldo={}",
                 annullato.getStato(), giacenza(), saldo(utente.getId()));
- 
+
         assertEquals("ANNULLATO", annullato.getStato());
         assertEquals(5, giacenza());                                        // ripristinate
-        assertEquals(0, new BigDecimal("50.00").compareTo(saldo(utente.getId())));  // rimborsato
- 
-        // ledger: RIMBORSO in testa; timeline: 2 righe
+        assertEquals(0, new BigDecimal("50.00").compareTo(saldo(utente.getId())));  // rimborsato TUTTO
         assertEquals("RIMBORSO", portafoglioS.storico(utente.getId()).get(0).getTipo());
         assertEquals(2, ordineS.getTimeline(ordine.getId(), utente.getId()).size());
     }
@@ -295,6 +299,7 @@ public class OrdineServiceTest {
         accredita(utente.getId(), "50.00");
         mettiNelCarrello(utente.getId(), sku.getId(), 2);
         OrdineDTO ordine = ordineS.checkout(checkoutReq(utente.getId(), indirizzo.getId()));
+        assertEquals(0, new BigDecimal("4.90").compareTo(ordine.getSpeseSpedizione()));
         Utente admin = creaAdmin();
  
         // CREATO: confermaConsegna e' illegale
@@ -422,6 +427,66 @@ public class OrdineServiceTest {
         admin.setNome("Alice");
         admin.setCognome("Admin");
         return utenteR.save(admin);
+    }
+    
+ // ------------------------------------------------------------------
+    // SPEDIZIONE
+    // ------------------------------------------------------------------
+
+    @Test
+    @Order(9)
+    public void spedizioneExpressSottoSogliaVieneAddebitata() {
+        log.debug("TEST 9: express scelto sotto soglia -> 7.90 addebitati");
+        accredita(utente.getId(), "50.00");
+        mettiNelCarrello(utente.getId(), sku.getId(), 2);      // 20.00 di merce
+
+        CheckoutReq req = checkoutReq(utente.getId(), indirizzo.getId());
+        req.setTipoSpedizione(TipoSpedizione.EXPRESS);
+        OrdineDTO ordine = ordineS.checkout(req);
+
+        assertEquals(0, new BigDecimal("27.90").compareTo(ordine.getTotale()));
+        assertEquals(0, new BigDecimal("7.90").compareTo(ordine.getSpeseSpedizione()));
+        assertEquals("EXPRESS", ordine.getTipoSpedizione());
+        assertEquals(0, new BigDecimal("22.10").compareTo(saldo(utente.getId())));
+    }
+
+    @Test
+    @Order(10)
+    public void sopraSogliaLaSpedizioneEOffertaEDiventaExpress() {
+        log.debug("TEST 10: merce a 70.00 -> express offerta, la preferenza del client e' IGNORATA");
+        // la fixture nasce con giacenza 5: serve piu' merce per toccare la soglia
+        MagazzinoSKU vivo = skuR.findById(sku.getId()).orElseThrow();
+        vivo.setQuantita(10);
+        skuR.save(vivo);
+
+        accredita(utente.getId(), "100.00");
+        mettiNelCarrello(utente.getId(), sku.getId(), 7);      // 70.00 esatti: il confine
+
+        CheckoutReq req = checkoutReq(utente.getId(), indirizzo.getId());
+        req.setTipoSpedizione(TipoSpedizione.STANDARD);        // chiede standard...
+        OrdineDTO ordine = ordineS.checkout(req);
+
+        assertEquals(0, new BigDecimal("70.00").compareTo(ordine.getTotale()));   // nessun sovrapprezzo
+        assertEquals(0, BigDecimal.ZERO.compareTo(ordine.getSpeseSpedizione()));
+        assertEquals("EXPRESS", ordine.getTipoSpedizione());   // ...ma riceve express
+        assertEquals(0, new BigDecimal("30.00").compareTo(saldo(utente.getId())));
+    }
+
+    @Test
+    @Order(11)
+    public void saldoCheCopreSoloLaMerceVieneRifiutato() {
+        log.debug("TEST 11: saldo pari alla merce ma non alla spedizione -> rifiuto pulito");
+        accredita(utente.getId(), "30.00");                    // esattamente la merce
+        mettiNelCarrello(utente.getId(), sku.getId(), 3);      // 30.00 + 4.90 di spedizione
+
+        MtgException ex = assertThrows(MtgException.class,
+                () -> ordineS.checkout(checkoutReq(utente.getId(), indirizzo.getId())));
+        log.debug("eccezione attesa: {}", ex.getMessage());
+        assertEquals("Saldo del portafoglio insufficiente", ex.getMessage());
+
+        // rollback totale: nessun addebito, nessuna scorta consumata
+        assertEquals(0, new BigDecimal("30.00").compareTo(saldo(utente.getId())));
+        assertEquals(5, giacenza());
     }
     
 }

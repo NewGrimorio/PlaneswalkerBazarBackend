@@ -34,6 +34,7 @@ public class OrdineMap {
                 .stato(o.getStato().name())
                 .totale(o.getTotale())
                 .speseSpedizione(o.getSpeseSpedizione())
+                .tipoSpedizione(o.getTipoSpedizione().name())
                 .spedDestinatario(o.getSpedDestinatario())
                 .spedVia(o.getSpedVia())
                 .spedCivico(o.getSpedCivico())

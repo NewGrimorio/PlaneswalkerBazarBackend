@@ -7,6 +7,7 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import com.betacom.mtgbazar.be.model.users.enums.StatOrdine;
+import com.betacom.mtgbazar.be.model.users.enums.TipoSpedizione;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -85,4 +86,9 @@ public class Ordine {
     @UpdateTimestamp
     @Column(name = "update_date", nullable = false)
     private LocalDateTime updateDate;
+    
+    @Enumerated(EnumType.STRING)
+    @Column(name = "tipo_spedizione", nullable = false, length = 10)
+    private TipoSpedizione tipoSpedizione = TipoSpedizione.STANDARD;
+    
 }

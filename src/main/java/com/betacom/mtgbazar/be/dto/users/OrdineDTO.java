@@ -29,6 +29,7 @@ public class OrdineDTO {
     private String stato;
     private BigDecimal totale;
     private BigDecimal speseSpedizione;
+    private String tipoSpedizione;
 
     private String spedDestinatario;
     private String spedVia;
@@ -42,4 +43,5 @@ public class OrdineDTO {
     private LocalDateTime updateDate;
 
     private List<VoceOrdineDTO> voci;
+    
 }
