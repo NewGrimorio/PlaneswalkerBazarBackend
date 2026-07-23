@@ -146,13 +146,13 @@ public class TendenzaPrezzoImplTest {
                 .andRespond(withSuccess("""
                     {"555":[
                       {"price":{"cents":500,"currency":"EUR"},
-                       "properties":{"condition":"Moderately Played","mtg_language":"en","mtg_foil":false}},
+                       "properties_hash":{"condition":"Moderately Played","mtg_language":"en","mtg_foil":false}},
                       {"price":{"cents":600,"currency":"EUR"},
-                       "properties":{"condition":"Moderately Played","mtg_language":"en","mtg_foil":false}},
+                       "properties_hash":{"condition":"Moderately Played","mtg_language":"en","mtg_foil":false}},
                       {"price":{"cents":1050,"currency":"EUR"},
-                       "properties":{"condition":"Near Mint","mtg_language":"en","mtg_foil":false}},
+                       "properties_hash":{"condition":"Near Mint","mtg_language":"en","mtg_foil":false}},
                       {"price":{"cents":1100,"currency":"EUR"},
-                       "properties":{"condition":"Near Mint","mtg_language":"en","mtg_foil":false}}
+                       "properties_hash":{"condition":"Near Mint","mtg_language":"en","mtg_foil":false}}
                     ]}
                     """, APPLICATION_JSON));
 
@@ -163,9 +163,9 @@ public class TendenzaPrezzoImplTest {
                 .andRespond(withSuccess("""
                     {"555":[
                       {"price":{"cents":2600,"currency":"EUR"},
-                       "properties":{"condition":"Near Mint","mtg_language":"en","mtg_foil":true}},
+                       "properties_hash":{"condition":"Near Mint","mtg_language":"en","mtg_foil":true}},
                       {"price":{"cents":2700,"currency":"EUR"},
-                       "properties":{"condition":"Near Mint","mtg_language":"en","mtg_foil":true}}
+                       "properties_hash":{"condition":"Near Mint","mtg_language":"en","mtg_foil":true}}
                     ]}
                     """, APPLICATION_JSON));
 
