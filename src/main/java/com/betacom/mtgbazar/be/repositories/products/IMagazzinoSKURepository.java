@@ -73,4 +73,6 @@ public interface IMagazzinoSKURepository extends JpaRepository<MagazzinoSKU, Lon
     List<MagazzinoSKU> sottoScortaEsclusoTipo(@Param("soglia") int soglia,
                                               @Param("tipoEscluso") TipoProdotto tipoEscluso);
     
+
+    
 }

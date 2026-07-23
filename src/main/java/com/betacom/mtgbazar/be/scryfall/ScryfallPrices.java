@@ -8,5 +8,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public record ScryfallPrices(
         BigDecimal eur,
-        @JsonProperty("eur_foil") BigDecimal eurFoil) {
+        @JsonProperty("eur_foil")   BigDecimal eurFoil,
+        @JsonProperty("eur_etched") BigDecimal eurEtched) {
 }

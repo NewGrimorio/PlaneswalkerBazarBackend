@@ -48,4 +48,6 @@ public interface IProdottoRepository extends JpaRepository<Prodotto, Long> {
     List<Prodotto> findByEspansioneIdAndTipoProdottoOrderByNomeAsc(
             Long espansioneId, TipoProdotto tipoProdotto);
     
+    Optional<Prodotto> findByStampaId(Long stampaId);
+    
 }

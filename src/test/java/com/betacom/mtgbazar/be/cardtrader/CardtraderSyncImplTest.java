@@ -1,7 +1,7 @@
 package com.betacom.mtgbazar.be.cardtrader;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.mockito.ArgumentMatchers.anyList;
+import static org.mockito.ArgumentMatchers.anyMap;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.verifyNoInteractions;
@@ -14,8 +14,6 @@ import static org.springframework.test.web.client.match.MockRestRequestMatchers.
 import static org.springframework.test.web.client.response.MockRestResponseCreators.withServerError;
 import static org.springframework.test.web.client.response.MockRestResponseCreators.withSuccess;
 
-import java.util.List;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -25,17 +23,20 @@ import org.springframework.test.web.client.MockRestServiceServer;
 import org.springframework.web.client.RestClient;
 
 import com.betacom.mtgbazar.be.dto.products.CardtraderSyncDTO;
-import com.betacom.mtgbazar.be.model.products.Espansione;
-import com.betacom.mtgbazar.be.repositories.products.IEspansioneRepository;
 import com.betacom.mtgbazar.be.services.implementations.products.CardtraderArricchimentoTx;
 import com.betacom.mtgbazar.be.services.implementations.products.CardtraderSyncImpl;
 
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * Collaudo dell'ORCHESTRAZIONE (best-effort per set), con HTTP stubbato
- * via MockRestServiceServer e collaboratori mockati. Nessun contesto
- * Spring, nessuna rete: verifichiamo solo il comportamento del giro.
+ * Collaudo dell'ORCHESTRAZIONE a mappa globale, con HTTP stubbato via
+ * MockRestServiceServer e il Tx mockato. Nessun contesto Spring, nessuna
+ * rete: verifichiamo solo il comportamento del giro.
+ *
+ * Rispetto alla versione per-set: l'impl non usa piu' IEspansioneRepository
+ * (le espansioni arrivano da /expansions di Cardtrader), costruisce UNA
+ * mappa scryfall_id -> blueprint_id da tutte le espansioni, e chiama il Tx
+ * una sola volta con quella mappa.
  */
 @ExtendWith(MockitoExtension.class)
 @Slf4j
@@ -43,7 +44,6 @@ public class CardtraderSyncImplTest {
 
     private static final String BASE = "http://cardtrader.test/api/v2";
 
-    @Mock private IEspansioneRepository espansioneR;
     @Mock private CardtraderArricchimentoTx arricchimentoTx;
 
     private MockRestServiceServer server;
@@ -54,23 +54,15 @@ public class CardtraderSyncImplTest {
         RestClient.Builder builder = RestClient.builder().baseUrl(BASE);
         server = MockRestServiceServer.bindTo(builder).build();
         RestClient client = builder.build();
-        impl = new CardtraderSyncImpl(client, espansioneR, arricchimentoTx);
-    }
-
-    private Espansione esp(String codice) {
-        Espansione e = new Espansione();
-        e.setCodice(codice);
-        e.setNome(codice.toUpperCase());
-        return e;
+        impl = new CardtraderSyncImpl(client, arricchimentoTx);
     }
 
     @Test
-    public void unSetCheFallisceNonFermaGliAltri() {
-        log.debug("TEST: /blueprints/export va in errore su un set, l'altro viene comunque agganciato");
+    public void unEspansioneCheFallisceNonFermaLeAltre() {
+        log.debug("TEST: /blueprints/export va in errore su un'espansione, "
+                + "l'altra confluisce comunque nella mappa");
 
-        when(espansioneR.findAll()).thenReturn(List.of(esp("aaa"), esp("bbb")));
-
-        // /expansions: due set Magic, codici allineati ai nostri
+        // /expansions: due espansioni Magic (game_id=1)
         server.expect(once(), requestTo(BASE + "/expansions"))
               .andExpect(method(GET))
               .andRespond(withSuccess("""
@@ -78,12 +70,12 @@ public class CardtraderSyncImplTest {
                     {"id":20,"game_id":1,"code":"bbb","name":"B"} ]
                   """, APPLICATION_JSON));
 
-        // export di "aaa" -> 500: deve essere ingoiato e non fermare il giro
+        // export di id=10 -> 500: deve essere ingoiato e non fermare il giro
         server.expect(once(), requestTo(BASE + "/blueprints/export?expansion_id=10"))
               .andExpect(method(GET))
               .andRespond(withServerError());
 
-        // export di "bbb" -> ok
+        // export di id=20 -> ok: un blueprint con scryfall_id valido
         server.expect(once(), requestTo(BASE + "/blueprints/export?expansion_id=20"))
               .andExpect(method(GET))
               .andRespond(withSuccess("""
@@ -93,21 +85,22 @@ public class CardtraderSyncImplTest {
                      "card_market_ids":[]} ]
                   """, APPLICATION_JSON));
 
-        // il Tx viene invocato SOLO per il set andato a buon fine
-        when(arricchimentoTx.arricchisci(anyList()))
-              .thenReturn(new CardtraderArricchimentoTx.Esito(1, 0));
+        // mappa non vuota -> il Tx viene invocato UNA volta con la mappa globale
+        when(arricchimentoTx.arricchisciDaMappa(anyMap()))
+              .thenReturn(new CardtraderArricchimentoTx.Esito(1, 28));
 
         CardtraderSyncDTO dto = impl.sincronizzaBlueprint();
 
-        assertEquals(1, dto.getEspansioniElaborate());        // solo bbb
+        assertEquals(1, dto.getEspansioniElaborate());   // solo id=20 e' andata a buon fine
         assertEquals(1, dto.getStampeAggiornate());
-        verify(arricchimentoTx, times(1)).arricchisci(anyList());
+        assertEquals(28, dto.getBlueprintSenzaCorrispondenza());
+        verify(arricchimentoTx, times(1)).arricchisciDaMappa(anyMap());
         server.verify();
     }
 
     @Test
     public void expansionsGiuInterrompeInModoPulito() {
-        log.debug("TEST: se /expansions fallisce, mappa vuota -> stop pulito, niente giro sui set");
+        log.debug("TEST: se /expansions fallisce, lista vuota -> stop pulito, niente Tx");
 
         server.expect(once(), requestTo(BASE + "/expansions"))
               .andExpect(method(GET))

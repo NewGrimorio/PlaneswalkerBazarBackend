@@ -7,7 +7,10 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import com.betacom.mtgbazar.be.model.products.PrezzoRiferimento;
+import com.betacom.mtgbazar.be.model.products.Stampa;
+import com.betacom.mtgbazar.be.model.products.enums.Condizione;
 import com.betacom.mtgbazar.be.model.products.enums.Finitura;
+import com.betacom.mtgbazar.be.model.products.enums.FontePrezzo;
 
 @Repository
 public interface IPrezzoRiferimentoRepository extends JpaRepository<PrezzoRiferimento, Long> {
@@ -22,5 +25,10 @@ public interface IPrezzoRiferimentoRepository extends JpaRepository<PrezzoRiferi
  
     /** La serie storica completa (per un futuro grafico andamento prezzi). */
     List<PrezzoRiferimento> findByStampaIdOrderByDetectionDateAsc(Long stampaId);
+    
+    Optional<PrezzoRiferimento>
+    findFirstByStampaIdAndFonteAndFinituraAndCondizioneAndLinguaOrderByDetectionDateDesc(
+            Long stampaId, FontePrezzo fonte, Finitura finitura,
+            Condizione condizione, String lingua);
     
 }

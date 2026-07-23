@@ -5,6 +5,7 @@ import java.time.LocalDateTime;
 
 import org.hibernate.annotations.CreationTimestamp;
 
+import com.betacom.mtgbazar.be.model.products.enums.Condizione;
 import com.betacom.mtgbazar.be.model.products.enums.Finitura;
 import com.betacom.mtgbazar.be.model.products.enums.FontePrezzo;
 
@@ -66,5 +67,12 @@ public class PrezzoRiferimento {
     @CreationTimestamp
     @Column(name = "detection_date", nullable = false, updatable = false)
     private LocalDateTime detectionDate; //Data Rivelamento
+    
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false, length = 2)
+    private Condizione condizione = Condizione.NA;
+
+    @Column(nullable = false, length = 2)
+    private String lingua = "NA";          // 'NA' = finish-level (Cardmarket/Scryfall)
     
 }

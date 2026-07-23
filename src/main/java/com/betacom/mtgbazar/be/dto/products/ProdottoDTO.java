@@ -29,6 +29,7 @@ public class ProdottoDTO {
     private Boolean attivo;
 
     private Long espansioneId;
+    private Long stampaId;
     private String espansioneNome;
 
     // --- solo nel dettaglio ---

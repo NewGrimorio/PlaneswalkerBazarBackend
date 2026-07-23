@@ -49,6 +49,7 @@ public class ProdottoMap {
                 .descrizione(p.getDescrizione())
                 .imageUrl(p.getImageUrl())
                 .attivo(p.getAttivo())
+                .stampaId(p.getStampa() == null ? null : p.getStampa().getId())
                 .espansioneId(p.getEspansione() == null ? null : p.getEspansione().getId())
                 .espansioneNome(p.getEspansione() == null ? null : p.getEspansione().getNome());
     }

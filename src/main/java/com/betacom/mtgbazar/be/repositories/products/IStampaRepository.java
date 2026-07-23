@@ -38,5 +38,7 @@ public interface IStampaRepository extends JpaRepository<Stampa, Long> {
     
     List<Stampa> findByEspansioneIdAndAttivoTrue(Long espansioneId);
     
+    Optional<Stampa> findByIdFetchCartaEspansione(@Param("id") Long id);
+    
     
 }
